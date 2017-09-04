@@ -39,7 +39,9 @@
           <h1>Melhores destinos</h1></a>
       </div>
       <div class="menu_promocoes">
-          <h1>Promoções</h1>
+        <a href="promocao.php"
+        <?php if($paginaCorrente == 'promocao.php') {echo'class="menu_promocoes"';}?>>
+        <h1>Promoções</h1></a>
       </div>
       <div class="menu_sobre">
           <a href="sobre.php"
