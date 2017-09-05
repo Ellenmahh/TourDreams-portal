@@ -42,13 +42,13 @@
   							</div>
 
 							<p class="txt_local_parceiro" >São Paulo</p>
-              <div class="icone_wifi">
+							<div class="icone_wifi">
 								<img src="imagens/wifi.png" alt="">
 							</div>
 								<p class="txt_caracteristica_hotel_melhoresDestinos">Wi-fi grátis</p>
-								<p class="txt_diaria_hotel" >Diárias a partir de</p>
-								<p class="txt_rs" >R$</p>
-								<p class="txt_preco_hotel">200</p>
+								<p class="txt_diaria_hotel_destinos" >Diárias a partir de</p>
+								<p class="txt_rs_destinos" >R$</p>
+								<p class="txt_preco_hotel_destinos">200</p>
 								<input type="submit" name="btn_produto" value="Reservar" class="btn_produto">
 
 					</div>
@@ -58,13 +58,13 @@
 								<img  src="imagens/localizacao.png" alt="">
 							</div>
 							<p class="txt_local_parceiro" >São Paulo</p>
-							<!--<div class="icone_wifi">
+							<div class="icone_wifi">
 								<img src="imagens/wifi.png"  alt="">
-							</div>-->
-								<p class="txt_caracteristica_hotel">Wi-fi grátis</p>
-								<p class="txt_diaria_hotel" >Diárias a partir de</p>
-								<p class="txt_rs" >R$</p>
-								<p class="txt_preco_hotel">200</p>
+							</div>
+								<p class="txt_caracteristica_hotel_melhoresDestinos">Wi-fi grátis</p>
+								<p class="txt_diaria_hotel_destinos" >Diárias a partir de</p>
+								<p class="txt_rs_destinos" >R$</p>
+								<p class="txt_preco_hotel_destinos">200</p>
 								<input type="submit" name="btn_produto" value="Reservar" class="btn_produto">
 
 					</div>
@@ -74,13 +74,13 @@
 								<img  src="imagens/localizacao.png" alt="">
 							</div>
 							<p class="txt_local_parceiro" >São Paulo</p>
-							<!--<div class="icone_wifi">
+							<div class="icone_wifi">
 								<img src="imagens/wifi.png"  alt="">
-							</div>-->
-								<p class="txt_caracteristica_hotel">Wi-fi grátis</p>
-								<p class="txt_diaria_hotel" >Diárias a partir de</p>
-								<p class="txt_rs" >R$</p>
-								<p class="txt_preco_hotel">200</p>
+							</div>
+								<p class="txt_caracteristica_hotel_melhoresDestinos">Wi-fi grátis</p>
+								<p class="txt_diaria_hotel_destinos" >Diárias a partir de</p>
+								<p class="txt_rs_destinos" >R$</p>
+								<p class="txt_preco_hotel_destinos">200</p>
 								<input type="submit" name="btn_produto" value="Reservar" class="btn_produto">
 
 					</div>
@@ -93,18 +93,18 @@
 				<div class="espacoCat">
 				  <button class="button_melhoresDestinos" onClick="plusIndex(-1)" id="btn1">&#10094; </button>
 					   <div class="produtos_div_melhoresDestinos">
-						  <img src="imagens/hotel9.jpg" alt=""  class="imagem_melhoresdestinos">
+						  <img src="imagens/hotel9.jpg" alt="" class="imagem_melhoresdestinos">
 							<div class="img_icone_local">
 								<img  src="imagens/localizacao.png" alt="">
 							</div>
 							<p class="txt_local_parceiro" >São Paulo</p>
-							<!--<div class="img_icone_local">
+							<div class="icone_wifi">
 								<img src="imagens/wifi.png" alt="">
-							</div>-->
-								<p class="txt_caracteristica_hotel">Wi-fi grátis</p>
-								<p class="txt_diaria_hotel" >Diárias a partir de</p>
-								<p class="txt_rs" >R$</p>
-								<p class="txt_preco_hotel">200</p>
+							</div>
+								<p class="txt_caracteristica_hotel_melhoresDestinos">Wi-fi grátis</p>
+								<p class="txt_diaria_hotel_destinos" >Diárias a partir de</p>
+								<p class="txt_rs_destinos" >R$</p>
+								<p class="txt_preco_hotel_destinos">200</p>
 								<input type="submit" name="btn_produto" value="Reservar" class="btn_produto">
 
 						</div>
@@ -114,13 +114,13 @@
 									<img  src="imagens/localizacao.png" alt="">
 								</div>
 								<p class="txt_local_parceiro" >São Paulo</p>
-								<!--<div class="icone_wifi">
+								<div class="icone_wifi">
 									<img src="imagens/wifi.png"  alt="">
-								</div>-->
-									<p class="txt_caracteristica_hotel">Wi-fi grátis</p>
-									<p class="txt_diaria_hotel" >Diárias a partir de</p>
-									<p class="txt_rs" >R$</p>
-									<p class="txt_preco_hotel">200</p>
+								</div>
+									<p class="txt_caracteristica_hotel_melhoresDestinos">Wi-fi grátis</p>
+									<p class="txt_diaria_hotel_destinos" >Diárias a partir de</p>
+									<p class="txt_rs_destinos" >R$</p>
+									<p class="txt_preco_hotel_destinos">200</p>
 									<input type="submit" name="btn_produto" value="Reservar" class="btn_produto">
 
 						</div>
@@ -130,13 +130,13 @@
 									<img  src="imagens/localizacao.png" alt="">
 								</div>
 								<p class="txt_local_parceiro" >São Paulo</p>
-								<!--<div class="icone_wifi">
+								<div class="icone_wifi">
 									<img src="imagens/wifi.png"  alt="">
-								</div>-->
-									<p class="txt_caracteristica_hotel">Wi-fi grátis</p>
-									<p class="txt_diaria_hotel" >Diárias a partir de</p>
-									<p class="txt_rs" >R$</p>
-									<p class="txt_preco_hotel">200</p>
+								</div>
+									<p class="txt_caracteristica_hotel_melhoresDestinos">Wi-fi grátis</p>
+									<p class="txt_diaria_hotel_destinos" >Diárias a partir de</p>
+									<p class="txt_rs_destinos" >R$</p>
+									<p class="txt_preco_hotel_destinos">200</p>
 									<input type="submit" name="btn_produto" value="Reservar" class="btn_produto">
 
 						</div>
@@ -155,13 +155,13 @@
 								<img  src="imagens/localizacao.png" alt="">
 							</div>
 							<p class="txt_local_parceiro" >São Paulo</p>
-							<!--<div class="img_icone_local">
+							<div class="icone_wifi">
 								<img src="imagens/wifi.png" alt="">
-							</div>-->
-								<p class="txt_caracteristica_hotel">Wi-fi grátis</p>
-								<p class="txt_diaria_hotel" >Diárias a partir de</p>
-								<p class="txt_rs" >R$</p>
-								<p class="txt_preco_hotel">200</p>
+							</div>
+								<p class="txt_caracteristica_hotel_melhoresDestinos">Wi-fi grátis</p>
+								<p class="txt_diaria_hotel_destinos" >Diárias a partir de</p>
+								<p class="txt_rs_destinos">R$</p>
+								<p class="txt_preco_hotel_destinos">200</p>
 								<input type="submit" name="btn_produto" value="Reservar" class="btn_produto">
 
 						</div>
@@ -171,13 +171,13 @@
 									<img  src="imagens/localizacao.png" alt="">
 								</div>
 								<p class="txt_local_parceiro" >São Paulo</p>
-								<!--<div class="icone_wifi">
+								<div class="icone_wifi">
 									<img src="imagens/wifi.png"  alt="">
-								</div>-->
-									<p class="txt_caracteristica_hotel">Wi-fi grátis</p>
-									<p class="txt_diaria_hotel" >Diárias a partir de</p>
-									<p class="txt_rs" >R$</p>
-									<p class="txt_preco_hotel">200</p>
+								</div>
+									<p class="txt_caracteristica_hotel_melhoresDestinos">Wi-fi grátis</p>
+									<p class="txt_diaria_hotel_destinos" >Diárias a partir de</p>
+									<p class="txt_rs_destinos" >R$</p>
+									<p class="txt_preco_hotel_destinos">200</p>
 									<input type="submit" name="btn_produto" value="Reservar" class="btn_produto">
 
 						</div>
@@ -187,13 +187,13 @@
 									<img  src="imagens/localizacao.png" alt="">
 								</div>
 								<p class="txt_local_parceiro" >São Paulo</p>
-								<!--<div class="icone_wifi">
+								<div class="icone_wifi">
 									<img src="imagens/wifi.png"  alt="">
-								</div>-->
-									<p class="txt_caracteristica_hotel">Wi-fi grátis</p>
-									<p class="txt_diaria_hotel" >Diárias a partir de</p>
-									<p class="txt_rs" >R$</p>
-									<p class="txt_preco_hotel">200</p>
+								</div>
+									<p class="txt_caracteristica_hotel_melhoresDestinos">Wi-fi grátis</p>
+									<p class="txt_diaria_hotel_destinos" >Diárias a partir de</p>
+									<p class="txt_rs_destinos" >R$</p>
+									<p class="txt_preco_hotel_destinos">200</p>
 									<input type="submit" name="btn_produto" value="Reservar" class="btn_produto">
 
 						</div>
@@ -211,13 +211,13 @@
 								<img  src="imagens/localizacao.png" alt="">
 							</div>
 							<p class="txt_local_parceiro" >São Paulo</p>
-							<!--<div class="img_icone_local">
+							<div class="icone_wifi">
 								<img src="imagens/wifi.png" alt="">
-							</div>-->
-								<p class="txt_caracteristica_hotel">Wi-fi grátis</p>
-								<p class="txt_diaria_hotel" >Diárias a partir de</p>
-								<p class="txt_rs" >R$</p>
-								<p class="txt_preco_hotel">200</p>
+							</div>
+								<p class="txt_caracteristica_hotel_melhoresDestinos">Wi-fi grátis</p>
+								<p class="txt_diaria_hotel_destinos" >Diárias a partir de</p>
+								<p class="txt_rs_destinos" >R$</p>
+								<p class="txt_preco_hotel_destinos">200</p>
 								<input type="submit" name="btn_produto" value="Reservar" class="btn_produto">
 
 						</div>
@@ -227,13 +227,13 @@
 									<img  src="imagens/localizacao.png" alt="" >
 								</div>
 								<p class="txt_local_parceiro" >São Paulo</p>
-								<!--<div class="icone_wifi">
+								<div class="icone_wifi">
 									<img src="imagens/wifi.png"  alt="">
-								</div>-->
-									<p class="txt_caracteristica_hotel">Wi-fi grátis</p>
-									<p class="txt_diaria_hotel" >Diárias a partir de</p>
-									<p class="txt_rs" >R$</p>
-									<p class="txt_preco_hotel">200</p>
+								</div>
+									<p class="txt_caracteristica_hotel_melhoresDestinos">Wi-fi grátis</p>
+									<p class="txt_diaria_hotel_destinos" >Diárias a partir de</p>
+									<p class="txt_rs_destinos" >R$</p>
+									<p class="txt_preco_hotel_destinos">200</p>
 									<input type="submit" name="btn_produto" value="Reservar" class="btn_produto">
 
 						</div>
@@ -243,13 +243,13 @@
 									<img  src="imagens/localizacao.png" alt=""  >
 								</div>
 								<p class="txt_local_parceiro" >São Paulo</p>
-								<!--<div class="icone_wifi">
+								<div class="icone_wifi">
 									<img src="imagens/wifi.png"  alt="">
-								</div>-->
-									<p class="txt_caracteristica_hotel">Wi-fi grátis</p>
-									<p class="txt_diaria_hotel" >Diárias a partir de</p>
-									<p class="txt_rs" >R$</p>
-									<p class="txt_preco_hotel">200</p>
+								</div>
+									<p class="txt_caracteristica_hotel_melhoresDestinos">Wi-fi grátis</p>
+									<p class="txt_diaria_hotel_destinos" >Diárias a partir de</p>
+									<p class="txt_rs_destinos" >R$</p>
+									<p class="txt_preco_hotel_destinos">200</p>
 									<input type="submit" name="btn_produto" value="Reservar" class="btn_produto">
 
 						</div>
