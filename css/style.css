@@ -619,9 +619,15 @@ a.menu_sobre {
 	border-radius: 2px;
 }
 
-.labels{
+#labels{
+width:800px;
+height:400px;
+}
+#labels:target{
 
 }
+
+
 
 #img_filtro{
 	width: 40px;
@@ -872,36 +878,12 @@ a.menu_sobre {
 
 }
 
-.txt_diaria_hotel_destinos{
-	font-family: Calibri;
-	margin-top: 30px;
-	font-size: 12px;
-	float:left;
-	margin-right:130px;
-}
-.txt_rs_destinos{
-	margin-top: 20px;
-	margin-left: 10px;
-	float:left;
-	margin-right:130px;
-}
-.txt_caracteristica_hotel_melhoresDestinos {
-	margin-top:-20px;
-    float:left;
-	margin-left:40px;
-	font-size: 18px;
-	color: #000;
-	font-family: Calibri;
-	opacity: 0.7;
-}
-.txt_preco_hotel_destinos{
-	margin-top: -35px;
-	margin-left: 30px;
-	font-size: 35px;
-	font-family: Calibri;
-	float:left;
-	margin-right:130px;
-
+.txt_caracteristica_hotel_melhoresDestinos{
+	margin-top: 40px;
+	margin-left: 40px;
+	border:1px solid;
+	width: 80px;
+	height: 30px;
 }
 
 .espacoCat>.button_melhoresDestinos{
@@ -945,7 +927,7 @@ a.menu_sobre {
 .produtos_div_melhoresDestinos{
 	width: 300px;
 	min-height: 220px;
-	height:375px ;
+	height:400px ;
 	margin-left: 80px;
 	margin-top: 80px;
 	float: left;
@@ -966,13 +948,135 @@ a.menu_sobre {
 	border-radius: 2px;
 }
 
+/*========================================PROMOÇÕES============================*/
+
+#principal_promocao{
+	width: 1200px;
+	margin: auto;
+	min-height:100%;
+	overflow:hidden;
+	height:auto;
+	margin-bottom: 80px;
+	border: solid 0px;
+
+}
+
+.promocao_div{
+	width: 440px;
+	min-height: 420px;
+	height: auto;
+	margin-left: 100px;
+	margin-top: 80px;
+	float: left;
+	border: solid 0px;
+	border-radius: 2px;
+	margin-bottom: 10px;
+	box-shadow: 5px 5px 5px #c5c5c5;
+}
+
+.promocao_div:hover .btn_promocao{
+	opacity: 1;
+	transition: 1.1s;
+}
+
+.promocao_div img{
+	width: 440px;
+	height: 200px;
+	border-radius: 2px;
+}
+
+.legenda_promocao{
+	width: 350px;
+	height: 215px;
+	margin-top: 140px;
+	position: absolute;
+	margin-top: -2px;
+	opacity: 1;
+	transition: 1s;
+	background: rgba(255, 255, 255, 0.6);
+	border: solid 0px;
+}
+
+.txt_nome_hotel_promocao{
+	margin-left: 20px;
+	margin-top: 10px;
+	font-size: 25px;
+	color: #000;
+	font-family: Calibri;
+}
+
+.txt_estado_hotel_promocao{
+	margin-left: 20px;
+	font-size: 20px;
+	color: #000;
+	font-family: Calibri;
+	opacity: 0.7;
+}
+
+.legenda_promocao img{
+	width: 30px;
+	height: 30px;
+	margin-top: 45px;
+	margin-left: 15px;
+	float:left;
+}
+
+.txt_caracteristica_hotel_promocao{
+	text-align: left;
+	margin-top: 40px;
+	font-size:	20px;
+	color: #000;
+	font-family: Calibri;
+	opacity: 0.7;
+}
+
+.txt_diaria_hotel_promocao{
+	font-family: Calibri;
+	margin-top: 20px;
+	font-size: 14px;
+}
+
+.txt_rs_promocao{
+	margin-top: 20px;
+	margin-left: 10px;
+}
+
+.txt_preco_hotel_promocao{
+	margin-top: -35px;
+	margin-left: 30px;
+	font-size: 35px;
+	font-family: Calibri;
+}
+
+.btn_promocao{
+	font-size: 20px;
+	color: #fff;
+	background-color:#5270ff;
+	font-family: Calibri;
+	width: 160px;
+	height: 50px;
+	border: 0;
+	opacity: 0;
+	margin-top: -60px;
+	margin-left: 20px;
+	margin-right: 2px;
+	transition:0.5s;
+	float: right;
+}
+
+.btn_promocao:hover{
+	color:#000;
+	transition:0.5s;
+}
+
+
 /*============================================== SOBRE ==============================================*/
 
 #slider{
     width:600px;
     height:500px;
     position:relative;
-    border:1px solid #5270ff;
+    border:0px solid #5270ff;
     margin-top: 100px;
 		border-radius: 5px;
 
@@ -990,7 +1094,7 @@ a.menu_sobre {
     height:50px;
     position:absolute;
     border:none;
-    border-radius:10px;
+    border-radius:25px;
     top:235px;
     background-color:#5270ff;
     color:#fff;
@@ -1067,6 +1171,119 @@ a.menu_sobre {
 
 .txt_info_sobre p{
 	font-size: 22px;
+}
+
+/*============================================== PERFIL USUARIO ==============================================*/
+
+#capa_usuario{
+	width: 1500px;
+	height: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 0px solid;
+	box-shadow: 5px 5px 5px #c5c5c5;
+}
+
+#img_perfilUsuario{
+	width: 300px;
+	height: 300px;
+	border: 0px solid;
+	margin-left: 50px;
+	margin-top: 50px;
+	float: left;
+	border-radius: 20px;
+}
+
+#img_perfilUsuario img{
+	width: 300px;
+	height: 300px;
+	border: 0px solid;
+}
+
+#area_info_perfilUsuario{
+	width: auto;
+	height: 300px;
+	border: 0px solid;
+	margin-left: 100px;
+	margin-top: 50px;
+	float: left;
+
+}
+
+#area_info_perfilUsuario p{
+	font-size: 30px;
+	font-family: Calibri;
+	margin-top: 30px;
+}
+
+#mtf_perfilUsuario{
+	width: 350px; height: auto;
+	border: 0px solid;
+	float: right;
+	margin-top: 50px;
+	margin-right: 50px;
+}
+
+#titulo_mtf_perfilUsuario{
+	font-size: 50px;
+	text-align: center;
+}
+
+#pontuacao_mtf_perfilUsuario{
+	width: auto; height: 50px;
+	border: 0px solid;
+	margin-top: 20px;
+
+}
+
+#pontuacao_mtf_perfilUsuario img{
+	width: 50px; height: 50px;
+	margin-left: 20px;
+	float: left;
+
+}
+
+#pontuacao_mtf_perfilUsuario p{
+	font-size: 40px;
+	font-family: Calibri;
+	margin-left: 40px;
+	float: left;
+}
+
+#duvida_mtf_perfilUsuario{
+	width: auto; height: 30px;
+	border: 0px solid;
+	margin-top: 50px;
+}
+
+#duvida_mtf_perfilUsuario p{
+	font-size: 20px;
+	font-family: Calibri;
+	float: left;
+	margin-left: 35px;
+}
+
+#a_index_duvida{
+  color: black;
+  font-size: 20px;
+	font-family: Tahoma;
+	margin-top: 0px;
+}
+
+#txt_perfilUsuario{
+	width: 1000px;
+	height: auto;
+	margin-top: 80px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	font-size: 50px;
+	font-family: Calibri;
+	border: solid 0px;
+}
+
+#txt_perfilUsuario p{
+	opacity: 0.5;
 }
 
 /*============================================================================*/
@@ -1353,6 +1570,12 @@ body {
 .group {
 	position: relative;
 	margin-bottom: 45px;
+}
+
+.group p{
+	text-align: justify;
+	font-size: 20px;
+	font-family: Calibri;
 }
 
 .input_modal {
