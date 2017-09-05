@@ -1070,7 +1070,7 @@ a.menu_sobre {
     width:600px;
     height:500px;
     position:relative;
-    border:1px solid #5270ff;
+    border:0px solid #5270ff;
     margin-top: 100px;
 		border-radius: 5px;
 
@@ -1088,7 +1088,7 @@ a.menu_sobre {
     height:50px;
     position:absolute;
     border:none;
-    border-radius:10px;
+    border-radius:25px;
     top:235px;
     background-color:#5270ff;
     color:#fff;
@@ -1165,6 +1165,119 @@ a.menu_sobre {
 
 .txt_info_sobre p{
 	font-size: 22px;
+}
+
+/*============================================== PERFIL USUARIO ==============================================*/
+
+#capa_usuario{
+	width: 1500px;
+	height: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 0px solid;
+	box-shadow: 5px 5px 5px #c5c5c5;
+}
+
+#img_perfilUsuario{
+	width: 300px;
+	height: 300px;
+	border: 0px solid;
+	margin-left: 50px;
+	margin-top: 50px;
+	float: left;
+	border-radius: 20px;
+}
+
+#img_perfilUsuario img{
+	width: 300px;
+	height: 300px;
+	border: 0px solid;
+}
+
+#area_info_perfilUsuario{
+	width: auto;
+	height: 300px;
+	border: 0px solid;
+	margin-left: 100px;
+	margin-top: 50px;
+	float: left;
+
+}
+
+#area_info_perfilUsuario p{
+	font-size: 30px;
+	font-family: Calibri;
+	margin-top: 30px;
+}
+
+#mtf_perfilUsuario{
+	width: 350px; height: auto;
+	border: 0px solid;
+	float: right;
+	margin-top: 50px;
+	margin-right: 50px;
+}
+
+#titulo_mtf_perfilUsuario{
+	font-size: 50px;
+	text-align: center;
+}
+
+#pontuacao_mtf_perfilUsuario{
+	width: auto; height: 50px;
+	border: 0px solid;
+	margin-top: 20px;
+
+}
+
+#pontuacao_mtf_perfilUsuario img{
+	width: 50px; height: 50px;
+	margin-left: 20px;
+	float: left;
+
+}
+
+#pontuacao_mtf_perfilUsuario p{
+	font-size: 40px;
+	font-family: Calibri;
+	margin-left: 40px;
+	float: left;
+}
+
+#duvida_mtf_perfilUsuario{
+	width: auto; height: 30px;
+	border: 0px solid;
+	margin-top: 50px;
+}
+
+#duvida_mtf_perfilUsuario p{
+	font-size: 20px;
+	font-family: Calibri;
+	float: left;
+	margin-left: 35px;
+}
+
+#a_index_duvida{
+  color: black;
+  font-size: 20px;
+	font-family: Tahoma;
+	margin-top: 0px;
+}
+
+#txt_perfilUsuario{
+	width: 1000px;
+	height: auto;
+	margin-top: 80px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	font-size: 50px;
+	font-family: Calibri;
+	border: solid 0px;
+}
+
+#txt_perfilUsuario p{
+	opacity: 0.5;
 }
 
 /*============================================================================*/
@@ -1451,6 +1564,12 @@ body {
 .group {
 	position: relative;
 	margin-bottom: 45px;
+}
+
+.group p{
+	text-align: justify;
+	font-size: 20px;
+	font-family: Calibri;
 }
 
 .input_modal {

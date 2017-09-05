@@ -44,8 +44,8 @@
         	<img class="slides" title="CONFIRA" src="Imagens/hotel4.jpg" alt="">
         	<img class="slides" title="CONFIRA" src="Imagens/hotel2.jpg" alt="">
         	<img class="slides" title="CONFIRA" src="Imagens/hotel3.jpg" alt="">
-        	<button class = "button" onClick = "plusIndex(-1)" id = "btn1">&#10094;</button>
-        	<button class = "button" onClick = "plusIndex(1)" id = "btn2">&#10095;</button>
+        	<button class = "button" onClick = "plusIndex(-1)" id = "btn1"> &#10094;</button>
+        	<button class = "button" onClick = "plusIndex(1)" id = "btn2"> &#10095;</button>
         </div>
         <div class="">
           <ul>
