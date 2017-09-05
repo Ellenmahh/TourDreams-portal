@@ -619,9 +619,15 @@ a.menu_sobre {
 	border-radius: 2px;
 }
 
-.labels{
+#labels{
+width:800px;
+height:400px;
+}
+#labels:target{
 
 }
+
+
 
 #img_filtro{
 	width: 40px;
