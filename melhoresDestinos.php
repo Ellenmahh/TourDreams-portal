@@ -1,27 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>Tour Dreams</title>
-    	<link rel="stylesheet" type="text/css" href="css/style.css">
-      <link href="fontes/fonte.css" rel="stylesheet">
-      <script src="js/jquery-3.2.1.min.js"></script>
-      </script>
-      <script type="text/javascript">
-
-      $(window).scroll(function() {
-        if ($(this).scrollTop() > 1){
-          $('header').addClass("sticky");
-        }
-        else{
-          $('header').removeClass("sticky");
-        }
-        });
-
-      </script>
-      <?php
-        include('tradutor.php');
-       ?>
+  <?php include('head.php'); ?>
   </head>
   <body>
 		<header>

@@ -1,65 +1,58 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>Tour Dreams</title>
-    	<link rel="stylesheet" type="text/css" href="css/style.css">
-      <link href="fontes/fonte.css" rel="stylesheet">
-      <script src="js/jquery-3.2.1.min.js"></script>
-      </script>
-      <script type="text/javascript">
-
-      $(window).scroll(function() {
-        if ($(this).scrollTop() > 1){
-          $('header').addClass("sticky");
-        }
-        else{
-          $('header').removeClass("sticky");
-        }
-        });
-
-      </script>
-
-      <?php
-        include('tradutor.php');
-       ?>
-	   <script>
-		$(document).ready(function(){
-			$("a[rel=modal]").click( function(ev){
-				ev.preventDefault();
-
-				var id = $(this).attr("href");
-
-				var alturaTela = $(document).height();
-				var larguraTela = $(window).width();
-
-				//colocando o fundo preto
-				$('#mascara').css({'width':larguraTela,'height':alturaTela});
-				$('#mascara').fadeIn(1000);
-				$('#mascara').fadeTo("slow",0.8);
-
-				var left = ($(window).width() /2) - ( $(id).width() / 2 );
-				var top = ($(window).height() / 2) - ( $(id).height() / 2 );
-
-				$(id).css({'top':top,'left':left});
-				$(id).show();
-			});
-
-			$("#mascara").click( function(){
-				$(this).hide();
-				$(".window").hide();
-			});
-
-			$('.fechar').click(function(ev){
-				ev.preventDefault();
-				$("#mascara").hide();
-				$(".window").hide();
-			});
-		});
-
-	  </script>
+    <?php include('head.php'); ?>
   </head>
   <body>
+    <div class="window" id="editar_perfilUsuario">
+			<hgroup id="hgroup_modal_editar_perfilUsuario">
+			  <h1 class="h1_modal"><p>ATUALIZE SUAS INFORMAÇÕES</p></h1>
+			</hgroup>
+			<form id="form_modal_editar_perfilUsuario">
+        <div class="group_editar_perfilUsuario">
+				   <input type="text" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
+				   <label class="label_modal">nome</label>
+			  </div>
+        <div class="group_editar_perfilUsuario">
+				   <input type="text" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
+				   <label class="label_modal">e-mail</label>
+			  </div>
+        <div class="group_editar_perfilUsuario">
+				   <input type="text" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
+				   <label class="label_modal">endereço</label>
+			  </div>
+        <div class="group_editar_perfilUsuario">
+				   <input type="text" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
+				   <label class="label_modal">telefone</label>
+			  </div>
+        <div class="group_editar_perfilUsuario">
+				   <input type="text" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
+				   <label class="label_modal">celular</label>
+			  </div>
+        <div class="group_editar_perfilUsuario">
+				   <input type="text" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
+				   <label class="label_modal">CPF</label>
+			  </div>
+        <div class="group_editar_perfilUsuario">
+				   <input type="text" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
+				   <label class="label_modal">RG</label>
+			  </div>
+        <div class="group_editar_perfilUsuario">
+				   <input type="text" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
+				   <label class="label_modal">usuário</label>
+			  </div>
+        <div class="group_editar_perfilUsuario">
+				   <input type="text" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
+				   <label class="label_modal">senha</label>
+			  </div>
+        <button type="button" class="button_editar_perfilUsuario buttonBlue">Salvar
+				   <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+			  </button>
+        <button type="button" class="button_editar_perfilUsuario buttonBlue">Limpar
+				   <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+			  </button>
+			</form>
+		</div>
 		<div class="window" id="janela1">
 			<hgroup id="hgroup_modal">
 			  <h1 class="h1_modal"><p>O QUE É MILHAS TRAVEL FIDELIDADE</p></h1>
@@ -67,7 +60,7 @@
 			<form id="form_modal">
 			  <div class="group">
 				   <p>O Milhas Travel Fidelidade conhecida como MTF, é uma
-           maneira que a TourDreams encontrou de presentiar nossos
+           maneira que a TourDreams encontrou de presentear nossos
          clientes por tais ações realizadas no portal, ou até mesmo, no aplicativo.</p>
 			  </div>
 			</form>
@@ -79,7 +72,8 @@
 			<form id="form_modal">
 			  <div class="group">
 				   <p>Para adquirir e acumular seus pontos MTF, é necessário
-           realizar reservas ou interagir, publicando comentários em
+           <a href="index.php" color="#5270ff">realizar reservas</a> ou interagir,
+           <a href="conhecaDestino.php">publicando comentários</a> em
          lugares que você ja visitou.</p>
 			  </div>
 			</form>
@@ -102,6 +96,13 @@
               <p>Usuário</p>
               <p>E-mail</p>
               <p>Senha</p>
+              <div id="area_opcoes_perfilUsuario">
+                <a href="#editar_perfilUsuario" id="a_index_duvida" rel="modal">
+                  <p>Editar informações</p>
+                  <img src="imagens/editar.png" alt="">
+                </a>
+              </div>
+
             </div>
             <div id="mtf_perfilUsuario">
               <p id="titulo_mtf_perfilUsuario">MILHAS TRAVEL FIDELIDADE</p>

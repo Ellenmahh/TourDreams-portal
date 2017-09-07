@@ -1,48 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>Tour Dreams</title>
-    	<link rel="stylesheet" type="text/css" href="css/style.css">
-      <link href="fontes/fonte.css" rel="stylesheet">
-      <script language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
-      <script src="js/jquery-3.2.1.min.js"></script>
-      </script>
-      <script type="text/javascript">
-
-      $(window).scroll(function() {
-        if ($(this).scrollTop() > 1){
-          $('header').addClass("sticky");
-        }
-        else{
-          $('header').removeClass("sticky");
-        }
-        });
-
-      </script>
-      <script type="text/javascript">
-          $(document).ready(function(){
-            $("#mostrar").click(function(event){
-              event.preventDefault();
-              $("#filtros").slideToggle(500);
-
-
-            });
-
-          });
-      </script>
-	  
-      <!--<script type="text/javascript">
-        $(document).ready(function(){
-          $("#filtrar").click(function(event){
-            event.preventDefault();
-            $(".labels").slideToggle(300);
-          });
-        });
-      </script>-->
-      <?php
-        include('tradutor.php');
-       ?>
+    <?php include('head.php'); ?>
   </head>
   <body>
     <header>
@@ -59,34 +18,35 @@
         <div id="filtros">
           <!--<button>
             <a href="#" id="filtrar">OPÇÕES DE FILTROS</a></button>-->
-          <div id="labels">
-            <input type="checkbox" id="checkbox1" name="" value="">
-            <label class="labels" for="checkbox1"></label>
-            <p>TESTE</p>
-            <input type="checkbox" id="checkbox2" name="" value="">
-            <label class="labels"for="checkbox2"></label>
-            <p>TESTE</p>
-            <input type="checkbox" id="checkbox3" name="" value="">
-            <label class="labels"for="checkbox3"></label>
-            <p>TESTE</p>
-            <input type="checkbox" id="checkbox4" name="" value="">
-            <label class="labels"for="checkbox4"></label>
-            <p>TESTE</p>
-            <input type="checkbox" id="checkbox5" name="" value="">
-            <label class="labels"for="checkbox5"></label>
-            <p>TESTE</p>
-            <input type="checkbox" id="checkbox6" name="" value="">
-            <label class="labels"for="checkbox6"></label>
-            <p>TESTE</p>
-            <input type="checkbox" id="checkbox7" name="" value="">
-            <label class="labels"for="checkbox7"></label>
-            <p>TESTE</p>
-            <input type="checkbox" id="checkbox8" name="" value="">
-            <label class="labels"for="checkbox8"></label>
-            <p>TESTE</p>
-          </div>
+            <div id="labels">
+              <input type="checkbox" id="checkbox1" name="" value="">
+              <label class="labels" for="checkbox1"></label>
+              <p>TESTE</p>
+              <input type="checkbox" id="checkbox2" name="" value="">
+              <label class="labels"for="checkbox2"></label>
+              <p>TESTE</p>
+              <input type="checkbox" id="checkbox3" name="" value="">
+              <label class="labels"for="checkbox3"></label>
+              <p>TESTE</p>
+              <input type="checkbox" id="checkbox4" name="" value="">
+              <label class="labels"for="checkbox4"></label>
+              <p>TESTE</p>
+              <input type="checkbox" id="checkbox5" name="" value="">
+              <label class="labels"for="checkbox5"></label>
+              <p>TESTE</p>
+              <input type="checkbox" id="checkbox6" name="" value="">
+              <label class="labels"for="checkbox6"></label>
+              <p>TESTE</p>
+              <input type="checkbox" id="checkbox7" name="" value="">
+              <label class="labels"for="checkbox7"></label>
+              <p>TESTE</p>
+              <input type="checkbox" id="checkbox8" name="" value="">
+              <label class="labels"for="checkbox8"></label>
+              <p>TESTE</p>
+            </div>
 
         </div>
+
         <div id="txt_busca_avancada">
           <p>ALGUMAS SUGESTÕES</p>
         </div>
