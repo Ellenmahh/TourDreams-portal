@@ -29,7 +29,7 @@
 								<p class="txt_diaria_hotel_destinos" >Diárias a partir de</p>
 								<p class="txt_rs_destinos" >R$</p>
 								<p class="txt_preco_hotel_destinos">200</p>
-								<input type="submit" name="btn_produto" value="Reservar" class="btn_produto">
+								<a href="areaReserva.php"><input type="submit" name="btn_produto" value="reservar" class="btn_produto"></a>
 
 					</div>
 					<div class="produtos_div_melhoresDestinos">
@@ -45,7 +45,7 @@
 								<p class="txt_diaria_hotel_destinos" >Diárias a partir de</p>
 								<p class="txt_rs_destinos" >R$</p>
 								<p class="txt_preco_hotel_destinos">200</p>
-								<input type="submit" name="btn_produto" value="Reservar" class="btn_produto">
+								<a href="areaReserva.php"><input type="submit" name="btn_produto" value="reservar" class="btn_produto"></a>
 
 					</div>
 					<div class="produtos_div_melhoresDestinos">
@@ -61,7 +61,7 @@
 								<p class="txt_diaria_hotel_destinos" >Diárias a partir de</p>
 								<p class="txt_rs_destinos" >R$</p>
 								<p class="txt_preco_hotel_destinos">200</p>
-								<input type="submit" name="btn_produto" value="Reservar" class="btn_produto">
+								<a href="areaReserva.php"><input type="submit" name="btn_produto" value="reservar" class="btn_produto"></a>
 
 					</div>
 					<button class="button_melhoresDestinos" onClick="plusIndex(1)" id="btn2">&#10095; </button>
@@ -85,7 +85,7 @@
 								<p class="txt_diaria_hotel_destinos" >Diárias a partir de</p>
 								<p class="txt_rs_destinos" >R$</p>
 								<p class="txt_preco_hotel_destinos">200</p>
-								<input type="submit" name="btn_produto" value="Reservar" class="btn_produto">
+								<a href="areaReserva.php"><input type="submit" name="btn_produto" value="reservar" class="btn_produto"></a>
 
 						</div>
 						<div class="produtos_div_melhoresDestinos">
@@ -101,7 +101,7 @@
 									<p class="txt_diaria_hotel_destinos" >Diárias a partir de</p>
 									<p class="txt_rs_destinos" >R$</p>
 									<p class="txt_preco_hotel_destinos">200</p>
-									<input type="submit" name="btn_produto" value="Reservar" class="btn_produto">
+									<a href="areaReserva.php"><input type="submit" name="btn_produto" value="reservar" class="btn_produto"></a>
 
 						</div>
 						<div class="produtos_div_melhoresDestinos">
@@ -117,7 +117,7 @@
 									<p class="txt_diaria_hotel_destinos" >Diárias a partir de</p>
 									<p class="txt_rs_destinos" >R$</p>
 									<p class="txt_preco_hotel_destinos">200</p>
-									<input type="submit" name="btn_produto" value="Reservar" class="btn_produto">
+									<a href="areaReserva.php"><input type="submit" name="btn_produto" value="reservar" class="btn_produto"></a>
 
 						</div>
 					<button class="button_melhoresDestinos" onClick="plusIndex(1)" id="btn2">&#10095; </button>
@@ -142,7 +142,7 @@
 								<p class="txt_diaria_hotel_destinos" >Diárias a partir de</p>
 								<p class="txt_rs_destinos">R$</p>
 								<p class="txt_preco_hotel_destinos">200</p>
-								<input type="submit" name="btn_produto" value="Reservar" class="btn_produto">
+								<a href="areaReserva.php"><input type="submit" name="btn_produto" value="reservar" class="btn_produto"></a>
 
 						</div>
 						<div class="produtos_div_melhoresDestinos">
@@ -158,7 +158,7 @@
 									<p class="txt_diaria_hotel_destinos" >Diárias a partir de</p>
 									<p class="txt_rs_destinos" >R$</p>
 									<p class="txt_preco_hotel_destinos">200</p>
-									<input type="submit" name="btn_produto" value="Reservar" class="btn_produto">
+									<a href="areaReserva.php"><input type="submit" name="btn_produto" value="reservar" class="btn_produto"></a>
 
 						</div>
 						<div class="produtos_div_melhoresDestinos">
@@ -174,7 +174,7 @@
 									<p class="txt_diaria_hotel_destinos" >Diárias a partir de</p>
 									<p class="txt_rs_destinos" >R$</p>
 									<p class="txt_preco_hotel_destinos">200</p>
-									<input type="submit" name="btn_produto" value="Reservar" class="btn_produto">
+									<a href="areaReserva.php"><input type="submit" name="btn_produto" value="reservar" class="btn_produto"></a>
 
 						</div>
 					<button class="button_melhoresDestinos" onClick="plusIndex(1)" id="btn2">&#10095; </button>
@@ -198,7 +198,7 @@
 								<p class="txt_diaria_hotel_destinos" >Diárias a partir de</p>
 								<p class="txt_rs_destinos" >R$</p>
 								<p class="txt_preco_hotel_destinos">200</p>
-								<input type="submit" name="btn_produto" value="Reservar" class="btn_produto">
+								<a href="areaReserva.php"><input type="submit" name="btn_produto" value="reservar" class="btn_produto"></a>
 
 						</div>
 						<div class="produtos_div_melhoresDestinos">
@@ -214,7 +214,7 @@
 									<p class="txt_diaria_hotel_destinos" >Diárias a partir de</p>
 									<p class="txt_rs_destinos" >R$</p>
 									<p class="txt_preco_hotel_destinos">200</p>
-									<input type="submit" name="btn_produto" value="Reservar" class="btn_produto">
+									<a href="areaReserva.php"><input type="submit" name="btn_produto" value="reservar" class="btn_produto"></a>
 
 						</div>
 						<div class="produtos_div_melhoresDestinos">
@@ -230,7 +230,7 @@
 									<p class="txt_diaria_hotel_destinos" >Diárias a partir de</p>
 									<p class="txt_rs_destinos" >R$</p>
 									<p class="txt_preco_hotel_destinos">200</p>
-									<input type="submit" name="btn_produto" value="Reservar" class="btn_produto">
+									<a href="areaReserva.php"><input type="submit" name="btn_produto" value="reservar" class="btn_produto"></a>
 
 						</div>
 					<button class="button_melhoresDestinos" onClick="plusIndex(1)" id="btn2">&#10095; </button>

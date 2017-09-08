@@ -17,7 +17,7 @@
           <img class="img_icone_local" src="imagens/localizacao.png" alt="">
           <p class="txt_local_parceiro" >São Paulo</p>
           <p class="txt_nome_parceiro">Hotel Fazende</p>
-          <input type="submit" name="btn_produto" value="ver" class="btn_ver_parceiro">
+          <a href=".php"><input type="submit" name="btn_produto" value="ver" class="btn_ver_parceiro"></a>
         </div>
         <div class="area_parceiro">
           <img class="img_logo_parceiro" src="imagens/hotel1.jpg" alt="">

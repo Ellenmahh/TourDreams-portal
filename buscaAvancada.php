@@ -61,7 +61,7 @@
               <p class="txt_diaria_hotel" >Diárias a partir de</p>
               <p class="txt_rs" >R$</p>
               <p class="txt_preco_hotel">200</p>
-              <input type="submit" name="btn_produto" value="Reservar" class="btn_produto">
+              <a href="areaReserva.php"><input type="submit" name="btn_produto" value="reservar" class="btn_produto"></a>
 
             </div>
 
@@ -76,7 +76,7 @@
                 <p class="txt_diaria_hotel" >Diárias a partir de</p>
                 <p class="txt_rs" >R$</p>
                 <p class="txt_preco_hotel">200</p>
-                <input type="submit" name="btn_produto" value="Reservar" class="btn_produto">
+                <a href="areaReserva.php"><input type="submit" name="btn_produto" value="reservar" class="btn_produto"></a>
 
               </div>
 
@@ -92,7 +92,7 @@
                   <p class="txt_diaria_hotel" >Diárias a partir de</p>
                   <p class="txt_rs" >R$</p>
                   <p class="txt_preco_hotel">200</p>
-                  <input type="submit" name="btn_produto" value="Reservar" class="btn_produto">
+                  <a href="areaReserva.php"><input type="submit" name="btn_produto" value="reservar" class="btn_produto"></a>
 
                 </div>
 
@@ -107,7 +107,7 @@
                   <p class="txt_diaria_hotel" >Diárias a partir de</p>
                   <p class="txt_rs" >R$</p>
                   <p class="txt_preco_hotel">200</p>
-                  <input type="submit" name="btn_produto" value="Reservar" class="btn_produto">
+                  <a href="areaReserva.php"><input type="submit" name="btn_produto" value="reservar" class="btn_produto"></a>
 
                 </div>
 
@@ -122,7 +122,7 @@
                   <p class="txt_diaria_hotel" >Diárias a partir de</p>
                   <p class="txt_rs" >R$</p>
                   <p class="txt_preco_hotel">200</p>
-                  <input type="submit" name="btn_produto" value="Reservar" class="btn_produto">
+                  <a href="areaReserva.php"><input type="submit" name="btn_produto" value="reservar" class="btn_produto"></a>
 
                 </div>
 
@@ -137,7 +137,7 @@
                   <p class="txt_diaria_hotel" >Diárias a partir de</p>
                   <p class="txt_rs" >R$</p>
                   <p class="txt_preco_hotel">200</p>
-                  <input type="submit" name="btn_produto" value="Reservar" class="btn_produto">
+                  <a href="areaReserva.php"><input type="submit" name="btn_produto" value="reservar" class="btn_produto"></a>
 
                 </div>
 

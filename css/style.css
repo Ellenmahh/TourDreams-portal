@@ -330,10 +330,11 @@ a.menu_sobre {
   position: absolute;
   margin-top: 110px;
   margin-left:105px;
+	color: #fff;
 }
 
 #btn_login:hover #btn_logar{
-	color:#fff;
+	color:#000;
 	transition: 1s;
 }
 
@@ -342,6 +343,7 @@ a.menu_sobre {
   height: 40px;border:0;
   background-color:#5270ff;
 	transition: 1s;
+	color: #fff;
 }
 
 .inputs_login::-webkit-input-placeholder { /* Chrome, Safari, Opera */
