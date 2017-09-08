@@ -4,32 +4,6 @@
     <?php include('head.php'); ?>
   </head>
   <body>
-		<div class="window" id="janela1">
-			<hgroup id="hgroup_modal">
-			  <h1 class="h1_modal"><p>ÁREA DE AUTENTICAÇÃO</p></h1>
-			  <h3 class="h3_modal"><p>Hoteleiros.</p></h3>
-			</hgroup>
-			<form id="form_modal">
-
-			  <div class="group">
-				<input type="text" class="input_modal"><span class="highlight"></span><span class="bar"></span>
-				<label class="label_modal">Login</label>
-			  </div>
-			  <div class="group">
-				<input type="email"  class="input_modal"><span class="highlight"></span><span class="bar"></span>
-				<label class="label_modal">Senha</label>
-			  </div>
-			  <button type="button" class="button buttonBlue">Conectar-se
-				<div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
-			  </button>
-
-			</form>
-
-		</div>
-
-
-<!-- mascara para cobrir o site -->
-<div id="mascara"></div>
     <header>
         <?php include('menu.php'); ?>
     </header>
@@ -57,11 +31,45 @@
                 <img src="imagens/hotel9.jpg" alt="">
               </div>
               <div class="img_areaReserva_mini">
-                <img src="imagens/hotel10.jpg" alt="">
+                <img src="imagens/hotel4.jpg" alt="">
               </div>
+              <div class="img_areaReserva_mini">
+                <img src="imagens/hotel1.jpg" alt="">
+              </div>
+              <div class="img_areaReserva_mini">
+                <img src="imagens/hotel3.jpg" alt="">
+              </div>
+              <div class="img_areaReserva_mini">
+                <img src="imagens/hotel2.jpg" alt="">
+              </div>
+
             </div>
             <div id="area_txt_areaReserva">
-              <p>Hotel tal</p>
+              <div class="caixa_areaReserva">
+                <div id="nome_hotel_areaReserva">
+                  <p>Hotel tal</p>
+                </div>
+                <p>Endereço do Hotel</p>
+                <p>N° do Hotel</p>
+              </div>
+              <div class="caixa_areaReserva">
+                <div id="reserva_inclui_areaReserva">
+                  <p>Sua reserva inclui:</p>
+                </div>
+                <p>- Wi-fi</p>
+                <p>- Café da manhã</p>
+              </div>
+              <div class="caixa_areaReserva">
+                <div id="cancelamento_reserva_areaReserva">
+                  <p>Cancelamento pode ser feito em até 30 dias antes da data</p>
+                </div>
+
+                <div id="entrada_saida_areaReserva">
+                  <p>Data de entrada: <input class="insert_data" type="text" placeholder="Insira a entrada" id="calendario" /></p>
+                  <p>Data de saída: <input class="insert_data" type="text" placeholder="Insira a saída" id="calendario2" /></p>
+                </div>
+              </div>
+              <input type="submit" name="btn_produto" value="FINALIZAR RESERVA" class="btn_produto_areaReserva">
             </div>
 
           </div>

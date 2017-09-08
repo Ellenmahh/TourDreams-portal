@@ -1575,14 +1575,15 @@ a.menu_sobre {
 /*============================================== AREA DA RESERVA ==============================================*/
 
 #area_img_areaReserva{
-	width: 650px; height: 800px;
-	border: 1px solid;
+	width: 650px; height: auto;
+	border: 0px solid;
+	float: left;
 }
 
 #img_areaReserva{
 	width: 620px; height: 500px;
 	border: 0px solid;
-	margin-top: 100px;
+	margin-top: 40px;
 	margin-left: 10px;
 }
 
@@ -1592,14 +1593,105 @@ a.menu_sobre {
 
 .img_areaReserva_mini{
 	width: 200px; height: 150px;
-	border: 0px solid;
+	border: 5px solid white;
 	margin-left: 10px;
 	margin-top: 20px;
 	float: left;
 }
 
 .img_areaReserva_mini img{
-	width: 100%; height: 100%;
+	width: 180px; height: 130px;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+
+.img_areaReserva_mini:hover{
+	border: 5px solid #5270ff;
+}
+
+#area_txt_areaReserva{
+	width: 415px; height: auto;
+	float: left;
+	margin-top: -10px;
+	margin-left: 50px;
+	border: 0px solid;
+	/*
+	border: 3px solid #ccc;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-bottom: 50px;*/
+}
+
+#area_txt_areaReserva p{
+	font-size: 25px; font-family: Calibri;
+	margin-top: 18px;
+	margin-left: 20px;
+}
+
+.caixa_areaReserva{
+	width: auto; height: auto;
+	border: 0px solid #ddd;
+	border-radius: 20px;
+	/*box-shadow: 2px 1px 20px 1px #c5c5c5;*/
+	margin-top: 60px;
+}
+
+#nome_hotel_areaReserva{
+	width: auto; height: auto;
+	border:0px solid;
+}
+
+#nome_hotel_areaReserva p{
+	font-size: 60px; font-family: Calibri; font-weight: bold;
+}
+
+#reserva_inclui_areaReserva{
+	width: auto; height: auto;
+	border: 0px solid #ddd;
+	font-weight: bold;
+}
+
+#reserva_inclui_areaReserva p{
+	font-size: 35px; font-family: Calibri;
+}
+
+#cancelamento_reserva_areaReserva{
+	width: auto; height: auto;
+	border: 0px solid;
+}
+
+#cancelamento_reserva_areaReserva p{
+	font-size: 16px; font-family: Calibri; color: #5270ff;
+	font-weight: bold;
+}
+
+.insert_data{
+	width: 250px; height: 50px;
+	font-size: 20px;
+	border-radius: 10px;
+}
+
+.insert_data:hover{
+
+}
+
+.btn_produto_areaReserva{
+	font-size: 30px;
+	color: #fff;
+	background-color:#5270ff;
+	font-family: Calibri;
+	width: 400px;
+	height: 100px;
+	border: 0;
+	margin-right: 5px;
+	transition:0.5s;
+	margin-top: 50px;
+}
+
+.btn_produto_areaReserva:hover{
+	color:#000;
+	transition:0.5s;
 }
 
 /*============================================================================*/
