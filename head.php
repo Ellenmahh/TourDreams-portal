@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
   <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
   <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
-  </script>
 
     <!-- ========================================= Script para menu 2 ========================================= -->
   <script type="text/javascript">
@@ -131,9 +130,9 @@
   </script>
 
   <!-- ========================================= Script para o calendario ========================================= -->
-  <script>
+<script type='text/javascript'>
   $(function() {
-      $( "#calendario" ).datepicker({
+      $("#calendario").datepicker({
         changeMonth: true,
         changeYear: true,
 
@@ -147,7 +146,7 @@
   });
 
   $(function() {
-      $( "#calendario2" ).datepicker({
+      $("#calendario2").datepicker({
         changeMonth: true,
         changeYear: true,
 
@@ -159,4 +158,47 @@
         monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez']
       });
   });
-  </script>
+
+</script>
+
+<!-- ========================================= Style e Script para o slide de imagens da Area da Reserva ========================================= -->
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    color: #09f;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  #back_to_camera {
+    clear: both;
+    display: block;
+    height: 80px;
+    line-height: 40px;
+    padding: 20px;
+  }
+  .fluid_container {
+    margin: 0 auto;
+    width:500px;
+  }
+</style>
+
+<!-- Pegando Scripts -->
+<script type='text/javascript' src='scripts_slide_areaReserva/jquery.min.js'></script>
+<script type='text/javascript' src='scripts_slide_areaReserva/jquery.mobile.customized.min.js'></script>
+<script type='text/javascript' src='scripts_slide_areaReserva/jquery.easing.1.3.js'></script>
+<script type='text/javascript' src='scripts_slide_areaReserva/camera.min.js'></script>
+
+<script>
+  jQuery(function(){
+    jQuery('#camera_wrap_2').camera({
+      height: '400px',
+      loader: 'bar',
+      pagination: false,
+      thumbnails: true
+    });
+  });
+</script>
