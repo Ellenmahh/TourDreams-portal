@@ -19,7 +19,7 @@
 
     <?php $paginaCorrente = basename($_SERVER['SCRIPT_NAME']);?>
       <div class="menu_busca">
-          <a href="buscaAvancada.php"
+          <a id="busca_avancada" href="buscaAvancada.php"
           <?php if($paginaCorrente == 'buscaAvancada.php') {echo'class="menu_busca"';}?>>
           <h1>Busca Avançada</h1></a>
       </div>
