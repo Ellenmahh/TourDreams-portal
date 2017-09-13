@@ -8,40 +8,20 @@
       <?php include('menu.php'); ?>
 
       <script type="text/javascript">
-        /*setInterval(toggle_busca, 3000);
-
-        function toggle_busca() {
-        $('.content').slideToggle('visible');*/
-
-        ( function($) {
-        	$(function() {
-        		comecar.init();
-        	});
-        	var comecar = {
-        		init : function() {
-              $("#msg_buscaAvancada").slideToggle(3000);
-        		}
-        	};
-        })(jQuery);
-
-        /*$(document).ready(function(){
-          $("#busca_avancada").click(function(event){
-            event.preventDefault();
-            $('.content').slideToggle(500);
-          });
-
-        });*/
-
+      $("p#texto").textAnimation({
+        mode:"jump"
+      });
+    
+      Down
       </script>
 
     </header>
     <section>
 
-    </div>
-    <div id="msg_buscaAvancada" class="content visible">
+    <div id="template_info_todos" class="content visible">
       <img src="imagens/maldives.jpg" alt="">
-      <div id="txt_msg_buscaAvancada">
-        <p>Faça uma pesquisa mais detalhada</p>
+      <div id="txt_template_info_buscaAvancada">
+        <p id="texto">Faça uma pesquisa mais detalhada</p>
       </div>
 
     </div>

@@ -32,6 +32,10 @@
 <div id="mascara"></div>
     <header>
         <?php include('menu.php'); ?>
+  <script type="text/javascript" src="js/scrollReveal.js"></script>
+  <script type="text/javascript">
+  window.scrollReveal = new scrollReveal();
+  </script>
     </header>
 
       <section>
@@ -74,7 +78,7 @@
           </div>
 
           <div id="principal_produtos">
-            <div class="produtos_div">
+            <div class="produtos_div"  data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
               <img src="imagens/hotel1.jpg" alt="">
               <div class="legenda_produto">
                 <p class="txt_nome_hotel">Hotel Fazende Suipe</p>
@@ -89,7 +93,7 @@
               </div>
 
             </div>
-              <div class="produtos_div">
+              <div class="produtos_div" data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
                 <img src="imagens/hotel2.jpg" alt="">
                 <div class="legenda_produto">
                   <p class="txt_nome_hotel">Hotel Fazende Suipe</p>
@@ -105,7 +109,7 @@
 
 
               </div>
-                <div class="produtos_div">
+                <div class="produtos_div" data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
                   <img src="imagens/hotel3.jpg" alt="">
                   <div class="legenda_produto">
                     <p class="txt_nome_hotel">Hotel Fazende Suipe</p>
@@ -120,7 +124,7 @@
                   </div>
 
                 </div>
-                <div class="produtos_div">
+                <div class="produtos_div" data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
                   <img src="imagens/hotel4.jpg" alt="">
                   <div class="legenda_produto">
                     <p class="txt_nome_hotel">Hotel Fazende Suipe</p>
@@ -135,7 +139,7 @@
                   </div>
 
                 </div>
-                  <div class="produtos_div">
+                  <div class="produtos_div" data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
                     <img src="imagens/hotel5.jpg" alt="">
                     <div class="legenda_produto">
                       <p class="txt_nome_hotel">Hotel Fazende Suipe</p>
@@ -150,7 +154,7 @@
                     </div>
 
                   </div>
-                    <div class="produtos_div">
+                    <div class="produtos_div" data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
                       <img src="imagens/hotel6.jpg" alt="">
                       <div class="legenda_produto">
                         <p class="txt_nome_hotel">Hotel Fazende Suipe</p>
@@ -165,7 +169,7 @@
                       </div>
 
                     </div>
-                    <div class="produtos_div">
+                    <div class="produtos_div" data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
                       <img src="imagens/hotel7.jpg" alt="">
                       <div class="legenda_produto">
                         <p class="txt_nome_hotel">Hotel Fazende Suipe</p>
@@ -180,7 +184,7 @@
                       </div>
 
                     </div>
-                      <div class="produtos_div">
+                      <div class="produtos_div" data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
                         <img src="imagens/hotel8.jpg" alt="">
                         <div class="legenda_produto">
                           <p class="txt_nome_hotel">Hotel Fazende Suipe</p>
@@ -195,7 +199,7 @@
                         </div>
 
                       </div>
-                        <div class="produtos_div">
+                        <div class="produtos_div" data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
                           <img src="imagens/hotel9.jpg" alt="">
                           <div class="legenda_produto">
                             <p class="txt_nome_hotel">Hotel Fazende Suipe</p>
@@ -210,7 +214,7 @@
                           </div>
 
                         </div>
-                        <div class="produtos_div">
+                        <div class="produtos_div" data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
                           <img src="imagens/hotel10.jpg" alt="">
                           <div class="legenda_produto">
                             <p class="txt_nome_hotel">Hotel Fazende Suipe</p>
@@ -225,7 +229,7 @@
                           </div>
 
                         </div>
-                          <div class="produtos_div">
+                          <div class="produtos_div" data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
                             <img src="imagens/hotel11.jpg" alt="">
                             <div class="legenda_produto">
                               <p class="txt_nome_hotel">Hotel Fazende Suipe</p>
@@ -240,7 +244,7 @@
                             </div>
 
                           </div>
-                            <div class="produtos_div">
+                            <div class="produtos_div" data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
                               <img src="imagens/hotel12.jpg" alt="">
                               <div class="legenda_produto">
                                 <p class="txt_nome_hotel">Hotel Fazende Suipe</p>

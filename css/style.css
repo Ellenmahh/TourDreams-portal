@@ -26,6 +26,7 @@ header.sticky #logo_escondida {
 	transition: all 1s ease;
 }
 
+
 #principal_header{
   width: 100%;
 	height:150px;
@@ -87,7 +88,7 @@ a{
 
 a.menu_busca {
 	width: 150px;
-  height: 50px;
+  height: 60px;
   float: left;
   margin-left: 0px;
 	border:0px solid;
@@ -97,7 +98,7 @@ a.menu_busca {
 
 a.menu_parceiros {
 	width: 90px;
-  height: 50px;
+  height: 60px;
   float: left;
   margin-left: 0px;
 	text-decoration: none;
@@ -108,7 +109,7 @@ a.menu_parceiros {
 
 a.menu {
 	width: 190px;
-  height: 50px;
+  height: 60px;
   float: left;
   margin-left: 0px;
 	border: 0px solid;
@@ -118,7 +119,7 @@ a.menu {
 
 a.menu_promocoes {
 	width: 110px;
-  height: 50px;
+  height: 60px;
   float: left;
   margin-left: 0px;
 	border-bottom: solid 4px #5270ff;
@@ -127,7 +128,7 @@ a.menu_promocoes {
 
 a.menu_sobre {
 	width: 70px;
-  height: 50px;
+  height: 60px;
   float: left;
   margin-left: 0px;
 	border-bottom: solid 4px #5270ff;
@@ -140,7 +141,7 @@ a.menu_sobre {
 
 .menu{
   width: 190px;
-  height: 50px;
+  height: 60px;
   float: left;
   margin-left: 40px;
 	border: 0px solid;
@@ -149,7 +150,7 @@ a.menu_sobre {
 
 .menu_parceiros{
   width: 90px;
-  height: 50px;
+  height: 60px;
   float: left;
   margin-left: 40px;
 	text-decoration: none;
@@ -159,7 +160,7 @@ a.menu_sobre {
 
 .menu_busca{
   width: 150px;
-  height: 50px;
+  height: 60px;
   float: left;
   margin-left: 40px;
 	border:0px solid;
@@ -168,7 +169,7 @@ a.menu_sobre {
 
 .menu_promocoes{
   width: 110px;
-  height: 50px;
+  height: 60px;
   float: left;
   margin-left: 40px;
 	border-radius:0px;
@@ -176,7 +177,7 @@ a.menu_sobre {
 
 .menu_sobre{
   width: 70px;
-  height: 50px;
+  height: 60px;
   float: left;
   margin-left: 40px;
 	border-radius:0px;
@@ -480,7 +481,10 @@ a.menu_sobre {
 	border-radius: 2px;
 	margin-bottom: 10px;
 	box-shadow: 5px 5px 5px #c5c5c5;
+
 }
+
+
 
 .produtos_div:hover .btn_produto{
 	opacity: 1;
@@ -576,11 +580,9 @@ a.menu_sobre {
 	transition:0.5s;
 }
 
-/******************************************************************************/
+/****************************Templates**************************************************/
 
-/*============================================== BUSCA AVANÇADA ==============================================*/
-
-#msg_buscaAvancada{
+#template_info_todos{
   width: 100%;
   height: auto;
   background-color: #fff;
@@ -588,36 +590,90 @@ a.menu_sobre {
 	box-shadow: 5px 5px 5px #c5c5c5;
 }
 
-#msg_buscaAvancada img{ filter: brightness(50%);
-	width: 100%; height: 650px;
+#template_info_todos img{ filter: brightness(50%);
+	width: 100%; height: 700px;
 	brig
 }
 
-#txt_msg_buscaAvancada{
+#txt_template_info_buscaAvancada{
 	width: auto; height: auto;
 	border: 0px solid;
 	margin-top:-410px;
-	margin-left: 150px;
+	margin-left: 200px;
 	position: absolute;
 }
 
-#txt_msg_buscaAvancada p{
+#txt_template_info_buscaAvancada p{
 	font-size: 100px;
-	font-family: Calibri;
+	font-family: Calibri light;
 	color: #fff;
 	text-align: center;
 }
 
-.content {
- display: none;
+#txt_template_info_parceiros{
+	width: auto; height: auto;
+	border: 0px solid;
+	margin-top:-410px;
+	margin-left: 400px;
+	position: absolute;
 }
-.content.visible {
- display: block;
+
+#txt_template_info_parceiros p{
+	font-size: 100px;
+	font-family: Calibri light;
+	color: #fff;
+	text-align: center;
 }
+
+#txt_template_info_conhecaDestino{
+	width: auto; height: auto;
+	border: 0px solid;
+	margin-top:-410px;
+	margin-left: 250px;
+	position: absolute;
+}
+
+#txt_template_info_conhecaDestino p{
+	font-size: 100px;
+	font-family: Calibri light;
+	color: #fff;
+	text-align: center;
+}
+
+#txt_template_info_melhoresDestinos{
+	width: auto; height: auto;
+	border: 0px solid;
+	margin-top:-410px;
+	margin-left: 200px;
+	position: absolute;
+}
+
+#txt_template_info_melhoresDestinos p{
+	font-size: 100px;
+	font-family: Calibri light;
+	color: #fff;
+	text-align: center;
+}
+
+#txt_template_info_promocoes{
+	width: auto; height: auto;
+	border: 0px solid;
+	margin-top:-410px;
+	margin-left: 100px;
+	position: absolute;
+}
+
+#txt_template_info_promocoes p{
+	font-size: 100px;
+	font-family: Calibri light;
+	color: #fff;
+	text-align: center;
+}
+
+/*============================================== BUSCA AVANÇADA ==============================================*/
+
 
 /*
-
-
 #splashScreen img{
     width: 1500px; height: 500px;
 }
@@ -1043,7 +1099,7 @@ a.menu_sobre {
 	width: 300px;
 	min-height: 420px;
 	height: auto;
-	margin-left: 200px;
+	margin-left: 100px;
 	margin-top: 80px;
 	float: left;
 	border: solid 0px;
@@ -1070,12 +1126,12 @@ a.menu_sobre {
 	float:left;
 }
 .promo img{
-	width: 100px;
-	height: 100px;
+	width: 115px;
+	height: 115px;
 	position:absolute;
 	float:right;
-	margin-top:-214px;
-	margin-left:-7px;
+	margin-top:-216px;
+	margin-left:-10px;
 }
 
 

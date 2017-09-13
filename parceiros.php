@@ -8,10 +8,17 @@
       <?php include('menu.php'); ?>
     </header>
     <section>
-      <div id="principal">
-        <div id="txt_parceiros">
-          <p>NOSSOS PARCEIROS</p>
+      <div id="template_info_todos" class="content visible">
+        <img src="imagens/maldives.jpg" alt="">
+        <div id="txt_template_info_parceiros">
+          <p>Confira nossos parceiros</p>
         </div>
+
+      </div>
+      <div id="principal">
+        <!--<div id="txt_parceiros">
+          <p>NOSSOS PARCEIROS</p>
+        </div>-->
         <div class="area_parceiro">
           <img class="img_logo_parceiro" src="imagens/logo.jpg" alt="">
           <img class="img_icone_local" src="imagens/localizacao.png" alt="">
