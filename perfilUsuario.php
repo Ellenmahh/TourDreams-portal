@@ -10,40 +10,40 @@
 			</hgroup>
 			<form id="form_modal_editar_perfilUsuario">
         <div class="group_editar_perfilUsuario">
-				   <input type="text" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
-				   <label class="label_modal">nome</label>
+				   <input type="text" placeholder="nome" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
+				   <!--<label class="label_modal">nome</label>-->
 			  </div>
         <div class="group_editar_perfilUsuario">
-				   <input type="text" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
-				   <label class="label_modal">e-mail</label>
+          <input type="text" placeholder="e-mail" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
+          <!--<label class="label_modal">e-mail</label>-->
 			  </div>
         <div class="group_editar_perfilUsuario">
-				   <input type="text" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
-				   <label class="label_modal">endereço</label>
+          <input type="text" placeholder="endereço" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
+          <!--<label class="label_modal">endereço</label>-->
 			  </div>
         <div class="group_editar_perfilUsuario">
-				   <input type="text" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
-				   <label class="label_modal">telefone</label>
+          <input type="text" placeholder="telefone" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
+          <!--<label class="label_modal">telefone</label>-->
 			  </div>
         <div class="group_editar_perfilUsuario">
-				   <input type="text" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
-				   <label class="label_modal">celular</label>
+          <input type="text" placeholder="celular" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
+          <!--<label class="label_modal">celular</label>-->
 			  </div>
         <div class="group_editar_perfilUsuario">
-				   <input type="text" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
-				   <label class="label_modal">CPF</label>
+          <input type="text" placeholder="CPF" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
+          <!--<label class="label_modal">CPF</label>-->
 			  </div>
         <div class="group_editar_perfilUsuario">
-				   <input type="text" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
-				   <label class="label_modal">RG</label>
+          <input type="text" placeholder="RG" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
+          <!--<label class="label_modal">RG</label>-->
 			  </div>
         <div class="group_editar_perfilUsuario">
-				   <input type="text" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
-				   <label class="label_modal">usuário</label>
+          <input type="text" placeholder="usuário" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
+          <!--<label class="label_modal">usuário</label>-->
 			  </div>
         <div class="group_editar_perfilUsuario">
-				   <input type="text" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
-				   <label class="label_modal">senha</label>
+          <input type="text" placeholder="senha" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
+          <!--<label class="label_modal">senha</label>-->
 			  </div>
         <button type="button" class="button_editar_perfilUsuario buttonBlue">Salvar
 				   <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>

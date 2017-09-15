@@ -1608,7 +1608,7 @@ a.menu_sobre {
 	width: 800px;
 	height: auto;
 	text-align:center;
-	margin-top: -150px;
+	margin-top: -100px;
 	margin-left: -200px;
 	margin-right: auto;
 	border: 1px solid white;
@@ -1625,16 +1625,16 @@ a.menu_sobre {
 	width: 300px;
 	border: none;
 	border-radius: 0;
-	border-bottom: 1px solid #757575;
+	border-bottom: 0px solid #c3c3c3;
 }
 
-.input_modal_editar_perfilUsuario:focus { outline: none; }
+/*.input_modal_editar_perfilUsuario:focus { outline: none; }
 
 .input_modal_editar_perfilUsuario:focus ~ .label_modal, .input_modal.used ~ .label_modal {
 	top: -20px;
   -webkit-transform: scale(.75);
           transform: scale(.75); left: -2px;
-	/* font-size: 14px; */
+	/* font-size: 14px;
 	color: #4a89dc;
 }
 
@@ -1643,13 +1643,13 @@ a.menu_sobre {
 .input_modal_editar_perfilUsuario:focus ~ .highlight {
 	-webkit-animation: inputHighlighter 0.3s ease;
 	        animation: inputHighlighter 0.3s ease;
-}
+}*/
 
 .group_editar_perfilUsuario {
 	position: relative;
 	margin-bottom: 45px;
 	float: left;
-	border: 0px solid;
+	border: 1px solid;
 	margin-left: 40px;
 }
 
@@ -1663,8 +1663,8 @@ a.menu_sobre {
   position: relative;
   display: inline-block;
   padding: 12px 24px;
-	margin-top: 10px;
-	margin-left: 50px;
+	margin-top: 20px;
+	margin-left: 150px;
   width: 200px;
   vertical-align: middle;
   color: #fff;
@@ -2864,6 +2864,54 @@ a.menu_sobre {
 }
 .camera_yellow_skin .camera_commands > .camera_stop {
 	background-position: -120px -1240px	;
+}
+
+/*============================================== OPT CADASTRO ==============================================*/
+
+#area_optCadastro{
+	width: 100%; height: 650px;
+	border: 0px solid;
+}
+
+#txt_area_optCadastro{
+	width: 100%; height: auto;
+	margin-top: 150px;
+	font-family: Calibri;
+	border: solid 0px;
+}
+
+#txt_area_optCadastro p{
+	font-size: 30px;
+	font-family: Arial;
+	text-align: center;
+	opacity: 0.5;
+}
+
+#btns_area_optCadastro{
+	width: 100%; height: 350px;
+	border: 0px solid;
+	margin-top: 200px;
+}
+
+.btn_area_optCadastro{
+	width: 450px; height: 150px;
+	border: 3px solid #5270ff; border-radius: 20px;
+	float: left;
+	margin-left: 100px;
+	color: #5270ff;
+}
+
+.btn_area_optCadastro p{
+	font-size: 60px;
+	font-family: Calibri;
+	text-align: center;
+	margin-top: 35px;
+}
+
+.btn_area_optCadastro:hover{
+	border: 3px solid #fff;
+	background-color: #5270ff;
+	color: #fff;
 }
 
 

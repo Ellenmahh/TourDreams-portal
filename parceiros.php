@@ -9,7 +9,7 @@
     </header>
     <section>
       <div id="template_info_todos" class="content visible">
-        <img src="imagens/maldives.jpg" alt="">
+        <img src="imagens/cumprimento.jpg" alt="">
         <div id="txt_template_info_parceiros">
           <p>Confira nossos parceiros</p>
         </div>

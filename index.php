@@ -66,7 +66,7 @@
 
                       </div>
                         <div id="cadastra_se">
-                          <a href="#" id="a_index_cadastrar">Cadastre-se</a>
+                          <a href="optCadastro.php" id="a_index_cadastrar">Cadastre-se</a>
 
                         </div>
             						<div id="log_hoteleiro">
