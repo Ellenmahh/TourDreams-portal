@@ -149,7 +149,7 @@ a.menu_sobre {
 }
 
 .menu:hover, .menu_busca:hover, .menu_parceiros:hover, .menu_promocoes:hover, .menu_sobre:hover{
-	border-bottom: solid 4px #5270ff;
+	border-bottom: solid 5px #5270ff;
 }
 
 .menu{
