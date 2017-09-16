@@ -37,7 +37,19 @@ header.sticky #logo_escondida {
 	background-color:#fff;
 	z-index: 999;
 	transition: 0.5s;
-	border:0px solid black;
+	border: 0px solid black;
+}
+
+nav{
+	width: 1700px; height: 150px;
+	border: 0px solid;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#nav_dois{
+	width: 1800px; height: 150px;
+	border: 0px solid;
 }
 
 #header_escondida{
@@ -46,7 +58,7 @@ header.sticky #logo_escondida {
 	-webkit-box-shadow: 0px 10px 5px -5px rgba(96,113,126,0.75);
 	-moz-box-shadow: 0px 10px 5px -5px rgba(96,113,126,0.75);
 	box-shadow: 0px 10px 5px -5px rgba(96,113,126,0.75);
-	width: 100%;
+	width: 1800px;
 	height: 80px;
 	z-index: 999;
 	opacity: 0;
@@ -54,7 +66,7 @@ header.sticky #logo_escondida {
 
 #logo{
   width: 300px;
-  height:100%;
+  height: 150px;
   margin-left: 5px;
 	float: left;
 	border: solid 0px;
@@ -87,17 +99,18 @@ a{
 }
 
 a.menu_busca {
-	width: 150px;
+	width: auto;
   height: 60px;
   float: left;
   margin-left: 0px;
 	border:0px solid;
 	border-bottom: solid 4px #5270ff;
 	border-radius:0px;
+
 }
 
 a.menu_parceiros {
-	width: 90px;
+	width: auto;
   height: 60px;
   float: left;
   margin-left: 0px;
@@ -108,7 +121,7 @@ a.menu_parceiros {
 }
 
 a.menu {
-	width: 190px;
+	width: auto;
   height: 60px;
   float: left;
   margin-left: 0px;
@@ -118,7 +131,7 @@ a.menu {
 }
 
 a.menu_promocoes {
-	width: 110px;
+	width: auto;
   height: 60px;
   float: left;
   margin-left: 0px;
@@ -127,7 +140,7 @@ a.menu_promocoes {
 }
 
 a.menu_sobre {
-	width: 70px;
+	width: auto;
   height: 60px;
   float: left;
   margin-left: 0px;
@@ -140,63 +153,75 @@ a.menu_sobre {
 }
 
 .menu{
-  width: 190px;
+  width: auto;
   height: 60px;
   float: left;
   margin-left: 40px;
 	border: 0px solid;
 	border-radius:0px;
+	background-color: white;
+	transition-duration: 0.2s;
 }
 
 .menu_parceiros{
-  width: 90px;
+  width: auto;
   height: 60px;
   float: left;
   margin-left: 40px;
 	text-decoration: none;
 	border: 0px solid;
 	border-radius:0px;
+	background-color: white;
+	transition-duration: 0.2s;
 }
 
 .menu_busca{
-  width: 150px;
+  width: auto;
   height: 60px;
   float: left;
   margin-left: 40px;
 	border:0px solid;
 	border-radius:0px;
+	background-color: white;
+	transition-duration: 0.2s;
 }
 
 .menu_promocoes{
-  width: 110px;
+  width: auto;
   height: 60px;
   float: left;
   margin-left: 40px;
 	border-radius:0px;
+	background-color: white;
+	transition-duration: 0.2s;
 }
 
 .menu_sobre{
-  width: 70px;
+  width: auto;
   height: 60px;
   float: left;
   margin-left: 40px;
 	border-radius:0px;
+	background-color: white;
+	transition-duration: 0.2s;
 }
 
 .menu h1, .menu_parceiros h1, .menu_parceiros h1, .menu_busca h1, .menu_promocoes h1, .menu_sobre h1{
-	font-family: 'Bad Script', cursive;
-	font-size: 22px;
+	font-family: 'dosislight', cursive;
+	font-size: 28px;
 	color: #000;
 	text-decoration:none;
 	text-align: center;
 }
 
 #principal_menu{
-  width: 1200px;
-  height: 50px;
+  width: auto;
+  height: auto;
   position: absolute;
-  margin-left: 400px;
+  margin-left: 500px;
   margin-top: 60px;
+	border: 0px solid;
+	background-color: white;
 }
 
 #menu_escondida{
@@ -1446,7 +1471,7 @@ a.menu_sobre {
 .titulo_info_sobre img{
 	margin-top: -90px;
 	margin-right: 10px;
-	width: 110px; height: 100px;
+	width: 100px; height: 100px;
 	float: right;
 }
 
@@ -2914,6 +2939,19 @@ a.menu_sobre {
 	color: #fff;
 }
 
+.txt_btn_optCadastro{
+	width: 450px; height: auto;
+	border: 0px solid;
+	float: left;
+	margin-left: 100px;
+	margin-top: 30px;
+}
+
+.txt_btn_optCadastro p{
+	font-size: 25px;
+	font-family: 'dosislight';
+	text-align: center;
+}
 
 /*============================================================================*/
 

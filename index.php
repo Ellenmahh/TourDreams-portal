@@ -32,10 +32,10 @@
 <div id="mascara"></div>
     <header>
         <?php include('menu.php'); ?>
-  <script type="text/javascript" src="js/scrollReveal.js"></script>
-  <script type="text/javascript">
-  window.scrollReveal = new scrollReveal();
-  </script>
+      <script type="text/javascript" src="js/scrollReveal.js"></script>
+      <script type="text/javascript">
+      window.scrollReveal = new scrollReveal();
+      </script>
     </header>
 
       <section>

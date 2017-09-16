@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <title>Tour Dreams</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="shortcut icon" href="imagens/td2.png" />
+  <link rel="shortcut icon" href="imagens/iconsiteblack.png" />
   <link href="fontes/fonte.css" rel="stylesheet">
   <script language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
   <script src="js/jquery-3.2.1.min.js"></script>
