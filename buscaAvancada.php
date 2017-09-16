@@ -11,7 +11,7 @@
       $("p#texto").textAnimation({
         mode:"jump"
       });
-    
+
       Down
       </script>
 
@@ -38,30 +38,47 @@
           <!--<button>
             <a href="#" id="filtrar">OPÇÕES DE FILTROS</a></button>-->
             <div id="labels">
-              <input type="checkbox" id="checkbox1" name="" value="">
-              <label class="labels" for="checkbox1"></label>
-              <p>TESTE</p>
-              <input type="checkbox" id="checkbox2" name="" value="">
-              <label class="labels"for="checkbox2"></label>
-              <p>TESTE</p>
-              <input type="checkbox" id="checkbox3" name="" value="">
-              <label class="labels"for="checkbox3"></label>
-              <p>TESTE</p>
-              <input type="checkbox" id="checkbox4" name="" value="">
-              <label class="labels"for="checkbox4"></label>
-              <p>TESTE</p>
-              <input type="checkbox" id="checkbox5" name="" value="">
-              <label class="labels"for="checkbox5"></label>
-              <p>TESTE</p>
-              <input type="checkbox" id="checkbox6" name="" value="">
-              <label class="labels"for="checkbox6"></label>
-              <p>TESTE</p>
-              <input type="checkbox" id="checkbox7" name="" value="">
-              <label class="labels"for="checkbox7"></label>
-              <p>TESTE</p>
-              <input type="checkbox" id="checkbox8" name="" value="">
-              <label class="labels"for="checkbox8"></label>
-              <p>TESTE</p>
+              <div class="area_selecao_buscaAvancada">
+                <input type="checkbox" id="checkbox1" name="" value="">
+                <label class="labels" for="checkbox1"></label>
+                <p>TESTE</p>
+              </div>
+
+              <div class="area_selecao_buscaAvancada">
+                <input type="checkbox" id="checkbox1" name="" value="">
+                <label class="labels" for="checkbox1"></label>
+                <p>TESTE</p>
+              </div>
+              <div class="area_selecao_buscaAvancada">
+                <input type="checkbox" id="checkbox1" name="" value="">
+                <label class="labels" for="checkbox1"></label>
+                <p>TESTE</p>
+              </div>
+              <div class="area_selecao_buscaAvancada">
+                <input type="checkbox" id="checkbox1" name="" value="">
+                <label class="labels" for="checkbox1"></label>
+                <p>TESTE</p>
+              </div>
+              <div class="area_selecao_buscaAvancada">
+                <input type="checkbox" id="checkbox1" name="" value="">
+                <label class="labels" for="checkbox1"></label>
+                <p>TESTE</p>
+              </div>
+              <div class="area_selecao_buscaAvancada">
+                <input type="checkbox" id="checkbox1" name="" value="">
+                <label class="labels" for="checkbox1"></label>
+                <p>TESTE</p>
+              </div>
+              <div class="area_selecao_buscaAvancada">
+                <input type="checkbox" id="checkbox1" name="" value="">
+                <label class="labels" for="checkbox1"></label>
+                <p>TESTE</p>
+              </div>
+              <div class="area_selecao_buscaAvancada">
+                <input type="checkbox" id="checkbox1" name="" value="">
+                <label class="labels" for="checkbox1"></label>
+                <p>TESTE</p>
+              </div>
             </div>
 
         </div>
