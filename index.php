@@ -40,7 +40,10 @@
 
       <section>
           <div id="template">
-              <img src="imagens/template.png" alt="template">
+            <div id="caixa_template">
+
+
+              <!--<img src="imagens/template.png" alt="template">-->
             <div id="busca_index">
 
               <input type="text" id="input_busca" name="" value="" placeholder=" Locais, Cidades, Hotéis" >
@@ -74,6 +77,7 @@
 
                         </div>
 
+              </div>
               </div>
           </div>
 
