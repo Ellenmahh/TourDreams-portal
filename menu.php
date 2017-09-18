@@ -54,7 +54,7 @@
 </nav>
 
 </div>
-<nav id="nav_dois">
+<div id="nav_dois">
   <div id="header_escondida">
     <div id="logo_escondida">
         <a href="index.php"><img id="img_logo_principal_escondida" src="imagens/td_escondida.png" alt="TourDreams"></a>
@@ -95,4 +95,4 @@
       </div>
 
   </div>
-</nav>
+</div>

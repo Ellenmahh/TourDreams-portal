@@ -40,25 +40,44 @@
             </div>
 
             <div id="entrada_saida_areaReserva">
-              <p>Data de entrada: <input class="insert_data" type="text" placeholder=" Insira a entrada" id="calendario" /></p>
-              <p>Data de saída: <input class="insert_data" type="text" placeholder=" Insira a saída" id="calendario2" /></p>
+              <p>Data de entrada* <input class="insert_data" type="text" placeholder=" Insira a entrada" id="calendario" /></p>
+              <p>Data de saída* <input class="insert_data" type="text" placeholder=" Insira a saída" id="calendario2" /></p>
+            </div>
+
+            <div id="quantidade_quartos">
+              <p>Quantidade de quartos*</p>
+              <select class="" name="">
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+                <option value="">5</option>
+              </select>
             </div>
           </div>
         </div>
         <div id="area_txt_areaReserva">
           <div class="caixa_areaReserva">
             <div id="nome_hotel_areaReserva">
-              <p>Hotel tal</p>
+              <p>Quarto tal</p>
             </div>
             <p>Endereço do Hotel</p>
             <p>N° do Hotel</p>
           </div>
           <div class="caixa_areaReserva">
-            <div id="reserva_inclui_areaReserva">
+            <div id="sub_texto_areaReserva">
               <p>Sua reserva inclui:</p>
             </div>
             <p>- Wi-fi</p>
             <p>- Café da manhã</p>
+          </div>
+          <div class="caixa_areaReserva">
+
+            <div id="sub_texto_areaReserva">
+              <p>Faça seu desconto:</p>
+            </div>
+            <p>Pontuação atual: 0</p>
+            <!--<input type="radio" name="" value="">dhkjahd-->
           </div>
 
           <input type="submit" name="btn_produto" value="FINALIZAR RESERVA" class="btn_produto_areaReserva">
