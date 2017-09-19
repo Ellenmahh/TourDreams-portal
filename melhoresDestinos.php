@@ -8,13 +8,7 @@
 			<?php include('menu.php'); ?>
 		</header>
 		<section>
-      <div id="template_info_todos" class="content visible">
-        <img src="imagens/grecia.jpg" alt="">
-        <div id="txt_template_info_melhoresDestinos">
-          <p>Veja os melhores lugares a se visitar</p>
-        </div>
-
-      </div>
+    
 			<div id="principal">
 				<div id="txt_categoria">
 					<p>PRAIAS</p>

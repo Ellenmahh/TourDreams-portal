@@ -8,13 +8,7 @@
         <?php include('menu.php'); ?>
       </header>
       <section>
-        <div id="template_info_todos" class="content visible">
-          <img src="imagens/quarto.jpg" alt="">
-          <div id="txt_template_info_promocoes">
-            <p>Acompanhe as promoções mais atuais</p>
-          </div>
-
-        </div>
+      
         <div id="principal">
           <!--<div id="txt_parceiros">
             <p>VEJA NOSSAS PROMOÇÕES ATUAIS </p>

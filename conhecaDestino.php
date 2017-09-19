@@ -8,17 +8,11 @@
       <?php include('menu.php'); ?>
     </header>
     <section>
-      <div id="template_info_todos" class="content visible">
-        <img src="imagens/cumprimento.jpg" alt="">
-        <div id="txt_template_info_conhecaDestino">
-          <p>Descubra mais sobre seu destino</p>
-        </div>
 
-      </div>
       <div id="principal">
-        <!--<div id="txt_parceiros">
+        <div id="txt_parceiros">
           <p>PESQUISE SOBRE SEU DESTINO</p>
-        </div>-->
+        </div>
         <div id="area_pesquisa">
           <input id="input_busca_avancada" placeholder="Ex: Vargem Grande" type="text" name="" value="">
           <button id="btn_buscar_conhecaDestino" type="button" name="button" ><img  src="imagens/img_btn3.png" alt=""></button>

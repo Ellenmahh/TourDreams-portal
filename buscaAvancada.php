@@ -18,12 +18,12 @@
     </header>
     <section>
 
-    <div id="template_info_todos" class="content visible">
+    <!--<div id="template_info_todos" class="content visible">
       <img src="imagens/maldives.jpg" alt="">
       <div id="txt_template_info_buscaAvancada">
         <p id="texto">Faça uma pesquisa mais detalhada</p>
       </div>
-
+    -->
     </div>
       <div id="principal">
 

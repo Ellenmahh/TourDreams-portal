@@ -36,7 +36,6 @@
         <div id="area_info_sobre">
           <div class="titulo_info_sobre">
             <p >SOBRE NOSSA EMPRESA</p>
-            <img src="imagens/sobre.png" alt="">
           </div>
           <div class="txt_info_sobre">
             <p>teste teste teste teste teste teste
@@ -88,7 +87,6 @@
         <div id="area_info_missao">
           <div class="titulo_info_sobre">
             <p>MISSÃO</p>
-            <img src="imagens/missao (2).png" alt="">
           </div>
           <div class="txt_info_sobre">
             <p  >teste teste teste teste teste teste
@@ -125,7 +123,6 @@
         <div id="area_info_visao">
           <div class="titulo_info_sobre">
             <p>VISÃO</p>
-            <img src="imagens/visao.png" alt="">
           </div>
           <div class="txt_info_sobre">
             <p>teste teste teste teste teste teste
@@ -158,7 +155,6 @@
         <div id="area_info_valores">
           <div class="titulo_info_sobre">
             <p>VALORES</p>
-            <img src="imagens/valores.png" alt="">
           </div>
           <div class="txt_info_sobre">
             <p>teste teste teste teste teste teste
