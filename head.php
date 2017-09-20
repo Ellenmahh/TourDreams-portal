@@ -1,13 +1,13 @@
 <meta charset="utf-8">
 <title>Tour Dreams</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="shortcut icon" href="imagens/iconsiteblack.png" />
-  <link href="fontes/fonte.css" rel="stylesheet">
-  <script language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
-  <script src="js/jquery-3.2.1.min.js"></script>
-  <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
-  <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
-  <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="shortcut icon" href="imagens/iconsiteblack.png" />
+<link href="fontes/fonte.css" rel="stylesheet">
+<script language="javascript" src="js/jquery.min.js"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<link rel="stylesheet" src="js/jquery-ui.css" />
+<script src="js/jquery-1.8.2.js"></script>
+<script src="js/jquery-ui.js"></script>
 
     <!-- ========================================= Script para menu 2 ========================================= -->
   <script type="text/javascript">
@@ -25,9 +25,12 @@
 
     <!-- ========================================= Script para filtros ========================================= -->
   <script type="text/javascript">
-      $(document).ready(function(){
-        $("#mostrar").click(function(event){
+      jQuery(document).ready(function($){
+        $("#btn_pesquisa_avancada").click(function(event){
+
+          event.stopPropagation();
           event.preventDefault();
+
           $("#filtros").slideToggle(500);
         });
 
@@ -187,7 +190,7 @@
 </style>
 
 <!-- Pegando Scripts -->
-<script type='text/javascript' src='scripts_slide_areaReserva/jquery.min.js'></script>
+<!--<script type='text/javascript' src='scripts_slide_areaReserva/jquery.min.js'></script>-->
 <script type='text/javascript' src='scripts_slide_areaReserva/jquery.mobile.customized.min.js'></script>
 <script type='text/javascript' src='scripts_slide_areaReserva/jquery.easing.1.3.js'></script>
 <script type='text/javascript' src='scripts_slide_areaReserva/camera.min.js'></script>
