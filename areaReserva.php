@@ -71,14 +71,14 @@
             <p>- Wi-fi</p>
             <p>- Café da manhã</p>
           </div>
-          <div class="caixa_areaReserva">
+          <!--<div class="caixa_areaReserva">
 
             <div id="sub_texto_areaReserva">
               <p>Faça seu desconto:</p>
             </div>
             <p>Pontuação atual: 0</p>
-            <!--<input type="radio" name="" value="">dhkjahd-->
-          </div>
+            <input type="radio" name="" value="">dhkjahd
+          </div>-->
 
           <input type="submit" name="btn_produto" value="FINALIZAR RESERVA" class="btn_produto_areaReserva">
         </div>

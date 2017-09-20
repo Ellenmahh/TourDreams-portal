@@ -21,8 +21,10 @@
               <div class="legenda_produto_verQuartos">
                 <p class="txt_nome_hotel">Quarto tal</p>
                 <p class="txt_estado_hotel">São Paulo</p>
-                <img src="imagens/wifi.png" alt="">
-                <p class="txt_caracteristica_hotel">Wi-fi grátis</p>
+                <div class="caracteristicas_verQuartos">
+                  <img class="img_caracteristicas_verQuartos" src="imagens/wifi.png" alt="">
+                </div>
+                <p class="txt_caracteristica_verQuartos">Wi-fi grátis</p>
                 <p class="txt_diaria_hotel" >Diárias a partir de</p>
                 <p class="txt_rs" >R$</p>
                 <p class="txt_preco_hotel">200</p>

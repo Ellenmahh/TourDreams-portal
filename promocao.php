@@ -8,11 +8,11 @@
         <?php include('menu.php'); ?>
       </header>
       <section>
-      
+
         <div id="principal">
           <!--<div id="txt_parceiros">
             <p>VEJA NOSSAS PROMOÇÕES ATUAIS </p>
-          </div>-->
+          </div>
             <div id="principal_promocao">
               <div class="promocao_div">
                 <img src="imagens/hotel6.jpg" alt="">
@@ -122,7 +122,7 @@
                 </div>
 
               </div>
-
+            -->
             </div>
       </section>
       <footer>

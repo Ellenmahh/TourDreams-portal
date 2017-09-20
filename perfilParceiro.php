@@ -106,42 +106,17 @@
           </div>
 
           <div id="principal_produtos">
-            <div class="produtos_div">
-              <img src="imagens/hotel1.jpg" alt="">
-              <div class="legenda_produto">
-                <p class="txt_nome_hotel">Hotel Fazende Suipe</p>
-                <p class="txt_estado_hotel">São Paulo</p>
-                <img src="imagens/wifi.png" alt="">
-                <p class="txt_caracteristica_hotel">Wi-fi grátis</p>
-                <p class="txt_diaria_hotel" >Diárias a partir de</p>
-                <p class="txt_rs" >R$</p>
-                <p class="txt_preco_hotel">200</p>
-                <input type="submit" name="btn_produto" value="editar" class="btn_produto">
-
-              </div>
-
-            </div>
-            <div class="produtos_div">
-              <img src="imagens/hotel5.jpg" alt="">
-              <div class="legenda_produto">
-                <p class="txt_nome_hotel">Hotel Fazende Suipe</p>
-                <p class="txt_estado_hotel">São Paulo</p>
-                <img src="imagens/wifi.png" alt="">
-                <p class="txt_caracteristica_hotel">Wi-fi grátis</p>
-                <p class="txt_diaria_hotel" >Diárias a partir de</p>
-                <p class="txt_rs" >R$</p>
-                <p class="txt_preco_hotel">200</p>
-                <input type="submit" name="btn_produto" value="editar" class="btn_produto">
-
-              </div>
-
-            </div>
-            <div class="produtos_div">
+            <div class="produtos_div"  data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
               <img src="imagens/hotel3.jpg" alt="">
               <div class="legenda_produto">
                 <p class="txt_nome_hotel">Hotel Fazende Suipe</p>
                 <p class="txt_estado_hotel">São Paulo</p>
-                <img src="imagens/wifi.png" alt="">
+                <div class="estrelas">
+                  <img class="img_estrelas_hotel" src="imagens/estrelas.png" alt="">
+                </div>
+                <div class="caracteristicas_hotel">
+                  <img class="img_caracteristica_hotel" src="imagens/wifi.png" alt="">
+                </div>
                 <p class="txt_caracteristica_hotel">Wi-fi grátis</p>
                 <p class="txt_diaria_hotel" >Diárias a partir de</p>
                 <p class="txt_rs" >R$</p>
@@ -151,12 +126,17 @@
               </div>
 
             </div>
-            <div class="produtos_div">
+            <div class="produtos_div"  data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
               <img src="imagens/hotel2.jpg" alt="">
               <div class="legenda_produto">
                 <p class="txt_nome_hotel">Hotel Fazende Suipe</p>
                 <p class="txt_estado_hotel">São Paulo</p>
-                <img src="imagens/wifi.png" alt="">
+                <div class="estrelas">
+                  <img class="img_estrelas_hotel" src="imagens/estrelas.png" alt="">
+                </div>
+                <div class="caracteristicas_hotel">
+                  <img class="img_caracteristica_hotel" src="imagens/wifi.png" alt="">
+                </div>
                 <p class="txt_caracteristica_hotel">Wi-fi grátis</p>
                 <p class="txt_diaria_hotel" >Diárias a partir de</p>
                 <p class="txt_rs" >R$</p>
@@ -166,12 +146,17 @@
               </div>
 
             </div>
-            <div class="produtos_div">
-              <img src="imagens/hotel9.jpg" alt="">
+            <div class="produtos_div"  data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
+              <img src="imagens/hotel1.jpg" alt="">
               <div class="legenda_produto">
                 <p class="txt_nome_hotel">Hotel Fazende Suipe</p>
                 <p class="txt_estado_hotel">São Paulo</p>
-                <img src="imagens/wifi.png" alt="">
+                <div class="estrelas">
+                  <img class="img_estrelas_hotel" src="imagens/estrelas.png" alt="">
+                </div>
+                <div class="caracteristicas_hotel">
+                  <img class="img_caracteristica_hotel" src="imagens/wifi.png" alt="">
+                </div>
                 <p class="txt_caracteristica_hotel">Wi-fi grátis</p>
                 <p class="txt_diaria_hotel" >Diárias a partir de</p>
                 <p class="txt_rs" >R$</p>
@@ -181,12 +166,57 @@
               </div>
 
             </div>
-            <div class="produtos_div">
+            <div class="produtos_div"  data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
               <img src="imagens/hotel8.jpg" alt="">
               <div class="legenda_produto">
                 <p class="txt_nome_hotel">Hotel Fazende Suipe</p>
                 <p class="txt_estado_hotel">São Paulo</p>
-                <img src="imagens/wifi.png" alt="">
+                <div class="estrelas">
+                  <img class="img_estrelas_hotel" src="imagens/estrelas.png" alt="">
+                </div>
+                <div class="caracteristicas_hotel">
+                  <img class="img_caracteristica_hotel" src="imagens/wifi.png" alt="">
+                </div>
+                <p class="txt_caracteristica_hotel">Wi-fi grátis</p>
+                <p class="txt_diaria_hotel" >Diárias a partir de</p>
+                <p class="txt_rs" >R$</p>
+                <p class="txt_preco_hotel">200</p>
+                <input type="submit" name="btn_produto" value="editar" class="btn_produto">
+
+              </div>
+
+            </div>
+            <div class="produtos_div"  data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
+              <img src="imagens/hotel9.jpg" alt="">
+              <div class="legenda_produto">
+                <p class="txt_nome_hotel">Hotel Fazende Suipe</p>
+                <p class="txt_estado_hotel">São Paulo</p>
+                <div class="estrelas">
+                  <img class="img_estrelas_hotel" src="imagens/estrelas.png" alt="">
+                </div>
+                <div class="caracteristicas_hotel">
+                  <img class="img_caracteristica_hotel" src="imagens/wifi.png" alt="">
+                </div>
+                <p class="txt_caracteristica_hotel">Wi-fi grátis</p>
+                <p class="txt_diaria_hotel" >Diárias a partir de</p>
+                <p class="txt_rs" >R$</p>
+                <p class="txt_preco_hotel">200</p>
+                <input type="submit" name="btn_produto" value="editar" class="btn_produto">
+
+              </div>
+
+            </div>
+            <div class="produtos_div"  data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
+              <img src="imagens/hotel11.jpg" alt="">
+              <div class="legenda_produto">
+                <p class="txt_nome_hotel">Hotel Fazende Suipe</p>
+                <p class="txt_estado_hotel">São Paulo</p>
+                <div class="estrelas">
+                  <img class="img_estrelas_hotel" src="imagens/estrelas.png" alt="">
+                </div>
+                <div class="caracteristicas_hotel">
+                  <img class="img_caracteristica_hotel" src="imagens/wifi.png" alt="">
+                </div>
                 <p class="txt_caracteristica_hotel">Wi-fi grátis</p>
                 <p class="txt_diaria_hotel" >Diárias a partir de</p>
                 <p class="txt_rs" >R$</p>

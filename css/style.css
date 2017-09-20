@@ -1,3 +1,4 @@
+
 *{
 	margin:0;
 }
@@ -16,7 +17,8 @@ header.sticky #header_escondida {
 	transition: all 0.4s ease;
 }
 header.sticky #header_escondida ul{
-	margin-left: 200px;
+	margin-left: 250px;
+	margin-top: -10px;
 }
 
 header.sticky #menu_escondida {
@@ -27,7 +29,7 @@ header.sticky #menu_escondida {
 header.sticky #logo_escondida {
 	opacity: 1;
 	transition: all 1s ease;
-	margin-left: 20px;
+	margin-left: 50px;
 }
 
 
@@ -85,7 +87,8 @@ nav{
   height: 300px;
   margin-bottom: 30px;
   position: absolute;
-  margin-top: -60px;
+  margin-top: -70px;
+	border: 0px solid;
 }
 
 #logo_escondida{
@@ -124,7 +127,7 @@ a.menu_busca {
 .menu_busca{
   width: 100%;
   float: left;
-  margin-left: 40px;
+  margin-left: 100px;
 	border:0px solid;
 	border-radius:0px;
 	background-color: white;
@@ -136,7 +139,7 @@ a.menu_busca {
 
 .menu_busca li{
 text-align: center;
-	margin-left: 20px;
+	margin-left: 30px;
 }
 
 .menu_busca ul li{
@@ -468,7 +471,7 @@ text-align: center;
 
 .legenda_produto{
 	width: 300px;
-	height: 215px;
+	height: auto;
 	margin-top: 0px;
 	position: absolute;
 	opacity: 1;
@@ -494,17 +497,40 @@ text-align: center;
 	opacity: 0.7;
 }
 
-.legenda_produto img{
+.estrelas{
+	width: 200px; height: 30px;
+	border: 0px solid;
+	margin-top: 5px;
+}
+
+.estrelas img{
+	width: 100px;
+	height: 25px;
+	margin-top: 0px;
+	margin-left: 15px;
+	float:left;
+}
+
+.caracteristicas_hotel img{
+	width: 30px;
+	height: 30px;
+	margin-top: 0px;
+	margin-left: 15px;
+	float:left;
+}
+
+/*.legenda_produto img{
 	width: 30px;
 	height: 30px;
 	margin-top: 40px;
 	margin-left: 15px;
 	float:left;
-}
+}*/
+
 
 .txt_caracteristica_hotel{
 	text-align: left;
-	margin-top: 45px;
+	margin-top: 5px;
 	font-size: 18px;
 	color: #000;
 	font-family: Calibri;
@@ -513,7 +539,7 @@ text-align: center;
 
 .txt_diaria_hotel{
 	font-family: Calibri;
-	margin-top: 30px;
+	margin-top: 20px;
 	font-size: 12px;
 }
 
@@ -538,7 +564,7 @@ text-align: center;
 	height: 50px;
 	border: 0;
 	opacity: 0;
-	margin-top: -60px;
+	margin-top: -40px;
 	margin-left: 150px;
 	margin-right: 5px;
 	transition:0.5s;
@@ -1094,13 +1120,7 @@ text-align: center;
 	height: 200px;
 	border-radius: 2px;
 }
-.legenda_produto img{
-	width: 30px;
-	height: 30px;
-	margin-top: 40px;
-	margin-left: 15px;
-	float:left;
-}
+
 .promo img{
 	width: 115px;
 	height: 115px;
@@ -1745,7 +1765,7 @@ text-align: center;
 
 .produtos_div_verQuartos{
 	width: 470px;
-	min-height: 520px;
+	min-height: 500px;
 	height: auto;
 	margin-left: 80px;
 	margin-top: 80px;
@@ -1770,7 +1790,7 @@ text-align: center;
 
 .legenda_produto_verQuartos{
 	width: 300px;
-	height: 215px;
+	height: 100px;
 	margin-top: 0px;
 	position: absolute;
 	opacity: 1;
@@ -1782,7 +1802,7 @@ text-align: center;
 .legenda_produto_verQuartos img{
 	width: 30px;
 	height: 30px;
-	margin-top: 40px;
+	margin-top: 0px;
 	margin-left: 15px;
 	float:left;
 }
@@ -1796,7 +1816,7 @@ text-align: center;
 	height: 50px;
 	border: 0;
 	opacity: 0;
-	margin-top: -60px;
+	margin-top: -50px;
 	margin-right: -160px;
 	transition:0.5s;
 	float: right;
@@ -1805,6 +1825,22 @@ text-align: center;
 .btn_produto_verQuartos:hover{
 	color:#000;
 	transition:0.5s;
+}
+
+.txt_caracteristica_verQuartos{
+	margin-left: 50px;
+	margin-top: 15px;
+	font-size: 18px;
+	color: #000;
+	font-family: Calibri;
+	opacity: 0.7;
+}
+
+.caracteristicas_verQuartos{
+	width: 30px;
+	height: 30px;
+	margin-top: 10px;
+	float:left;
 }
 
 
@@ -1962,7 +1998,7 @@ text-align: center;
 	border: 0;
 	margin-right: 5px;
 	transition:0.5s;
-	margin-top: 330px;
+	margin-top: 440px;
 }
 
 .btn_produto_areaReserva:hover{

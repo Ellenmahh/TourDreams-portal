@@ -1,8 +1,10 @@
 <div id="principal_header">
 <nav>
+  <a href="index.php">
     <div id="logo">
-        <a href="index.php"><img id="img_logo_principal" src="imagens/td.png" alt="TourDreams"></a>
+        <img id="img_logo_principal" src="imagens/td.png" alt="TourDreams">
     </div>
+    </a>
     <script type="text/javascript">
               $(document).ready(function() {
 
@@ -15,7 +17,7 @@
 
           </script>
     <div id="principal_menu">
-      
+
               <?php include('principalMenu.php') ?>
     </div>
 </nav>
