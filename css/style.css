@@ -28,7 +28,7 @@ header.sticky #menu_escondida {
 
 header.sticky #logo_escondida {
 	opacity: 1;
-	transition: all 1s ease;
+
 	margin-left: 50px;
 }
 
@@ -841,6 +841,66 @@ text-align: center;
   border-color: #7b7b7b;
 }
 
+
+/*#labels{
+	width:800px;
+	height:auto;
+	border: 0px solid;
+
+}
+
+.area_selecao_buscaAvancada{
+	float: left;
+	border: 1px solid;
+	width: auto; height: auto;
+}
+
+.labels{
+	display: block;
+}
+
+
+
+#filtros input[type="checkbox"]{
+	visibility: hidden;
+}
+
+#filtros label{
+	width: 28px;
+	height: 28px;
+	top: 1px.
+	left: 1px;
+	background-color: white;
+	cursor: pointer;
+	border:2px solid #ccc;
+	border-radius: 3px;
+	margin-top: 10px;
+	margin-left: 50px;
+
+}
+
+#filtros label:before{
+		content: '';
+		width: 9px;
+		height: 5px;
+		border: 3px solid white;
+		border-top: none;
+		border-right: none;
+		transform: rotate(-45deg);
+		top: 6px;
+		left: 6px;
+		opacity: 1;
+}
+
+#filtros input[type="checkbox"]:checkbox + label:before{
+	opacity: 1;
+}
+
+#filtros input[type="checkbox"]:checked + label{
+	border:2px solid #5270ff;
+	background-color: #5270ff;
+}
+*/
 #filtros p{
 	margin-top: -30px;
 	margin-left: 100px;
@@ -885,7 +945,7 @@ text-align: center;
 
 .area_parceiro{
 	width: 250px;
-	height: 300px;
+	height: auto;
 	border: solid 0px;
 	margin-top: 100px;
 	margin-left: 115px;
@@ -897,6 +957,7 @@ text-align: center;
 .img_logo_parceiro{
 	width: 250px;
 	height: 200px;
+	float: left;
 }
 
 .img_icone_local{
@@ -912,7 +973,7 @@ text-align: center;
 }
 
 .txt_local_parceiro{
-	float: left;
+	width: 100px;
 	margin-top: 10px;
 	font-size: 20px;
 	font-family: Calibri;
@@ -920,7 +981,7 @@ text-align: center;
 
 .txt_nome_parceiro{
 	font-size: 25px;
-	margin-top: 50px;
+	margin-top: 10px;
 	margin-left: 20px;
 	font-family: Calibri;
 
@@ -1028,11 +1089,11 @@ text-align: center;
 	float:left;
 	width:25px;
 	height:25px;
-	margin-top:7px;
+	margin-top:20px;
 	margin-right: 280px;
 }
 .espacoCat{
-	width:1197px;
+	width:1200px;
 	height:600px;
 	margin-right:10px;
 	float:left;
@@ -1067,7 +1128,8 @@ text-align: center;
 	margin-right:130px;
 }
 .txt_caracteristica_hotel_melhoresDestinos{
-	margin-top: -20px;
+	width: 100px;
+	margin-top: 20px;
 	float: left;
 	margin-left: 40px;
 	font-size: 18px;
@@ -1117,9 +1179,9 @@ text-align: center;
 .produtos_div_melhoresDestinos{
 	width: 300px;
 	min-height: auto;
-	height:auto ;
+	height:450px ;
 	margin-left: 80px;
-	margin-top: 80px;
+
 	float: left;
 	border: solid 0px;
 	border-radius: 2px;
@@ -1201,7 +1263,6 @@ text-align: center;
 .hexagon:before {
   bottom: 100%;
   border-bottom: 51.96px solid #0e87cf;
-	-moz-margin-start: -130px;
 
 
 }
@@ -1219,6 +1280,7 @@ text-align: center;
   width: 180px;
   height: 103.92px;
   background-color: #0e87cf;
+
   margin: 51.96px 0;
   transform:rotate(-30deg);
   margin-top:-65px;
@@ -1240,9 +1302,6 @@ text-align: center;
 .hexagon2:before {
   bottom: 100%;
   border-bottom: 51.96px solid #0e87cf;
-	-moz-margin-start: -130px;
-
-
 
 
 }
@@ -1282,7 +1341,7 @@ text-align: center;
 .hexagon3:before {
   bottom: 100%;
   border-bottom: 51.96px solid #0e87cf;
-	-moz-margin-start: -180px;
+
 
 }
 
@@ -1323,7 +1382,7 @@ text-align: center;
 .hexagon4:before {
   bottom: 100%;
   border-bottom: 51.96px solid #0e87cf;
-	-moz-margin-start: -130px;
+
 
 }
 
@@ -1887,6 +1946,7 @@ text-align: center;
 	margin-top: 10px;
 	float:left;
 }
+
 
 
 /*============================================== AREA DA RESERVA ==============================================*/

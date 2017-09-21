@@ -2,241 +2,281 @@
 <html>
   <head>
   <?php include('head.php'); ?>
+
+<link href="css/carousel.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.flexisel.js"></script>
+<script type="text/javascript" src="js/carousel.js"></script>
+
   </head>
   <body>
 		<header>
 			<?php include('menu.php'); ?>
 		</header>
 		<section>
-    
+
 			<div id="principal">
 				<div id="txt_categoria">
 					<p>PRAIAS</p>
 				</div>
 				<div class="espacoCat">
-				   <button class="button_melhoresDestinos" onClick="plusIndex(-1)" id="btn1">&#10094; </button>
-				   <div class="produtos_div_melhoresDestinos">
-  						  <img src="imagens/hotel1.jpg" alt="" class="imagem_melhoresdestinos">
+                    <ul id="flexiselDemo1">
+            <li>
+                  <div class="produtos_div_melhoresDestinos">
+       						  <img src="imagens/hotel9.jpg" alt="" class="imagem_melhoresdestinos">
+       							<div class="caracteristicas">
+       								<img  style="width:35px; float:left;" src="imagens/localizacao.png" alt="">
+                      	<p style="float:left;margin-top:50px;font-size:20px;">São Paulo</p>
+                        <img style="margin-right:250px;margin-top:10px;" src="imagens/wifi.png" alt="">
+                        	<p style="margin-top:20px;margin-left:20px;width:100px;">Wi-fi grátis</p>
+                          <p style="margin-top:40px;font-size:10px;margin-right:250px;width:100px;">Diárias a partir de</p>
+                          <p style="margin-top:30px;margin-right:250px;float:left;">R$</p>
+                          <p style="margin-right:230px;float:right;font-size:30px;">200</p>
+                          <a href="areaReserva.php">
+                            <input type="submit" name="btn_produto" value="reservar" class="btn_produto">
+                          </a>
+       							</div>
+ 						       </div>
+            </li>
 
-  							<div class="img_icone_local">
-  								<img  src="imagens/localizacao.png" alt="">
-  							</div>
 
-							<p class="txt_local_parceiro" >São Paulo</p>
-							<div class="icone_wifi">
-								<img src="imagens/wifi.png" alt="">
-							</div>
-								<p class="txt_caracteristica_hotel_melhoresDestinos">Wi-fi grátis</p>
-								<p class="txt_diaria_hotel_destinos" >Diárias a partir de</p>
-								<p class="txt_rs_destinos" >R$</p>
-								<p class="txt_preco_hotel_destinos">200</p>
-								<a href="areaReserva.php"><input type="submit" name="btn_produto" value="reservar" class="btn_produto"></a>
+            <li>
+              <div class="produtos_div_melhoresDestinos">
+ 						  <img src="imagens/hotel1.jpg" alt="" class="imagem_melhoresdestinos">
+              <div class="caracteristicas">
+                <img  style="width:35px; float:left;" src="imagens/localizacao.png" alt="">
+                  <p style="float:left;margin-top:50px;font-size:20px;">São Paulo</p>
+                  <img style="margin-right:250px;margin-top:10px;" src="imagens/wifi.png" alt="">
+                    <p style="margin-top:20px;margin-left:20px;width:100px;">Wi-fi grátis</p>
+                    <p style="margin-top:40px;font-size:10px;margin-right:250px;width:100px;">Diárias a partir de</p>
+                    <p style="margin-top:30px;margin-right:250px;float:left;">R$</p>
+                    <p style="margin-right:230px;float:right;font-size:30px;">200</p>
+                    <a href="areaReserva.php">
+                      <input type="submit" name="btn_produto" value="reservar" class="btn_produto">
+                    </a>
+              </div>
+ 						</div>
 
-					</div>
-					<div class="produtos_div_melhoresDestinos">
-						  <img src="imagens/hotel1.jpg" alt=""  class="imagem_melhoresdestinos">
-							<div class="img_icone_local">
-								<img  src="imagens/localizacao.png" alt="">
-							</div>
-							<p class="txt_local_parceiro" >São Paulo</p>
-							<div class="icone_wifi">
-								<img src="imagens/wifi.png"  alt="">
-							</div>
-								<p class="txt_caracteristica_hotel_melhoresDestinos">Wi-fi grátis</p>
-								<p class="txt_diaria_hotel_destinos" >Diárias a partir de</p>
-								<p class="txt_rs_destinos" >R$</p>
-								<p class="txt_preco_hotel_destinos">200</p>
-								<a href="areaReserva.php"><input type="submit" name="btn_produto" value="reservar" class="btn_produto"></a>
+            </li>
+            <li>
+              <div class="produtos_div_melhoresDestinos">
+ 						         <img src="imagens/hotel3.jpg" alt="" class="imagem_melhoresdestinos">
+                     <div class="caracteristicas">
+        								<img  style="width:35px; float:left;" src="imagens/localizacao.png" alt="">
+                       	<p style="float:left;margin-top:50px;font-size:20px;">São Paulo</p>
+                         <img style="margin-right:250px;margin-top:10px;" src="imagens/wifi.png" alt="">
+                         	<p style="margin-top:20px;margin-left:20px;width:100px;">Wi-fi grátis</p>
+                           <p style="margin-top:40px;font-size:10px;margin-right:250px;width:100px;">Diárias a partir de</p>
+                           <p style="margin-top:30px;margin-right:250px;float:left;">R$</p>
+                           <p style="margin-right:230px;float:right;font-size:30px;">200</p>
+                           <a href="areaReserva.php">
+                             <input type="submit" name="btn_produto" value="reservar" class="btn_produto">
+                           </a>
+        							</div>
 
-					</div>
-					<div class="produtos_div_melhoresDestinos">
-						  <img src="imagens/hotel1.jpg" alt=""  class="imagem_melhoresdestinos">
-							<div class="img_icone_local">
-								<img  src="imagens/localizacao.png" alt="">
-							</div>
-							<p class="txt_local_parceiro" >São Paulo</p>
-							<div class="icone_wifi">
-								<img src="imagens/wifi.png"  alt="">
-							</div>
-								<p class="txt_caracteristica_hotel_melhoresDestinos">Wi-fi grátis</p>
-								<p class="txt_diaria_hotel_destinos" >Diárias a partir de</p>
-								<p class="txt_rs_destinos" >R$</p>
-								<p class="txt_preco_hotel_destinos">200</p>
-								<a href="areaReserva.php"><input type="submit" name="btn_produto" value="reservar" class="btn_produto"></a>
 
-					</div>
-					<button class="button_melhoresDestinos" onClick="plusIndex(1)" id="btn2">&#10095; </button>
+					     </div>
+
+            </li>
+          </ul>
 
 				</div>
 				<div id="txt_categoria">
 					<p>INVERNO</p>
 				</div>
-				<div class="espacoCat">
-				  <button class="button_melhoresDestinos" onClick="plusIndex(-1)" id="btn1">&#10094; </button>
-					   <div class="produtos_div_melhoresDestinos">
-						  <img src="imagens/hotel9.jpg" alt="" class="imagem_melhoresdestinos">
-							<div class="img_icone_local">
-								<img  src="imagens/localizacao.png" alt="">
-							</div>
-							<p class="txt_local_parceiro" >São Paulo</p>
-							<div class="icone_wifi">
-								<img src="imagens/wifi.png" alt="">
-							</div>
-								<p class="txt_caracteristica_hotel_melhoresDestinos">Wi-fi grátis</p>
-								<p class="txt_diaria_hotel_destinos" >Diárias a partir de</p>
-								<p class="txt_rs_destinos" >R$</p>
-								<p class="txt_preco_hotel_destinos">200</p>
-								<a href="areaReserva.php"><input type="submit" name="btn_produto" value="reservar" class="btn_produto"></a>
+                <div class="espacoCat">
+                  <ul id="flexiselDemo2">
+                    <li>
+                          <div class="produtos_div_melhoresDestinos">
+                            <img src="imagens/hotel9.jpg" alt="" class="imagem_melhoresdestinos">
+                            <div class="caracteristicas">
+                              <img  style="width:35px; float:left;" src="imagens/localizacao.png" alt="">
+                                <p style="float:left;margin-top:50px;font-size:20px;">São Paulo</p>
+                                <img style="margin-right:250px;margin-top:10px;" src="imagens/wifi.png" alt="">
+                                  <p style="margin-top:20px;margin-left:20px;width:100px;">Wi-fi grátis</p>
+                                  <p style="margin-top:40px;font-size:10px;margin-right:250px;width:100px;">Diárias a partir de</p>
+                                  <p style="margin-top:30px;margin-right:250px;float:left;">R$</p>
+                                  <p style="margin-right:230px;float:right;font-size:30px;">200</p>
+                                  <a href="areaReserva.php">
+                                    <input type="submit" name="btn_produto" value="reservar" class="btn_produto">
+                                  </a>
+                            </div>
+                           </div>
+                    </li>
 
-						</div>
-						<div class="produtos_div_melhoresDestinos">
-							  <img src="imagens/hotel9.jpg" alt=""  class="imagem_melhoresdestinos">
-								<div class="img_icone_local">
-									<img  src="imagens/localizacao.png" alt="">
-								</div>
-								<p class="txt_local_parceiro" >São Paulo</p>
-								<div class="icone_wifi">
-									<img src="imagens/wifi.png"  alt="">
-								</div>
-									<p class="txt_caracteristica_hotel_melhoresDestinos">Wi-fi grátis</p>
-									<p class="txt_diaria_hotel_destinos" >Diárias a partir de</p>
-									<p class="txt_rs_destinos" >R$</p>
-									<p class="txt_preco_hotel_destinos">200</p>
-									<a href="areaReserva.php"><input type="submit" name="btn_produto" value="reservar" class="btn_produto"></a>
 
-						</div>
-						<div class="produtos_div_melhoresDestinos">
-							  <img src="imagens/hotel9.jpg" alt=""  class="imagem_melhoresdestinos">
-								<div class="img_icone_local">
-									<img  src="imagens/localizacao.png" alt="">
-								</div>
-								<p class="txt_local_parceiro" >São Paulo</p>
-								<div class="icone_wifi">
-									<img src="imagens/wifi.png"  alt="">
-								</div>
-									<p class="txt_caracteristica_hotel_melhoresDestinos">Wi-fi grátis</p>
-									<p class="txt_diaria_hotel_destinos" >Diárias a partir de</p>
-									<p class="txt_rs_destinos" >R$</p>
-									<p class="txt_preco_hotel_destinos">200</p>
-									<a href="areaReserva.php"><input type="submit" name="btn_produto" value="reservar" class="btn_produto"></a>
+                    <li>
+                      <div class="produtos_div_melhoresDestinos">
+                      <img src="imagens/hotel1.jpg" alt="" class="imagem_melhoresdestinos">
+                      <div class="caracteristicas">
+                        <img  style="width:35px; float:left;" src="imagens/localizacao.png" alt="">
+                          <p style="float:left;margin-top:50px;font-size:20px;">São Paulo</p>
+                          <img style="margin-right:250px;margin-top:10px;" src="imagens/wifi.png" alt="">
+                            <p style="margin-top:20px;margin-left:20px;width:100px;">Wi-fi grátis</p>
+                            <p style="margin-top:40px;font-size:10px;margin-right:250px;width:100px;">Diárias a partir de</p>
+                            <p style="margin-top:30px;margin-right:250px;float:left;">R$</p>
+                            <p style="margin-right:230px;float:right;font-size:30px;">200</p>
+                            <a href="areaReserva.php">
+                              <input type="submit" name="btn_produto" value="reservar" class="btn_produto">
+                            </a>
+                      </div>
+                    </div>
 
-						</div>
-					<button class="button_melhoresDestinos" onClick="plusIndex(1)" id="btn2">&#10095; </button>
+                    </li>
+                    <li>
+                      <div class="produtos_div_melhoresDestinos">
+                             <img src="imagens/hotel3.jpg" alt="" class="imagem_melhoresdestinos">
+                             <div class="caracteristicas">
+                                <img  style="width:35px; float:left;" src="imagens/localizacao.png" alt="">
+                                <p style="float:left;margin-top:50px;font-size:20px;">São Paulo</p>
+                                 <img style="margin-right:250px;margin-top:10px;" src="imagens/wifi.png" alt="">
+                                  <p style="margin-top:20px;margin-left:20px;width:100px;">Wi-fi grátis</p>
+                                   <p style="margin-top:40px;font-size:10px;margin-right:250px;width:100px;">Diárias a partir de</p>
+                                   <p style="margin-top:30px;margin-right:250px;float:left;">R$</p>
+                                   <p style="margin-right:230px;float:right;font-size:30px;">200</p>
+                                   <a href="areaReserva.php">
+                                     <input type="submit" name="btn_produto" value="reservar" class="btn_produto">
+                                   </a>
+                              </div>
 
-				</div>
+
+                       </div>
+
+                    </li>
+                  </ul>
+
+                </div>
 
 				<div id="txt_categoria">
 					<p>CAMPOS</p>
 				</div>
-				<div class="espacoCat">
-					<button class="button_melhoresDestinos" onClick="plusIndex(-1)" id="btn1">&#10094; </button>
-					   <div class="produtos_div_melhoresDestinos">
-						  <img src="imagens/hotel3.jpg" alt=""  class="imagem_melhoresdestinos">
-							<div class="img_icone_local">
-								<img  src="imagens/localizacao.png" alt="">
-							</div>
-							<p class="txt_local_parceiro" >São Paulo</p>
-							<div class="icone_wifi">
-								<img src="imagens/wifi.png" alt="">
-							</div>
-								<p class="txt_caracteristica_hotel_melhoresDestinos">Wi-fi grátis</p>
-								<p class="txt_diaria_hotel_destinos" >Diárias a partir de</p>
-								<p class="txt_rs_destinos">R$</p>
-								<p class="txt_preco_hotel_destinos">200</p>
-								<a href="areaReserva.php"><input type="submit" name="btn_produto" value="reservar" class="btn_produto"></a>
+				 <div class="espacoCat">
+                  <ul id="flexiselDemo3">
+                    <li>
+                          <div class="produtos_div_melhoresDestinos">
+                            <img src="imagens/hotel9.jpg" alt="" class="imagem_melhoresdestinos">
+                            <div class="caracteristicas">
+                              <img  style="width:35px; float:left;" src="imagens/localizacao.png" alt="">
+                                <p style="float:left;margin-top:50px;font-size:20px;">São Paulo</p>
+                                <img style="margin-right:250px;margin-top:10px;" src="imagens/wifi.png" alt="">
+                                  <p style="margin-top:20px;margin-left:20px;width:100px;">Wi-fi grátis</p>
+                                  <p style="margin-top:40px;font-size:10px;margin-right:250px;width:100px;">Diárias a partir de</p>
+                                  <p style="margin-top:30px;margin-right:250px;float:left;">R$</p>
+                                  <p style="margin-right:230px;float:right;font-size:30px;">200</p>
+                                  <a href="areaReserva.php">
+                                    <input type="submit" name="btn_produto" value="reservar" class="btn_produto">
+                                  </a>
+                            </div>
+                           </div>
+                    </li>
 
-						</div>
-						<div class="produtos_div_melhoresDestinos">
-							  <img src="imagens/hotel8.jpg" alt=""  class="imagem_melhoresdestinos">
-								<div class="img_icone_local">
-									<img  src="imagens/localizacao.png" alt="">
-								</div>
-								<p class="txt_local_parceiro" >São Paulo</p>
-								<div class="icone_wifi">
-									<img src="imagens/wifi.png"  alt="">
-								</div>
-									<p class="txt_caracteristica_hotel_melhoresDestinos">Wi-fi grátis</p>
-									<p class="txt_diaria_hotel_destinos" >Diárias a partir de</p>
-									<p class="txt_rs_destinos" >R$</p>
-									<p class="txt_preco_hotel_destinos">200</p>
-									<a href="areaReserva.php"><input type="submit" name="btn_produto" value="reservar" class="btn_produto"></a>
 
-						</div>
-						<div class="produtos_div_melhoresDestinos">
-							  <img src="imagens/hotel3.jpg" alt=""  class="imagem_melhoresdestinos">
-								<div class="img_icone_local">
-									<img  src="imagens/localizacao.png" alt="">
-								</div>
-								<p class="txt_local_parceiro" >São Paulo</p>
-								<div class="icone_wifi">
-									<img src="imagens/wifi.png"  alt="">
-								</div>
-									<p class="txt_caracteristica_hotel_melhoresDestinos">Wi-fi grátis</p>
-									<p class="txt_diaria_hotel_destinos" >Diárias a partir de</p>
-									<p class="txt_rs_destinos" >R$</p>
-									<p class="txt_preco_hotel_destinos">200</p>
-									<a href="areaReserva.php"><input type="submit" name="btn_produto" value="reservar" class="btn_produto"></a>
+                    <li>
+                      <div class="produtos_div_melhoresDestinos">
+                      <img src="imagens/hotel1.jpg" alt="" class="imagem_melhoresdestinos">
+                      <div class="caracteristicas">
+                        <img  style="width:35px; float:left;" src="imagens/localizacao.png" alt="">
+                          <p style="float:left;margin-top:50px;font-size:20px;">São Paulo</p>
+                          <img style="margin-right:250px;margin-top:10px;" src="imagens/wifi.png" alt="">
+                            <p style="margin-top:20px;margin-left:20px;width:100px;">Wi-fi grátis</p>
+                            <p style="margin-top:40px;font-size:10px;margin-right:250px;width:100px;">Diárias a partir de</p>
+                            <p style="margin-top:30px;margin-right:250px;float:left;">R$</p>
+                            <p style="margin-right:230px;float:right;font-size:30px;">200</p>
+                            <a href="areaReserva.php">
+                              <input type="submit" name="btn_produto" value="reservar" class="btn_produto">
+                            </a>
+                      </div>
+                    </div>
 
-						</div>
-					<button class="button_melhoresDestinos" onClick="plusIndex(1)" id="btn2">&#10095; </button>
+                    </li>
+                    <li>
+                      <div class="produtos_div_melhoresDestinos">
+                             <img src="imagens/hotel3.jpg" alt="" class="imagem_melhoresdestinos">
+                             <div class="caracteristicas">
+                                <img  style="width:35px; float:left;" src="imagens/localizacao.png" alt="">
+                                <p style="float:left;margin-top:50px;font-size:20px;">São Paulo</p>
+                                 <img style="margin-right:250px;margin-top:10px;" src="imagens/wifi.png" alt="">
+                                  <p style="margin-top:20px;margin-left:20px;width:100px;">Wi-fi grátis</p>
+                                   <p style="margin-top:40px;font-size:10px;margin-right:250px;width:100px;">Diárias a partir de</p>
+                                   <p style="margin-top:30px;margin-right:250px;float:left;">R$</p>
+                                   <p style="margin-right:230px;float:right;font-size:30px;">200</p>
+                                   <a href="areaReserva.php">
+                                     <input type="submit" name="btn_produto" value="reservar" class="btn_produto">
+                                   </a>
+                              </div>
 
-				</div>
+
+                       </div>
+
+                    </li>
+                  </ul>
+
+                </div>
 				<div id="txt_categoria">
 					<p>FAZENDAS</p>
 				</div>
-				<div class="espacoCat">
-					<button class="button_melhoresDestinos" onClick="plusIndex(-1)" id="btn1">&#10094; </button>
-					   <div class="produtos_div_melhoresDestinos">
-						  <img src="imagens/hotel5.jpg" alt=""  class="imagem_melhoresdestinos">
-							<div class="img_icone_local">
-								<img  src="imagens/localizacao.png" alt="">
-							</div>
-							<p class="txt_local_parceiro" >São Paulo</p>
-							<div class="icone_wifi">
-								<img src="imagens/wifi.png" alt="">
-							</div>
-								<p class="txt_caracteristica_hotel_melhoresDestinos">Wi-fi grátis</p>
-								<p class="txt_diaria_hotel_destinos" >Diárias a partir de</p>
-								<p class="txt_rs_destinos" >R$</p>
-								<p class="txt_preco_hotel_destinos">200</p>
-								<a href="areaReserva.php"><input type="submit" name="btn_produto" value="reservar" class="btn_produto"></a>
+				 <div class="espacoCat">
+                  <ul id="flexiselDemo4">
+                    <li>
+                          <div class="produtos_div_melhoresDestinos">
+                            <img src="imagens/hotel9.jpg" alt="" class="imagem_melhoresdestinos">
+                            <div class="caracteristicas">
+                              <img  style="width:35px; float:left;" src="imagens/localizacao.png" alt="">
+                                <p style="float:left;margin-top:50px;font-size:20px;">São Paulo</p>
+                                <img style="margin-right:250px;margin-top:10px;" src="imagens/wifi.png" alt="">
+                                  <p style="margin-top:20px;margin-left:20px;width:100px;">Wi-fi grátis</p>
+                                  <p style="margin-top:40px;font-size:10px;margin-right:250px;width:100px;">Diárias a partir de</p>
+                                  <p style="margin-top:30px;margin-right:250px;float:left;">R$</p>
+                                  <p style="margin-right:230px;float:right;font-size:30px;">200</p>
+                                  <a href="areaReserva.php">
+                                    <input type="submit" name="btn_produto" value="reservar" class="btn_produto">
+                                  </a>
+                            </div>
+                           </div>
+                    </li>
 
-						</div>
-						<div class="produtos_div_melhoresDestinos">
-							  <img src="imagens/hotel5.jpg" alt=""  class="imagem_melhoresdestinos">
-								<div class="img_icone_local">
-									<img  src="imagens/localizacao.png" alt="" >
-								</div>
-								<p class="txt_local_parceiro" >São Paulo</p>
-								<div class="icone_wifi">
-									<img src="imagens/wifi.png"  alt="">
-								</div>
-									<p class="txt_caracteristica_hotel_melhoresDestinos">Wi-fi grátis</p>
-									<p class="txt_diaria_hotel_destinos" >Diárias a partir de</p>
-									<p class="txt_rs_destinos" >R$</p>
-									<p class="txt_preco_hotel_destinos">200</p>
-									<a href="areaReserva.php"><input type="submit" name="btn_produto" value="reservar" class="btn_produto"></a>
 
-						</div>
-						<div class="produtos_div_melhoresDestinos">
-							  <img src="imagens/hotel5.jpg" alt=""  class="imagem_melhoresdestinos">
-								<div class="img_icone_local">
-									<img  src="imagens/localizacao.png" alt=""  >
-								</div>
-								<p class="txt_local_parceiro" >São Paulo</p>
-								<div class="icone_wifi">
-									<img src="imagens/wifi.png"  alt="">
-								</div>
-									<p class="txt_caracteristica_hotel_melhoresDestinos">Wi-fi grátis</p>
-									<p class="txt_diaria_hotel_destinos" >Diárias a partir de</p>
-									<p class="txt_rs_destinos" >R$</p>
-									<p class="txt_preco_hotel_destinos">200</p>
-									<a href="areaReserva.php"><input type="submit" name="btn_produto" value="reservar" class="btn_produto"></a>
+                    <li>
+                      <div class="produtos_div_melhoresDestinos">
+                      <img src="imagens/hotel1.jpg" alt="" class="imagem_melhoresdestinos">
+                      <div class="caracteristicas">
+                        <img  style="width:35px; float:left;" src="imagens/localizacao.png" alt="">
+                          <p style="float:left;margin-top:50px;font-size:20px;">São Paulo</p>
+                          <img style="margin-right:250px;margin-top:10px;" src="imagens/wifi.png" alt="">
+                            <p style="margin-top:20px;margin-left:20px;width:100px;">Wi-fi grátis</p>
+                            <p style="margin-top:40px;font-size:10px;margin-right:250px;width:100px;">Diárias a partir de</p>
+                            <p style="margin-top:30px;margin-right:250px;float:left;">R$</p>
+                            <p style="margin-right:230px;float:right;font-size:30px;">200</p>
+                            <a href="areaReserva.php">
+                              <input type="submit" name="btn_produto" value="reservar" class="btn_produto">
+                            </a>
+                      </div>
+                    </div>
 
-						</div>
-					<button class="button_melhoresDestinos" onClick="plusIndex(1)" id="btn2">&#10095; </button>
+                    </li>
+                    <li>
+                      <div class="produtos_div_melhoresDestinos">
+                             <img src="imagens/hotel3.jpg" alt="" class="imagem_melhoresdestinos">
+                             <div class="caracteristicas">
+                                <img  style="width:35px; float:left;" src="imagens/localizacao.png" alt="">
+                                <p style="float:left;margin-top:50px;font-size:20px;">São Paulo</p>
+                                 <img style="margin-right:250px;margin-top:10px;" src="imagens/wifi.png" alt="">
+                                  <p style="margin-top:20px;margin-left:20px;width:100px;">Wi-fi grátis</p>
+                                   <p style="margin-top:40px;font-size:10px;margin-right:250px;width:100px;">Diárias a partir de</p>
+                                   <p style="margin-top:30px;margin-right:250px;float:left;">R$</p>
+                                   <p style="margin-right:230px;float:right;font-size:30px;">200</p>
+                                   <a href="areaReserva.php">
+                                     <input type="submit" name="btn_produto" value="reservar" class="btn_produto">
+                                   </a>
+                              </div>
 
-				</div>
+
+                       </div>
+
+                    </li>
+                  </ul>
+
+                </div>
 			</div>
 
 		</section>
