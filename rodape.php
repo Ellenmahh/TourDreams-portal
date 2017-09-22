@@ -48,7 +48,7 @@
           <div id="txt_tourdreams">
 
             <p>O escrítorio da TourDreams, localiza-se em:<br> Av. Paulista, 1754 - Consolação, São Paulo - SP, Brasil.</p>
-            <p>Contate-nos: tourdreamsltda@saq.com.br </p>
+            <p>Contate-nos: tourdreamsltda@sac.com.br </p>
 
           </div>
           <div id="google_translate_element"></div>

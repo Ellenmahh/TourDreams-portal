@@ -1,11 +1,16 @@
 <meta charset="utf-8">
 <title>Tour Dreams</title>
+
+<!--============= LINKS =============-->
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="shortcut icon" href="imagens/iconsiteblack.png" />
 <link href="fontes/fonte.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/calendario.css">
+<link rel="stylesheet" src="js/jquery-ui.css" />
+
+<!--============= Scripts diversos =============-->
 <script language="javascript" src="js/jquery.min.js"></script>
 <script src="js/jquery-3.2.1.min.js"></script>
-<link rel="stylesheet" src="js/jquery-ui.css" />
 <script src="js/jquery-1.8.2.js"></script>
 <script src="js/jquery-ui.js"></script>
 
@@ -145,6 +150,12 @@
         dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb','Dom'],
         monthNames: ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
         monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez']
+
+        ,
+        nextText: 'Próximo',
+        prevText: 'Anterior'
+
+
       });
   });
 
@@ -159,6 +170,11 @@
         dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb','Dom'],
         monthNames: ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
         monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez']
+
+        ,
+        nextText: 'Próximo',
+        prevText: 'Anterior'
+
       });
   });
 
@@ -190,7 +206,8 @@
 </style>
 
 <!-- Pegando Scripts -->
-<!--<script type='text/javascript' src='scripts_slide_areaReserva/jquery.min.js'></script>-->
+<!--
+<script type='text/javascript' src='scripts_slide_areaReserva/jquery.min.js'></script>-->
 <script type='text/javascript' src='scripts_slide_areaReserva/jquery.mobile.customized.min.js'></script>
 <script type='text/javascript' src='scripts_slide_areaReserva/jquery.easing.1.3.js'></script>
 <script type='text/javascript' src='scripts_slide_areaReserva/camera.min.js'></script>
