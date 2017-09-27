@@ -7,12 +7,15 @@
 <link href="fontes/fonte.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/calendario.css">
 <link rel="stylesheet" src="js/jquery-ui.css" />
+<link rel="stylesheet" href="css/superslides.css">
 
 <!--============= Scripts diversos =============-->
 <script language="javascript" src="js/jquery.min.js"></script>
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/jquery-1.8.2.js"></script>
 <script src="js/jquery-ui.js"></script>
+<script src="js/jquery.superslides.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.superslides.min.js" type="text/javascript"></script>
 
     <!-- ========================================= Script para menu 2 ========================================= -->
   <script type="text/javascript">
@@ -28,19 +31,73 @@
 
   </script>
 
-    <!-- ========================================= Script para filtros ========================================= -->
-  <script type="text/javascript">
-      jQuery(document).ready(function($){
-        $("#btn_pesquisa_avancada").click(function(event){
+    <!-- ========================================= Script para filtros e comentario ========================================= -->
+    <script type="text/javascript">
+        jQuery(document).ready(function($){
+          $("#btn_pesquisa_avancada").click(function(event){
 
-          event.stopPropagation();
-          event.preventDefault();
+            event.stopPropagation();
+            event.preventDefault();
 
-          $("#filtros").slideToggle(500);
+            $("#filtros").slideToggle(500);
+            $("#comentario").slideToggle(500);
+
+
+          });
+
+          $("#btn_pesquisa_avancada_comentario2").click(function(event){
+
+            event.stopPropagation();
+            event.preventDefault();
+
+
+            $("#comentario2").slideToggle(500);
+
+
+          });
+          $("#btn_pesquisa_avancada_comentario3").click(function(event){
+
+            event.stopPropagation();
+            event.preventDefault();
+
+
+            $("#comentario3").slideToggle(500);
+
+
+          });
+          $("#btn_pesquisa_avancada_comentario4").click(function(event){
+
+            event.stopPropagation();
+            event.preventDefault();
+
+
+            $("#comentario4").slideToggle(500);
+
+
+          });
+          $("#btn_pesquisa_avancada_comentario5").click(function(event){
+
+            event.stopPropagation();
+            event.preventDefault();
+
+
+            $("#comentario5").slideToggle(500);
+
+
+          });
+          $("#btn_pesquisa_avancada_comentario6").click(function(event){
+
+            event.stopPropagation();
+            event.preventDefault();
+
+
+            $("#comentario6").slideToggle(500);
+
+
+          });
+
         });
-
-      });
-  </script>
+    </script>
 
 
   <!-- ========================================= Script para Ancora ========================================= -->
@@ -135,6 +192,16 @@
     }
 
 
+  </script>
+
+
+<!-- ========================================= Script para o superslider (promoções) ========================================= -->
+  <script>
+    $(function() {
+      $('#slides').superslides({
+        hashchange: true
+      });
+    });
   </script>
 
   <!-- ========================================= Script para o calendario ========================================= -->

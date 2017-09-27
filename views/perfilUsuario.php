@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <?php include('head.php'); ?>
+  </head>
+  <body>
+    <div class="window" id="editar_perfilUsuario">
+			<hgroup id="hgroup_modal_editar_perfilUsuario">
+			  <h1 class="h1_modal"><p>ATUALIZE SUAS INFORMAÇÕES</p></h1>
+			</hgroup>
+			<form id="form_modal_editar_perfilUsuario">
+        <div class="group_editar_perfilUsuario">
+				   <input type="text" placeholder="nome" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
+				   <!--<label class="label_modal">nome</label>-->
+			  </div>
+        <div class="group_editar_perfilUsuario">
+          <input type="text" placeholder="e-mail" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
+          <!--<label class="label_modal">e-mail</label>-->
+			  </div>
+        <div class="group_editar_perfilUsuario">
+          <input type="text" placeholder="endereço" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
+          <!--<label class="label_modal">endereço</label>-->
+			  </div>
+        <div class="group_editar_perfilUsuario">
+          <input type="text" placeholder="telefone" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
+          <!--<label class="label_modal">telefone</label>-->
+			  </div>
+        <div class="group_editar_perfilUsuario">
+          <input type="text" placeholder="celular" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
+          <!--<label class="label_modal">celular</label>-->
+			  </div>
+        <div class="group_editar_perfilUsuario">
+          <input type="text" placeholder="CPF" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
+          <!--<label class="label_modal">CPF</label>-->
+			  </div>
+        <div class="group_editar_perfilUsuario">
+          <input type="text" placeholder="RG" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
+          <!--<label class="label_modal">RG</label>-->
+			  </div>
+        <div class="group_editar_perfilUsuario">
+          <input type="text" placeholder="usuário" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
+          <!--<label class="label_modal">usuário</label>-->
+			  </div>
+        <div class="group_editar_perfilUsuario">
+          <input type="text" placeholder="senha" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
+          <!--<label class="label_modal">senha</label>-->
+			  </div>
+        <button type="button" class="button_editar_perfilUsuario buttonBlue">Salvar
+				   <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+			  </button>
+        <button type="button" class="button_editar_perfilUsuario buttonBlue">Limpar
+				   <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+			  </button>
+			</form>
+		</div>
+		<div class="window" id="janela1">
+			<hgroup id="hgroup_modal">
+			  <h1 class="h1_modal"><p>O QUE É MILHAS TRAVEL FIDELIDADE</p></h1>
+			</hgroup>
+			<form id="form_modal">
+			  <div class="group">
+				   <p>O Milhas Travel Fidelidade conhecida como MTF, é uma
+           maneira que a TourDreams encontrou de presentear nossos
+         clientes por tais ações realizadas no portal, ou até mesmo, no aplicativo.</p>
+			  </div>
+			</form>
+		</div>
+    <div class="window" id="janela2">
+			<hgroup id="hgroup_modal">
+			  <h1 class="h1_modal"><p>COMO ADQUIRIR MILHAS TRAVEL FIDELIDADE</p></h1>
+			</hgroup>
+			<form id="form_modal">
+			  <div class="group">
+				   <p>Para adquirir e acumular seus pontos MTF, é necessário
+           <a href="index.php" color="#5270ff">realizar reservas</a> ou interagir,
+           <a href="conhecaDestino.php">publicando comentários</a> em
+         lugares que você ja visitou.</p>
+			  </div>
+			</form>
+		</div>
+	<div class="window" id="janela3">
+		<hgroup id="hgroup_modal">
+			  <h1 class="h1_modal"><p>DETALHES STATUS</p></h1>
+		</hgroup>
+		<form id="form_modal">
+			  <div class="group">
+				<div id="espaco_icones_status_detalhes">
+					<div class="icone_status_detalhes_">
+						&nbsp;<img src="imagens/pendentee.png" alt="pendente" width="100%" height="100%">
+					</div>
+					<div class="_status_detalhes_2">
+						 Reserva Pendente
+					</div>
+					<div class="icone_status_detalhes_">
+						<img src="imagens/aprovado.png" alt="aprovado" width="100%" height="100%">
+					</div>
+					<div class="_status_detalhes_2">
+						Reserva Aprovada
+					</div>
+					<div class="icone_status_detalhes_">
+						<img src="imagens/curtindo_cinza.png" alt="curtindo_viagem" width="100%" height="100%">
+					</div>
+					<div class="_status_detalhes_2">
+						Curtindo Viagem
+					</div>
+					<div class="icone_status_detalhes_">
+						<img src="imagens/aguardando_avalicao_cinza.png" alt="avaliacao" width="100%" height="100%">
+					</div>
+					<div class="_status_detalhes_2">
+						Aguardando sua Avaliação
+					</div>
+				</div>
+			  </div>
+		</form>
+	</div>
+<!-- mascara para cobrir o site -->
+<div id="mascara"></div>
+    <header>
+        <?php include('menu.php'); ?>
+    </header>
+
+      <section>
+        <!--<div id="principal">-->
+          <div id="capa_usuario">
+            <div id="img_perfilUsuario">
+              <img src="imagens/harry.jpg" alt="">
+            </div>
+            <div id="area_info_perfilUsuario">
+              <p>Nome</p>
+              <p>Usuário</p>
+              <p>E-mail</p>
+              <p>Senha</p>
+              <div id="area_opcoes_perfilUsuario">
+                <a href="#editar_perfilUsuario" id="a_index_duvida" rel="modal">
+                  <p>Editar informações</p>
+                  <img src="imagens/editar.png" alt="">
+                </a>
+              </div>
+
+            </div>
+            <div id="mtf_perfilUsuario">
+              <p id="titulo_mtf_perfilUsuario">MILHAS TRAVEL FIDELIDADE</p>
+              <div id="pontuacao_mtf_perfilUsuario">
+                <img src="imagens/mtf.png" alt="">
+                <p>000000</p>
+              </div>
+              <div id="duvida_mtf_perfilUsuario">
+                <a href="#janela1" id="a_index_duvida" rel="modal"><p>O que é MTF?</p></a>
+                <a href="#janela2" id="a_index_duvida" rel="modal"><p>Como adquirir?</p></a>
+              </div>
+
+            </div>
+          </div>
+		  <div id="espaco_status">
+			<p>MINHAS RESERVAS</p>
+			<table id="status_table">
+				<tr>
+					<td class="campos_status_usuario">
+						&nbsp;&nbsp;Hotel
+					</td>
+					<td class="campos_status_usuario">
+						&nbsp;&nbsp;Lugar
+					</td>
+					<td  class="campos_status_usuario">
+						&nbsp;&nbsp;Data da Reserva
+					</td>
+					<td  class="campos_status_usuario">
+						&nbsp;&nbsp;Status
+					</td>
+					<td  class="campos_status_usuario">
+						&nbsp;&nbsp;Mais informações
+					</td>
+				</tr>
+				<tr class="conteudo_status">
+					<td>
+						&nbsp;Hotel Fazenda Suipe
+					</td>
+					<td>
+						&nbsp;São Paulo
+					</td>
+					<td>
+						&nbsp;10/09/2017
+					</td>
+					<td>
+						&nbsp;Reserva Aprovada
+					</td>
+					<td>
+						<a href="#janela3" rel="modal"  id="a_index_duvida">
+							<img class="icone_perfil_mais_status" src="imagens/mais.png" width="100%" height="100%"/>
+							&nbsp;Detalhes
+						</a>
+
+					</td>
+				</tr>
+					<tr class="conteudo_status">
+					<td>
+					</td>
+					<td>
+					</td>
+					<td>
+
+					</td>
+					<td>
+
+					</td>
+					<td>
+
+					</td>
+				</tr>
+					<tr class="conteudo_status">
+					<td>
+					</td>
+					<td>
+					</td>
+					<td>
+
+					</td>
+					<td>
+
+					</td>
+					<td>
+
+					</td>
+				</tr>
+				</tr>
+					<tr class="conteudo_status">
+					<td>
+					</td>
+					<td>
+					</td>
+					<td>
+
+					</td>
+					<td>
+
+					</td>
+					<td>
+
+					</td>
+				</tr>
+			</table>
+		  </div>
+          <div id="txt_perfilUsuario">
+            <p>LUGARES POR ONDE VOCÊ PASSOU</p>
+          </div>
+
+          <div id="principal_produtos">
+            <div class="produtos_div"  data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
+              <img src="imagens/hotel2.jpg" alt="">
+              <div class="legenda_produto">
+                <p class="txt_nome_hotel">Hotel Fazende Suipe</p>
+                <p class="txt_estado_hotel">São Paulo</p>
+                <div class="estrelas">
+                  <img class="img_estrelas_hotel" src="imagens/estrelas.png" alt="">
+                </div>
+                <div class="caracteristicas_hotel">
+                  <img class="img_caracteristica_hotel" src="imagens/wifi.png" alt="">
+                </div>
+                <p class="txt_caracteristica_hotel">Wi-fi grátis</p>
+                <div id="area_comentario_perfilUsuario">
+                    <a href="#" id="mostrar">
+                    <button id="btn_pesquisa_avancada" type="button" name="button" >
+                    <img  id="img_filtro_comentario" src="imagens/cv.png" alt="dasd"></a></button>
+                </div>
+                <p class="txt_diaria_hotel" >Diárias a partir de</p>
+                <p class="txt_rs" >R$</p>
+                <p class="txt_preco_hotel">200</p>
+                <input type="submit" name="btn_produto" value="ver novamente" class="btn_produto">
+                <div id="comentario">
+                  <h1 class="txt_comentario"><p>FAÇA SEU COMENTARIO</p></h1>
+                  <textarea name="txtobs" cols="39" rows="8" class="observacao"> </textarea>
+                  <button type="button" class="button_editar_comentario ">ENVIAR
+                     <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+                  </button>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="produtos_div"  data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
+              <img src="imagens/hotel2.jpg" alt="">
+              <div class="legenda_produto">
+                <p class="txt_nome_hotel">Hotel Fazende Suipe</p>
+                <p class="txt_estado_hotel">São Paulo</p>
+                <div class="estrelas">
+                  <img class="img_estrelas_hotel" src="imagens/estrelas.png" alt="">
+                </div>
+                <div class="caracteristicas_hotel">
+                  <img class="img_caracteristica_hotel" src="imagens/wifi.png" alt="">
+                </div>
+                <p class="txt_caracteristica_hotel">Wi-fi grátis</p>
+                <div id="area_comentario_perfilUsuario">
+                    <a href="#" id="mostrar">
+                    <button id="btn_pesquisa_avancada_comentario2" type="button" name="button" >
+                    <img  id="img_filtro_comentario" src="imagens/cv.png" alt="dasd"></a></button>
+                </div>
+                <p class="txt_diaria_hotel" >Diárias a partir de</p>
+                <p class="txt_rs" >R$</p>
+                <p class="txt_preco_hotel">200</p>
+                <input type="submit" name="btn_produto" value="ver novamente" class="btn_produto">
+                <div id="comentario2">
+                  <h1 class="txt_comentario"><p>FAÇA SEU COMENTARIO</p></h1>
+                  <textarea name="txtobs" cols="39" rows="8" class="observacao"> </textarea>
+                  <button type="button" class="button_editar_comentario ">ENVIAR
+                     <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+                  </button>
+                </div>
+
+              </div>
+
+            </div>
+            <div class="produtos_div"  data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
+              <img src="imagens/hotel2.jpg" alt="">
+              <div class="legenda_produto">
+                <p class="txt_nome_hotel">Hotel Fazende Suipe</p>
+                <p class="txt_estado_hotel">São Paulo</p>
+                <div class="estrelas">
+                  <img class="img_estrelas_hotel" src="imagens/estrelas.png" alt="">
+                </div>
+                <div class="caracteristicas_hotel">
+                  <img class="img_caracteristica_hotel" src="imagens/wifi.png" alt="">
+                </div>
+                <p class="txt_caracteristica_hotel">Wi-fi grátis</p>
+                <div id="area_comentario_perfilUsuario">
+                    <a href="#" id="mostrar">
+                    <button id="btn_pesquisa_avancada_comentario3" type="button" name="button" >
+                    <img  id="img_filtro_comentario" src="imagens/cv.png" alt="dasd"></a></button>
+                </div>
+                <p class="txt_diaria_hotel" >Diárias a partir de</p>
+                <p class="txt_rs" >R$</p>
+                <p class="txt_preco_hotel">200</p>
+                <input type="submit" name="btn_produto" value="ver novamente" class="btn_produto">
+                <div id="comentario3">
+                  <h1 class="txt_comentario"><p>FAÇA SEU COMENTARIO</p></h1>
+                  <textarea name="txtobs" cols="39" rows="8" class="observacao"> </textarea>
+                  <button type="button" class="button_editar_comentario ">ENVIAR
+                     <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+                  </button>
+                </div>
+
+              </div>
+
+            </div>
+            <div class="produtos_div"  data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
+              <img src="imagens/hotel2.jpg" alt="">
+              <div class="legenda_produto">
+                <p class="txt_nome_hotel">Hotel Fazende Suipe</p>
+                <p class="txt_estado_hotel">São Paulo</p>
+                <div class="estrelas">
+                  <img class="img_estrelas_hotel" src="imagens/estrelas.png" alt="">
+                </div>
+                <div class="caracteristicas_hotel">
+                  <img class="img_caracteristica_hotel" src="imagens/wifi.png" alt="">
+                </div>
+                <p class="txt_caracteristica_hotel">Wi-fi grátis</p>
+                <div id="area_comentario_perfilUsuario">
+                    <a href="#" id="mostrar">
+                    <button id="btn_pesquisa_avancada_comentario4" type="button" name="button" >
+                    <img  id="img_filtro_comentario" src="imagens/cv.png" alt="dasd"></a></button>
+                </div>
+                <p class="txt_diaria_hotel" >Diárias a partir de</p>
+                <p class="txt_rs" >R$</p>
+                <p class="txt_preco_hotel">200</p>
+                <input type="submit" name="btn_produto" value="ver novamente" class="btn_produto">
+                <div id="comentario2">
+                  <h1 class="txt_comentario4"><p>FAÇA SEU COMENTARIO</p></h1>
+                  <textarea name="txtobs" cols="39" rows="8" class="observacao"> </textarea>
+                  <button type="button" class="button_editar_comentario ">ENVIAR
+                     <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+                  </button>
+                </div>
+
+              </div>
+
+            </div>
+            <div class="produtos_div"  data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
+              <img src="imagens/hotel2.jpg" alt="">
+              <div class="legenda_produto">
+                <p class="txt_nome_hotel">Hotel Fazende Suipe</p>
+                <p class="txt_estado_hotel">São Paulo</p>
+                <div class="estrelas">
+                  <img class="img_estrelas_hotel" src="imagens/estrelas.png" alt="">
+                </div>
+                <div class="caracteristicas_hotel">
+                  <img class="img_caracteristica_hotel" src="imagens/wifi.png" alt="">
+                </div>
+                <p class="txt_caracteristica_hotel">Wi-fi grátis</p>
+                <div id="area_comentario_perfilUsuario">
+                    <a href="#" id="mostrar">
+                    <button id="btn_pesquisa_avancada_comentario5" type="button" name="button" >
+                    <img  id="img_filtro_comentario" src="imagens/cv.png" alt="dasd"></a></button>
+                </div>
+                <p class="txt_diaria_hotel" >Diárias a partir de</p>
+                <p class="txt_rs" >R$</p>
+                <p class="txt_preco_hotel">200</p>
+                <input type="submit" name="btn_produto" value="ver novamente" class="btn_produto">
+                <div id="comentario5">
+                  <h1 class="txt_comentario"><p>FAÇA SEU COMENTARIO</p></h1>
+                  <textarea name="txtobs" cols="39" rows="8" class="observacao"> </textarea>
+                  <button type="button" class="button_editar_comentario ">ENVIAR
+                     <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+                  </button>
+                </div>
+
+              </div>
+
+            </div>
+            <div class="produtos_div"  data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
+              <img src="imagens/hotel2.jpg" alt="">
+              <div class="legenda_produto">
+                <p class="txt_nome_hotel">Hotel Fazende Suipe</p>
+                <p class="txt_estado_hotel">São Paulo</p>
+                <div class="estrelas">
+                  <img class="img_estrelas_hotel" src="imagens/estrelas.png" alt="">
+                </div>
+                <div class="caracteristicas_hotel">
+                  <img class="img_caracteristica_hotel" src="imagens/wifi.png" alt="">
+                </div>
+                <p class="txt_caracteristica_hotel">Wi-fi grátis</p>
+                <div id="area_comentario_perfilUsuario">
+                    <a href="#" id="mostrar">
+                    <button id="btn_pesquisa_avancada_comentario6" type="button" name="button" >
+                    <img  id="img_filtro_comentario" src="imagens/cv.png" alt="dasd"></a></button>
+                </div>
+                <p class="txt_diaria_hotel" >Diárias a partir de</p>
+                <p class="txt_rs" >R$</p>
+                <p class="txt_preco_hotel">200</p>
+                <input type="submit" name="btn_produto" value="ver novamente" class="btn_produto">
+                <div id="comentario6">
+                  <h1 class="txt_comentario"><p>FAÇA SEU COMENTARIO</p></h1>
+                  <textarea name="txtobs" cols="39" rows="8" class="observacao"> </textarea>
+                  <button type="button" class="button_editar_comentario ">ENVIAR
+                     <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+                  </button>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+      </section>
+
+          <footer>
+            <?php include('rodape.php'); ?>
+          </footer>
+  </body>
+</html>

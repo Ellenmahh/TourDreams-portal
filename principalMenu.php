@@ -2,8 +2,8 @@
   <?php $paginaCorrente = basename($_SERVER['SCRIPT_NAME']);?>
           <ul class="menu_busca">
             <li>
-              <a href="buscaAvancada.php"
-              <?php if($paginaCorrente == 'buscaAvancada.php') {echo'class="menu_busca"';}?>>
+              <a href="avancada.php"
+              <?php if($paginaCorrente == 'avancada.php') {echo'class="menu_busca"';}?>>
               <h1>Busca avançada</h1></a>
           </li>
           <li>
