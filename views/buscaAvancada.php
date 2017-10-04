@@ -93,6 +93,64 @@
                 <div class="control__indicator"></div>
               </label>
             </div>
+            <div class="control-group">
+              <!--<p class="titulo_filtro" >PREÇO</p>-->
+              <label class="control control--checkbox">TESTE
+                <input type="checkbox" checked="checked"/>
+                <div class="control__indicator"></div>
+              </label>
+              <label class="control control--checkbox">TESTE
+                <input type="checkbox"/>
+                <div class="control__indicator"></div>
+              </label>
+              <label class="control control--checkbox">TESTE
+                <input type="checkbox"/>
+                <div class="control__indicator"></div>
+              </label>
+              <label class="control control--checkbox">TESTE
+                <input type="checkbox"/>
+                <div class="control__indicator"></div>
+              </label>
+            </div>
+            <div class="control-group">
+              <!--<p class="titulo_filtro" >PREÇO</p>-->
+              <label class="control control--checkbox">TESTE
+                <input type="checkbox" checked="checked"/>
+                <div class="control__indicator"></div>
+              </label>
+              <label class="control control--checkbox">TESTE
+                <input type="checkbox"/>
+                <div class="control__indicator"></div>
+              </label>
+              <label class="control control--checkbox">TESTE
+                <input type="checkbox"/>
+                <div class="control__indicator"></div>
+              </label>
+              <label class="control control--checkbox">TESTE
+                <input type="checkbox"/>
+                <div class="control__indicator"></div>
+              </label>
+            </div>
+            <div class="control-group">
+              <!--<p class="titulo_filtro" >PREÇO</p>-->
+              <label class="control control--checkbox">TESTE
+                <input type="checkbox" checked="checked"/>
+                <div class="control__indicator"></div>
+              </label>
+              <label class="control control--checkbox">TESTE
+                <input type="checkbox"/>
+                <div class="control__indicator"></div>
+              </label>
+              <label class="control control--checkbox">TESTE
+                <input type="checkbox"/>
+                <div class="control__indicator"></div>
+              </label>
+              <label class="control control--checkbox">TESTE
+                <input type="checkbox"/>
+                <div class="control__indicator"></div>
+              </label>
+            </div>
+            <input id="btn_aplicarFiltros" type="submit" name="button" value="APLICAR" />
           </div>
 
         </div>

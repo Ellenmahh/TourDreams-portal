@@ -1,6 +1,6 @@
 <div id="principal_header">
 <nav>
-  <a href="index.php">
+  <a href="home.php">
     <div id="logo">
         <img id="img_logo_principal" src="imagens/td.png" alt="TourDreams">
     </div>
@@ -28,7 +28,7 @@
     <nav id="nav_dois">
 
     <div id="logo_escondida">
-        <a href="index.php"><img id="img_logo_principal_escondida" src="imagens/td_escondida.png" alt="TourDreams"></a>
+        <a href="home.php"><img id="img_logo_principal_escondida" src="imagens/td_escondida.png" alt="TourDreams"></a>
     </div>
       <?php include('principalMenu.php') ?>
     </nav>

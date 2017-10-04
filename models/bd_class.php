@@ -11,7 +11,7 @@ class mysql_db{
       //guardando os valores referente a conexão do banco de dados, nos atributos da classe
       $this->server="localhost";
       $this->user="root";
-      $this->password="";
+      $this->password="bcd127";
   }
 
   //metodo para conectar no banco de dados
@@ -20,7 +20,7 @@ class mysql_db{
       //estabelece a conexão com o banco de dados, se a conexão estiver correta, seleciona o database, caso contrário, informa uma mensagem e finaliza a conexão
       if ($conexao=mysql_connect( $this->server,  $this->user,  $this->password)){
 
-          mysql_select_db('banco');
+          mysql_select_db('dbtourdreams');
 
       }else{
 

@@ -1,27 +1,31 @@
-<div id="principal_footer">
+<?php
+      //Incluindo o arquivo da controller para fazer o select
+      require_once('controllers/aspectos_controller.php');
+      //Instancia do objeto de controller, e chamada dos metodos para listar os registros
+      $controller_cor_preco_aspecto = new controllerAspectos();
+      $rsCorPreco = $controller_cor_preco_aspecto->listar_cor_rodape();
+      $cont=0;
+      while ($cont<count($rsCorPreco)) {
+
+
+
+     ?>
+
+<div id="principal_footer" style="background-color:#<?php echo($rsCorPreco[$cont]->cor_rodape);?>">
+
+  <?php
+    $cont+=1;
+
+    }
+
+
+  ?>
   <div id="fale_conosco">
       <div id="titulo_fale_conosco">
           <h1>FALE CONOSCO</h1>
 
       </div>
-        <div id="campos_fc">
-          <input type="text" name="txt_nome_fc" placeholder=" Nome" class="inputs_fc">
-          <br>
-          <input type="text" name="txt_email_fc" placeholder=" Email" class="inputs_fc_mail">
-          <br>
-          <input type="text" name="txt_telefone_fc" placeholder=" Telefone" class="inputs_fc_tel">
-
-
-        </div>
-        <div id="sugestao">
-          <textarea name="name" rows="7" cols="80" placeholder=" Sugestões e Críticas" id="input_obs"></textarea>
-
-        </div>
-        <div id="div_btn_enviar">
-          <input type="submit" name="btn_enviar" value="Enviar" id="btn_enviar">
-
-        </div>
-
+      <?php include_once('views/crud_fale_conosco/view_fale_conosco.php'); ?>
 
   </div>
 
@@ -40,6 +44,7 @@
         </div>
 
     </div>
+    
         <div id="localização">
           <div id="maps">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.2260099021055!2d-46.659662285744375!3d-23.560324967437474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59cc22fd0f3f%3A0x636dada907dcf59e!2sAv.+Paulista%2C+1754!5e0!3m2!1spt-BR!2sbr!4v1503871224476" width="500" height="280" frameborder="0" style="border:0" allowfullscreen></iframe>

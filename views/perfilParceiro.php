@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<?php 
+<?php
 	if(isset($_POST['btn_quarto_editar'])){
 		header('location:editarQuarto.php');
 
@@ -115,114 +115,98 @@
 			<form  name="perfil_Parceiro" method="post" enctype="multipart/form-data" action="editarQuarto.php">
 
 			  <div id="principal_produtos">
-				<div class="produtos_div"  data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
-				  <img src="imagens/hotel3.jpg" alt="">
-				  <div class="legenda_produto">
-					<p class="txt_nome_hotel">Quarto tal - N° 13</p>
-					<p class="txt_estado_hotel">São Paulo</p>
-				   
-					<div class="caracteristicas_hotel">
-					  <img class="img_caracteristica_hotel" src="imagens/wifi.png" alt="">
-					</div>
-					<p class="txt_caracteristica_hotel">Wi-fi grátis</p>
-					<p class="txt_diaria_hotel" >Diárias a partir de</p>
-					<p class="txt_rs" >R$</p>
-					<p class="txt_preco_hotel">200</p>
-					<input type="submit" name="btn_quarto_editar" value="editar" class="btn_produto">
+					<div class="produtos_div_verQuartos">
+						<a href="editarQuarto.php"><img class="img_hotel" src="imagens/hotel9.jpg" alt=""></a>
+						<div class="legenda_produto_verQuartos">
+							<p class="txt_nome_hotel">Quarto tal</p>
+							<p class="txt_estado_hotel">São Paulo</p>
+							<div class="caracteristicas_verQuartos">
+								<img class="img_caracteristicas_verQuartos" src="imagens/wifi.png" alt="">
+							</div>
+							<p class="txt_caracteristica_verQuartos">Wi-fi gratuito</p>
+							<a href="editarQuarto.php"><input type="submit" name="btn_quarto_editar" value="editar" class="btn_produto_verQuartos"></a>
 
-				  </div>
+						</div>
+
+					</div>
+
+				<!--</li>
+			</ul>-->
+
+			<div class="produtos_div_verQuartos">
+				<a href="editarQuarto.php"><img class="img_hotel" src="imagens/hotel7.jpg" alt=""></a>
+				<div class="legenda_produto_verQuartos">
+					<p class="txt_nome_hotel">Quarto tal</p>
+					<p class="txt_estado_hotel">São Paulo</p>
+					<div class="caracteristicas_verQuartos">
+						<img class="img_caracteristicas_verQuartos" src="imagens/wifi.png" alt="">
+					</div>
+					<p class="txt_caracteristica_verQuartos">Wi-fi gratuito</p>
+
+					<a href="editarQuarto.php"><input type="submit" name="btn_quarto_editar" value="editar" class="btn_produto_verQuartos"></a>
 
 				</div>
-				<div class="produtos_div"  data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
-				  <img src="imagens/hotel2.jpg" alt="">
-				  <div class="legenda_produto">
-					<p class="txt_nome_hotel">Quarto tal - N° 15</p>
-					<p class="txt_estado_hotel">São Paulo</p>
-				  
-				   <div class="caracteristicas_hotel">
-					  <img class="img_caracteristica_hotel" src="imagens/wifi.png" alt="">
-					</div>
-					<p class="txt_caracteristica_hotel">Wi-fi grátis</p>
-					<p class="txt_diaria_hotel" >Diárias a partir de</p>
-					<p class="txt_rs" >R$</p>
-					<p class="txt_preco_hotel">200</p>
-					<input type="submit" name="btn_quarto_editar" value="editar" class="btn_produto">
 
-				  </div>
+			</div>
+			<div class="produtos_div_verQuartos">
+				<a href="editarQuarto.php"><img class="img_hotel" src="imagens/hotel5.jpg" alt=""></a>
+				<div class="legenda_produto_verQuartos">
+					<p class="txt_nome_hotel">Quarto tal</p>
+					<p class="txt_estado_hotel">São Paulo</p>
+					<div class="caracteristicas_verQuartos">
+						<img class="img_caracteristicas_verQuartos" src="imagens/wifi.png" alt="">
+					</div>
+					<p class="txt_caracteristica_verQuartos">Wi-fi gratuito</p>
+
+					<a href="editarQuarto.php"><input type="submit" name="btn_quarto_editar" value="editar" class="btn_produto_verQuartos"></a>
 
 				</div>
-				<div class="produtos_div"  data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
-				  <img src="imagens/hotel1.jpg" alt="">
-				  <div class="legenda_produto">
-					<p class="txt_nome_hotel">Quarto tal - N° 06</p>
-					<p class="txt_estado_hotel">São Paulo</p>
-				  
-					<div class="caracteristicas_hotel">
-					  <img class="img_caracteristica_hotel" src="imagens/wifi.png" alt="">
-					</div>
-					<p class="txt_caracteristica_hotel">Wi-fi grátis</p>
-					<p class="txt_diaria_hotel" >Diárias a partir de</p>
-					<p class="txt_rs" >R$</p>
-					<p class="txt_preco_hotel">200</p>
-					<input type="submit" name="btn_quarto_editar" value="editar" class="btn_produto">
 
-				  </div>
+			</div>
+			<div class="produtos_div_verQuartos">
+				<a href="editarQuarto.php"><img class="img_hotel" src="imagens/hotel2.jpg" alt=""></a>
+				<div class="legenda_produto_verQuartos">
+					<p class="txt_nome_hotel">Quarto tal</p>
+					<p class="txt_estado_hotel">São Paulo</p>
+					<div class="caracteristicas_verQuartos">
+						<img class="img_caracteristicas_verQuartos" src="imagens/wifi.png" alt="">
+					</div>
+					<p class="txt_caracteristica_verQuartos">Wi-fi gratuito</p>
+
+					<a href="editarQuarto.php"><input type="submit" name="btn_quarto_editar" value="editar" class="btn_produto_verQuartos"></a>
+				</div>
+
+			</div>
+			<div class="produtos_div_verQuartos">
+				<a href="editarQuarto.php"><img class="img_hotel" src="imagens/hotel4.jpg" alt=""></a>
+				<div class="legenda_produto_verQuartos">
+					<p class="txt_nome_hotel">Quarto tal</p>
+					<p class="txt_estado_hotel">São Paulo</p>
+					<div class="caracteristicas_verQuartos">
+						<img class="img_caracteristicas_verQuartos" src="imagens/wifi.png" alt="">
+					</div>
+					<p class="txt_caracteristica_verQuartos">Wi-fi gratuito</p>
+
+					<a href="editarQuarto.php"><input type="submit" name="btn_quarto_editar" value="editar" class="btn_produto_verQuartos"></a>
+				</div>
+
+			</div>
+			<div class="produtos_div_verQuartos">
+				<a href="editarQuarto.php"><img class="img_hotel" src="imagens/hotel3.jpg" alt=""></a>
+				<div class="legenda_produto_verQuartos">
+					<p class="txt_nome_hotel">Quarto tal</p>
+					<p class="txt_estado_hotel">São Paulo</p>
+					<div class="caracteristicas_verQuartos">
+						<img class="img_caracteristicas_verQuartos" src="imagens/wifi.png" alt="">
+					</div>
+					<p class="txt_caracteristica_verQuartos">Wi-fi gratuito</p>
+
+					<a href="editarQuarto.php"><input type="submit" name="btn_quarto_editar" value="editar" class="btn_produto_verQuartos"></a>
 
 				</div>
-				<div class="produtos_div"  data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
-				  <img src="imagens/hotel8.jpg" alt="">
-				  <div class="legenda_produto">
-					<p class="txt_nome_hotel">Quarto tal - N° 21</p>
-					<p class="txt_estado_hotel">São Paulo</p>
-				  
-					<div class="caracteristicas_hotel">
-					  <img class="img_caracteristica_hotel" src="imagens/wifi.png" alt="">
-					</div>
-					<p class="txt_caracteristica_hotel">Wi-fi grátis</p>
-					<p class="txt_diaria_hotel" >Diárias a partir de</p>
-					<p class="txt_rs" >R$</p>
-					<p class="txt_preco_hotel">200</p>
-					<input type="submit" name="btn_quarto_editar" value="editar" class="btn_produto">
 
-				  </div>
+			</div>
 
-				</div>
-				<div class="produtos_div"  data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
-				  <img src="imagens/hotel9.jpg" alt="">
-				  <div class="legenda_produto">
-					<p class="txt_nome_hotel">Quarto tal - N° 582</p>
-					<p class="txt_estado_hotel">São Paulo</p>
-
-					<div class="caracteristicas_hotel">
-					  <img class="img_caracteristica_hotel" src="imagens/wifi.png" alt="">
-					</div>
-					<p class="txt_caracteristica_hotel">Wi-fi grátis</p>
-					<p class="txt_diaria_hotel" >Diárias a partir de</p>
-					<p class="txt_rs" >R$</p>
-					<p class="txt_preco_hotel">200</p>
-					<input type="submit" name="btn_quarto_editar" value="editar" class="btn_produto">
-
-				  </div>
-
-				</div>
-				<div class="produtos_div"  data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
-				  <img src="imagens/hotel11.jpg" alt="">
-				  <div class="legenda_produto">
-					<p class="txt_nome_hotel">Quarto tal - N° 600</p>
-					<p class="txt_estado_hotel">São Paulo</p>
-				   
-					<div class="caracteristicas_hotel">
-					  <img class="img_caracteristica_hotel" src="imagens/wifi.png" alt="">
-					</div>
-					<p class="txt_caracteristica_hotel">Wi-fi grátis</p>
-					<p class="txt_diaria_hotel" >Diárias a partir de</p>
-					<p class="txt_rs" >R$</p>
-					<p class="txt_preco_hotel">200</p>
-					<input type="submit" name="btn_quarto_editar" value="editar" class="btn_produto">
-
-				  </div>
-
-				</div>
           <!--</div>-->
 		  </form>
         </div>

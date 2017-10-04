@@ -11,9 +11,27 @@
       <div id="principal">
 		<div id="espaco_sobre">
 			<div id="slider">
-				<img class="slides" title="CONFIRA" src="Imagens/hotel4.jpg" alt="">
-				<img class="slides" title="CONFIRA" src="Imagens/hotel2.jpg" alt="">
-				<img class="slides" title="CONFIRA" src="Imagens/hotel3.jpg" alt="">
+        <?php
+              //Incluindo o arquivo da controller para fazer o select
+              require_once('controllers/sobre_controller.php');
+              //Instancia do objeto de controller, e chamada dos metodos para listar os registros
+              $controller_sobre_foto = new controllerSobre();
+              $rsSobreFotos = $controller_sobre_foto->listarfotos();
+              $cont=0;
+              while ($cont<count($rsSobreFotos)) {
+
+
+
+             ?>
+				<img class="slides" title="CONFIRA" src="admin/cms/<?php echo($rsSobreFotos[$cont]->descricao_imagem);?>" alt="">
+        <?php
+          $cont+=1;
+
+          }
+
+
+        ?>
+
 				<button class = "button" onClick = "plusIndex(-1)" id = "btn1"> &#10094;</button>
 				<button class = "button" onClick = "plusIndex(1)" id = "btn2"> &#10095;</button>
 			</div>
@@ -33,54 +51,24 @@
 				</div>
 			</div>
 		</div>
+    <?php
+          //Incluindo o arquivo da controller para fazer o select
+          require_once('controllers/sobre_controller.php');
+          //Instancia do objeto de controller, e chamada dos metodos para listar os registros
+          $controller_sobre = new controllerSobre();
+          $rsSobre = $controller_sobre->listar();
+          $cont=0;
+          while ($cont<count($rsSobre)) {
+
+
+
+         ?>
         <div id="area_info_sobre">
           <div class="titulo_info_sobre">
             <p >SOBRE NOSSA EMPRESA</p>
           </div>
           <div class="txt_info_sobre">
-            <p>teste teste teste teste teste teste
-            teste teste teste teste teste teste
-            teste teste teste teste teste teste
-            teste teste teste teste teste teste
-            teste teste teste teste teste teste
-            teste teste teste teste teste teste
-            teste teste teste teste teste teste
-            teste teste teste teste teste teste
-            teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
+            <p><?php echo($rsSobre[$cont]->txt_sobre);?>
                 </p>
           </div>
         </div>
@@ -89,34 +77,7 @@
             <p>MISSÃO</p>
           </div>
           <div class="txt_info_sobre">
-            <p  >teste teste teste teste teste teste
-            teste teste teste teste teste teste
-            teste teste teste teste teste teste
-            teste teste teste teste teste teste
-            teste teste teste teste teste teste
-            teste teste teste teste teste teste
-            teste teste teste teste teste teste
-            teste teste teste teste teste teste
-            teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
+            <p><?php echo($rsSobre[$cont]->txt_missao);?>
                 </p>
           </div>
         </div>
@@ -125,30 +86,7 @@
             <p>VISÃO</p>
           </div>
           <div class="txt_info_sobre">
-            <p>teste teste teste teste teste teste
-            teste teste teste teste teste teste
-            teste teste teste teste teste teste
-            teste teste teste teste teste teste
-            teste teste teste teste teste teste
-            teste teste teste teste teste teste
-            teste teste teste teste teste teste
-            teste teste teste teste teste teste
-            teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
+            <p><?php echo($rsSobre[$cont]->txt_visao);?>
                 </p>
           </div>
         </div>
@@ -157,34 +95,17 @@
             <p>VALORES</p>
           </div>
           <div class="txt_info_sobre">
-            <p>teste teste teste teste teste teste
-            teste teste teste teste teste teste
-            teste teste teste teste teste teste
-            teste teste teste teste teste teste
-            teste teste teste teste teste teste
-            teste teste teste teste teste teste
-            teste teste teste teste teste teste
-            teste teste teste teste teste teste
-            teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
-              teste teste teste teste teste teste
+            <p><?php echo($rsSobre[$cont]->txt_valores);?>
                 </p>
           </div>
         </div>
+        <?php
+          $cont+=1;
+
+          }
+
+
+        ?>
       </div>
     </section>
     <script type="text/javascript">

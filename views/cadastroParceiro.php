@@ -1,14 +1,5 @@
 <!DOCTYPE html>
-<?php
-	if(isset($_POST['btnAvancar'])){
-		header('location:cadastroParceiro2.php');
 
-	}
-
-
-
-
-?>
 <html>
   <head>
     <?php

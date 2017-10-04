@@ -23,7 +23,7 @@
 
             <a href="cadastroParceiro.php">
               <div class="btn_area_optCadastro">
-                <p>PARCEIRO</p>
+                <p>HOTELEIRO</p>
               </div>
             </a>
 

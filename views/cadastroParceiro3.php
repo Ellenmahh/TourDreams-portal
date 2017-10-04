@@ -3,7 +3,7 @@
 <html>
   <head>
     <?php include('head.php'); ?>
-	
+
 
   </head>
   <body>
@@ -12,7 +12,7 @@
 	  </header>
    </body>
     <section>
-	
+
       <div id="principal">
 	  	<div id="area_optCadastro">
           <div id="txt_area_optCadastro">
@@ -23,14 +23,14 @@
               <div class="btn_area_optCadastro">
                 <p>ADICIONAR + </p>
               </div>
-            </a>           
+            </a>
 		   <a href="index.php">
               <div class="btn_area_optCadastro">
                 <p>FINALIZAR</p>
               </div>
             </a>
 
-           
+
 			<div class="txt_btn_optCadastro">
               <p> Adicionar mais um quarto ao cadastro de seu Hotél.</p>
             </div>
@@ -38,10 +38,10 @@
               <p>  Finalizar o cadastro do seu Hotél.</p>
             </div>
 
-            
+
           </div>
         </div>
       </div>
 	  </div>
-	  
+
 	</section>

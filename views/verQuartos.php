@@ -35,9 +35,6 @@
                       <img class="img_caracteristicas_verQuartos" src="imagens/wifi.png" alt="">
                     </div>
                     <p class="txt_caracteristica_verQuartos">Wi-fi gratuito</p>
-                    <p class="txt_diaria_hotel" >Diárias a partir de</p>
-                    <p class="txt_rs" >R$</p>
-                    <p class="txt_preco_hotel">200</p>
                     <a href="areaReserva.php"><input type="submit" name="btn_produto" value="reservar" class="btn_produto_verQuartos"></a>
 
                   </div>
@@ -56,9 +53,7 @@
                   <img class="img_caracteristicas_verQuartos" src="imagens/wifi.png" alt="">
                 </div>
                 <p class="txt_caracteristica_verQuartos">Wi-fi gratuito</p>
-                <p class="txt_diaria_hotel" >Diárias a partir de</p>
-                <p class="txt_rs" >R$</p>
-                <p class="txt_preco_hotel">200</p>
+
                 <a href="areaReserva.php"><input type="submit" name="btn_produto" value="reservar" class="btn_produto_verQuartos"></a>
 
               </div>
@@ -73,9 +68,7 @@
                   <img class="img_caracteristicas_verQuartos" src="imagens/wifi.png" alt="">
                 </div>
                 <p class="txt_caracteristica_verQuartos">Wi-fi gratuito</p>
-                <p class="txt_diaria_hotel" >Diárias a partir de</p>
-                <p class="txt_rs" >R$</p>
-                <p class="txt_preco_hotel">200</p>
+
                 <a href="areaReserva.php"><input type="submit" name="btn_produto" value="reservar" class="btn_produto_verQuartos"></a>
 
               </div>
@@ -90,9 +83,7 @@
                   <img class="img_caracteristicas_verQuartos" src="imagens/wifi.png" alt="">
                 </div>
                 <p class="txt_caracteristica_verQuartos">Wi-fi gratuito</p>
-                <p class="txt_diaria_hotel" >Diárias a partir de</p>
-                <p class="txt_rs" >R$</p>
-                <p class="txt_preco_hotel">200</p>
+
                 <a href="areaReserva.php"><input type="submit" name="btn_produto" value="reservar" class="btn_produto_verQuartos"></a>
 
               </div>
@@ -107,9 +98,7 @@
                   <img class="img_caracteristicas_verQuartos" src="imagens/wifi.png" alt="">
                 </div>
                 <p class="txt_caracteristica_verQuartos">Wi-fi gratuito</p>
-                <p class="txt_diaria_hotel" >Diárias a partir de</p>
-                <p class="txt_rs" >R$</p>
-                <p class="txt_preco_hotel">200</p>
+
                 <a href="areaReserva.php"><input type="submit" name="btn_produto" value="reservar" class="btn_produto_verQuartos"></a>
 
               </div>
@@ -124,9 +113,7 @@
                   <img class="img_caracteristicas_verQuartos" src="imagens/wifi.png" alt="">
                 </div>
                 <p class="txt_caracteristica_verQuartos">Wi-fi gratuito</p>
-                <p class="txt_diaria_hotel" >Diárias a partir de</p>
-                <p class="txt_rs" >R$</p>
-                <p class="txt_preco_hotel">200</p>
+                
                 <a href="areaReserva.php"><input type="submit" name="btn_produto" value="reservar" class="btn_produto_verQuartos"></a>
 
               </div>

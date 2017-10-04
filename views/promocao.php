@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,11 +13,31 @@
       <section>
         <div id="slides">
         <div class="slides-container">
-          <img src="imagens/bannerpromocao.jpg">
-          <img src="imagens/bannerpromocao2.jpg">
-          <img src="imagens/bannerpromocao3.jpg">
-          <img src="imagens/bannerpromocao4.jpg">
-          <img src="imagens/bannerpromocao5.jpg">
+                  <?php
+                        //Incluindo o arquivo da controller para fazer o select
+                        require_once('controllers/promocao_controller.php');
+                        //Instancia do objeto de controller, e chamada dos metodos para listar os registros
+                       $promocao_controller = new controllerPromocao();
+                       $rsPromocao = $promocao_controller->listarfotos();
+                        $cont=0;
+                        while ($cont<count($rsPromocao)) {
+
+
+
+                       ?>
+
+                      <img src="admin/cms/<?php echo($rsPromocao[$cont]->banner_promocao);?>" alt="asdasd">
+
+                      <?php
+                        $cont+=1;
+
+                        }
+
+
+                      ?>
+
+
+
         </div>
 
         <nav class="slides-navigation">

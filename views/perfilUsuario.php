@@ -1,3 +1,7 @@
+<?php
+  session_start();
+  $id_usuario = $_SESSION['id_usuario'];
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -8,50 +12,11 @@
 			<hgroup id="hgroup_modal_editar_perfilUsuario">
 			  <h1 class="h1_modal"><p>ATUALIZE SUAS INFORMAÇÕES</p></h1>
 			</hgroup>
-			<form id="form_modal_editar_perfilUsuario">
-        <div class="group_editar_perfilUsuario">
-				   <input type="text" placeholder="nome" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
-				   <!--<label class="label_modal">nome</label>-->
-			  </div>
-        <div class="group_editar_perfilUsuario">
-          <input type="text" placeholder="e-mail" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
-          <!--<label class="label_modal">e-mail</label>-->
-			  </div>
-        <div class="group_editar_perfilUsuario">
-          <input type="text" placeholder="endereço" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
-          <!--<label class="label_modal">endereço</label>-->
-			  </div>
-        <div class="group_editar_perfilUsuario">
-          <input type="text" placeholder="telefone" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
-          <!--<label class="label_modal">telefone</label>-->
-			  </div>
-        <div class="group_editar_perfilUsuario">
-          <input type="text" placeholder="celular" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
-          <!--<label class="label_modal">celular</label>-->
-			  </div>
-        <div class="group_editar_perfilUsuario">
-          <input type="text" placeholder="CPF" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
-          <!--<label class="label_modal">CPF</label>-->
-			  </div>
-        <div class="group_editar_perfilUsuario">
-          <input type="text" placeholder="RG" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
-          <!--<label class="label_modal">RG</label>-->
-			  </div>
-        <div class="group_editar_perfilUsuario">
-          <input type="text" placeholder="usuário" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
-          <!--<label class="label_modal">usuário</label>-->
-			  </div>
-        <div class="group_editar_perfilUsuario">
-          <input type="text" placeholder="senha" class="input_modal_editar_perfilUsuario"><span class="highlight"></span><span class="bar"></span>
-          <!--<label class="label_modal">senha</label>-->
-			  </div>
-        <button type="button" class="button_editar_perfilUsuario buttonBlue">Salvar
-				   <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
-			  </button>
-        <button type="button" class="button_editar_perfilUsuario buttonBlue">Limpar
-				   <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
-			  </button>
-			</form>
+
+      <?php
+          require_once('crud_cadastroUsuario/editar_usuarios_view.php');
+      ?>
+
 		</div>
 		<div class="window" id="janela1">
 			<hgroup id="hgroup_modal">
@@ -114,7 +79,7 @@
 		</form>
 	</div>
 <!-- mascara para cobrir o site -->
-<div id="mascara"></div>
+<div id="mascara_usuario"></div>
     <header>
         <?php include('menu.php'); ?>
     </header>
@@ -122,17 +87,28 @@
       <section>
         <!--<div id="principal">-->
           <div id="capa_usuario">
+            <?php
+              $sql = 'select * from tbl_usuario where id_usuario = '.$id_usuario;
+
+              $select=mysql_query($sql);
+              while ($rs=mysql_fetch_array($select)) {
+            //echo ($sql);
+
+
+             ?>
             <div id="img_perfilUsuario">
-              <img src="imagens/harry.jpg" alt="">
+              <img src="<?php echo($rs['foto_usuario']); ?>" alt="">
             </div>
             <div id="area_info_perfilUsuario">
-              <p>Nome</p>
-              <p>Usuário</p>
-              <p>E-mail</p>
-              <p>Senha</p>
+              <p><?php echo($rs['nome_usuario']); ?></p>
+              <p><?php echo($rs['telefone_usuario']); ?></p>
+              <p><?php echo($rs['email_usuario']); ?></p>
+              <p><?php echo($rs['cpf_usuario']); ?></p>
               <div id="area_opcoes_perfilUsuario">
+
                 <a href="#editar_perfilUsuario" id="a_index_duvida" rel="modal">
                   <p>Editar informações</p>
+
                   <img src="imagens/editar.png" alt="">
                 </a>
               </div>
@@ -150,6 +126,11 @@
               </div>
 
             </div>
+            <?php
+
+             }
+
+             ?>
           </div>
 		  <div id="espaco_status">
 			<p>MINHAS RESERVAS</p>
