@@ -9,6 +9,25 @@ $modo=$_GET['modo'];
 //verificar qual controller devemos instanciar, essa informação e enviada na varíavel controller pela view
 switch($controller){
 
+
+
+      case'visualizar_quartos_hotel':
+      require_once('controllers/visualizar_quartos_controller.php');
+      require_once('models/visualizar_quartos_class.php');
+      echo "string";
+          switch ($modo) {
+            case 'listar_quartos':
+            echo "string2";
+            $controller_quartos = new controllerQuartos();
+
+            $controller_quartos->listar_quartos();
+              # code...
+              break;
+
+
+          }
+
+
       case'usuarios':
           //incluindo todos os arquivos necessários para a programação, no caso a controller e a model
           require_once('controllers/usuarios_controller.php');
@@ -82,18 +101,31 @@ switch($controller){
                     $ControllerHotel->ListarCategoria();
 
   				break;
-				
+
 		  case 'SelectCategoriaQuarto':
 			$ControllerHotel = new ControllerHotel();
 			$ControllerHotel->ListarCategoriaQuarto();
 			break;
-		
+
 		  case'NovoQuarto':
 			$ControllerHotel = new ControllerHotel();
 			$ControllerHotel->NovoQuarto();
 			break;
 		}
 
+
+    case 'fale_conosco':
+    require_once('controllers/fale_conosco_controller.php');
+      require_once('models/fale_class.php');
+
+      switch($modo){
+
+      case 'inserir_fale_conosco':
+      $ControllerFale = new controllerFaleConosco();
+      $ControllerFale->novofale();
+
+      break;
+    }
 
 
 

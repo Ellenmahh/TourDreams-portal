@@ -71,14 +71,14 @@ class controllerUsuarios{
           //Resgatando os valores do form
           $id_usuario=$_GET['id_usuario'];
           $nome_usuario=$_POST['nome_usuario'];
-          $cpf_usuario=$_POST['cpf_usuario'];
           $rg_usuario=$_POST['rg_usuario'];
           $email_usuario=$_POST['email_usuario'];
           $senha_usuario=$_POST['senha_usuario'];
           $telefone_usuario=$_POST['telefone_usuario'];
           $celular_usuario=$_POST['celular_usuario'];
           $email_usuario=$_POST['email_usuario'];
-          //$foto_usuario=$_POST['foto_usuario'];
+
+
           $rua_usuario=$_POST['rua_usuario'];
           $bairro_usuario=$_POST['bairro_usuario'];
           $numero_usuario=$_POST['numero_usuario'];
@@ -88,20 +88,30 @@ class controllerUsuarios{
 
           $usuarios_controller->id_usuario = $id_usuario;
           $usuarios_controller->nome_usuario = $nome_usuario;
-          $usuarios_controller->cpf_usuario = $cpf_usuario;
           $usuarios_controller->rg_usuario = $rg_usuario;
           $usuarios_controller->email_usuario = $email_usuario;
           $usuarios_controller->senha_usuario = $senha_usuario;
           $usuarios_controller->telefone_usuario = $telefone_usuario;
           $usuarios_controller->celular_usuario = $celular_usuario;
           $usuarios_controller->email_usuario = $email_usuario;
-          //$usuarios_controller->foto_usuario = $foto_usuario;
+
+
 
           $usuarios_controller->rua_usuario = $rua_usuario;
           $usuarios_controller->bairro_usuario = $bairro_usuario;
           $usuarios_controller->numero_usuario = $numero_usuario;
 
-          $usuarios_controller->Update($usuarios_controller);
+          if(empty($_POST['arquivos']) ){
+
+              $usuarios_controller->Update($usuarios_controller);
+
+          }else{
+              $foto_usuario = $_POST['arquivos'];
+              $usuarios_controller->foto_usuario = $foto_usuario;
+              $usuarios_controller->Update_foto($usuarios_controller);
+
+          }
+
 
 
       }

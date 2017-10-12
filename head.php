@@ -161,16 +161,27 @@
 
           //======== FORM COM AJAX ========
           jQuery(document).ready(function(){
-            jQuery('#form_modal_editar_perfilUsuario').submit(function() {
-              var dados = jQuery(this).serialize();
+            jQuery('#form_modal_editar_perfilUsuario').submit(function(event) {
+
+              //anula a ação do submit tradicional "botao" ou F5
+              //event.preventDefault();
 
               jQuery.ajax({
                 type: "POST",
                 url: "router.php?controller=usuarios&modo=alterar_dados&id_usuario=<?php echo($id_usuario); ?>",
-                data: dados,
 
-                success: function(data){
-                  alert(data);
+                //Foi utilizado o FormData para o resgate da foto do usuario
+                //Pois o serialize() nao tem o suporte essencial para tal função
+                data: new FormData($("#form_modal_editar_perfilUsuario")[0]),
+
+                cache:false,
+                contentType:false,
+                processData:false,
+                async:true,
+
+                success: function(dados){
+                  //alert(dados);
+                  $('.modal').html(dados);
                 }
               });
 
@@ -180,6 +191,7 @@
 
           });
 
+          //Trazer informações do usuario cadastrado
           $.ajax({"url":"router.php?controller=usuarios&modo=buscarAJAX&id_usuario=<?php echo($id_usuario); ?>"}).done(
             function(data){
 
@@ -196,12 +208,17 @@
               $("[name='rg_usuario']").val( user.rg_usuario);
               $("[name='senha_usuario']").val( user.senha_usuario);
 
-              $("[name='cb_estado']").val( user.idEstado);
+              //poder vizualizar informações no console do inspecionar
+              console.log(user);
+
+              //trazer a imagem do usuario atraves do atributo src
+              var foto = $("#img_perfil_usuario").attr("src");
+              $("#img_perfil_usuario_modal").attr("src", foto );
 
               $("[name='btnCadastrar']").val( "ALTERAR");
 
+              //Fazendo a modal
               var id = $(mod).attr("href");
-
               var alturaTela = $(document).height();
               var larguraTela = $(window).width();
 
@@ -237,7 +254,7 @@
 
   </script>
 
-  <!-- ========================================= Script para Modal do usuario ========================================= -->
+  <!-- ========================================= Script para Modal ========================================= -->
    <script>
       $(document).ready(function(){
         $("a[rel=modal]").click( function(ev){

@@ -80,15 +80,35 @@ class cadastroUsuario{
                             rua_usuario='".$usuario->rua_usuario."', bairro_usuario='".$usuario->bairro_usuario."',
                             numero_usuario='".$usuario->numero_usuario."',telefone_usuario='".$usuario->telefone_usuario."',
                             celular_usuario='".$usuario->celular_usuario."', rg_usuario='".$usuario->rg_usuario."',
-                            senha_usuario='".$usuario->senha_usuario."' where u.id_usuario=$usuario->id_usuario";
+                            senha_usuario='".$usuario->senha_usuario."'
+                            where u.id_usuario=$usuario->id_usuario";
 
       mysql_query($sql_atualizar);
 
       //echo ($sql_atualizar);
 
-      header('location:perfilUsuario.php');
+      //header('location:perfilUsuario.php');
 
   }
+
+    //metodo para atualizar com foto
+    public function Update_foto($usuario){
+
+      $sql_atualizar_foto = "update tbl_usuario as u inner join tbl_endereco_usuario as e on u.id_usuario = e.id_usuario
+                            set nome_usuario='".$usuario->nome_usuario."', email_usuario='".$usuario->email_usuario."',
+                                rua_usuario='".$usuario->rua_usuario."', bairro_usuario='".$usuario->bairro_usuario."',
+                                numero_usuario='".$usuario->numero_usuario."',telefone_usuario='".$usuario->telefone_usuario."',
+                                celular_usuario='".$usuario->celular_usuario."', rg_usuario='".$usuario->rg_usuario."',
+                                senha_usuario='".$usuario->senha_usuario."', foto_usuario='".$usuario->foto_usuario."'
+                                where u.id_usuario=$usuario->id_usuario";
+
+      mysql_query($sql_atualizar_foto);
+
+      //echo ($sql_atualizar);
+
+      //header('location:perfilUsuario.php');
+
+    }
 
   //selecionar por id
    public function SelectById($usuario){

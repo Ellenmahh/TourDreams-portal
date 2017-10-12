@@ -10,7 +10,6 @@ $telefone_usuario = "";
 $celular_usuario = "";
 $foto_usuario = "";
 $qtds_reserva_usuario = "";
-$endereco_usuario = "";
 $senha_usuario = "";
 $btn_usuario = "ENVIAR";
 
@@ -92,7 +91,7 @@ $action = "novo";
        <img src="imagens/usuario.png" width="100%" height="98%"/>
      </div>
      <div id="espacoBotao_enviarfile">
-       <label id="escolha_foto_usu_label"for='filefotousuario'>Escolha uma foto </label>
+       <label id="escolha_foto_usu_label"for='filefotousuario'>Escolha uma foto</label>
        <input type="file" name="arquivos[]" id="filefotousuario"/>
      </div>
      <div id="txt_info_cadastroUsuario">

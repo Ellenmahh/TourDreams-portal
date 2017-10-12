@@ -1,5 +1,11 @@
 <!DOCTYPE html>
+<?php 
+if(isset($_GET['id_hotel']))
+			$action_id_hotel = "&id_hotel=".$_GET['id_hotel'];
+	else
+			$action_id_hotel="";
 
+?>
 <html>
   <head>
     <?php include('head.php'); ?>
@@ -9,7 +15,8 @@
   <body>
   <header>
 		  <?php include('menu.php'); ?>
-	  </header>
+	 
+   </header>
    </body>
     <section>
 
@@ -19,7 +26,7 @@
             <p> DESEJA MESMO FINALIZAR CADASTRO ?</p>
           </div>
           <div id="btns_area_optCadastro">
-			<a href="cadastroParceiro2.php">
+			<a href="cadastroParceiro2.php?<?php echo($action_id_hotel);?>">
               <div class="btn_area_optCadastro">
                 <p>ADICIONAR + </p>
               </div>

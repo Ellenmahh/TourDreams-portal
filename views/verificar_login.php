@@ -26,6 +26,7 @@ $senha = "";
 			$_SESSION['nome_usuario'] = $nome;
 			$_SESSION['id_usuario'] = $idUsuario;
 			$_SESSION['foto_usuario'] = $foto;
+			
 			header('location:../home.php?logado=ON');
 
 		}
@@ -43,9 +44,10 @@ $senha = "";
 
 			<?php
 			//FAZ UM REFRESH NA PAG
-			echo "<meta http-equiv='refresh' content='0.1;URL=../index.php'>";
+			echo "<meta http-equiv='refresh' content='0.1;URL=../home.php'>";
 			echo "Redirect...";
 
 			}
+
 
 ?>

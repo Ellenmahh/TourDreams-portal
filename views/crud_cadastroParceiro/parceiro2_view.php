@@ -5,7 +5,7 @@
 	$camas_solteiro ="";
 	$action="NovoQuarto";
 	$preco_quarto="";
-	
+	//$_GET['id_hotel'];
 	if(isset($_GET['id_hotel']))
 			$action_id_hotel = "&id_hotel=".$_GET['id_hotel'];
 	else
@@ -43,58 +43,19 @@
 									while($cont2<count($rsconsulta)){
 							?>
 										<label class="control2 control--checkbox"> 
-											<input type="checkbox" name="optC" value="<?php echo($rsconsulta[$cont2]->id_carac_quarto); ?>" /> 
+											<input type="checkbox" name="optC[]" value="<?php echo($rsconsulta[$cont2]->id_carac_quarto); ?>" /> 
 											<?php echo($rsconsulta[$cont2]->descricao_carac_quarto); ?>
 											<div class="control__indicator2"></div>
 
 										</label>
 							<?php
 										$cont2+=1;
+										 
+												
+							
 									}	
 							?>
-							<!--<label class="control2 control--radio"> 
-								<input type="checkbox" name="optC" value="2" />  Internet
-								<div class="control__indicator2"></div>
-
-							</label>
-							<label class="control2 control--radio"> 
-								<input type="checkbox" name="optC" value="3" />  Banheira hidromassagem
-								<div class="control__indicator2"></div>
-
-							</label>
-							<label class="control2 control--radio"> 
-								<input type="checkbox" name="optC[]" value="4" /> Serviços de quarto
-								<div class="control__indicator2"></div>
-
-							</label>
-							<label class="control2 control--radio"> 
-								<input type="checkbox" name="opt1_tv" value="5" /> Televisão 
-								<div class="control__indicator2"></div>
-
-							</label>
-							<label class="control2 control--radio"> 
-								<input type="radio" name="opt1_acesso" value="acesso_cadeirantes" />  Acesso para cadeirantes
-								<div class="control__indicator2"></div>
-
-							</label>
-							-->
-							
-							<!--$opcoes = _POST["optC"];
-							
-							$listBanco;
-							
-							while(rs){
-								
-								if($opcoes.contains( rs[id])){
-									insert com 1
-									
-								}else{
-									
-									inset cm 0
-								}
-								
-							}
-							-->
+						
 							
 					
 					</div>
@@ -115,7 +76,7 @@
 
 			</div>
 	
-				<p><a href="cadastroParceiro3.php"><input type="submit" class="btn_avanca_parceiro" value="Finalizar" name="btnFinalizar"/></a></p>
+				<p><input type="submit" class="btn_avanca_parceiro" value="Finalizar" name="btnFinalizar"/></p>
 
 		</form>
 		

@@ -27,7 +27,7 @@
 	$action="Novo";
 	$numero_hotel="";
 	$restaurante="";
-
+   $senha_hotel="";
 ?>
 
 <form name="Cadastro_parceiro" method="post" enctype="multipart/form-data" action="router.php?controller=hotel&modo=<?php echo($action) ?>">
@@ -35,6 +35,8 @@
 			<div id="espaco_cadastro_p1">
 				<input type="text" name="txtNomeHotel" placeholder="  Nome do hotel " class="input_cadastro_parceiro" value="<?php echo($nome_hotel); ?>"/>
 				<input type="text" name="txtEmail" placeholder="  E-mail " class="input_cadastro_parceiro" value="<?php echo($email_hotel); ?>"/>
+				<input type="password" name="txtSenha" placeholder=" Senha " class="input_cadastro_parceiro" value="<?php echo($senha_hotel); ?>"/>
+
 				<input type="text" name="txtTelefone" placeholder="  Telefone " class="input_cadastro_parceiro" value="<?php echo($telefone_hotel); ?>"/>
 
 				<div id="corpo">

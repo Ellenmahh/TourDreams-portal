@@ -18,7 +18,7 @@ class mysql_db{
   public function conectar(){
 
       //estabelece a conexão com o banco de dados, se a conexão estiver correta, seleciona o database, caso contrário, informa uma mensagem e finaliza a conexão
-      if ($conexao=mysql_connect( $this->server,  $this->user,  $this->password)){
+      if (@$conexao=mysql_connect( $this->server,  $this->user,  $this->password)){
 
           mysql_select_db('dbtourdreams');
 

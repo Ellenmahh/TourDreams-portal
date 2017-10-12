@@ -24,7 +24,7 @@
 				$pscina=$_POST['opt6'];
 				$academia=$_POST['opt7'];
 				$restaurante=$_POST['opt71'];
-
+				$senha_hotel=$_POST['txtSenha'];
 				$cafe_da_manha=$_POST['opt8'];
 				$almoco=$_POST['opt9'];
 				$cafe_da_tarde=$_POST['opt10'];
@@ -70,9 +70,9 @@
 					 $hotel_controller->numero_hotel=$numero_hotel;
 					 $hotel_controller->restaurante=$restaurante;
 					 $hotel_controller->foto=$destino;
-			
+					$hotel_controller->senha=$senha_hotel;
 
-					  $hotel_controller->Insert($hotel_controller);
+					 $id_hotel= $hotel_controller->Insert($hotel_controller);
 
 
 					$i++;
@@ -91,8 +91,8 @@
 				$nome_quarto=$_POST['txtNome'];
 				$numero_quarto=$_POST['txtNumero'];
 				$camas_solteiro=$_POST['txtCamas'];
-				$camas_casal=$_POST['txtCamasCasal'];
-				$id_carac_quarto=$_POST['optC'];
+				$camas_casal=$_POST['txtCamasCasal'];			
+				
 				$preco=$_POST['txtPreco'];
 				$id_hotel=$_GET['id_hotel'];
 				$i2= 0;
@@ -107,21 +107,47 @@
 				 $destino);
 				 
 				 $hotel_controller = new parceiro();
+				 
 				 $hotel_controller->nome_quarto=$nome_quarto;
 				 $hotel_controller->numero_quarto=$numero_quarto;
 				 $hotel_controller->camas_solteiro=$camas_solteiro;
 				 $hotel_controller->camas_casal=$camas_casal;
-				 $hotel_controller->id_carac_quarto=$id_carac_quarto;
+			     $id_quarto=-1;	
+				
+				
 				 $hotel_controller->preco_quarto=$preco;
 				 $hotel_controller->id_hotel=$id_hotel;
 
 				 $hotel_controller->foto_quarto=$destino;
 
-     				$hotel_controller->InsertQuarto($hotel_controller);
+     				$id_quarto = $hotel_controller->InsertQuarto($hotel_controller);
 
 					$i2++;
 
 				}
+				
+				
+				$vetor_carac = $_POST['optC'];
+				//var_dump($_POST['optC']);
+				
+				for($i3 = 0; $i3 < sizeof($vetor_carac); $i3++){
+				$id_carac_quarto=$vetor_carac[$i3];
+				
+				$hotel_controller_carac = new parceiro();
+				 
+				 $hotel_controller_carac->id_carac_quarto=$id_carac_quarto;
+				 
+				 $hotel_controller_carac->InsertCaracQuarto( $id_quarto, $id_hotel);	
+				 
+				 //parceiro::InsertCaracQuartoT($hotel_controller_carac,$id_quarto );
+					
+					
+					
+					
+				}
+				
+				
+				 
 			}
 		 }
 		public function ListarCategoria(){
@@ -131,9 +157,40 @@
 
 			return $listCategoria -> SelectCategoria();
             
+			
+			
         }
 	
+		public function ListarQuartos(){
 		
+			require_once('models/parceiro_class.php');
+			$listQuartos = new parceiro;
+
+			return $listQuartos -> SelectQuartos();
+		
+		}
+		public function BuscarInfoQuarto(){
+				
+			require_once('models/parceiro_class.php');
+			$id_quarto=$_GET['id_quarto'];
+			$hotel_controller = new parceiro;
+			$hotel_controller->id_quarto=$id_quarto;
+
+			return $hotel_controller -> BuscarInfoQuarto($hotel_controller);
+			/*if($_SERVER['REQUEST_METHOD'] == 'GET'){
+				
+
+				$id_quarto=$_GET['id_quarto'];
+				$hotel_controller = new parceiro();
+				
+				 $hotel_controller->id_quarto=id_quarto;
+		    	
+			    $listEditar=$hotel_controller->BuscarInfoQuarto( $hotel_controller);
+				echo json_encode($listEditar);
+			
+			}*/
+		
+		}
 		public function ListarCategoriaQuarto(){
 			
 			require_once('models/parceiro_class.php');
@@ -142,6 +199,7 @@
 			return $listCategoriaQuarto -> SelectCategoriaQuarto();
 		}		
 		
+   
 		
 	}
 

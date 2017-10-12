@@ -10,7 +10,6 @@ $telefone_usuario = "";
 $celular_usuario = "";
 $foto_usuario = "";
 $qtds_reserva_usuario = "";
-$endereco_usuario = "";
 $senha_usuario = "";
 $btn_usuario = "ENVIAR";
 
@@ -33,6 +32,8 @@ if (isset($_GET['modo'] )){
     $telefone_usuario =$list->telefone_usuario;
     $celular_usuario = $list->celular_usuario;
 
+    $foto_usuario=$list->foto_usuario;
+
     $rua_usuario=$list->rua_usuario;
     $bairro_usuario=$list->bairro_usuario;
     $numero_usuario=$list->numero_usuario;
@@ -48,42 +49,48 @@ if (isset($_GET['modo'] )){
 
 <form id="form_modal_editar_perfilUsuario" name="Atualizar_usuario" method="post" enctype="multipart/form-data" action="">
   <div class="group_editar_perfilUsuario">
-     <input name="nome_usuario" type="text" placeholder="nome" class="input_modal_editar_perfilUsuario" value="<?php echo($nome_usuario); ?>"><span class="highlight"></span><span class="bar"></span>
+     <input name="nome_usuario" type="text" placeholder="nome" class="input_modal_editar_perfilUsuario" id="nome_usuario" value="<?php echo($nome_usuario); ?>"><span class="highlight"></span><span class="bar"></span>
      <!--<label class="label_modal">nome</label>-->
   </div>
   <div class="group_editar_perfilUsuario">
-    <input name="email_usuario" type="text" placeholder="e-mail" class="input_modal_editar_perfilUsuario" value="<?php echo($email_usuario); ?>"><span class="highlight"></span><span class="bar"></span>
+    <input name="email_usuario" type="text" placeholder="e-mail" class="input_modal_editar_perfilUsuario" id="email_usuario" value="<?php echo($email_usuario); ?>"><span class="highlight"></span><span class="bar"></span>
     <!--<label class="label_modal">e-mail</label>-->
   </div>
 
   <div class="group_editar_perfilUsuario">
-    <input name="rua_usuario" type="text" placeholder="rua" class="input_modal_editar_perfilUsuario" value="<?php echo($rua_usuario); ?>"><span class="highlight"></span><span class="bar"></span>
+    <input name="rua_usuario" type="text" placeholder="rua" class="input_modal_editar_perfilUsuario" id="rua_usuario" value="<?php echo($rua_usuario); ?>"><span class="highlight"></span><span class="bar"></span>
     <!--<label class="label_modal">endereço</label>-->
   </div>
   <div class="group_editar_perfilUsuario">
-    <input name="bairro_usuario" type="text" placeholder="bairro" class="input_modal_editar_perfilUsuario" value="<?php echo($bairro_usuario); ?>"><span class="highlight"></span><span class="bar"></span>
+    <input name="bairro_usuario" type="text" placeholder="bairro" class="input_modal_editar_perfilUsuario" id="bairro_usuario" value="<?php echo($bairro_usuario); ?>"><span class="highlight"></span><span class="bar"></span>
     <!--<label class="label_modal">telefone</label>-->
   </div>
   <div class="group_editar_perfilUsuario">
-    <input name="numero_usuario" type="text" placeholder="numero" class="input_modal_editar_perfilUsuario" value="<?php echo($numero_usuario); ?>"><span class="highlight"></span><span class="bar"></span>
+    <input name="numero_usuario" type="text" placeholder="numero" class="input_modal_editar_perfilUsuario" id="numero_usuario" value="<?php echo($numero_usuario); ?>"><span class="highlight"></span><span class="bar"></span>
     <!--<label class="label_modal">celular</label>-->
   </div>
   <div class="group_editar_perfilUsuario">
-    <input name="telefone_usuario" type="text" placeholder="telefone" class="input_modal_editar_perfilUsuario" value="<?php echo($telefone_usuario); ?>"><span class="highlight"></span><span class="bar"></span>
+    <input name="telefone_usuario" type="text" placeholder="telefone" class="input_modal_editar_perfilUsuario" id="telefone_usuario" value="<?php echo($telefone_usuario); ?>"><span class="highlight"></span><span class="bar"></span>
     <!--<label class="label_modal">CPF</label>-->
   </div>
   <div class="group_editar_perfilUsuario">
-    <input name="celular_usuario" type="text" placeholder="celular" class="input_modal_editar_perfilUsuario" value="<?php echo($celular_usuario); ?>"><span class="highlight"></span><span class="bar"></span>
+    <input name="celular_usuario" type="text" placeholder="celular" class="input_modal_editar_perfilUsuario" id="celular_usuario" value="<?php echo($celular_usuario); ?>"><span class="highlight"></span><span class="bar"></span>
     <!--<label class="label_modal">RG</label>-->
   </div>
   <div class="group_editar_perfilUsuario">
-    <input name="rg_usuario" type="text" placeholder="RG" class="input_modal_editar_perfilUsuario" value="<?php echo($rg_usuario); ?>"><span class="highlight"></span><span class="bar"></span>
+    <input name="rg_usuario" type="text" placeholder="RG" class="input_modal_editar_perfilUsuario" id="rg_usuario" value="<?php echo($rg_usuario); ?>"><span class="highlight"></span><span class="bar"></span>
     <!--<label class="label_modal">RG</label>-->
   </div>
   <div class="group_editar_perfilUsuario">
-    <input name="senha_usuario" type="text" placeholder="senha" class="input_modal_editar_perfilUsuario" value="<?php echo($senha_usuario); ?>"><span class="highlight"></span><span class="bar"></span>
+    <input name="senha_usuario" type="text" placeholder="senha" class="input_modal_editar_perfilUsuario" id="senha_usuario" value="<?php echo($senha_usuario); ?>"><span class="highlight"></span><span class="bar"></span>
     <!--<label class="label_modal">senha</label>-->
   </div>
+
+
+
+    <!--<label class="label_modal">senha</label>-->
+
+
 
   <div class="group_editar_perfilUsuario">
     <div id="corpo">
@@ -133,6 +140,21 @@ if (isset($_GET['modo'] )){
 
 
    </script>
+ </div>
+
+
+
+
+ <div class="group_editar_perfilUsuario">
+   <div id="foto_editar_usuario">
+     <img src="imagens/usuario.png" width="100%" height="98%" id="img_perfil_usuario_modal"/>
+   </div>
+   <div id="espacoBotao_enviarfile_editar">
+    <label id="escolha_foto_usu_label_editar"for='filefotousuario'>Alterar foto</label>
+     <!-- <input name="arquivos[]" type="file" id="filefotousuario"/>-->
+
+     <input name="arquivos[]" type="file" id="filefotousuario"/>
+   </div>
  </div>
 
   <input type="submit" name="btnCadastrar" value="<?php echo($btn_usuario) ?>" id="botao" style="<?php echo($style_btn) ?>" class="button_editar_perfilUsuario buttonBlue">

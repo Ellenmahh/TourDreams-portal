@@ -87,6 +87,7 @@
       <section>
         <!--<div id="principal">-->
           <div id="capa_usuario">
+
             <?php
               $sql = 'select * from tbl_usuario where id_usuario = '.$id_usuario;
 
@@ -97,9 +98,10 @@
 
              ?>
             <div id="img_perfilUsuario">
-              <img src="<?php echo($rs['foto_usuario']); ?>" alt="">
+              <img src="<?php echo($rs['foto_usuario']); ?>" alt="" id="img_perfil_usuario">
             </div>
             <div id="area_info_perfilUsuario">
+
               <p><?php echo($rs['nome_usuario']); ?></p>
               <p><?php echo($rs['telefone_usuario']); ?></p>
               <p><?php echo($rs['email_usuario']); ?></p>
