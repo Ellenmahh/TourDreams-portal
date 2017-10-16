@@ -79,11 +79,16 @@ $action = "novo";
      <input placeholder=" Rua" type="text" name="rua_usuario" value="<?php echo($rua_usuario) ?>" class="input_cadastro_usu" required>
      <input placeholder=" Bairro" type="text" name="bairro_usuario" value="<?php echo($bairro_usuario) ?>" id="input_cadastro_usu_bairro" required>
      <input placeholder=" N°" type="text" name="numero_usuario" value="<?php echo($numero_usuario) ?>" id="input_cadastro_usu_numero" required>
-     <input placeholder=" Telefone" type="text" name="telefone_usuario" value="<?php echo($telefone_usuario) ?>" class="input_cadastro_usu" required>
-     <input placeholder=" Celular" type="text" name="celular_usuario" value="<?php echo($celular_usuario) ?>" class="input_cadastro_usu" required>
-     <input placeholder=" CPF" type="text" name="cpf_usuario" value="<?php echo($cpf_usuario) ?>" class="input_cadastro_usu" required>
-     <input placeholder=" RG" type="text" name="rg_usuario" value="<?php echo($rg_usuario) ?>" class="input_cadastro_usu" required>
-     <input placeholder=" Senha" type="password" name="senha_usuario" value="<?php echo($senha_usuario) ?>" class="input_cadastro_usu" required>
+     <input placeholder=" Telefone" type="text" name="telefone_usuario" value="<?php echo($telefone_usuario) ?>" id="telefone_usuario" class="input_cadastro_usu"
+     onkeypress="this.value = FormataTel(event)" maxlength="13" required>
+     <input placeholder=" Celular" type="text" name="celular_usuario" value="<?php echo($celular_usuario) ?>" id="celular_usuario" class="input_cadastro_usu"
+     onkeypress="this.value = FormataCel(event)" maxlength="13" required>
+     <input placeholder=" CPF" type="text" name="cpf_usuario" value="<?php echo($cpf_usuario) ?>" id="cpf_usuario" class="input_cadastro_usu"
+     onkeypress="this.value = FormataCpf(event)" onpaste="return false;" maxlength="14" required>
+     <input placeholder=" RG" type="text" name="rg_usuario" value="<?php echo($rg_usuario) ?>" id="rg_usuario" class="input_cadastro_usu"
+     onkeypress="this.value = FormataRg(event)" onpaste="return false;" maxlength="12" required>
+     <input placeholder=" Senha" type="password" name="senha_usuario" value="<?php echo($senha_usuario) ?>" class="input_cadastro_usu"
+     maxlength="15" required>
    </div>
    <div id="espaco_cadastro_usuario">
 

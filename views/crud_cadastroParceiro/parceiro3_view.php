@@ -1,4 +1,4 @@
-<<?php
+<?php
 	$id_quarto = $_GET['id_quarto'];
 	
 
@@ -13,26 +13,22 @@
 		<?php 
 			require_once('controllers/hotel_controller.php');
 			$hotel_controller = new ControllerHotel();
-			$cont=0;
-			
+
 			$rsconsulta0 = $hotel_controller->BuscarInfoQuarto();
-			
-			$total=count($rsconsulta0);
-			while($cont<$total){
-			
-			
+			/*while($rsconsulta0=mysql_fetch_array($select)){
+			{*/
+
 		 ?>
-			  <input  type="text" name="txtNome" placeholder="  Nome do quarto (ex: Suíte Presidencial)" class="input_cadastro_parceiroo" value="<?php echo($rsconsulta0[$cont]->nome_quarto); ?>"/>
-			  <input type="text" name="txtNumero"  placeholder=" N° do quarto" class="input_cadastro_parceiroo2" value="<?php echo($rsconsulta0[$cont]->numero_quarto); ?>"/>
+			  <input  type="text" name="txtNome" placeholder="  Nome do quarto (ex: Suíte Presidencial)" class="input_cadastro_parceiroo" value="<?php echo($rsconsulta0->nome_quarto); ?>"/>
+			  <input type="text" name="txtNumero"  placeholder=" N° do quarto" class="input_cadastro_parceiroo2" value="<?php echo($rsconsulta0->numero_quarto); ?>"/>
 			  <div id="espaco_parceiroo_perguntas">
-				<p>Quantidade de camas de solteiro: &nbsp;<input   type="text" name="txtCamasSolteiro" placeholder=" " class="input_cadastro_parceiroo3" value="<?php echo($rsconsulta0[$cont]->camas_solteiro); ?>"/></p>
-				<p>&nbsp;Quantidade de camas de casal: &nbsp;<input   type="text" name="txtCamasCasal" placeholder=" " class="input_cadastro_parceiroo3" value="<?php echo($rsconsulta0[$cont]->camas_casal); ?>"/></p>
+				<p>Quantidade de camas de solteiro: &nbsp;<input   type="text" name="txtCamasSolteiro" placeholder=" " class="input_cadastro_parceiroo3" value="<?php echo($rsconsulta0->camas_solteiro); ?>"/></p>
+				<p>&nbsp;Quantidade de camas de casal: &nbsp;<input   type="text" name="txtCamasCasal" placeholder=" " class="input_cadastro_parceiroo3" value="<?php echo($rsconsulta0->camas_casal); ?>"/></p>
 				<p> O que contém no quarto? </p>
 				<div id="resp_parceiro2">
 		
 		 <?php
-			$cont+=1;
-		   }
+		    
 			require_once('controllers/hotel_controller.php');
 			$hotel_controller = new ControllerHotel();
 
@@ -59,7 +55,7 @@
 		<div id="espaco_fotos_parceiro_cadastro">
 
 			<div class="img_parceiro_cadastro2">
-											
+
 			</div>
 
 		  <div class="img_parceiro_cadastro22">

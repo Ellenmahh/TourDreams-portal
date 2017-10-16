@@ -26,6 +26,23 @@ switch($controller){
 
 
           }
+          case'busca':
+          require_once('controllers/busca_avancada_controller.php');
+          require_once('models/busca_avancada_class.php');
+          
+              switch ($modo) {
+                case 'busca_avancada':
+
+                $controller_busca = new controllerBuscaAvancada();
+
+                $controller_busca->pesquisa();
+                  # code...
+                  break;
+
+
+              }
+
+
 
 
       case'usuarios':
@@ -102,18 +119,42 @@ switch($controller){
 
   				break;
 
+
+
+      case'BuscarInfoHotel':
+
+          $controller_usuario = new ControllerHotel();
+          //chamando o metodo para selecionar um determinado usuario
+          $controller_usuario-> buscarInfoHotel();
+          break;
+
+      case 'alterar_dados':
+
+        $controller_usuario = new ControllerHotel();
+        //chamando o método atualizar();
+        $controller_usuario->atualizar();
+        break;
+
+		}
+
+	case 'quarto':
+		  require_once('controllers/quarto_controller.php');
+          require_once('models/quarto_class.php');
+
+
+		switch ($modo) {
+
 		  case 'SelectCategoriaQuarto':
-			$ControllerHotel = new ControllerHotel();
-			$ControllerHotel->ListarCategoriaQuarto();
+			$ControllerQuarto = new ControllerQuarto();
+			$ControllerQuarto->ListarCategoriaQuarto();
 			break;
 
 		  case'NovoQuarto':
-			$ControllerHotel = new ControllerHotel();
-			$ControllerHotel->NovoQuarto();
+			$ControllerQuarto = new ControllerQuarto();
+			$ControllerQuarto->NovoQuarto();
 			break;
+
 		}
-
-
     case 'fale_conosco':
     require_once('controllers/fale_conosco_controller.php');
       require_once('models/fale_class.php');

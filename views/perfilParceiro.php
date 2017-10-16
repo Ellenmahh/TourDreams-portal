@@ -1,18 +1,33 @@
-<!DOCTYPE html>
-
 <?php
+  session_start();
+  $id_hotel = $_SESSION['id_hotel'];
+
 	if(isset($_POST['btn_quarto_editar'])){
 		header('location:editarQuarto.php');
 
 	}
 
+  if(isset($_POST['btn_hotel_editar'])){
+		header("location:editarHotel.php?id_hotel=".$id_hotel);
+
+  }
+
+//CONEXÃO
+	@require_once('models/bd_class.php');
+	@$conexao_bd = new mysql_db();
+	@$conexao_bd->conectar();
+
 ?>
+
+<!DOCTYPE html>
+
+
 <html>
   <head>
     <?php include('head.php'); ?>
   </head>
   <body>
-  
+
 		<div class="window" id="janela1">
 			<hgroup id="hgroup_modal">
 			  <h1 class="h1_modal"><p>O QUE É MILHAS TRAVEL FIDELIDADE</p></h1>
@@ -61,6 +76,57 @@
 
             </div>
           </div>
+
+          <div id="area_indicacao_hotel_perfilParceiro">
+            <?php
+
+            $sql = 'select h.nome_hotel,
+                           h.imagem_hotel_1,
+                           c.nome_categoria,
+                           eh.rua_hotel,
+                           eh.numero_hotel
+                           from tbl_hotel as h
+                           inner join
+                           tbl_categoria as c
+                           on h.id_categora = c.id_categoria
+                           inner join
+                           tbl_endereco_hotel as eh
+                           on h.id_hotel = eh.id_hotel
+                           where h.id_hotel = '.$id_hotel;
+
+            $select=mysql_query($sql);
+
+            //echo($sql);
+
+            while ($rs=mysql_fetch_array($select)) {
+
+
+             ?>
+
+            <div id="produto_div_hotel_perfilParceiro">
+              <img src="<?php echo($rs['imagem_hotel_1']); ?>" alt="">
+              <div id="legenda_hotel_perfilParceiro">
+                <div id="area_titulo_hotel_perfilParceiro">
+                  <p>HOTEL <?php echo($rs['nome_hotel']); ?></p>
+                </div>
+                <div id="area_infos_hotel_perfilParceiro">
+                  <p><?php echo($rs['nome_categoria']); ?></p>
+                  <p><?php echo($rs['rua_hotel']); ?></p>
+                  <p>N <?php echo($rs['numero_hotel']); ?></p>
+
+                  <a href="router.php?controller=hotel&modo=BuscarInfoHotel&id_hotel=<?php echo($id_hotel); ?>">
+                    <input type="submit" id="btn_produto_editarHotel" name="btn_hotel_editar" value="editar">
+                  </a>
+                </div>
+              </div>
+
+            </div>
+            <?php
+              }
+             ?>
+          </div>
+
+
           <div id="txt_perfilUsuario">
             <p>MEUS QUARTOS CADASTRADOS</p>
           </div>

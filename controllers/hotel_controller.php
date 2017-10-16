@@ -6,8 +6,8 @@
         public function Novo(){
             if($_SERVER['REQUEST_METHOD']=='POST')
             {
-				
-				
+
+
 				$nome_hotel=$_POST['txtNomeHotel'];
 				$email_hotel=$_POST['txtEmail'];
 
@@ -32,9 +32,9 @@
 				$telefone_hotel=$_POST['txtTelefone'];
 				$bairro_hotel=$_POST['txtBairro'];
 				$numero_hotel=$_POST['txtNumeroHotel'];
-				
+
 				$i = 0;
-				
+
 				foreach ($_FILES["arquivos"]["error"] as $key => $error) {
 
 				 $destino = "arquivos_parceiro/".$_FILES["arquivos"]["name"]
@@ -43,7 +43,7 @@
 				 move_uploaded_file( $_FILES["arquivos"]["tmp_name"][$i],
 
 				 $destino);
-				 
+
 					$hotel_controller = new parceiro();
 
 					 $hotel_controller->nome_hotel=$nome_hotel;
@@ -85,122 +85,107 @@
 
 			}
 		}
-		 public function NovoQuarto(){
-			if($_SERVER['REQUEST_METHOD']=='POST')
-            {
-				$nome_quarto=$_POST['txtNome'];
-				$numero_quarto=$_POST['txtNumero'];
-				$camas_solteiro=$_POST['txtCamas'];
-				$camas_casal=$_POST['txtCamasCasal'];			
-				
-				$preco=$_POST['txtPreco'];
-				$id_hotel=$_GET['id_hotel'];
-				$i2= 0;
-
-				foreach ($_FILES["arquivos2"]["error"] as $key => $error) {
-
-				 $destino = "arquivos_parceiro/".$_FILES["arquivos2"]["name"]
-				[$i2];
-
-				 move_uploaded_file( $_FILES["arquivos2"]["tmp_name"][$i2],
-
-				 $destino);
-				 
-				 $hotel_controller = new parceiro();
-				 
-				 $hotel_controller->nome_quarto=$nome_quarto;
-				 $hotel_controller->numero_quarto=$numero_quarto;
-				 $hotel_controller->camas_solteiro=$camas_solteiro;
-				 $hotel_controller->camas_casal=$camas_casal;
-			     $id_quarto=-1;	
-				
-				
-				 $hotel_controller->preco_quarto=$preco;
-				 $hotel_controller->id_hotel=$id_hotel;
-
-				 $hotel_controller->foto_quarto=$destino;
-
-     				$id_quarto = $hotel_controller->InsertQuarto($hotel_controller);
-
-					$i2++;
-
-				}
-				
-				
-				$vetor_carac = $_POST['optC'];
-				//var_dump($_POST['optC']);
-				
-				for($i3 = 0; $i3 < sizeof($vetor_carac); $i3++){
-				$id_carac_quarto=$vetor_carac[$i3];
-				
-				$hotel_controller_carac = new parceiro();
-				 
-				 $hotel_controller_carac->id_carac_quarto=$id_carac_quarto;
-				 
-				 $hotel_controller_carac->InsertCaracQuarto( $id_quarto, $id_hotel);	
-				 
-				 //parceiro::InsertCaracQuartoT($hotel_controller_carac,$id_quarto );
-					
-					
-					
-					
-				}
-				
-				
-				 
-			}
-		 }
+		 
+		 
 		public function ListarCategoria(){
-			
+
 			require_once('models/parceiro_class.php');
 			$listCategoria = new parceiro;
 
 			return $listCategoria -> SelectCategoria();
-            
-			
-			
+
+
+
         }
-	
-		public function ListarQuartos(){
-		
-			require_once('models/parceiro_class.php');
-			$listQuartos = new parceiro;
 
-			return $listQuartos -> SelectQuartos();
 		
-		}
-		public function BuscarInfoQuarto(){
-				
-			require_once('models/parceiro_class.php');
-			$id_quarto=$_GET['id_quarto'];
-			$hotel_controller = new parceiro;
-			$hotel_controller->id_quarto=$id_quarto;
 
-			return $hotel_controller -> BuscarInfoQuarto($hotel_controller);
-			/*if($_SERVER['REQUEST_METHOD'] == 'GET'){
-				
 
-				$id_quarto=$_GET['id_quarto'];
-				$hotel_controller = new parceiro();
-				
-				 $hotel_controller->id_quarto=id_quarto;
-		    	
-			    $listEditar=$hotel_controller->BuscarInfoQuarto( $hotel_controller);
-				echo json_encode($listEditar);
-			
-			}*/
-		
-		}
-		public function ListarCategoriaQuarto(){
-			
-			require_once('models/parceiro_class.php');
-			$listCategoriaQuarto = new parceiro;
+    public function atualizar(){
 
-			return $listCategoriaQuarto -> SelectCategoriaQuarto();
-		}		
-		
-   
-		
+      $id_hotel=$_GET['id_hotel'];
+
+      if($_SERVER['REQUEST_METHOD'] == 'POST'){
+
+        $id_hotel=$_GET['id_hotel'];
+
+        $nome_hotel=$_POST['txtNomeHotel'];
+        $email_hotel=$_POST['txtEmail'];
+        $telefone_hotel=$_POST['txtTelefone'];
+        $bairro_hotel=$_POST['txtBairro'];
+        $numero_hotel=$_POST['txtNumeroHotel'];
+        $cnpj_hotel=$_POST['txtCNPJ'];
+        $rua_hotel=$_POST['txtEndereco'];
+        $senha_hotel=$_POST['txtSenha'];
+
+        //$categoria_hotel=$_POST['nome_categoria'];
+        $wifi=$_POST['opt2'];
+        $estacionamento=$_POST['opt4'];
+        $spa=$_POST['opt5'];
+        $piscina=$_POST['opt6'];
+        $academia=$_POST['opt7'];
+        $aceita_animais=$_POST['opt3'];
+        $restaurante=$_POST['opt71'];
+        $cafe_da_manha=$_POST['opt8'];
+        $almoco=$_POST['opt9'];
+        $cafe_da_tarde=$_POST['opt10'];
+        $jantar=$_POST['opt11'];
+
+        $hotel_controller = new parceiro();
+
+        $hotel_controller->nome_hotel = $nome_hotel;
+        $hotel_controller->email_hotel = $email_hotel;
+        $hotel_controller->telefone_hotel = $telefone_hotel;
+        $hotel_controller->bairro_hotel = $bairro_hotel;
+        $hotel_controller->numero_hotel = $numero_hotel;
+        $hotel_controller->cnpj_hotel = $cnpj_hotel;
+        $hotel_controller->rua_hotel = $rua_hotel;
+        $hotel_controller->senha_hotel = $senha_hotel;
+
+        //$hotel_controller->categoria_hotel = $categoria_hotel;
+        $hotel_controller->wifi = $wifi;
+        $hotel_controller->estacionamento = $estacionamento;
+        $hotel_controller->spa = $spa;
+        $hotel_controller->piscina = $piscina;
+        $hotel_controller->academia = $academia;
+        $hotel_controller->aceita_animais = $aceita_animais;
+        $hotel_controller->restaurante = $restaurante;
+        $hotel_controller->cafe_da_manha = $cafe_da_manha;
+        $hotel_controller->almoco = $almoco;
+        $hotel_controller->cafe_da_tarde = $cafe_da_tarde;
+        $hotel_controller->jantar= $jantar;
+
+        $hotel_controller->Update_hotel($hotel_controller);
+
+      }
+
+    }
+
+    public function buscarInfoHotel(){
+
+      $id_hotel=$_GET['id_hotel'];
+
+      if($_SERVER['REQUEST_METHOD'] == 'GET'){
+
+        //require_once('models/parceiro_class.php');
+
+        $id_hotel=$_GET['id_hotel'];
+
+        $hotel_controller = new parceiro();
+        $hotel_controller->id_hotel=$id_hotel;
+
+        $list=$hotel_controller->BuscarInfoHotel($hotel_controller);
+
+        require_once('editarHotel.php');
+
+        //header('location:editarHotel.php');
+
+      }
+
+    }
+
+
+
 	}
 
 

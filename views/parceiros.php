@@ -27,7 +27,7 @@
 
         ?>
         <div class="area_parceiro">
-          <img class="img_logo_parceiro" src="imagens/logo.jpg" alt="">
+          <img class="img_logo_parceiro" src="<?php echo ($rsHome[$cont2]->imagem_hotel);?>" alt="">
           <img class="img_icone_local" src="imagens/localizacao.png" alt="">
           <p class="txt_local_parceiro" ><?php echo ($rsHome[$cont2]->cidade_hotel);?></p>
           <p class="txt_nome_parceiro"><?php echo($rsHome[$cont2]->nome_hotel);?></p>

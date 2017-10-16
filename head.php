@@ -154,7 +154,17 @@
   <!-- ========================================= Script para Modal do usuario ========================================= -->
    <script>
       $(document).ready(function(){
+
+
+
+
+
+
+
+
         $("a[rel=modal]").click( function(ev){
+          //alert('teste');
+          $("#editar_perfilUsuario").slideToggle(2000);
           ev.preventDefault();
 
           var mod = this;
@@ -423,4 +433,61 @@
       thumbnails: true
     });
   });
+</script>
+
+<!-- ========================================= Script para formar a mascara dos cadastros ========================================= -->
+
+<script type="text/javascript">
+  function verificaNumero(e){
+    if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)){
+      return false;
+    }
+  }
+
+  $(document).ready(function(){
+    $("#telefone_usuario").keypress(verificaNumero);
+    $("#celular_usuario").keypress(verificaNumero);
+    $("#cpf_usuario").keypress(verificaNumero);
+    $("#rg_usuario").keypress(verificaNumero);
+  });
+
+  function FormataTel(evt){
+    vr = (navigator.appName == "Netscape") ?evt.target.value : evt.srcElement.value;
+
+      if(vr.length == 0)vr = vr+"(";
+      if(vr.length == 3)vr = vr+")";
+      if(vr.length == 8) vr = vr+"-";
+
+    return vr;
+  }
+
+  function FormataCel(evt){
+    vr = (navigator.appName == "Netscape") ?evt.target.value : evt.srcElement.value;
+
+    if(vr.length == 0)vr = vr+"(";
+    if(vr.length == 3)vr = vr+")";
+
+    return vr;
+  }
+
+  function FormataCpf(evt){
+    vr = (navigator.appName == "Netscape") ?evt.target.value : evt.srcElement.value;
+
+      if(vr.length == 3) vr = vr+".";
+      if(vr.length == 7) vr = vr+".";
+      if(vr.length == 11) vr = vr+"-";
+
+    return vr;
+  }
+
+  function FormataRg(evt){
+    vr = (navigator.appName == "Netscape") ?evt.target.value : evt.srcElement.value;
+
+      if(vr.length == 2) vr = vr+".";
+      if(vr.length == 6) vr = vr+".";
+      if(vr.length == 10) vr = vr+"-";
+
+    return vr;
+  }
+
 </script>

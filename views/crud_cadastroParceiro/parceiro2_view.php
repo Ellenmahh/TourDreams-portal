@@ -33,11 +33,12 @@
 					<p>Oque contém no quarto? </p>
 					<div id="resp_parceiro2">
 							<?php
-									require_once('controllers/hotel_controller.php');
+									require_once('controllers/quarto_controller.php');
 
-									$hotel_controller = new ControllerHotel();
+						
+									$quarto_controller = new ControllerQuarto();
 
-									 $rsconsulta = $hotel_controller->ListarCategoriaQuarto();
+									 $rsconsulta = $quarto_controller->ListarCategoriaQuarto();
 
 									$cont2 = 0;
 									while($cont2<count($rsconsulta)){

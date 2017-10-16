@@ -2,8 +2,9 @@
 
 
 <?php 
+$parceiro="";
 	$id_quarto=""; 
-	//$id_hotel=$_GET['id_hotel'];
+	$id_hotel=$_GET['id_hotel'];
 ?>
 
 <form  name="perfil_Parceiro" method="GET" enctype="multipart/form-data" action="editarQuarto.php">
@@ -14,7 +15,7 @@
 						 
 						$hotel_controller = new ControllerHotel();
 						
-						 $rsconsulta1= $hotel_controller->ListarQuartos();
+						 $rsconsulta1= $hotel_controller->ListarQuartos($parceiro);
 
 						$cont3 = 0;
 						

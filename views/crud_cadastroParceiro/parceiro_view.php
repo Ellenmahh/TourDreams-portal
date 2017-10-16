@@ -6,7 +6,9 @@
 	$cnpj_hotel="";
 	$imagem_hotel_1="";
 	$imagem_hotel_2="";
-	$btnAvancar="";
+
+	$btnAvancar="AVANÇAR";
+
 	$email_hotel="";
 	$pais_hotel="";
 	$estado_hotel="";
@@ -21,24 +23,71 @@
 	$almoco="";
 	$cafe_da_tarde="";
 	$jantar="";
-	$endereco_hotel="";
+	$rua_hotel="";
 	$CEP = "";
 	$bairro_hotel="";
 	$action="Novo";
 	$numero_hotel="";
 	$restaurante="";
-   $senha_hotel="";
+  $senha_hotel="";
+
+	$idEditar="";
+
+	 if (isset($_GET['modo'] )){
+
+	   if($_GET['modo'] == 'BuscarInfoHotel'){
+
+	     $id_hotel=$list->id_hotel;
+
+	     $nome_hotel=$list->nome_hotel;
+			 $telefone_hotel=$list->telefone_hotel;
+			 $id_categoria=$list->id_categoria;
+			 $cnpj_hotel=$list->cnpj_hotel;
+			 $imagem_hotel_1=$list->imagem_hotel_1;
+			 $imagem_hotel_2=$list->imagem_hotel_2;
+			 $email_hotel=$list->email_hotel;
+			 $pais_hotel=$list->pais_hotel;
+			 $estado_hotel=$list->estado_hotel;
+			 $cidade_hotel=$list->cidade_hotel;
+			 $wi_fi=$list->wi_fi;
+			 $aceita_animais=$list->aceita_animais;
+			 $estacionamento=$list->estacionamento;
+			 $spa=$list->spa;
+			 $pscina=$list->pscina;
+			 $academia=$list->academia;
+			 $cafe_da_manha=$list->cafe_da_manha;
+			 $almoco=$list->almoco;
+			 $cafe_da_tarde=$list->cafe_da_tarde;
+			 $jantar=$list->jantar;
+			 $rua_hotel=$list->rua_hotel;
+			 $bairro_hotel=$list->bairro_hotel;
+
+			 $numero_hotel=$list->numero_hotel;
+			 $restaurante=$list->restaurante;
+			 $senha_hotel=$list->senha_hotel;
+
+	     $action = "alterar_dados";
+	     $btnAvancar="ALTERAR";
+	     $idEditar = "&id_hotel=$id_hotel";
+	   }
+
+	 }
+
 ?>
 
-<form name="Cadastro_parceiro" method="post" enctype="multipart/form-data" action="router.php?controller=hotel&modo=<?php echo($action) ?>">
+<form name="Cadastro_parceiro" method="post" enctype="multipart/form-data" action="router.php?controller=hotel&modo=<?php echo($action) ?><?php echo($idEditar) ?>">
 
 			<div id="espaco_cadastro_p1">
 				<input type="text" name="txtNomeHotel" placeholder="  Nome do hotel " class="input_cadastro_parceiro" value="<?php echo($nome_hotel); ?>"/>
 				<input type="text" name="txtEmail" placeholder="  E-mail " class="input_cadastro_parceiro" value="<?php echo($email_hotel); ?>"/>
-				<input type="password" name="txtSenha" placeholder=" Senha " class="input_cadastro_parceiro" value="<?php echo($senha_hotel); ?>"/>
 
 				<input type="text" name="txtTelefone" placeholder="  Telefone " class="input_cadastro_parceiro" value="<?php echo($telefone_hotel); ?>"/>
 
+				<input type="text" name="txtBairro" placeholder="  Bairro" class="input_cadastro_parceiro2"  value="<?php echo($bairro_hotel); ?>"/>
+				<input placeholder=" N°" type="text" name="txtNumeroHotel" value="<?php echo($numero_hotel) ?>" class="numero_cadastro_parceiro" >
+				<input type="text" name="txtCNPJ" placeholder="  CNPJ" class="input_cadastro_parceiro"  value="<?php echo($cnpj_hotel); ?>"/>
+				<input type="text" name="txtEndereco" placeholder="  Endereço" class="input_cadastro_parceiro" value="<?php echo($rua_hotel); ?>"/>
+				<input type="password" name="txtSenha" placeholder=" Senha " class="input_cadastro_parceiro" value="<?php echo($senha_hotel); ?>"/>
 				<div id="corpo">
 
 				   <select name="cb_estado" id="cb_estado" class="option_cadastro2">
@@ -82,11 +131,6 @@
 						);
 					});
 			 </script>
-			 	<input type="text" name="txtCEP" placeholder="  CEP" class="input_cadastro_parceiro" value="<?php echo($CEP); ?>"/>
-				<input type="text" name="txtBairro" placeholder="  Bairro" class="input_cadastro_parceiro2"  value="<?php echo($bairro_hotel); ?>"/>
-				<input placeholder=" N°" type="text" name="txtNumeroHotel" value="<?php echo($numero_hotel) ?>" class="numero_cadastro_parceiro" >
-				<input type="text" name="txtCNPJ" placeholder="  CNPJ" class="input_cadastro_parceiro"  value="<?php echo($cnpj_hotel); ?>"/>
-				<input type="text" name="txtEndereco" placeholder="  Endereço" class="input_cadastro_parceiro" value="<?php echo($endereco_hotel); ?>"/>
 
 			</div>
 			<table id="espaco_cadastro_p3" border="0">
@@ -338,7 +382,7 @@
 				</tr>
 				<tr>
 					<td class="espaco_perguntas_btn">
-						<input type="submit" name="btnAvancar"  value = "AVANÇAR" class="btn_avanca_parceiro"/>
+						<input type="submit" name="btnAvancar"  value = "<?php echo($btnAvancar); ?>" class="btn_avanca_parceiro"/>
 
 
 					</td>

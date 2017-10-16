@@ -913,7 +913,7 @@ text-align: center;
 
 .container {
   width: 100%;
-  height: 100%;
+  height: 500px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -942,10 +942,10 @@ text-align: center;
   background: #fff;
   text-align: left;
   box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-  padding: 30px;
+  padding: 0px;
   width: 200px;
   height: 210px;
-  margin: 10px;
+  margin: 0px;
 	margin-left: 50px;
 }
 
@@ -1908,7 +1908,7 @@ text-align: center;
 	margin-left:0px;
 	margin-bottom:25px;
 	border-radius:15px;
-	 font-family: Calibri;
+	 font-family: 'dosislight';
 	font-size: 20px;
 	opacity: 0.8;
 	float:left;
@@ -2190,6 +2190,7 @@ text-align: center;
 
 /*============================================== PERFIL PARCEIRO ==============================================*/
 
+
 #capa_parceiro{
 	width: 1000px;
 	height: auto;
@@ -2251,6 +2252,78 @@ text-align: center;
   font-size: 20px;
 	font-family: Tahoma;
 	margin-top: 0px;
+}
+
+#area_indicacao_hotel_perfilParceiro{
+	width: 1000px; height: auto;
+	border: 0px solid;
+	margin: auto;
+	margin-top: 50px;
+}
+
+#area_indicacao_hotel_perfilParceiro img{
+	width: 550px; height: 420px;
+	float: left;
+}
+
+#produto_div_hotel_perfilParceiro{
+	width: 1000px;
+	min-height: 420px;
+	height: auto;
+
+	border: solid 0px;
+	border-radius: 2px;
+	margin-bottom: 10px;
+	box-shadow: 5px 5px 5px #c5c5c5;
+	opacity: 1;
+}
+
+#legenda_hotel_perfilParceiro{
+	width: 450px; height: 420px;
+	float: left;
+}
+
+#area_titulo_hotel_perfilParceiro{
+	width: 450px; height: 150px;
+}
+
+#area_titulo_hotel_perfilParceiro p{
+	font-size: 40px;
+	opacity: 0.5;
+	text-align: center;
+}
+
+#area_infos_hotel_perfilParceiro{
+	width: 450px; height: auto;
+}
+
+#area_infos_hotel_perfilParceiro p{
+	font-size: 40px;
+	margin-left: 50px;
+	margin-top: 30px;
+}
+
+#area_indicacao_hotel_perfilParceiro:hover #btn_produto_editarHotel{
+	opacity: 1;
+	transition: 1.1s;
+}
+
+#btn_produto_editarHotel{
+	font-size: 20px;
+	color: #fff;
+	background-color:#5270ff;
+	font-family: Calibri;
+	width: 150px;
+	height: 50px;
+	border: 0;
+	opacity: 0;
+	transition:0.5s;
+	margin-top: -20px;
+	float: right;
+}
+
+#btn_produto_editarHotel:hover{
+	color: black;
 }
 
 #txt_perfilUsuario{
@@ -4376,7 +4449,7 @@ body {
 	margin-left:30px;
 	margin-bottom:25px;
 	border-radius:15px;
-	 font-family: Calibri;
+	 font-family: 'dosislight';
 	font-size: 20px;
 	opacity: 0.8;
 	float:left;
@@ -4393,12 +4466,17 @@ body {
 	margin-left:30px;
 	margin-bottom:25px;
 	border-radius:15px;
-	 font-family: Calibri;
-	font-size: 20px;
+	 font-family: 'dosislight';
+	font-size: 25px;
 	opacity: 0.8;
 	float:left;
 	margin-top:10px;
+	border: 2px solid #c3c3c3;
 
+}
+
+.option_cadastro2:focus{
+	border: 2px solid #d3d3d3;
 }
 
 #foto_editar_usuario{
@@ -4525,6 +4603,7 @@ input[type='file'] {
    width:90px;
    height:50px;
    margin-top:8px;
+	font-size: 20px;
    border: 2px solid #b3b3b3;
 }
 .numero_cadastro_parceiro:focus{
@@ -4610,7 +4689,7 @@ input[type='file'] {
 
 .input_cadastro_parceiro{
   width: 1132px;
-  height: 60px;
+  height: 50px;
   float: left;
   margin-left: 30px;
   font-family: Calibri;
@@ -4624,7 +4703,7 @@ input[type='file'] {
 	border: 2px solid #e3e3e3;
 }
 .input_cadastro_parceiro2{
-  width: 432px;
+  width: 1010px;
   height: 50px;
   float: left;
   margin-left: 30px;
@@ -4643,13 +4722,15 @@ input[type='file'] {
 	float:left;
 	width:600px;
 	height:950px;
-	border:0px solid green;
+
+	margin-left: 40px;
 }
 #espaco_cadastro_p4{
 	float:right;
-	width:600px;
+	width:550px;
 	height:950px;
-	border:0px solid green;
+
+	margin-top: 8px;
 }
 
 .espaco_perguntas{
@@ -4658,17 +4739,13 @@ input[type='file'] {
   border:1px solid white;
   height:200px;
 	 width:600px;
-	 margin-top:20px;
+	 margin-top:25px;
 	 overflow:auto;
 
  		font-family: 'dosislight';
 
 }
 
-.espaco_perguntas:hover{
-	background-color: #e5e5e5;
-	border-radius: 5px;
-}
 
 .espaco_perguntas_img{
   font-family: Calibri;
@@ -4681,10 +4758,6 @@ input[type='file'] {
 
 }
 
-.espaco_perguntas_img:hover{
-	background-color: #e5e5e5;
-	border-radius: 5px;
-}
 
 .espaco_perguntas_btn{
   font-family: Calibri;

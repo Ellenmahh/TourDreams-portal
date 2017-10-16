@@ -84,6 +84,20 @@ class controllerUsuarios{
           $numero_usuario=$_POST['numero_usuario'];
 
 
+          $foto_usuario = basename($_FILES["arquivos"]["name"]);
+
+          $i = 0;
+
+
+         foreach ($_FILES["arquivos"]["error"] as $key => $error) {
+
+           $destino = "arquivos_usuarios/".$_FILES["arquivos"]["name"]
+           [$i];
+
+           move_uploaded_file( $_FILES["arquivos"]["tmp_name"][$i],
+
+           $destino );
+
           $usuarios_controller = new cadastroUsuario();
 
           $usuarios_controller->id_usuario = $id_usuario;
@@ -101,18 +115,22 @@ class controllerUsuarios{
           $usuarios_controller->bairro_usuario = $bairro_usuario;
           $usuarios_controller->numero_usuario = $numero_usuario;
 
-          if(empty($_POST['arquivos']) ){
+          //var_dump ($_FILES['arquivos']);
+          //echo('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx');
+          if(empty($_FILES['arquivos']) ){
 
               $usuarios_controller->Update($usuarios_controller);
 
           }else{
-              $foto_usuario = $_POST['arquivos'];
-              $usuarios_controller->foto_usuario = $foto_usuario;
+              //$foto_usuario = $_FILES['arquivos'];
+              $usuarios_controller->foto_usuario = $destino;
               $usuarios_controller->Update_foto($usuarios_controller);
 
           }
 
+          $i++;
 
+        }
 
       }
 

@@ -20,7 +20,8 @@
 
 
         <div id="area_pesquisa">
-          <input id="input_busca_avancada" placeholder="Faça uma busca..." type="text" name="" value="">
+          <form class="" action="router.php?controller=busca&modo=busca_avancada" method="post">
+          <input id="input_busca_avancada" placeholder="Faça uma busca..." type="text" name="busca" value="">
 
           <button id="btn_pesquisa_avancada" type="button" name="button" >
             <a href="#" id="mostrar"><img id="img_filtro" src="imagens/filtro.png" alt="dasd"></a></button>
@@ -28,24 +29,37 @@
         <div id="filtros">
 
           <div class="container">
+
+
+
             <div class="control-group">
+
+              <?php
+                    //Incluindo o arquivo da controller para fazer o select
+                    require_once('controllers/busca_avancada_controller.php');
+                    //Instancia do objeto de controller, e chamada dos metodos para listar os registros
+                    $controller_busca_categoria = new controllerBuscaAvancada();
+                    $rsCategoria = $controller_busca_categoria->listar_categorias();
+                    $cont2=0;
+                    while ($cont2<count($rsCategoria)) {
+
+
+
+
+              ?>
               <!--<p class="titulo_filtro" >ESTRELAS</p>-->
-              <label class="control control--checkbox">TESTE
-                <input type="checkbox" checked="checked"/>
+              <label class="control control--checkbox"><?php echo($rsCategoria[$cont2]->nome_categoria);?>
+                <input type="checkbox" value="<?php echo($rsCategoria[$cont2]->id_categoria);?>" name="categoria" />
                 <div class="control__indicator"></div>
               </label>
-              <label class="control control--checkbox">TESTE
-                <input type="checkbox"/>
-                <div class="control__indicator"></div>
-              </label>
-              <label class="control control--checkbox">TESTE
-                <input type="checkbox"/>
-                <div class="control__indicator"></div>
-              </label>
-              <label class="control control--checkbox">TESTE
-                <input type="checkbox"/>
-                <div class="control__indicator"></div>
-              </label>
+              <?php
+                $cont2+=1;
+
+                }
+
+
+              ?>
+
               <!--<label class="control control--checkbox">Disabled
                 <input type="checkbox" disabled="disabled"/>
                 <div class="control__indicator"></div>
@@ -55,102 +69,41 @@
                 <div class="control__indicator"></div>
               </label>-->
             </div>
+
+
             <div class="control-group">
               <!--<p class="titulo_filtro" >LOCAL</p>-->
-              <label class="control control--checkbox">TESTE
-                <input type="checkbox" checked="checked"/>
+              <?php
+                    //Incluindo o arquivo da controller para fazer o select
+                    require_once('controllers/busca_avancada_controller.php');
+                    //Instancia do objeto de controller, e chamada dos metodos para listar os registros
+                    $controller_busca_categoria = new controllerBuscaAvancada();
+                    $rsCarac = $controller_busca_categoria->listar_caracteristicas();
+                    $cont4=0;
+                    while ($cont4<count($rsCarac)) {
+
+
+
+
+              ?>
+              <label class="control control--checkbox"><?php echo($rsCarac[$cont4]->descricao_carac);?>
+                <input type="checkbox" value="<?php echo($rsCarac[$cont4]->id_carac);?>" name="caracteristicas" />
                 <div class="control__indicator"></div>
               </label>
-              <label class="control control--checkbox">TESTE
-                <input type="checkbox"/>
-                <div class="control__indicator"></div>
-              </label>
-              <label class="control control--checkbox">TESTE
-                <input type="checkbox"/>
-                <div class="control__indicator"></div>
-              </label>
-              <label class="control control--checkbox">TESTE
-                <input type="checkbox"/>
-                <div class="control__indicator"></div>
-              </label>
+              <?php
+                $cont4+=1;
+
+                }
+
+
+              ?>
+
             </div>
-            <div class="control-group">
-              <!--<p class="titulo_filtro" >PREÇO</p>-->
-              <label class="control control--checkbox">TESTE
-                <input type="checkbox" checked="checked"/>
-                <div class="control__indicator"></div>
-              </label>
-              <label class="control control--checkbox">TESTE
-                <input type="checkbox"/>
-                <div class="control__indicator"></div>
-              </label>
-              <label class="control control--checkbox">TESTE
-                <input type="checkbox"/>
-                <div class="control__indicator"></div>
-              </label>
-              <label class="control control--checkbox">TESTE
-                <input type="checkbox"/>
-                <div class="control__indicator"></div>
-              </label>
-            </div>
-            <div class="control-group">
-              <!--<p class="titulo_filtro" >PREÇO</p>-->
-              <label class="control control--checkbox">TESTE
-                <input type="checkbox" checked="checked"/>
-                <div class="control__indicator"></div>
-              </label>
-              <label class="control control--checkbox">TESTE
-                <input type="checkbox"/>
-                <div class="control__indicator"></div>
-              </label>
-              <label class="control control--checkbox">TESTE
-                <input type="checkbox"/>
-                <div class="control__indicator"></div>
-              </label>
-              <label class="control control--checkbox">TESTE
-                <input type="checkbox"/>
-                <div class="control__indicator"></div>
-              </label>
-            </div>
-            <div class="control-group">
-              <!--<p class="titulo_filtro" >PREÇO</p>-->
-              <label class="control control--checkbox">TESTE
-                <input type="checkbox" checked="checked"/>
-                <div class="control__indicator"></div>
-              </label>
-              <label class="control control--checkbox">TESTE
-                <input type="checkbox"/>
-                <div class="control__indicator"></div>
-              </label>
-              <label class="control control--checkbox">TESTE
-                <input type="checkbox"/>
-                <div class="control__indicator"></div>
-              </label>
-              <label class="control control--checkbox">TESTE
-                <input type="checkbox"/>
-                <div class="control__indicator"></div>
-              </label>
-            </div>
-            <div class="control-group">
-              <!--<p class="titulo_filtro" >PREÇO</p>-->
-              <label class="control control--checkbox">TESTE
-                <input type="checkbox" checked="checked"/>
-                <div class="control__indicator"></div>
-              </label>
-              <label class="control control--checkbox">TESTE
-                <input type="checkbox"/>
-                <div class="control__indicator"></div>
-              </label>
-              <label class="control control--checkbox">TESTE
-                <input type="checkbox"/>
-                <div class="control__indicator"></div>
-              </label>
-              <label class="control control--checkbox">TESTE
-                <input type="checkbox"/>
-                <div class="control__indicator"></div>
-              </label>
-            </div>
+
+
+
             <input id="btn_aplicarFiltros" type="submit" name="button" value="APLICAR" />
+            </form>
           </div>
 
         </div>
@@ -158,11 +111,24 @@
         <div id="txt_busca_avancada">
           <p>ALGUMAS SUGESTÕES</p>
         </div>
+        <?php
+              //Incluindo o arquivo da controller para fazer o select
+              require_once('controllers/busca_avancada_controller.php');
+              //Instancia do objeto de controller, e chamada dos metodos para listar os registros
+              $controller_busca = new controllerBuscaAvancada();
+              $rsBusca = $controller_busca->listar();
+              $cont=0;
+              while ($cont<count($rsBusca)) {
+
+              $id_hotel = $rsBusca[$cont]->id_hotel;
+
+
+        ?>
         <div class="produtos_div"  data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
-          <img src="imagens/hotel12.jpg" alt="">
+          <img src="<?php echo($rsBusca[$cont]->imagem_hotel);?>" alt="">
           <div class="legenda_produto">
-            <p class="txt_nome_hotel">Hotel Fazende Suipe</p>
-            <p class="txt_estado_hotel">São Paulo</p>
+            <p class="txt_nome_hotel"><?php echo($rsBusca[$cont]->nome_hotel);?></p>
+            <p class="txt_estado_hotel"><?php echo ($rsBusca[$cont]->cidade_hotel);?></p>
             <div class="estrelas">
               <img class="img_estrelas_hotel" src="imagens/estrelas.png" alt="">
             </div>
@@ -172,111 +138,39 @@
             <p class="txt_caracteristica_hotel">Wi-fi grátis</p>
             <p class="txt_diaria_hotel" >Diárias a partir de</p>
             <p class="txt_rs" >R$</p>
-            <p class="txt_preco_hotel">200</p>
+            <?php
+        								$sql = "select * from tbl_quarto where id_hotel = $id_hotel  order by preco_quarto asc limit 1;";
+        								$select = mysql_query($sql);
+
+        								while($rs=mysql_fetch_array($select)){
+
+
+
+
+
+
+        								?>
+            <p class="txt_preco_hotel"><?php echo($rs['preco_quarto']); ?></p>
+            <?php
+          }
+
+             ?>
             <a href="verQuartos.php"><input type="submit" name="btn_produto" value="ver quartos" class="btn_produto"></a>
 
           </div>
 
         </div>
-        <div class="produtos_div"  data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
-          <img src="imagens/hotel11.jpg" alt="">
-          <div class="legenda_produto">
-            <p class="txt_nome_hotel">Hotel Fazende Suipe</p>
-            <p class="txt_estado_hotel">São Paulo</p>
-            <div class="estrelas">
-              <img class="img_estrelas_hotel" src="imagens/estrelas.png" alt="">
-            </div>
-            <div class="caracteristicas_hotel">
-              <img class="img_caracteristica_hotel" src="imagens/wifi.png" alt="">
-            </div>
-            <p class="txt_caracteristica_hotel">Wi-fi grátis</p>
-            <p class="txt_diaria_hotel" >Diárias a partir de</p>
-            <p class="txt_rs" >R$</p>
-            <p class="txt_preco_hotel">200</p>
-            <a href="verQuartos.php"><input type="submit" name="btn_produto" value="ver quartos" class="btn_produto"></a>
+        <?php
+          $cont+=1;
 
-          </div>
+          }
 
-        </div>
-        <div class="produtos_div"  data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
-          <img src="imagens/hotel10.jpg" alt="">
-          <div class="legenda_produto">
-            <p class="txt_nome_hotel">Hotel Fazende Suipe</p>
-            <p class="txt_estado_hotel">São Paulo</p>
-            <div class="estrelas">
-              <img class="img_estrelas_hotel" src="imagens/estrelas.png" alt="">
-            </div>
-            <div class="caracteristicas_hotel">
-              <img class="img_caracteristica_hotel" src="imagens/wifi.png" alt="">
-            </div>
-            <p class="txt_caracteristica_hotel">Wi-fi grátis</p>
-            <p class="txt_diaria_hotel" >Diárias a partir de</p>
-            <p class="txt_rs" >R$</p>
-            <p class="txt_preco_hotel">200</p>
-            <a href="verQuartos.php"><input type="submit" name="btn_produto" value="ver quartos" class="btn_produto"></a>
-          </div>
 
-        </div>
-        <div class="produtos_div"  data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
-          <img src="imagens/hotel9.jpg" alt="">
-          <div class="legenda_produto">
-            <p class="txt_nome_hotel">Hotel Fazende Suipe</p>
-            <p class="txt_estado_hotel">São Paulo</p>
-            <div class="estrelas">
-              <img class="img_estrelas_hotel" src="imagens/estrelas.png" alt="">
-            </div>
-            <div class="caracteristicas_hotel">
-              <img class="img_caracteristica_hotel" src="imagens/wifi.png" alt="">
-            </div>
-            <p class="txt_caracteristica_hotel">Wi-fi grátis</p>
-            <p class="txt_diaria_hotel" >Diárias a partir de</p>
-            <p class="txt_rs" >R$</p>
-            <p class="txt_preco_hotel">200</p>
-            <a href="verQuartos.php"><input type="submit" name="btn_produto" value="ver quartos" class="btn_produto"></a>
+        ?>
 
-          </div>
 
-        </div>
-        <div class="produtos_div"  data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
-          <img src="imagens/hotel8.jpg" alt="">
-          <div class="legenda_produto">
-            <p class="txt_nome_hotel">Hotel Fazende Suipe</p>
-            <p class="txt_estado_hotel">São Paulo</p>
-            <div class="estrelas">
-              <img class="img_estrelas_hotel" src="imagens/estrelas.png" alt="">
-            </div>
-            <div class="caracteristicas_hotel">
-              <img class="img_caracteristica_hotel" src="imagens/wifi.png" alt="">
-            </div>
-            <p class="txt_caracteristica_hotel">Wi-fi grátis</p>
-            <p class="txt_diaria_hotel" >Diárias a partir de</p>
-            <p class="txt_rs" >R$</p>
-            <p class="txt_preco_hotel">200</p>
-            <a href="verQuartos.php"><input type="submit" name="btn_produto" value="ver quartos" class="btn_produto"></a>
 
-          </div>
 
-        </div>
-        <div class="produtos_div"  data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
-          <img src="imagens/hotel7.jpg" alt="">
-          <div class="legenda_produto">
-            <p class="txt_nome_hotel">Hotel Fazende Suipe</p>
-            <p class="txt_estado_hotel">São Paulo</p>
-            <div class="estrelas">
-              <img class="img_estrelas_hotel" src="imagens/estrelas.png" alt="">
-            </div>
-            <div class="caracteristicas_hotel">
-              <img class="img_caracteristica_hotel" src="imagens/wifi.png" alt="">
-            </div>
-            <p class="txt_caracteristica_hotel">Wi-fi grátis</p>
-            <p class="txt_diaria_hotel" >Diárias a partir de</p>
-            <p class="txt_rs" >R$</p>
-            <p class="txt_preco_hotel">200</p>
-            <a href="verQuartos.php"><input type="submit" name="btn_produto" value="ver quartos" class="btn_produto"></a>
-
-          </div>
-
-        </div>
       </div>
     </section>
     <footer>
