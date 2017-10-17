@@ -155,88 +155,26 @@
    <script>
       $(document).ready(function(){
 
-
-
-
-
-
-
-
         $("a[rel=modal]").click( function(ev){
           //alert('teste');
-          $("#editar_perfilUsuario").slideToggle(2000);
+          //$("#editar_perfilUsuario").slideToggle(2000);
           ev.preventDefault();
 
           var mod = this;
 
-          //======== FORM COM AJAX ========
-          jQuery(document).ready(function(){
-            jQuery('#form_modal_editar_perfilUsuario').submit(function(event) {
-
-              //anula a ação do submit tradicional "botao" ou F5
-              //event.preventDefault();
-
-              jQuery.ajax({
-                type: "POST",
-                url: "router.php?controller=usuarios&modo=alterar_dados&id_usuario=<?php echo($id_usuario); ?>",
-
-                //Foi utilizado o FormData para o resgate da foto do usuario
-                //Pois o serialize() nao tem o suporte essencial para tal função
-                data: new FormData($("#form_modal_editar_perfilUsuario")[0]),
-
-                cache:false,
-                contentType:false,
-                processData:false,
-                async:true,
-
-                success: function(dados){
-                  //alert(dados);
-                  $('.modal').html(dados);
-                }
-              });
-
-            });
-
-            return false;
-
-          });
-
-          //Trazer informações do usuario cadastrado
-          $.ajax({"url":"router.php?controller=usuarios&modo=buscarAJAX&id_usuario=<?php echo($id_usuario); ?>"}).done(
-            function(data){
-
-            //alert(data);
-           var user = jQuery.parseJSON(data);
-
-              $("[name='nome_usuario']").val( user.nome_usuario);
-              $("[name='email_usuario']").val( user.email_usuario);
-              $("[name='rua_usuario']").val( user.rua_usuario);
-              $("[name='bairro_usuario']").val( user.bairro_usuario);
-              $("[name='numero_usuario']").val( user.numero_usuario);
-              $("[name='telefone_usuario']").val( user.telefone_usuario);
-              $("[name='celular_usuario']").val( user.celular_usuario);
-              $("[name='rg_usuario']").val( user.rg_usuario);
-              $("[name='senha_usuario']").val( user.senha_usuario);
-
-              //poder vizualizar informações no console do inspecionar
-              console.log(user);
-
-              //trazer a imagem do usuario atraves do atributo src
-              var foto = $("#img_perfil_usuario").attr("src");
-              $("#img_perfil_usuario_modal").attr("src", foto );
-
-              $("[name='btnCadastrar']").val( "ALTERAR");
-
               //Fazendo a modal
+              //alert('teste');
               var id = $(mod).attr("href");
               var alturaTela = $(document).height();
               var larguraTela = $(window).width();
 
               //colocando o fundo preto
+              //alert('teste');
               $('#mascara_usuario').css({'width':larguraTela,'height':alturaTela});
               $('#mascara_usuario').fadeIn(1000);
               $('#mascara_usuario').fadeTo("slow",0.8);
 
+              //alert('teste');
               var left = ($(window).width() /2) - ( $(id).width() / 2 );
               var top = ($(window).height() / 2) - ( $(id).height() / 2 );
 
@@ -244,16 +182,78 @@
               $(id).show();
 
 
+              //======== FORM COM AJAX ========
+              jQuery(document).ready(function(){
+                jQuery('#form_modal_editar_perfilUsuario').submit(function(event) {
+
+                  //anula a ação do submit tradicional "botao" ou F5
+                  //event.preventDefault();
+
+                  jQuery.ajax({
+                    type: "POST",
+                    url: "router.php?controller=usuarios&modo=alterar_dados&id_usuario=<?php echo($id_usuario); ?>",
+
+                    //Foi utilizado o FormData para o resgate da foto do usuario
+                    //Pois o serialize() nao tem o suporte essencial para tal função
+                    data: new FormData($("#form_modal_editar_perfilUsuario")[0]),
+
+                    cache:false,
+                    contentType:false,
+                    processData:false,
+                    async:true,
+
+                    success: function(dados){
+                      //alert(dados);
+                      $('.modal').html(dados);
+                    }
+                  });
+
+                });
+
+                return false;
+
+              });
+
+              //Trazer informações do usuario cadastrado
+              $.ajax({"url":"router.php?controller=usuarios&modo=buscarAJAX&id_usuario=<?php echo($id_usuario); ?>"}).done(
+                function(data){
+
+                //alert('teste');
+                //alert(data);
+
+               var user = jQuery.parseJSON(data);
+
+                  $("[name='nome_usuario']").val( user.nome_usuario);
+                  $("[name='email_usuario']").val( user.email_usuario);
+                  $("[name='rua_usuario']").val( user.rua_usuario);
+                  $("[name='bairro_usuario']").val( user.bairro_usuario);
+                  $("[name='numero_usuario']").val( user.numero_usuario);
+                  $("[name='telefone_usuario']").val( user.telefone_usuario);
+                  $("[name='celular_usuario']").val( user.celular_usuario);
+                  $("[name='rg_usuario']").val( user.rg_usuario);
+                  $("[name='senha_usuario']").val( user.senha_usuario);
+
+                  //poder vizualizar informações no console do inspecionar
+                  console.log(user);
+
+                  //trazer a imagem do usuario atraves do atributo src
+                  var foto = $("#img_perfil_usuario").attr("src");
+                  $("#img_perfil_usuario_modal").attr("src", foto );
+
+                  $("[name='btnCadastrar']").val( "ALTERAR");
+
             });
 
 
      });
 
+     //alert('teste');
      $("#mascara_usuario").click( function(){
       $(this).hide();
       $(".window").hide();
      });
 
+     //alert('teste');
      $('.mascara_usuario').click(function(ev){
       ev.preventDefault();
       $("#mascara").hide();

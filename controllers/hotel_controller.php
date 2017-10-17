@@ -85,8 +85,8 @@
 
 			}
 		}
-		 
-		 
+
+
 		public function ListarCategoria(){
 
 			require_once('models/parceiro_class.php');
@@ -98,7 +98,7 @@
 
         }
 
-		
+
 
 
     public function atualizar(){
@@ -176,7 +176,7 @@
 
         $list=$hotel_controller->BuscarInfoHotel($hotel_controller);
 
-        require_once('editarHotel.php');
+        require_once('cadastroParceiro.php');
 
         //header('location:editarHotel.php');
 

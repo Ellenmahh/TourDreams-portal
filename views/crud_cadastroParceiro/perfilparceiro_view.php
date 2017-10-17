@@ -1,31 +1,31 @@
 
 
 
-<?php 
+<?php
 $parceiro="";
-	$id_quarto=""; 
-	$id_hotel=$_GET['id_hotel'];
+	$id_quarto="";
+	//$id_hotel=$_GET['id_hotel'];
 ?>
 
 <form  name="perfil_Parceiro" method="GET" enctype="multipart/form-data" action="editarQuarto.php">
-				
+
 				<div id="principal_produtos">
 				<?php
-						 require_once('controllers/hotel_controller.php');
-						 
-						$hotel_controller = new ControllerHotel();
-						
-						 $rsconsulta1= $hotel_controller->ListarQuartos($parceiro);
+						 require_once('controllers/quarto_controller.php');
+
+						$quarto_controller = new ControllerQuarto();
+
+						 $rsconsulta1= $quarto_controller->ListarQuartos();
 
 						$cont3 = 0;
-						
-					
-						
+
+
+
 						while($cont3<count($rsconsulta1)){
-							
-		
+
+
 				?>
-						 
+
 								<div class="produtos_div_verQuartos">
 									<a href="editarQuarto.php"><img class="img_hotel" src="<?php echo($rsconsulta1[$cont3]->nome_imagem); ?>" alt=""></a>
 									<div class="legenda_produto_verQuartos">
@@ -42,7 +42,7 @@ $parceiro="";
 									</div>
 
 								</div>
-					<?php 
+					<?php
 						$cont3+=1;
 
 						}

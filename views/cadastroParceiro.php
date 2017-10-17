@@ -74,10 +74,8 @@
 	  </header>
    </body>
     <section>
-      <div id="principal">
-		<div id="seja_usuario">
-			<p>SEJA NOSSO PARCEIRO </p>
-		</div>
+  <div id="principal">
+
 		 <?php
 
             require_once('crud_cadastroParceiro/parceiro_view.php');

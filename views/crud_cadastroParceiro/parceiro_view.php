@@ -30,8 +30,11 @@
 	$numero_hotel="";
 	$restaurante="";
   $senha_hotel="";
-
 	$idEditar="";
+
+
+	$titulo_parceiro = "SEJA NOSSO PARCEIRO";
+
 
 	 if (isset($_GET['modo'] )){
 
@@ -69,11 +72,16 @@
 	     $action = "alterar_dados";
 	     $btnAvancar="ALTERAR";
 	     $idEditar = "&id_hotel=$id_hotel";
+			 $titulo_parceiro = "EDITE AS INFORMAÇÕES DO SEU HOTEL";
 	   }
 
 	 }
 
 ?>
+
+<div id="seja_usuario">
+	<p><?php echo($titulo_parceiro); ?></p>
+</div>
 
 <form name="Cadastro_parceiro" method="post" enctype="multipart/form-data" action="router.php?controller=hotel&modo=<?php echo($action) ?><?php echo($idEditar) ?>">
 

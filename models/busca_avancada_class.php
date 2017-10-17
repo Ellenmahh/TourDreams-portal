@@ -22,9 +22,23 @@
 
         }
         public function Pesquisa($pesquisa){
-          echo ($pesquisa->busca);
-          echo ($pesquisa->categoria);
-          echo ($pesquisa->caracteristica);
+
+          $sql = "select * from tbl_hotel where id_hotel in(
+
+                   select distinct h.id_hotel  from tbl_quarto as q
+                   inner join tbl_hotel as h on h.id_hotel = q.id_hotel
+                   inner join caracteristicas_quarto_hotel as cqh on cqh.id_quarto = q.id_quarto
+                   inner join caracteristicas_quarto as cq on cq.id_carac_quarto = cqh.id_carac_quarto
+                   inner join tbl_endereco_hotel as eh on eh.id_hotel = h.id_hotel
+                   inner join cidade as c on c.cidade_codigo = eh.cidade_codigo
+                   inner join tbl_categoria as tbcat on tbcat.id_categoria = h.id_categora
+                   $pesquisa->carac_categoria
+
+                   );";
+
+
+                   echo $sql;
+
 
        }
         //metodo para selecionar tudo do banco

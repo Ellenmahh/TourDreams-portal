@@ -36,7 +36,53 @@ Arquivos relacionados: router.php, home_view.php, home_class.php.
 
                 //Resgatando os valores do form
                 $categoria=$_POST['categoria'];
+
+                $where2 = "or id_categoria in ( ";
+
+                $i2 = 0;
+
+                foreach ($categoria as $value) {
+
+                  if($i2==0){
+                    $where2 = $where2.$value;
+
+
+
+                  }else{
+
+                    $where2 = $where2.",".$value;
+
+                  }
+
+                    $i2++;
+
+
+                }
+
+                $where2 = $where2.")";
                 $caracteristica=$_POST['caracteristicas'];
+
+                $where = "where cqh.id_carac_quarto in ( ";
+
+                $i =0;
+                foreach ($caracteristica as $value2) {
+
+
+                    if($i==0){
+                        $where = $where.$value2;
+
+                    }else{
+                          $where = $where .",".$value2;
+                    }
+
+                  //var_dump($value2);
+                  $i++;
+                }
+                $where = $where.") ";
+
+                $result = $where.$where2;
+                //echo  $result;
+
                 $busca=$_POST['busca'];
 
 
@@ -44,9 +90,9 @@ Arquivos relacionados: router.php, home_view.php, home_class.php.
 
                 $pesquisa_controller = new busca();
 
-                $pesquisa_controller->categoria = $categoria;
-                $pesquisa_controller->caracteristica = $caracteristica;
+                $pesquisa_controller->carac_categoria = $result;
                 $pesquisa_controller->busca = $busca;
+
 
 
                 $pesquisa_controller->Pesquisa($pesquisa_controller);
