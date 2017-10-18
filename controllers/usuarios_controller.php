@@ -67,7 +67,6 @@ class controllerUsuarios{
     public function atualizar(){
       if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
-
           //Resgatando os valores do form
           $id_usuario=$_GET['id_usuario'];
           $nome_usuario=$_POST['nome_usuario'];
@@ -108,8 +107,6 @@ class controllerUsuarios{
           $usuarios_controller->telefone_usuario = $telefone_usuario;
           $usuarios_controller->celular_usuario = $celular_usuario;
           $usuarios_controller->email_usuario = $email_usuario;
-
-
 
           $usuarios_controller->rua_usuario = $rua_usuario;
           $usuarios_controller->bairro_usuario = $bairro_usuario;

@@ -54,7 +54,9 @@
 					 $hotel_controller->cidade_hotel=$cidade_hotel;
 					 $hotel_controller->cnpj_hotel=$cnpj_hotel;
 					 $hotel_controller->endereco_hotel=$endereco_hotel;
+
 					 $hotel_controller->categoria_hotel=$id_categoria;
+
 					 $hotel_controller->wi_fi_hotel=$wi_fi;
 					 $hotel_controller->aceita_animais=$aceita_animais;
 					 $hotel_controller->estacionamento_hotel=$estacionamento;
@@ -99,71 +101,7 @@
         }
 
 
-
-
-    public function atualizar(){
-
-      $id_hotel=$_GET['id_hotel'];
-
-      if($_SERVER['REQUEST_METHOD'] == 'POST'){
-
-        $id_hotel=$_GET['id_hotel'];
-
-        $nome_hotel=$_POST['txtNomeHotel'];
-        $email_hotel=$_POST['txtEmail'];
-        $telefone_hotel=$_POST['txtTelefone'];
-        $bairro_hotel=$_POST['txtBairro'];
-        $numero_hotel=$_POST['txtNumeroHotel'];
-        $cnpj_hotel=$_POST['txtCNPJ'];
-        $rua_hotel=$_POST['txtEndereco'];
-        $senha_hotel=$_POST['txtSenha'];
-
-        //$categoria_hotel=$_POST['nome_categoria'];
-        $wifi=$_POST['opt2'];
-        $estacionamento=$_POST['opt4'];
-        $spa=$_POST['opt5'];
-        $piscina=$_POST['opt6'];
-        $academia=$_POST['opt7'];
-        $aceita_animais=$_POST['opt3'];
-        $restaurante=$_POST['opt71'];
-        $cafe_da_manha=$_POST['opt8'];
-        $almoco=$_POST['opt9'];
-        $cafe_da_tarde=$_POST['opt10'];
-        $jantar=$_POST['opt11'];
-
-        $hotel_controller = new parceiro();
-
-        $hotel_controller->nome_hotel = $nome_hotel;
-        $hotel_controller->email_hotel = $email_hotel;
-        $hotel_controller->telefone_hotel = $telefone_hotel;
-        $hotel_controller->bairro_hotel = $bairro_hotel;
-        $hotel_controller->numero_hotel = $numero_hotel;
-        $hotel_controller->cnpj_hotel = $cnpj_hotel;
-        $hotel_controller->rua_hotel = $rua_hotel;
-        $hotel_controller->senha_hotel = $senha_hotel;
-
-        //$hotel_controller->categoria_hotel = $categoria_hotel;
-        $hotel_controller->wifi = $wifi;
-        $hotel_controller->estacionamento = $estacionamento;
-        $hotel_controller->spa = $spa;
-        $hotel_controller->piscina = $piscina;
-        $hotel_controller->academia = $academia;
-        $hotel_controller->aceita_animais = $aceita_animais;
-        $hotel_controller->restaurante = $restaurante;
-        $hotel_controller->cafe_da_manha = $cafe_da_manha;
-        $hotel_controller->almoco = $almoco;
-        $hotel_controller->cafe_da_tarde = $cafe_da_tarde;
-        $hotel_controller->jantar= $jantar;
-
-        $hotel_controller->Update_hotel($hotel_controller);
-
-      }
-
-    }
-
     public function buscarInfoHotel(){
-
-      $id_hotel=$_GET['id_hotel'];
 
       if($_SERVER['REQUEST_METHOD'] == 'GET'){
 
@@ -184,6 +122,67 @@
 
     }
 
+    public function atualizar(){
+
+      if($_SERVER['REQUEST_METHOD'] == 'POST'){
+
+        $id_hotel=$_GET['id_hotel'];
+
+        $nome_hotel=$_POST['txtNomeHotel'];
+        $email_hotel=$_POST['txtEmail'];
+        $telefone_hotel=$_POST['txtTelefone'];
+        $bairro_hotel=$_POST['txtBairro'];
+        $numero_hotel=$_POST['txtNumeroHotel'];
+        $cnpj_hotel=$_POST['txtCNPJ'];
+        $rua_hotel=$_POST['txtEndereco'];
+        $senha_hotel=$_POST['txtSenha'];
+
+        $id_categoria=$_POST['opt'];
+
+        $wifi=$_POST['opt2'];
+        $estacionamento=$_POST['opt4'];
+        $spa=$_POST['opt5'];
+        $piscina=$_POST['opt6'];
+        $academia=$_POST['opt7'];
+        $aceita_animais=$_POST['opt3'];
+        $restaurante=$_POST['opt71'];
+        $cafe_da_manha=$_POST['opt8'];
+        $almoco=$_POST['opt9'];
+        $cafe_da_tarde=$_POST['opt10'];
+        $jantar=$_POST['opt11'];
+
+        $hotel_controller = new parceiro();
+
+        $hotel_controller->id_hotel = $id_hotel;
+
+        $hotel_controller->nome_hotel = $nome_hotel;
+        $hotel_controller->email_hotel = $email_hotel;
+        $hotel_controller->telefone_hotel = $telefone_hotel;
+        $hotel_controller->bairro_hotel = $bairro_hotel;
+        $hotel_controller->numero_hotel = $numero_hotel;
+        $hotel_controller->cnpj_hotel = $cnpj_hotel;
+        $hotel_controller->rua_hotel = $rua_hotel;
+        $hotel_controller->senha_hotel = $senha_hotel;
+
+        $hotel_controller->categoria_hotel = $id_categoria;
+
+        $hotel_controller->wifi = $wifi;
+        $hotel_controller->estacionamento = $estacionamento;
+        $hotel_controller->spa = $spa;
+        $hotel_controller->piscina = $piscina;
+        $hotel_controller->academia = $academia;
+        $hotel_controller->aceita_animais = $aceita_animais;
+        $hotel_controller->restaurante = $restaurante;
+        $hotel_controller->cafe_da_manha = $cafe_da_manha;
+        $hotel_controller->almoco = $almoco;
+        $hotel_controller->cafe_da_tarde = $cafe_da_tarde;
+        $hotel_controller->jantar= $jantar;
+
+        $hotel_controller->Update_hotel($hotel_controller);
+
+      }
+
+    }
 
 
 	}

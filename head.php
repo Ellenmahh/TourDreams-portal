@@ -155,9 +155,10 @@
    <script>
       $(document).ready(function(){
 
-        $("a[rel=modal]").click( function(ev){
+        $("a[rel=modal_editar]").click( function(ev){
           //alert('teste');
-          //$("#editar_perfilUsuario").slideToggle(2000);
+          $("#editar_perfilUsuario").slideToggle(1000);
+
           ev.preventDefault();
 
           var mod = this;
@@ -218,34 +219,34 @@
               $.ajax({"url":"router.php?controller=usuarios&modo=buscarAJAX&id_usuario=<?php echo($id_usuario); ?>"}).done(
                 function(data){
 
-                //alert('teste');
-                //alert(data);
+                  //alert('teste');
+                  //alert(data);
 
-               var user = jQuery.parseJSON(data);
+                 var user = jQuery.parseJSON(data);
 
-                  $("[name='nome_usuario']").val( user.nome_usuario);
-                  $("[name='email_usuario']").val( user.email_usuario);
-                  $("[name='rua_usuario']").val( user.rua_usuario);
-                  $("[name='bairro_usuario']").val( user.bairro_usuario);
-                  $("[name='numero_usuario']").val( user.numero_usuario);
-                  $("[name='telefone_usuario']").val( user.telefone_usuario);
-                  $("[name='celular_usuario']").val( user.celular_usuario);
-                  $("[name='rg_usuario']").val( user.rg_usuario);
-                  $("[name='senha_usuario']").val( user.senha_usuario);
+                    $("[name='nome_usuario']").val( user.nome_usuario);
+                    $("[name='email_usuario']").val( user.email_usuario);
+                    $("[name='rua_usuario']").val( user.rua_usuario);
+                    $("[name='bairro_usuario']").val( user.bairro_usuario);
+                    $("[name='numero_usuario']").val( user.numero_usuario);
+                    $("[name='telefone_usuario']").val( user.telefone_usuario);
+                    $("[name='celular_usuario']").val( user.celular_usuario);
+                    $("[name='rg_usuario']").val( user.rg_usuario);
+                    $("[name='senha_usuario']").val( user.senha_usuario);
 
-                  //poder vizualizar informações no console do inspecionar
-                  console.log(user);
+                    //poder vizualizar informações no console do inspecionar
+                    console.log(user);
 
-                  //trazer a imagem do usuario atraves do atributo src
-                  var foto = $("#img_perfil_usuario").attr("src");
-                  $("#img_perfil_usuario_modal").attr("src", foto );
+                    //trazer a imagem do usuario atraves do atributo src
+                    var foto = $("#img_perfil_usuario").attr("src");
+                    $("#img_perfil_usuario_modal").attr("src", foto );
 
-                  $("[name='btnCadastrar']").val( "ALTERAR");
+                    $("[name='btnCadastrar']").val( "ALTERAR");
 
-            });
+                });
 
 
-     });
+        });
 
      //alert('teste');
      $("#mascara_usuario").click( function(){
@@ -261,6 +262,52 @@
      });
 
     });
+
+    $(document).ready(function(){
+
+      $("a[rel=modal]").click( function(ev){
+        //alert('teste');
+        $("#editar_perfilUsuario").slideToggle(1000);
+
+        ev.preventDefault();
+
+        var mod = this;
+
+            //Fazendo a modal
+            //alert('teste');
+            var id = $(mod).attr("href");
+            var alturaTela = $(document).height();
+            var larguraTela = $(window).width();
+
+            //colocando o fundo preto
+            //alert('teste');
+            $('#mascara_usuario').css({'width':larguraTela,'height':alturaTela});
+            $('#mascara_usuario').fadeIn(1000);
+            $('#mascara_usuario').fadeTo("slow",0.8);
+
+            //alert('teste');
+            var left = ($(window).width() /2) - ( $(id).width() / 2 );
+            var top = ($(window).height() / 2) - ( $(id).height() / 2 );
+
+            $(id).css({'top':top,'left':left});
+            $(id).show();
+
+      });
+
+   //alert('teste');
+   $("#mascara_usuario").click( function(){
+    $(this).hide();
+    $(".window").hide();
+   });
+
+   //alert('teste');
+   $('.mascara_usuario').click(function(ev){
+    ev.preventDefault();
+    $("#mascara").hide();
+    $(".window").hide();
+   });
+
+  });
 
   </script>
 

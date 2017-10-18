@@ -36,21 +36,20 @@
 			JOIN caracteristicas_quarto as c
 			ON ch.id_carac_quarto = c.id_carac_quarto
 			where q.id_quarto=$quarto->id_quarto";
-		 //echo($sqlq0);
-		 $select31 = mysql_query($sqlq0);
+		//echo($sqlq0);
+		 $select = mysql_query($sqlq0);
+			while($rsconsulta0=mysql_fetch_array($select)){
 
-			while($rsconsulta0=mysql_fetch_array($select31)){
+				$listEditar = new quarto;
 
-
-				$listEditar->id_quarto=$rsconsulta0['q.id_quarto'];
-				$listEditar->id_hotel=$rsconsulta0['h.id_hotel'];
-				$listEditar->nome_quarto=$rsconsulta0['q.nome_quarto'];
-				$listEditar->numero_quarto=$rsconsulta0['q.numero_quarto'];
-				$listEditar->camas_solteiro=$rsconsulta0['q.camas_solteiro'];
-				$listEditar->camas_casal=$rsconsulta0['q.camas_casal'];
-				$listEditar->id_carac_quarto=$rsconsulta0['c.id_carac_quarto'];
-				$listEditar->descricao_carac_quarto=$rsconsulta0['ch.descricao_carac_quarto'];
-				$listEditar->nome_imagem=$rsconsulta0['nome_imagem'];
+				$listEditar->id_quarto=$rsconsulta0['id_quarto'];
+				$listEditar->id_hotel=$rsconsulta0['id_hotel'];
+				$listEditar->nome_quarto=$rsconsulta0['nome_quarto'];
+				$listEditar->numero_quarto=$rsconsulta0['numero_quarto'];
+				$listEditar->camas_solteiro=$rsconsulta0['camas_solteiro'];
+				$listEditar->camas_casal=$rsconsulta0['camas_casal'];
+				$listEditar->id_carac_quarto=$rsconsulta0['id_carac_quarto'];
+				$listEditar->descricao_carac_quarto=$rsconsulta0['descricao_carac_quarto'];
 
 
 			}
@@ -58,8 +57,28 @@
 			//header('location:editarQuarto.php?id_quarto='.$id_quarto.'');*/
 
 	  }
+		public function BuscarInfoQuartoImagens($quarto,$id_quarto){
+			$sql_imagens_quarto ="select * from tbl_imagens_quarto where id_quarto=".$id_quarto;
+			//echo($sql_imagens_quarto);
+		$select_imagem = mysql_query($sql_imagens_quarto);
+		$cont_imagem = 0;
+		$listEditar_imagem="";
+			while($rsconsultaimagens=mysql_fetch_array($select_imagem)){
+					$listEditar_imagem [] = new quarto;
 
-	  public function SelectQuartos($quarto){
+					$listEditar_imagem[$cont_imagem]->id_quarto=$rsconsultaimagens['id_quarto'];
+					$listEditar_imagem[$cont_imagem]->id_imagem_quarto=$rsconsultaimagens['id_imagem_quarto'];
+					$listEditar_imagem[$cont_imagem]->nome_imagem=$rsconsultaimagens['nome_imagem'];
+
+					$cont_imagem +=1;
+			}
+				return $listEditar_imagem;
+			}
+
+
+
+
+	  public function SelectQuartos($quarto,$id_hotel){
 		  $sqlq = "select q.id_quarto,q.id_hotel,q.nome_quarto, q.numero_quarto,
 			q.camas_solteiro, q.camas_casal, q.preco_quarto, ch.id_carac_quarto,ch.id_quarto,
 			c.id_carac_quarto,c.descricao_carac_quarto,i.id_quarto,i.nome_imagem
@@ -70,7 +89,7 @@
 			ON i.id_quarto = q.id_quarto
 			JOIN caracteristicas_quarto as c
 			ON ch.id_carac_quarto = c.id_carac_quarto
-			where q.id_hotel=$quarto->id_hotel";
+			where q.id_hotel=".$id_hotel;
 
 		 //echo($sqlq);
 		  $select3 = mysql_query($sqlq);
@@ -78,10 +97,10 @@
 			$listQuartos="";
 			while($rsconsulta1=mysql_fetch_array($select3)){
 
-				$listQuartos[] = new parceiro;
+				$listQuartos[] = new quarto;
 
-				$listQuartos[$cont3]->id_quarto=$rsconsulta1['q.id_quarto'];
-				$listQuartos[$cont3]->id_hotel=$rsconsulta1['q.id_hotel'];
+				$listQuartos[$cont3]->id_quarto=$rsconsulta1['id_quarto'];
+				$listQuartos[$cont3]->id_hotel=$rsconsulta1['id_hotel'];
 				$listQuartos[$cont3]->nome_quarto=$rsconsulta1['nome_quarto'];
 				$listQuartos[$cont3]->numero_quarto=$rsconsulta1['numero_quarto'];
 				$listQuartos[$cont3]->camas_solteiro=$rsconsulta1['camas_solteiro'];

@@ -1,8 +1,10 @@
 ﻿<?php
-	$id_hotel="";
+
 	$nome_hotel="";
 	$telefone_hotel="";
+
 	$id_categoria="";
+
 	$cnpj_hotel="";
 	$imagem_hotel_1="";
 	$imagem_hotel_2="";
@@ -44,7 +46,9 @@
 
 	     $nome_hotel=$list->nome_hotel;
 			 $telefone_hotel=$list->telefone_hotel;
+
 			 $id_categoria=$list->id_categoria;
+
 			 $cnpj_hotel=$list->cnpj_hotel;
 			 $imagem_hotel_1=$list->imagem_hotel_1;
 			 $imagem_hotel_2=$list->imagem_hotel_2;
@@ -72,6 +76,7 @@
 	     $action = "alterar_dados";
 	     $btnAvancar="ALTERAR";
 	     $idEditar = "&id_hotel=$id_hotel";
+
 			 $titulo_parceiro = "EDITE AS INFORMAÇÕES DO SEU HOTEL";
 	   }
 
@@ -180,7 +185,7 @@
 
 							</label>
 							<label class="control2 control--radio">
-								<input  type="radio" name="opt2" value="0"/>Não
+								<input  type="radio" name="opt2"  value="0"/>Não
 								<div class="control__indicator2"></div>
 
 							</label>

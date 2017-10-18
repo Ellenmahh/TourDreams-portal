@@ -1,5 +1,5 @@
 <?php
 
-  require_once("views/editarHotel.php");
+  require_once("views/cadastroHotel.php");
 
 ?>

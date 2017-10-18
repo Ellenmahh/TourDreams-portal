@@ -93,12 +93,12 @@ class ControllerQuarto {
     }
 
 
-	public function ListarQuartos(){
+	public function ListarQuartos($id_hotel){
 
 			require_once('models/quarto_class.php');
 			$listQuartos = new quarto;
 
-			return $listQuartos -> SelectQuartos($listQuartos);
+			return $listQuartos -> SelectQuartos($listQuartos,$id_hotel);
 
 		}
 	public function ListarCategoriaQuarto(){
@@ -111,10 +111,12 @@ class ControllerQuarto {
 
 	public function BuscarInfoQuarto(){
 
-			require_once('models/parceiro_class.php');
+			require_once('models/quarto_class.php');
 			$id_quarto=$_GET['id_quarto'];
 			$quarto_controller = new quarto;
 			$quarto_controller->id_quarto=$id_quarto;
+
+
 
 			return $quarto_controller -> BuscarInfoQuarto($quarto_controller);
 			/*if($_SERVER['REQUEST_METHOD'] == 'GET'){
@@ -133,5 +135,17 @@ class ControllerQuarto {
 	}
 
 
+
+	public function BuscarInfoQuartoImagens(){
+
+			require_once('models/quarto_class.php');
+			$id_quarto=$_GET['id_quarto'];
+			$quarto_controller = new quarto;
+			$quarto_controller->id_quarto=$id_quarto;
+
+
+
+			return $quarto_controller -> BuscarInfoQuartoImagens($quarto_controller,$id_quarto);
+	}
 }
 ?>

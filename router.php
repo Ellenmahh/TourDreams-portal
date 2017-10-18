@@ -29,7 +29,7 @@ switch($controller){
           case'busca':
           require_once('controllers/busca_avancada_controller.php');
           require_once('models/busca_avancada_class.php');
-          
+
               switch ($modo) {
                 case 'busca_avancada':
 
@@ -112,28 +112,25 @@ switch($controller){
   	     case 'SelectCategoria':
   				$ControllerHotel = new ControllerHotel();
                     //chamando o método novo();
-
-
-
-                    $ControllerHotel->ListarCategoria();
+          $ControllerHotel->ListarCategoria();
 
   				break;
 
 
 
-      case'BuscarInfoHotel':
+        case'BuscarInfoHotel':
+
+            $controller_usuario = new ControllerHotel();
+            //chamando o metodo para selecionar um determinado usuario
+            $controller_usuario-> buscarInfoHotel();
+            break;
+
+        case 'alterar_dados':
 
           $controller_usuario = new ControllerHotel();
-          //chamando o metodo para selecionar um determinado usuario
-          $controller_usuario-> buscarInfoHotel();
+          //chamando o método atualizar();
+          $controller_usuario->atualizar();
           break;
-
-      case 'alterar_dados':
-
-        $controller_usuario = new ControllerHotel();
-        //chamando o método atualizar();
-        $controller_usuario->atualizar();
-        break;
 
 		}
 

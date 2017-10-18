@@ -7,10 +7,10 @@
 
 	}
 
-  if(isset($_POST['btn_hotel_editar'])){
+  /*if(isset($_POST['btn_hotel_editar'])){
 		header("location:editarHotel.php?id_hotel=".$id_hotel);
 
-  }
+  }*/
 
 //CONEXÃO
 	@require_once('models/bd_class.php');

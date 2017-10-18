@@ -108,7 +108,7 @@
               <p><?php echo($rs['cpf_usuario']); ?></p>
               <div id="area_opcoes_perfilUsuario">
 
-                <a href="#editar_perfilUsuario" id="a_index_duvida" rel="modal">
+                <a href="#editar_perfilUsuario" id="a_index_duvida" rel="modal_editar">
                   <p>Editar informações</p>
 
                   <img src="imagens/editar.png" alt="">

@@ -474,27 +474,21 @@ text-align: center;
 
 #cadastra_se{
   width: 110px;
-  height:20px;
+  height:50px;
   position: absolute;
   margin-top: 160px;
   margin-left:145px;
+	border-bottom: 1px solid white;
 }
 
 #log_hoteleiro{
 	width: auto;
 	height: auto;
-	border:0px solid #5270ff;
+	border: 0px solid #5270ff;
 	margin-left: 100px;
-	margin-top: 220px;
+	margin-top: 230px;
+	border-top: 0px solid white;
 	text-align: center;
-}
-
-#log_hoteleiro:hover {
-	-webkit-animation: swing 0.1s ease;
-  animation: swing 0.1s ease;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-
 }
 
 #a_index_cadastrar{
@@ -2344,9 +2338,17 @@ text-align: center;
 
 /*============================================== VER QUARTOS ==============================================*/
 
+
+.espaco_icone_editar_imagem_quarto{
+	width:50px;
+	height:20px;
+	clear:both;
+
+
+}
 .produtos_div_verQuartos{
 	width: 470px;
-	min-height: 400px;
+	min-height: 500px;
 	height: auto;
 	margin-left: 80px;
 	margin-top: 80px;
@@ -2402,12 +2404,12 @@ text-align: center;
 }
 
 .btn_produto_verQuartos{
-	font-size: 20px;
+	font-size: 25px;
 	color: #fff;
 	background-color:#5270ff;
 	font-family: Calibri;
 	width: 150px;
-	height: 50px;
+	height: 45px;
 	border: 0;
 	opacity: 0;
 	margin-top: -50px;
@@ -4949,6 +4951,16 @@ input[type='file'] {
 	border-radius: 2px;
 	display:block;
 	float: right;
+}
+.img_parceiro_cadastro2_quarto_editar{
+	border:0px solid black;
+	width:240px;
+	height:180px;
+	margin-top:10px;
+	margin-left: 18px;
+	border-radius: 2px;
+	display:block;
+	float: left;
 }
 .img_parceiro_cadastro22{
 	float:left;

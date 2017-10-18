@@ -4,7 +4,7 @@
 <?php
 $parceiro="";
 	$id_quarto="";
-	//$id_hotel=$_GET['id_hotel'];
+$id_hotel=$_GET['id_hotel'];
 ?>
 
 <form  name="perfil_Parceiro" method="GET" enctype="multipart/form-data" action="editarQuarto.php">
@@ -15,7 +15,7 @@ $parceiro="";
 
 						$quarto_controller = new ControllerQuarto();
 
-						 $rsconsulta1= $quarto_controller->ListarQuartos();
+						 $rsconsulta1= $quarto_controller->ListarQuartos($id_hotel);
 
 						$cont3 = 0;
 
@@ -27,7 +27,7 @@ $parceiro="";
 				?>
 
 								<div class="produtos_div_verQuartos">
-									<a href="editarQuarto.php"><img class="img_hotel" src="<?php echo($rsconsulta1[$cont3]->nome_imagem); ?>" alt=""></a>
+									<a href="editarQuarto.php?modo=BuscarInfoQuarto&id_quarto=<?php echo($rsconsulta1[$cont3]->id_quarto); ?>"><img class="img_hotel" src="<?php echo($rsconsulta1[$cont3]->nome_imagem); ?>"/></a>
 									<div class="legenda_produto_verQuartos">
 										<p class="txt_nome_hotel"><?php echo($rsconsulta1[$cont3]->nome_quarto); ?> N° <?php echo($rsconsulta1[$cont3]->numero_quarto); ?></p>
 										<!--<div class="caracteristicas_verQuartos">
@@ -37,7 +37,7 @@ $parceiro="";
 										<p class="txt_diaria_hotel">Diárias a partir de </p>
 										<p class="txt_rs" style="color:#000000;">R$ </p>
 										<p class="txt_preco_hotel" style="color:#000000;"><?php echo($rsconsulta1[$cont3]->preco_quarto); ?></p>
-										<a href="editarQuarto.php?modo=BuscarInfoQuarto&id_quarto=<?php echo($rsconsulta1[$cont3]->id_quarto); ?>"><p class="btn_produto_verQuartos"> Editar</p></a>
+										<a href="editarQuarto.php?modo=BuscarInfoQuarto&id_quarto=<?php echo($rsconsulta1[$cont3]->id_quarto); ?>"><p class="btn_produto_verQuartos">Editar</a>
 
 									</div>
 
