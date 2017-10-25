@@ -23,7 +23,7 @@
 
 
              ?>
-				<img class="slides" title="CONFIRA" src="admin/cms/<?php echo($rsSobreFotos[$cont]->descricao_imagem);?>" alt="">
+				<img class="slides" title="" src="admin/cms/<?php echo($rsSobreFotos[$cont]->descricao_imagem);?>" alt="">
         <?php
           $cont+=1;
 

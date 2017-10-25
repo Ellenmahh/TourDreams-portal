@@ -2,7 +2,8 @@
 <title>Tour Dreams</title>
 
 <!--============= LINKS =============-->
-<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/style.css" media="screen and (min-width:1200px)">
+<link rel="stylesheet" type="text/css" href="css/style_responsivo.css" media="screen and (max-device-width:700px)">
 <link rel="shortcut icon" href="imagens/iconsiteblack.png" />
 <link href="fontes/fonte.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/calendario.css">
@@ -157,7 +158,7 @@
 
         $("a[rel=modal_editar]").click( function(ev){
           //alert('teste');
-          $("#editar_perfilUsuario").slideToggle(1000);
+          //$("#editar_perfilUsuario").slideToggle(1000);
 
           ev.preventDefault();
 
@@ -267,7 +268,7 @@
 
       $("a[rel=modal]").click( function(ev){
         //alert('teste');
-        $("#editar_perfilUsuario").slideToggle(1000);
+        //$("#editar_perfilUsuario").slideToggle(1000);
 
         ev.preventDefault();
 
@@ -492,10 +493,17 @@
   }
 
   $(document).ready(function(){
+
+    //***** USUARIO *****
     $("#telefone_usuario").keypress(verificaNumero);
     $("#celular_usuario").keypress(verificaNumero);
     $("#cpf_usuario").keypress(verificaNumero);
     $("#rg_usuario").keypress(verificaNumero);
+
+    //***** HOTELEIRO *****
+    $("#telefone_hotel").keypress(verificaNumero);
+    $("#cnpj_hotel").keypress(verificaNumero);
+
   });
 
   function FormataTel(evt){
@@ -533,6 +541,17 @@
       if(vr.length == 2) vr = vr+".";
       if(vr.length == 6) vr = vr+".";
       if(vr.length == 10) vr = vr+"-";
+
+    return vr;
+  }
+
+  function FormataCnpj(evt){
+    vr = (navigator.appName == "Netscape") ?evt.target.value : evt.srcElement.value;
+
+      if(vr.length == 2) vr = vr+".";
+      if(vr.length == 6) vr = vr+".";
+      if(vr.length == 10) vr = vr+"/";
+      if(vr.length == 15) vr = vr+"-";
 
     return vr;
   }

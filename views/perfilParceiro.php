@@ -80,6 +80,12 @@
           <div id="area_indicacao_hotel_perfilParceiro">
             <?php
 
+            /*require_once('controllers/hotel_controller.php');
+
+            $hotel_controller = new ControllerHotel();
+
+            $rs = $hotel_controller->ListarInfoHotel($id_hotel);*/
+
             $sql = 'select h.nome_hotel,
                            h.imagem_hotel_1,
                            c.nome_categoria,
@@ -104,11 +110,12 @@
              ?>
 
             <div id="produto_div_hotel_perfilParceiro">
-              <img src="<?php echo($rs['imagem_hotel_1']); ?>" alt="">
+              <img id="img_hotel_perfilParceiro" src="<?php echo($rs['imagem_hotel_1']); ?>" alt="">
               <div id="legenda_hotel_perfilParceiro">
                 <div id="area_titulo_hotel_perfilParceiro">
                   <p>HOTEL <?php echo($rs['nome_hotel']); ?></p>
                 </div>
+
                 <div id="area_infos_hotel_perfilParceiro">
                   <p><?php echo($rs['nome_categoria']); ?></p>
                   <p><?php echo($rs['rua_hotel']); ?></p>

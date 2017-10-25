@@ -98,7 +98,7 @@
                            $rsInverno = $controller_inverno->listar_inverno();
                            $cont2=0;
                            while ($cont2<count($rsInverno)) {
-                            $id_hotel_2 =  $rsInverno[$cont2]->id_hotel;
+                            $id_hotel_2 = $rsInverno[$cont2]->id_hotel;
 
 
 
@@ -109,14 +109,15 @@
                             <img src="<?php echo($rsInverno[$cont2]->imagem_hotel);?>" alt="" class="imagem_melhoresdestinos">
                             <div class="caracteristicas">
                               <img  style="width:35px; float:left;" src="imagens/localizacao.png" alt="">
-                                <p style="float:left;margin-top:50px;font-size:20px;"><?php echo($rsInverno[$cont]->cidade_hotel);?></p>
+                                <p style="float:left;margin-top:50px;font-size:20px;"><?php echo($rsInverno[$cont2]->cidade_hotel);?></p>
                                 <img style="margin-right:250px;margin-top:10px;" src="imagens/wifi.png" alt="">
                                   <p style="margin-top:20px;margin-left:20px;width:100px;">Wi-fi grátis</p>
                                   <p style="margin-top:40px;font-size:10px;margin-right:250px;width:100px;">Diárias a partir de</p>
                                   <p style="margin-top:30px;margin-right:250px;float:left;">R$</p>
                                   <?php
-                              								$sql = "select * from tbl_quarto where id_hotel = $id_hotel2  order by preco_quarto asc limit 1;";
+                              								$sql = "select * from tbl_quarto where id_hotel = $id_hotel_2  order by preco_quarto asc limit 1;";
                               								$select = mysql_query($sql);
+                                              //echo $sql;
 
                               								while($rs=mysql_fetch_array($select)){
 
@@ -128,7 +129,7 @@
                               		?>
                                   <p style="margin-right:230px;float:right;font-size:30px;"><?php echo($rs['preco_quarto']);  ?></p>
                                   <?php
-                                }
+                                  }
 
                                    ?>
                                   <a href="areaReserva.php">

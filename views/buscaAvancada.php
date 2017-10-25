@@ -27,7 +27,7 @@ $modo = 'busca_avancada';
 
 
         <div id="area_pesquisa">
-          <form class="" action="router.php?controller=busca&modo=<?php $modo ?>" method="post">
+          <form class="" action="router.php?controller=busca&modo=<?php echo($modo); ?>" method="post">
           <input id="input_busca_avancada" placeholder="Faça uma busca..." type="text" name="busca" value="">
 
           <button id="btn_pesquisa_avancada" type="button" name="button" >
@@ -120,23 +120,27 @@ $modo = 'busca_avancada';
         </div>
 
         <?php
-          if($modo == "busca_avancada"){
-            //Incluindo o arquivo da controller para fazer o select
-            require_once('controllers/busca_avancada_controller.php');
-            //Instancia do objeto de controller, e chamada dos metodos para listar os registros
-            $controller_busca = new controllerBuscaAvancada();
-            $rsBusca = $controller_busca->listar();
-            $cont=0;
-            while ($cont<count($rsBusca)) {
+        if (isset($_GET['modo'])) {
 
-            $id_hotel = $rsBusca[$cont]->id_hotel;
+
+          if($_GET['modo'] == "busca_avancada"){
+
+            $cont2=0;
+
+
+
+
+            while ($cont2<count($lstPesquisada)) {
+
+            $id_hotel = $lstPesquisada[$cont2]->id_hotel;
+
 
         ?>
         <div class="produtos_div"  data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
-          <img src="<?php echo($rsBusca[$cont]->imagem_hotel);?>" alt="">
+          <img src="<?php echo($lstPesquisada[$cont2]->imagem_hotel);?>" alt="">
           <div class="legenda_produto">
-            <p class="txt_nome_hotel"><?php echo($rsBusca[$cont]->nome_hotel);?></p>
-            <p class="txt_estado_hotel"><?php echo ($rsBusca[$cont]->cidade_hotel);?></p>
+            <p class="txt_nome_hotel"><?php echo($lstPesquisada[$cont2]->nome_hotel);?></p>
+            <p class="txt_estado_hotel"><?php echo ($lstPesquisada[$cont2]->cidade_hotel);?></p>
             <div class="estrelas">
               <img class="img_estrelas_hotel" src="imagens/estrelas.png" alt="">
             </div>
@@ -152,11 +156,6 @@ $modo = 'busca_avancada';
 
         								while($rs=mysql_fetch_array($select)){
 
-
-
-
-
-
         								?>
             <p class="txt_preco_hotel"><?php echo($rs['preco_quarto']); ?></p>
             <?php
@@ -169,7 +168,8 @@ $modo = 'busca_avancada';
 
         </div>
         <?php
-          $cont+=1;
+          $cont2+=1;
+          
 
           }
 
@@ -177,7 +177,9 @@ $modo = 'busca_avancada';
         ?>
 
         <?php
-          }else{
+          }
+
+        }else{
             //Instancia do objeto de controller, e chamada dos metodos para listar os registros
             $controller_busca = new controllerBuscaAvancada();
             $rsBusca = $controller_busca->listar();
@@ -232,12 +234,7 @@ $modo = 'busca_avancada';
           }
 
         }
-
         ?>
-
-
-
-
       </div>
     </section>
     <footer>

@@ -1,9 +1,9 @@
 <?php
-function __construct(){
-  require_once('../models/bd_class.php');
-  $conexaoUser = new mysql_db();
-  $conexaoUser->conectar();
-}
+
+//CONEXÃO
+	require_once('../models/bd_class.php');
+	$conexao_bd = new mysql_db();
+	$conexao_bd->conectar();
 
 $usuario = $_GET['nome_usuario'];
 $cpf = $_GET['cpf_usuario'];
@@ -17,8 +17,8 @@ $email = $_GET['email_usuario'];
  values('".$usuario."','".$cpf."','".$rg."','".$email."','".$senha."','".$telefone."','".$celular."','.0.')";
 
  mysql_query($sql);
- if(mysql_affected_rows($sql) == 0){
-     echo "erro";
+ if(mysql_affected_rows() != 0){
+    echo "ok";
  }
 
  ?>

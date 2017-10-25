@@ -1,4 +1,7 @@
 <?php
+
+$modo = 'busca_home';
+
 $id_usuario = '';
 $nome_usuario = '';
 
@@ -38,6 +41,27 @@ if(isset($_SESSION['id_usuario']))
 <!DOCTYPE html>
 <html>
   <head>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="jQuery-gRating.js"></script>
+<script>
+	$(".rating").grating();
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
     <?php include('head.php'); ?>
     <script>
    $(window).scroll(function() {
@@ -116,16 +140,19 @@ if(isset($_SESSION['id_usuario']))
 
               ?>
             <div id="busca_index">
+              <form class="" action="router.php?controller=home&modo=<?php echo($modo); ?>" method="post">
 
-              <input type="text" id="input_busca" name="" value="" placeholder=" Locais, Cidades, Hotéis" >
+
+              <input type="text" id="input_busca" name="busca" value="" placeholder=" Locais, Cidades, Hotéis" >
               <button id="btn_buscar" type="submit">
                 <img src="imagens/img_btn2.png" alt="dasd">
               </button>
+            </form>
 
             </div>
 
             <?php echo($form_usuario_logado) ?>
-            <a href="perfilUsuario.php">
+            <a href="perfilUsuario.php?id_usuario=<?php echo($id_usuario); ?>">
               <div id="img_usuario_logado">
                   <img src="<?php echo($foto_usuario); ?>" alt="">
               </div>
@@ -167,7 +194,7 @@ if(isset($_SESSION['id_usuario']))
               </div>
           </div>
           <div class="data_entrada_home">
-           <input class="insert_data_home" type="text" placeholder="Check-in" name="txt_entrada" id="calendario" />
+           <input class="insert_data_home" type="text" placeholder="Check-in" name="txt_entrada" id="calendario"/>
            <div class="img_seta">
               <img src="imagens/seta_icon.png" alt="">
            </div>
@@ -181,9 +208,6 @@ if(isset($_SESSION['id_usuario']))
           </div>
 
           <div id="principal_produtos" >
-
-            
-
 
             <?php include_once('crud_home/home_view.php') ?>
 

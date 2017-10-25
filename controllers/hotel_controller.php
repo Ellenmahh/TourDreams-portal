@@ -92,13 +92,23 @@
 		public function ListarCategoria(){
 
 			require_once('models/parceiro_class.php');
-			$listCategoria = new parceiro;
+			$listCategoria = new parceiro();
 
 			return $listCategoria -> SelectCategoria();
 
 
 
         }
+
+
+  /*public function ListarCaracteristicaHotel(){
+
+		require_once('models/parceiro_class.php');
+		$listCategoria = new parceiro();
+
+		return $listCategoria -> SelectCaracteristicasHotel();
+
+  }*/
 
 
     public function buscarInfoHotel(){
@@ -151,6 +161,17 @@
         $cafe_da_tarde=$_POST['opt10'];
         $jantar=$_POST['opt11'];
 
+        $i = 0;
+
+				foreach ($_FILES["arquivos"]["error"] as $key => $error) {
+
+				 $destino = "arquivos_parceiro/".$_FILES["arquivos"]["name"]
+				[$i];
+
+				 move_uploaded_file( $_FILES["arquivos"]["tmp_name"][$i],
+
+				 $destino);
+
         $hotel_controller = new parceiro();
 
         $hotel_controller->id_hotel = $id_hotel;
@@ -178,7 +199,13 @@
         $hotel_controller->cafe_da_tarde = $cafe_da_tarde;
         $hotel_controller->jantar= $jantar;
 
+        $hotel_controller->foto=$destino;
+
         $hotel_controller->Update_hotel($hotel_controller);
+
+        $i++;
+
+      }
 
       }
 

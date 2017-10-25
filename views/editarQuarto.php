@@ -28,7 +28,7 @@
 	?>
 
 	<script type="text/javascript">
-                $(function(){
+                     $(function(){
                       $('#uploadChange').on('change',function() {
 						    var id = $(this).attr('id');
 							var totalFiles = $(this).get(0).files.length;
@@ -40,7 +40,7 @@
                                var c = (i % 2 == 0) ? 'item_white' : 'item_grey';
                                var arquivo = $(this).get(0).files[i];
                                var fileV = new readFileView(arquivo, i);
-                               htm +='<li class="+c+"><img class="img_parceiro_cadastro2" data-img="'+i+'" data-id="'+id+'" border="1"><span>'+"</li>";
+                               htm +='<li class="+c+"><img class="img_parceiro_cadastro2" data-img="'+i+'" data-id="'+id+'" border="1"> <span> '+"</li>";
 							}
                           htm += '</ol>';
 
@@ -61,7 +61,6 @@
 
                       reader.readAsDataURL(file);
                     }
-
 
 
 

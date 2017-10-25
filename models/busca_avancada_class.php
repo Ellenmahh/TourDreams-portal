@@ -23,24 +23,61 @@
         }
         public function Pesquisa($pesquisa){
 
-          $sql = "select * from tbl_hotel where id_hotel in(
+          $sql = "select ho.nome_hotel, ho.imagem_hotel_1, c.cidade_descricao, ho.id_hotel from tbl_hotel
+                   as ho inner join tbl_endereco_hotel as eh on eh.id_hotel = ho.id_hotel
+                   inner join cidade as c on c.cidade_codigo = eh.cidade_codigo
 
-                   select distinct h.id_hotel  from tbl_quarto as q
+                   where ho.id_hotel in(
+
+
+                   select distinct h.id_hotel from tbl_quarto as q
                    inner join tbl_hotel as h on h.id_hotel = q.id_hotel
                    inner join caracteristicas_quarto_hotel as cqh on cqh.id_quarto = q.id_quarto
                    inner join caracteristicas_quarto as cq on cq.id_carac_quarto = cqh.id_carac_quarto
                    inner join tbl_endereco_hotel as eh on eh.id_hotel = h.id_hotel
                    inner join cidade as c on c.cidade_codigo = eh.cidade_codigo
                    inner join tbl_categoria as tbcat on tbcat.id_categoria = h.id_categora
-                   $pesquisa->carac_categoria
+                  $pesquisa->carac_categoria
 
                    );";
+                   //echo($sql);
+
+                   $select = mysql_query($sql);
 
 
-                   echo $sql;
+                   $cont=0;
+
+                  $listPesquisa = array();
+
+                   //repetição para guardar os registros do banco de dados em array de objetos
+                   while ($rs=mysql_fetch_array($select)) {
+
+                     //instancia da classe contato, criando uma coleção de objetos
+
+                     $item  = new busca;
+
+
+                       //guardando em cada objeto um registro do banco de dados, referenciando pelo indece $cont
+                       $item->id_hotel=$rs['id_hotel'];
+                       $item->nome_hotel=$rs['nome_hotel'];
+                       $item->cidade_hotel=$rs['cidade_descricao'];
+                       $item->imagem_hotel=$rs['imagem_hotel_1'];
+
+
+                       $listPesquisa[] = $item;
+
+
+
+
+                   }
+
+                   return  $listPesquisa;
+
 
 
        }
+
+
         //metodo para selecionar tudo do banco
          public function SelectALL(){
            //script de select no banco de dados
@@ -90,6 +127,7 @@
           }
 
           return  $listCategoria;
+          header('avancada.php');
 
        }
        public function SelectCategorias2(){

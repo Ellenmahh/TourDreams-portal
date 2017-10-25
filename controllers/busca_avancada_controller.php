@@ -95,7 +95,12 @@ Arquivos relacionados: router.php, home_view.php, home_class.php.
 
 
 
-                $pesquisa_controller->Pesquisa($pesquisa_controller);
+                $lstPesquisada =  $pesquisa_controller->Pesquisa($pesquisa_controller);
+
+
+
+                require_once('avancada.php');
+
 
 
             }

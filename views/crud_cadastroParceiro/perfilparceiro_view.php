@@ -11,6 +11,12 @@ $id_hotel=$_GET['id_hotel'];
 
 				<div id="principal_produtos">
 				<?php
+						$sql="select * from tbl_quarto where id_hotel=".$id_hotel;
+						mysql_query($sql);
+
+					if($sql != null){
+
+
 						 require_once('controllers/quarto_controller.php');
 
 						$quarto_controller = new ControllerQuarto();
@@ -23,108 +29,76 @@ $id_hotel=$_GET['id_hotel'];
 
 						while($cont3<count($rsconsulta1)){
 
+							$id_quarto = $rsconsulta1[$cont3]->id_quarto;
+						  $vetor_carac[] = $rsconsulta1[$cont3]->descricao_carac_quarto;
 
 				?>
 
 								<div class="produtos_div_verQuartos">
-									<a href="editarQuarto.php?modo=BuscarInfoQuarto&id_quarto=<?php echo($rsconsulta1[$cont3]->id_quarto); ?>"><img class="img_hotel" src="<?php echo($rsconsulta1[$cont3]->nome_imagem); ?>"/></a>
+
+
+									<a href="editarQuarto.php?modo=BuscarInfoQuarto&id_quarto=<?php echo($rsconsulta1[$cont3]->id_quarto); ?>">
+										<?php
+											$sql = "select * from tbl_imagens_quarto where id_quarto =".$id_quarto." limit 1";
+											//echo($sql);
+											$select = mysql_query($sql);
+
+											while($rs=mysql_fetch_array($select)){
+
+
+										?>
+										<img class="img_hotel" src="<?php echo($rs['nome_imagem']); ?>"/>
+									</a>
+										<?php
+											}
+
+										?>
+
 									<div class="legenda_produto_verQuartos">
+										<div class="excluir_quarto_espaco">
+											<a href="router.php?controller=quarto&modo=excluirQuarto&id_quarto=<?php echo($id_quarto); ?>&id_hotel=<?php echo($_GET['id_hotel']);?>"><img src="imagens/delete_edit.png" width="100%" height="100%" /></a>
+										</div>
+
 										<p class="txt_nome_hotel"><?php echo($rsconsulta1[$cont3]->nome_quarto); ?> N° <?php echo($rsconsulta1[$cont3]->numero_quarto); ?></p>
 										<!--<div class="caracteristicas_verQuartos">
 											<img class="img_caracteristicas_verQuartos" src="imagens/wifi.png" alt="">
 										</div>-->
-										<p class="txt_caracteristica_verQuartos"><?php echo($rsconsulta1[$cont3]->descricao_carac_quarto); ?><p>
+
+										<?php
+											//var_dump($vetor_carac);*/
+											//$cont_carac = 0;
+
+											$sql_carac ="select c.descricao_carac_quarto from caracteristicas_quarto as c JOIN caracteristicas_quarto_hotel as ch ON c.id_carac_quarto = ch.id_carac_quarto where ch.id_quarto=".$id_quarto;
+											//echo($sql_carac);
+											$select_carac = mysql_query($sql_carac);
+
+											while($rsconsultacarac=mysql_fetch_array($select_carac)){
+											//while($cont_carac<count($vetor_carac)){
+
+										?>
+												<p class="txt_caracteristica_verQuartos"><?php echo($rsconsultacarac['descricao_carac_quarto']);?><p>
+
+										<?php
+											 //$cont_carac+=1;
+											}
+										?>
 										<p class="txt_diaria_hotel">Diárias a partir de </p>
 										<p class="txt_rs" style="color:#000000;">R$ </p>
 										<p class="txt_preco_hotel" style="color:#000000;"><?php echo($rsconsulta1[$cont3]->preco_quarto); ?></p>
-										<a href="editarQuarto.php?modo=BuscarInfoQuarto&id_quarto=<?php echo($rsconsulta1[$cont3]->id_quarto); ?>"><p class="btn_produto_verQuartos">Editar</a>
+										<a href="editarQuarto.php?modo=BuscarInfoQuarto&id_quarto=<?php echo($rsconsulta1[$cont3]->id_quarto); ?>"><p class="btn_produto_verQuartos"><font color="#ffffff">&nbsp;&nbsp;Editar</font></a>
+
 
 									</div>
 
 								</div>
 					<?php
-						$cont3+=1;
+							$cont3+=1;
 
 						}
+					}else{
+						echo('não há quartos cadastrados');
+					}
 					?>
 				</div>
 
-				<!--</li>
-			</ul>-->
-
-			<!--<div class="produtos_div_verQuartos">
-				<a href="editarQuarto.php"><img class="img_hotel" src="imagens/hotel7.jpg" alt=""></a>
-				<div class="legenda_produto_verQuartos">
-					<p class="txt_nome_hotel">Quarto tal</p>
-					<p class="txt_estado_hotel">São Paulo</p>
-					<div class="caracteristicas_verQuartos">
-						<img class="img_caracteristicas_verQuartos" src="imagens/wifi.png" alt="">
-					</div>
-					<p class="txt_caracteristica_verQuartos">Wi-fi gratuito</p>
-
-					<a href="editarQuarto.php"><input type="submit" name="btn_quarto_editar" value="editar" class="btn_produto_verQuartos"></a>
-
-				</div>
-
-			</div>
-			<div class="produtos_div_verQuartos">
-				<a href="editarQuarto.php"><img class="img_hotel" src="imagens/hotel5.jpg" alt=""></a>
-				<div class="legenda_produto_verQuartos">
-					<p class="txt_nome_hotel">Quarto tal</p>
-					<p class="txt_estado_hotel">São Paulo</p>
-					<div class="caracteristicas_verQuartos">
-						<img class="img_caracteristicas_verQuartos" src="imagens/wifi.png" alt="">
-					</div>
-					<p class="txt_caracteristica_verQuartos">Wi-fi gratuito</p>
-
-					<a href="editarQuarto.php"><input type="submit" name="btn_quarto_editar" value="editar" class="btn_produto_verQuartos"></a>
-
-				</div>
-
-			</div>
-			<div class="produtos_div_verQuartos">
-				<a href="editarQuarto.php"><img class="img_hotel" src="imagens/hotel2.jpg" alt=""></a>
-				<div class="legenda_produto_verQuartos">
-					<p class="txt_nome_hotel">Quarto tal</p>
-					<p class="txt_estado_hotel">São Paulo</p>
-					<div class="caracteristicas_verQuartos">
-						<img class="img_caracteristicas_verQuartos" src="imagens/wifi.png" alt="">
-					</div>
-					<p class="txt_caracteristica_verQuartos">Wi-fi gratuito</p>
-
-					<a href="editarQuarto.php"><input type="submit" name="btn_quarto_editar" value="editar" class="btn_produto_verQuartos"></a>
-				</div>
-
-			</div>
-			<div class="produtos_div_verQuartos">
-				<a href="editarQuarto.php"><img class="img_hotel" src="imagens/hotel4.jpg" alt=""></a>
-				<div class="legenda_produto_verQuartos">
-					<p class="txt_nome_hotel">Quarto tal</p>
-					<p class="txt_estado_hotel">São Paulo</p>
-					<div class="caracteristicas_verQuartos">
-						<img class="img_caracteristicas_verQuartos" src="imagens/wifi.png" alt="">
-					</div>
-					<p class="txt_caracteristica_verQuartos">Wi-fi gratuito</p>
-
-					<a href="editarQuarto.php"><input type="submit" name="btn_quarto_editar" value="editar" class="btn_produto_verQuartos"></a>
-				</div>
-
-			</div>
-			<div class="produtos_div_verQuartos">
-				<a href="editarQuarto.php"><img class="img_hotel" src="imagens/hotel3.jpg" alt=""></a>
-				<div class="legenda_produto_verQuartos">
-					<p class="txt_nome_hotel">Quarto tal</p>
-					<p class="txt_estado_hotel">São Paulo</p>
-					<div class="caracteristicas_verQuartos">
-						<img class="img_caracteristicas_verQuartos" src="imagens/wifi.png" alt="">
-					</div>
-					<p class="txt_caracteristica_verQuartos">Wi-fi gratuito</p>
-
-					<a href="editarQuarto.php"><input type="submit" name="btn_quarto_editar" value="editar" class="btn_produto_verQuartos"></a>
-
-				</div>
-
-			</div>
-
-          <!--</div>-->
  </form>

@@ -54,7 +54,7 @@
 
 			while($rs=mysql_fetch_array($select)){
 
-				$listCategoria[] = new parceiro;
+				$listCategoria[] = new parceiro();
 
 				$listCategoria[$cont]->idCategoria=$rs['id_categoria'];
 				$listCategoria[$cont]->nome_categoria=$rs['nome_categoria'];
@@ -65,6 +65,49 @@
 
 			return $listCategoria;
 		}
+
+		/*public function SelectCaracteristicasHotel(){
+			$sql_carac =" select h.id_hotel,
+										ch.wifi,
+										ch.estacionamento,
+										ch.spa,
+										ch.piscina,
+										ch.academia,
+										ch.aceita_animais,
+										ch.restaurante,
+										ch.cafe_da_manha,
+										ch.almoco,
+										ch.cafe_da_tarde,
+										ch.jantar
+										from tbl_caracteristicas_hotel as ch
+										inner join
+										tbl_hotel as h
+										on h.id_hotel = ch.id_hotel
+										where h.id_hotel=$id_hotel->id_hotel
+										";
+			$select = mysql_query($sql_carac);
+
+			while($rs=mysql_fetch_array($select)){
+
+				$ListarCaracteristicaHotel = new parceiro();
+
+				$ListarCaracteristicaHotel->id_caracteristica=$rs['id_caracteristica_hotel'];
+				$ListarCaracteristicaHotel->wifi=$rs['wifi'];
+				$ListarCaracteristicaHotel->estacionamento=$rs['estacionamento'];
+				$ListarCaracteristicaHotel->spa=$rs['spa'];
+				$ListarCaracteristicaHotel->piscina=$rs['piscina'];
+				$ListarCaracteristicaHotel->academia=$rs['academia'];
+				$ListarCaracteristicaHotel->aceita_animais=$rs['aceita_animais'];
+				$ListarCaracteristicaHotel->restaurante=$rs['restaurante'];
+				$ListarCaracteristicaHotel->cafe_da_manha=$rs['cafe_da_manha'];
+				$ListarCaracteristicaHotel->almoco=$rs['almoco'];
+				$ListarCaracteristicaHotel->cafe_da_tarde=$rs['cafe_da_tarde'];
+				$ListarCaracteristicaHotel->jantar=$rs['jantar'];
+
+			}
+
+			return $ListarCaracteristicaHotel;
+		}*/
 
 	  //metodo para inserir no banco
 	   public function Insert($parceiro){
@@ -85,8 +128,6 @@
 
 				//echo($sql);
 				mysql_query($sql);
-
-
 
 
 				//Pegando o ID do insert anterior
@@ -143,7 +184,8 @@
 												ch.cafe_da_manha,
 												ch.almoco,
 												ch.cafe_da_tarde,
-												ch.jantar
+												ch.jantar,
+												h.imagem_hotel_1
 												from tbl_hotel as h
 												inner join
 												tbl_endereco_hotel as eh
@@ -165,6 +207,7 @@
 			$listHotel_id = new parceiro();
 
 			$listHotel_id->id_hotel=$rs['id_hotel'];
+
 			$listHotel_id->nome_hotel=$rs['nome_hotel'];
 			$listHotel_id->email_hotel=$rs['email_hotel'];
 			$listHotel_id->telefone_hotel=$rs['telefone_hotel'];
@@ -188,6 +231,8 @@
 			$listHotel_id->cafe_da_tarde=$rs['cafe_da_tarde'];
 			$listHotel_id->jantar=$rs['jantar'];
 
+			$listHotel_id->foto=$rs['imagem_hotel_1'];
+
 			return $listHotel_id;
 
 		}
@@ -201,21 +246,23 @@
 												inner join tbl_categoria as c on h.id_categora = c.id_categoria
 												set nome_hotel='".$id_hotel->nome_hotel."', email_hotel='".$id_hotel->email_hotel."', telefone_hotel='".$id_hotel->telefone_hotel."',
 												bairro_hotel='".$id_hotel->bairro_hotel."', numero_hotel='".$id_hotel->numero_hotel."', cnpj='".$id_hotel->cnpj_hotel."',
-												rua_hotel='".$id_hotel->rua_hotel."', senha_hotel='".$id_hotel->senha_hotel."', id_categoria='".$id_hotel->categoria_hotel."',
+												rua_hotel='".$id_hotel->rua_hotel."', senha_hotel='".$id_hotel->senha_hotel."', h.id_categora='".$id_hotel->categoria_hotel."',
 												wifi='".$id_hotel->wifi."', estacionamento='".$id_hotel->estacionamento."', spa='".$id_hotel->spa."',
 												piscina='".$id_hotel->piscina."', academia='".$id_hotel->academia."', aceita_animais='".$id_hotel->aceita_animais."',
 												restaurante='".$id_hotel->restaurante."', cafe_da_manha='".$id_hotel->cafe_da_manha."', almoco='".$id_hotel->almoco."',
-												cafe_da_tarde='".$id_hotel->cafe_da_tarde."', jantar='".$id_hotel->jantar."' where h.id_hotel=$id_hotel->id_hotel";
+												cafe_da_tarde='".$id_hotel->cafe_da_tarde."', jantar='".$id_hotel->jantar."', imagem_hotel_1='".$id_hotel->foto."'
+												where h.id_hotel=$id_hotel->id_hotel";
 
-		//mysql_query($sql_updateHotel);
+		mysql_query($sql_updateHotel);
 
-		echo($sql_updateHotel);
+		echo "<script> alert('Informações atualizadas com sucesso!'); </script>";
 
-		//header('location:perfilParceiro.php');
+		header("location:perfilParceiro.php?id_hotel=".$id_hotel->id_hotel);
+
+		//echo($sql_updateHotel);
+
 
 	}
 
-
-
-  }
+}
 ?>

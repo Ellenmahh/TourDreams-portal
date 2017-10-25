@@ -36,7 +36,7 @@ class mysql_db{
 
       //fecha a conexão com o banco
       mysql_close();
-	  
+
   }
 
 }

@@ -154,18 +154,30 @@
 						&nbsp;&nbsp;Mais informações
 					</td>
 				</tr>
+        <?php
+              //Incluindo o arquivo da controller para fazer o select
+              require_once('controllers/reserva_usuario_controller.php');
+              //Instancia do objeto de controller, e chamada dos metodos para listar os registros
+              $controller_list_reserva = new controllerReserva();
+              $rsReserva = $controller_list_reserva->listar();
+              $cont=0;
+              while ($cont<count($rsReserva)) {
+
+
+
+        ?>
 				<tr class="conteudo_status">
 					<td>
-						&nbsp;Hotel Fazenda Suipe
+						&nbsp;<?php echo($rsReserva[$cont]->nome_hotel);?>
 					</td>
 					<td>
-						&nbsp;São Paulo
+						&nbsp;<?php echo($rsReserva[$cont]->cidade_descricao);?>
 					</td>
 					<td>
-						&nbsp;10/09/2017
+						&nbsp;<?php echo($rsReserva[$cont]->data_entrada);?>
 					</td>
 					<td>
-						&nbsp;Reserva Aprovada
+						&nbsp;Reserva <?php echo($rsReserva[$cont]->status_reserva);?>
 					</td>
 					<td>
 						<a href="#janela3" rel="modal"  id="a_index_duvida">
@@ -175,52 +187,13 @@
 
 					</td>
 				</tr>
-					<tr class="conteudo_status">
-					<td>
-					</td>
-					<td>
-					</td>
-					<td>
+        <?php
+          $cont+=1;
 
-					</td>
-					<td>
+          }
 
-					</td>
-					<td>
 
-					</td>
-				</tr>
-					<tr class="conteudo_status">
-					<td>
-					</td>
-					<td>
-					</td>
-					<td>
-
-					</td>
-					<td>
-
-					</td>
-					<td>
-
-					</td>
-				</tr>
-				</tr>
-					<tr class="conteudo_status">
-					<td>
-					</td>
-					<td>
-					</td>
-					<td>
-
-					</td>
-					<td>
-
-					</td>
-					<td>
-
-					</td>
-				</tr>
+        ?>
 			</table>
 		  </div>
           <div id="txt_perfilUsuario">

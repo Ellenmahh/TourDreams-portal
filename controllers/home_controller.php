@@ -26,6 +26,31 @@ Arquivos relacionados: router.php, home_view.php, home_class.php.
 
         }
 
+        public function pesquisa_home(){
+
+            require_once('models/home_class.php');
+
+
+              if($_SERVER['REQUEST_METHOD'] == 'POST'){
+                $buscar = $_POST['busca'];
+
+                $pesquisa_controller = new home();
+
+                $pesquisa_controller->buscar = $buscar;
+
+
+
+                $lstPesquisada =  $pesquisa_controller->Pesquisa($pesquisa_controller);
+
+
+
+                require_once('home.php');
+
+
+              }
+
+        }
+
 
 
 

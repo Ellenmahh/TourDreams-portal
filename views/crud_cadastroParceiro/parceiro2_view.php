@@ -26,7 +26,8 @@
 				<div id="espaco_parceiroo_perguntas">
 					<p>Quantidade de camas de solteiro: &nbsp;<input   type="text" name="txtCamas" placeholder=" " class="input_cadastro_parceiroo3"  value="<?php echo($camas_solteiro);?>"/></p>
 					<p>&nbsp;Quantidade de camas de casal: &nbsp;<input type="text" name="txtCamasCasal" placeholder=" " class="input_cadastro_parceiroo3"  value="<?php echo($camas_casal);?>"/></p>
-					<p>&nbsp;<input type="text"placeholder="Preço" name="txtPreco" placeholder=" " class="input_cadastro_parceiroo3"  value="<?php echo($preco_quarto);?>"/></p>
+					<p>&nbsp;<input type="text"placeholder="Preço" name="txtPreco" placeholder=" " class="input_cadastro_parceiroo3" id="preco_quarto"
+             required value="<?php echo($preco_quarto);?>"/></p>
 
 
 

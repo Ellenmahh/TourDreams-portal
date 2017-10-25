@@ -4,7 +4,7 @@
     <div id="logo">
         <img id="img_logo_principal" src="imagens/td.png" alt="TourDreams">
     </div>
-    </a>
+  </a>
     <script type="text/javascript">
               $(document).ready(function() {
 
@@ -20,6 +20,7 @@
 
               <?php include('principalMenu.php') ?>
     </div>
+    
 </nav>
 
 </div>

@@ -91,16 +91,24 @@
 <form name="Cadastro_parceiro" method="post" enctype="multipart/form-data" action="router.php?controller=hotel&modo=<?php echo($action) ?><?php echo($idEditar) ?>">
 
 			<div id="espaco_cadastro_p1">
-				<input type="text" name="txtNomeHotel" placeholder="  Nome do hotel " class="input_cadastro_parceiro" value="<?php echo($nome_hotel); ?>"/>
-				<input type="text" name="txtEmail" placeholder="  E-mail " class="input_cadastro_parceiro" value="<?php echo($email_hotel); ?>"/>
+				<input type="text" name="txtNomeHotel" placeholder="  Nome do hotel " class="input_cadastro_parceiro"
+				required value="<?php echo($nome_hotel); ?>"/>
+				<input type="email" name="txtEmail" placeholder="  E-mail " class="input_cadastro_parceiro"
+				required value="<?php echo($email_hotel); ?>"/>
 
-				<input type="text" name="txtTelefone" placeholder="  Telefone " class="input_cadastro_parceiro" value="<?php echo($telefone_hotel); ?>"/>
+				<input type="text" name="txtTelefone" placeholder="  Telefone " class="input_cadastro_parceiro" id="telefone_hotel"
+				onkeypress="this.value = FormataTel(event)" maxlength="13" required value="<?php echo($telefone_hotel); ?>"/>
 
-				<input type="text" name="txtBairro" placeholder="  Bairro" class="input_cadastro_parceiro2"  value="<?php echo($bairro_hotel); ?>"/>
-				<input placeholder=" N°" type="text" name="txtNumeroHotel" value="<?php echo($numero_hotel) ?>" class="numero_cadastro_parceiro" >
-				<input type="text" name="txtCNPJ" placeholder="  CNPJ" class="input_cadastro_parceiro"  value="<?php echo($cnpj_hotel); ?>"/>
-				<input type="text" name="txtEndereco" placeholder="  Endereço" class="input_cadastro_parceiro" value="<?php echo($rua_hotel); ?>"/>
-				<input type="password" name="txtSenha" placeholder=" Senha " class="input_cadastro_parceiro" value="<?php echo($senha_hotel); ?>"/>
+				<input type="text" name="txtBairro" placeholder="  Bairro" class="input_cadastro_parceiro2"
+				required value="<?php echo($bairro_hotel); ?>"/>
+				<input placeholder=" N°" type="text" name="txtNumeroHotel"
+				required value="<?php echo($numero_hotel) ?>" class="numero_cadastro_parceiro" >
+				<input type="text" name="txtCNPJ" placeholder="  CNPJ" class="input_cadastro_parceiro" id="cnpj_hotel"
+				onkeypress="this.value = FormataCnpj(event)" maxlength="18" required value="<?php echo($cnpj_hotel); ?>"/>
+				<input type="text" name="txtEndereco" placeholder="  Rua" class="input_cadastro_parceiro"
+				required value="<?php echo($rua_hotel); ?>"/>
+				<input type="password" name="txtSenha" maxlength="15" placeholder=" Senha " class="input_cadastro_parceiro"
+				required value="<?php echo($senha_hotel); ?>"/>
 				<div id="corpo">
 
 				   <select name="cb_estado" id="cb_estado" class="option_cadastro2">
@@ -174,18 +182,28 @@
 						?>
 					</td>
 				</tr>
-				<tr>
+				<?php
 
+					/*require_once('controllers/hotel_controller.php');
+
+				 	$hotel_controller = new ControllerHotel();
+
+					$rs = $hotel_controller->ListarCaracteristicaHotel();
+
+					while (mysql_fetch_array($rs)) {*/
+
+				?>
+				<tr>
 					<td class="espaco_perguntas">
 						<p class="espaco_p_cadastro">Seu Hotel possuí Wi-Fi?</p>
 						<div class="resposta_opt_p">
 							<label class="control2 control--radio">
-								<input  type="radio"  name="opt2" value="1"/>Sim
+								<input  type="radio"  name="opt2"  <?php if($wi_fi == 1){ echo('checked'); } ?> value="1"/>Sim
 								<div class="control__indicator2"></div>
 
 							</label>
 							<label class="control2 control--radio">
-								<input  type="radio" name="opt2"  value="0"/>Não
+								<input  type="radio" name="opt2"  <?php if($wi_fi == 0){ echo('checked'); } ?> value="0"/>Não
 								<div class="control__indicator2"></div>
 
 							</label>
@@ -193,6 +211,7 @@
 						</div>
 					</td>
 				</tr>
+			<?php //} ?>
 				<tr>
 					<td class="espaco_perguntas">
 						<p class="espaco_p_cadastro">Permite animais estimações? </p>

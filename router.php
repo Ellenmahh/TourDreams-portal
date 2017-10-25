@@ -26,6 +26,21 @@ switch($controller){
 
 
           }
+          case'reservas':
+          require_once('controllers/reservas_controller.php');
+          require_once('models/reserva_class.php');
+
+              switch ($modo) {
+                case 'nova_reserva':
+
+                $controller_reservas = new controllerReservas();
+
+                $controller_reservas->Novo();
+                  # code...
+                  break;
+
+
+              }
           case'busca':
           require_once('controllers/busca_avancada_controller.php');
           require_once('models/busca_avancada_class.php');
@@ -36,11 +51,30 @@ switch($controller){
                 $controller_busca = new controllerBuscaAvancada();
 
                 $controller_busca->pesquisa();
+
+                 header('location:areaReserva.php');
                   # code...
                   break;
 
 
               }
+
+
+              case'home':
+              require_once('controllers/home_controller.php');
+              require_once('models/home_class.php');
+
+                  switch ($modo) {
+                    case 'busca_home':
+
+                    $controller_busca = new controllerHome();
+
+                    $controller_busca->pesquisa_home();
+                      # code...
+                      break;
+
+
+                  }
 
 
 
@@ -149,6 +183,21 @@ switch($controller){
 		  case'NovoQuarto':
 			$ControllerQuarto = new ControllerQuarto();
 			$ControllerQuarto->NovoQuarto();
+			break;
+		  case'EditarQuarto':
+			//echo("odeio essa merda");
+			$ControllerQuarto = new ControllerQuarto();
+			$ControllerQuarto->EditarQuarto();
+
+			break;
+		  case 'DelImgQuarto':
+			  	$ControllerQuarto = new ControllerQuarto();
+				$ControllerQuarto->DelImgQuarto();
+				break;
+
+		  case 'excluirQuarto':
+				$ControllerQuarto = new ControllerQuarto();
+				$ControllerQuarto->excluirQuarto();
 			break;
 
 		}

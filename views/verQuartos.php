@@ -1,3 +1,16 @@
+<?php
+session_start();
+
+if(isset($_SESSION['id_usuario'])){
+
+$id_usuario = $_SESSION['id_usuario'];
+
+}
+
+
+
+ ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -49,7 +62,7 @@
 
 
               ?>
-              <a href="areaReserva.php?id_quarto=<?php echo($id_quarto); ?>"><img class="img_hotel" src="<?php echo($rs['nome_imagem']);?>" alt=""></a>
+              <a href="areaReserva.php?id_quarto=<?php echo($id_quarto); ?>&id_usuario=<?php echo($id_usuario); ?>"><img class="img_hotel" src="<?php echo($rs['nome_imagem']);?>" alt=""></a>
               <?php
 
                }
@@ -63,7 +76,7 @@
                 </div>
                 <p class="txt_caracteristica_verQuartos">Wi-fi gratuito</p>
 
-                <a href="areaReserva.php?id_quarto=<?php echo($id_quarto); ?>"><input type="submit" name="btn_produto" value="reservar" class="btn_produto_verQuartos"></a>
+                <a href="areaReserva.php?id_quarto=<?php echo($id_quarto); ?>&id_usuario=<?php echo($id_usuario); ?>"><input type="submit" name="btn_produto" value="reservar" class="btn_produto_verQuartos"></a>
 
               </div>
 
