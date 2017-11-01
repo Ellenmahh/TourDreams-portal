@@ -11,10 +11,11 @@ $id_hotel=$_GET['id_hotel'];
 
 				<div id="principal_produtos">
 				<?php
-						$sql="select * from tbl_quarto where id_hotel=".$id_hotel;
-						mysql_query($sql);
-
-					if($sql != null){
+				    $sql="select * from tbl_quarto where id_hotel=".$id_hotel;
+                    mysql_query($sql);
+                    
+                    
+					if(empty($sql)){
 
 
 						 require_once('controllers/quarto_controller.php');
@@ -95,8 +96,23 @@ $id_hotel=$_GET['id_hotel'];
 							$cont3+=1;
 
 						}
+						?>
+						<div id="espaco_add_quarto">
+							<a href="ADDQuarto.php?id_hotel=<?php echo($id_hotel);?>" >	<p> Adicione + Quartos</p> </a>
+						</div>
+				<?php
 					}else{
-						echo('não há quartos cadastrados');
+				?>
+							
+						<div id="mensagem_quartos">
+							<p><?php echo('NÃO HÁ QUARTOS CADASTRADOS'); ?> <p>
+							
+						</div>
+						<div id="espaco_add_quarto">
+								<a href="ADDQuarto.php?id_hotel=<?php echo($id_hotel);?>" >	<p> Adicione Quartos</p> </a>
+							
+						</div>
+				<?php
 					}
 					?>
 				</div>

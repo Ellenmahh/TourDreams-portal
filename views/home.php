@@ -42,12 +42,12 @@ if(isset($_SESSION['id_usuario']))
 <html>
   <head>
 
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-<script src="jQuery-gRating.js"></script>
-<script>
-	$(".rating").grating();
-</script>
-<script type="text/javascript">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="jQuery-gRating.js"></script>
+  <script>
+  	$(".rating").grating();
+  </script>
+  <script type="text/javascript">
 
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-36251023-1']);

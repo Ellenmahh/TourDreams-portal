@@ -1,21 +1,12 @@
-
-
-
-
-
 <?php
 if(isset($_GET['modo'])){
 
     if($_GET['modo'] == 'busca_home'){
       $cont5=0;
 
-
-
-
       while ($cont5<count($lstPesquisada)) {
 
       $id_hotel = $lstPesquisada[$cont5]->id_hotel;
-
 
     ?>
 
@@ -52,44 +43,28 @@ if(isset($_GET['modo'])){
     								while($rs=mysql_fetch_array($select)){
 
 
-
-
-
-
     								?>
         <p class="txt_preco_hotel" style="color:#<?php echo($rsCorPreco[$cont]->cor_preco);?>;"><?php echo($rs['preco_quarto']);?></p>
         <?php
 
         }
-
          ?>
         <?php
           $cont+=1;
-
           }
-
-
         ?>
         <a href="verQuartos.php?id_hotel=<?php echo($rsHome[$cont2]->id_hotel); ?>"><input type="submit" name="btn_produto" value="ver quartos" class="btn_produto"></a>
 
       </div>
 
     </div>
-
     <?php
     $cont5+=1;
-
     }
-
   }
 
-
-
-
 }else{
-
  ?>
-
 
 <?php
       //Incluindo o arquivo da controller para fazer o select
@@ -101,7 +76,6 @@ if(isset($_GET['modo'])){
       while ($cont2<count($rsHome)) {
 
       $id_hotel = $rsHome[$cont2]->id_hotel;
-
 
 ?>
 
@@ -127,46 +101,30 @@ if(isset($_GET['modo'])){
           $cont=0;
           while ($cont<count($rsCorPreco)) {
 
-
-
          ?>
     <p class="txt_rs" style="color:#<?php echo($rsCorPreco[$cont]->cor_preco);?>;">R$</p>
     <?php
-								$sql = "select * from tbl_quarto where id_hotel = $id_hotel  order by preco_quarto asc limit 1;";
-								$select = mysql_query($sql);
+			$sql = "select * from tbl_quarto where id_hotel = $id_hotel  order by preco_quarto asc limit 1;";
+			$select = mysql_query($sql);
 
-								while($rs=mysql_fetch_array($select)){
+			while($rs=mysql_fetch_array($select)){
 
-
-
-
-
-
-								?>
+		?>
     <p class="txt_preco_hotel" style="color:#<?php echo($rsCorPreco[$cont]->cor_preco);?>;"><?php echo($rs['preco_quarto']);?></p>
     <?php
-
     }
-
      ?>
     <?php
       $cont+=1;
-
       }
-
-
     ?>
     <a href="verQuartos.php?id_hotel=<?php echo($rsHome[$cont2]->id_hotel); ?>"><input type="submit" name="btn_produto" value="ver quartos" class="btn_produto"></a>
 
   </div>
-
 </div>
 
 <?php
   $cont2+=1;
-
   }
-
 }
-
 ?>

@@ -65,7 +65,7 @@
 
                            ?>
 
-                          <a href="areaReserva.php">
+                          <a href="verQuartos.php?id_hotel=<?php echo($id_hotel);?>">
                             <input type="submit" name="btn_produto" value="reservar" class="btn_produto">
                           </a>
        							</div>

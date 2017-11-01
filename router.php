@@ -41,6 +41,21 @@ switch($controller){
 
 
               }
+              case'reserva_usuario':
+              require_once('controllers/reserva_usuario_controller.php');
+              require_once('models/reserva_usuario_class.php');
+
+                  switch ($modo) {
+                    case 'inserir_comentario':
+
+                    $controller_reservas = new controllerReservaUsuario();
+
+                    $controller_reservas->comentario();
+                      # code...
+                      break;
+
+
+                  }
           case'busca':
           require_once('controllers/busca_avancada_controller.php');
           require_once('models/busca_avancada_class.php');
@@ -183,6 +198,11 @@ switch($controller){
 		  case'NovoQuarto':
 			$ControllerQuarto = new ControllerQuarto();
 			$ControllerQuarto->NovoQuarto();
+			break;
+
+		  case 'NovoQuartoHotel':
+			$ControllerQuarto = new ControllerQuarto();
+			$ControllerQuarto->NovoQuartoHotel();
 			break;
 		  case'EditarQuarto':
 			//echo("odeio essa merda");

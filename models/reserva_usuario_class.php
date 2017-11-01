@@ -63,29 +63,52 @@
         }
 
 
-        //selecionar por id
-         public function Desativar($promocoes){
-           $sql = "UPDATE tbl_promocoes SET status_promocao= 0 WHERE id_promocao=".$promocoes->id_promocao;
+        //metodo para selecionar tudo do banco
+         public function SelectALugares(){
 
-            if (mysql_query($sql)) {
-              ?>
-              <script type="text/javascript">
-                window.alert('Promoção Desativada');
-                window.location.href = "promocoes.php";
-              </script>
-              <?php
+           $id_usuario = $_GET['id_usuario'];
+           //script de select no banco de dados
+           $sql = "select distinct h.nome_hotel, c.cidade_descricao, h.id_hotel, h.imagem_hotel_1, r.id_reserva from tbl_reserva as r inner join tbl_quarto as q on q.id_quarto = r.id_quarto inner join tbl_hotel as h on h.id_hotel = q.id_hotel inner join tbl_endereco_hotel as eh on eh.id_hotel = h.id_hotel inner join cidade as c on c.cidade_codigo = eh.cidade_codigo inner join tbl_usuario as tbu on tbu.id_usuario = r.id_usuario where r.status_reserva = 'viajando' and tbu.id_usuario = $id_usuario;";
+           $select = mysql_query($sql);
+           $cont2=0;
+
+           //repetição para guardar os registros do banco de dados em array de objetos
+           while ($rs=mysql_fetch_array($select)) {
+
+             //instancia da classe contato, criando uma coleção de objetos
+             $listLugares[] = new reserva_usuario;
+
+             //guardando em cada objeto um registro do banco de dados, referenciando pelo indece $cont
+              $listLugares[$cont2]->id_hotel=$rs['id_hotel'];
+              $listLugares[$cont2]->nome_hotel=$rs['nome_hotel'];
+              $listLugares[$cont2]->cidade_descricao=$rs['cidade_descricao'];
+              $listLugares[$cont2]->imagem_hotel=$rs['imagem_hotel_1'];
+              $listLugares[$cont2]->id_reserva=$rs['id_reserva'];
 
 
-                //header('location:promocoes.php');
-            }
-            else
-            {
-                echo ('Erro no script SQL de edição no banco de dados.<br>ERROR: ' . mysql_error());
-            }
+              $cont2+=1;
 
+           }
 
+           return $listLugares;
 
         }
+
+
+
+        public function InsertComentario($comentario){
+
+          $sql = "insert into tbl_comentarios (id_reserva, txt_comentario, situacao_comentario)values($comentario->id_reserva, '".$comentario->comentario."', 0);";
+          //echo($sql);
+
+          mysql_query($sql);
+
+
+          header('location:perfilUsuario.php?comentario_enviado&id_usuario='.$comentario->id_usuario);
+
+        }
+
+
 
 
     }

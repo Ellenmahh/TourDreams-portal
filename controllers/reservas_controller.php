@@ -9,20 +9,24 @@
         $id_usuario = $_GET['id_usuario'];
 
 
-        if($id_usuario == ''){
+        if($id_usuario == 'null'){
           //echo "string";
-          header('location:areaReserva.php?usuario_null&id_quarto='.$_GET['id_quarto']);
+          header('location:areaReserva.php?usuario_null&id_usuario=null&id_quarto='.$_GET['id_quarto']);
 
 
 
 
 
         }else {
+
           $data_entrada=$_POST['txt_entrada'];
           $data_saida=$_POST['txt_saida'];
+          if(strtotime($data_saida) <= strtotime($data_entrada)){
 
-          $data_inicial = '23/03/2009';
-          $data_final = '04/11/2009';
+            header('location:areaReserva.php?data_menor&id_quarto='.$_GET['id_quarto'].'&id_usuario='.$id_usuario);
+
+          }else{
+
           // Cria uma função que retorna o timestamp de uma data no formato DD/MM/AAAA
           function geraTimestamp($data) {
           $partes = explode('/', $data);
@@ -40,8 +44,8 @@
 
           // A diferença entre as datas 23/03/2009 e 04/11/2009 é de 225 dias
 
-          $data_entrada = implode("-",array_reverse(explode("/",$data_entrada)));
-          $data_saida = implode("-",array_reverse(explode("/",$data_saida)));
+          $data_entrada_mysql = implode("-",array_reverse(explode("/",$data_entrada)));
+          $data_saida_mysql = implode("-",array_reverse(explode("/",$data_saida)));
 
 
           $id_quarto=$_GET['id_quarto'];
@@ -53,8 +57,10 @@
 
 
           $reserva_controller = new reservas();
-          $reserva_controller->data_entrada = $data_entrada;
-          $reserva_controller->data_saida = $data_saida;
+          $reserva_controller->data_entrada = $data_entrada_mysql;
+          $reserva_controller->data_saida = $data_saida_mysql;
+          $reserva_controller->data_entrada_verifica = $data_entrada;
+          $reserva_controller->data_saida_verifica = $data_saida;
           $reserva_controller->id_quarto = $id_quarto;
           $reserva_controller->id_usuario = $id_usuario;
           $reserva_controller->total_dias = $dias;
@@ -62,7 +68,7 @@
 
 
           $reserva_controller->Insert($reserva_controller);
-
+        }
 
       }
 

@@ -67,7 +67,26 @@
               <p id="titulo_mtf_perfilParceiro">MILHAS TRAVEL FIDELIDADE</p>
               <div id="pontuacao_mtf_perfilParceiro">
                 <img src="imagens/mtf.png" alt="">
-                <p>000000</p>
+                <?php
+                $id_hotel = $_GET['id_hotel'];
+
+
+                $sql="select sum(p.qtds_ponto) as valor_total from tbl_pontos as p
+                      inner join tbl_pontos_hotel as ph
+                      on p.id_pontos = ph.id_pontos
+                      inner join tbl_hotel as h on h.id_hotel = ph.id_hotel
+                      where h.id_hotel = $id_hotel
+                      group by p.id_pontos;";
+                //echo($sql);
+                $select = mysql_query($sql);
+
+                while($rs=mysql_fetch_array($select)){
+
+                 ?>
+                <p><?php echo($rs['valor_total']); ?></p>
+                <?php
+                }
+                 ?>
               </div>
               <div id="duvida_mtf_perfilParceiro">
                 <a href="#janela1" id="a_index_duvida" rel="modal"><p>O que é MTF?</p></a>

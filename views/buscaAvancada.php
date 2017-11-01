@@ -1,8 +1,6 @@
 <?php
 $modo = 'busca_avancada';
 
-
-
  ?>
 
 <!DOCTYPE html>
@@ -24,8 +22,6 @@ $modo = 'busca_avancada';
     -->
     </div>
       <div id="principal">
-
-
         <div id="area_pesquisa">
           <form class="" action="router.php?controller=busca&modo=<?php echo($modo); ?>" method="post">
           <input id="input_busca_avancada" placeholder="Faça uma busca..." type="text" name="busca" value="">
@@ -49,9 +45,6 @@ $modo = 'busca_avancada';
                     $rsCategoria = $controller_busca_categoria->listar_categorias();
                     $cont2=0;
                     while ($cont2<count($rsCategoria)) {
-
-
-
 
               ?>
               <!--<p class="titulo_filtro" >ESTRELAS</p>-->
@@ -88,10 +81,6 @@ $modo = 'busca_avancada';
                     $rsCarac = $controller_busca_categoria->listar_caracteristicas();
                     $cont4=0;
                     while ($cont4<count($rsCarac)) {
-
-
-
-
               ?>
               <label class="control control--checkbox"><?php echo($rsCarac[$cont4]->descricao_carac);?>
                 <input type="checkbox" value="<?php echo($rsCarac[$cont4]->id_carac);?>" name="caracteristicas[]" />
@@ -102,19 +91,13 @@ $modo = 'busca_avancada';
 
                 }
 
-
               ?>
-
             </div>
-
-
 
             <input id="btn_aplicarFiltros" type="submit" name="button" value="APLICAR" />
             </form>
           </div>
-
         </div>
-
         <div id="txt_busca_avancada">
           <p>ALGUMAS SUGESTÕES</p>
         </div>
@@ -122,18 +105,11 @@ $modo = 'busca_avancada';
         <?php
         if (isset($_GET['modo'])) {
 
-
           if($_GET['modo'] == "busca_avancada"){
-
             $cont2=0;
 
-
-
-
             while ($cont2<count($lstPesquisada)) {
-
             $id_hotel = $lstPesquisada[$cont2]->id_hotel;
-
 
         ?>
         <div class="produtos_div"  data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
@@ -169,13 +145,8 @@ $modo = 'busca_avancada';
         </div>
         <?php
           $cont2+=1;
-          
-
           }
-
-
         ?>
-
         <?php
           }
 
@@ -189,8 +160,6 @@ $modo = 'busca_avancada';
             $id_hotel = $rsBusca[$cont]->id_hotel;
 
          ?>
-
-
 
         <div class="produtos_div"  data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
           <img src="<?php echo($rsBusca[$cont]->imagem_hotel);?>" alt="">
@@ -207,21 +176,16 @@ $modo = 'busca_avancada';
             <p class="txt_diaria_hotel" >Diárias a partir de</p>
             <p class="txt_rs" >R$</p>
             <?php
-        								$sql = "select * from tbl_quarto where id_hotel = $id_hotel  order by preco_quarto asc limit 1;";
-        								$select = mysql_query($sql);
+							$sql = "select * from tbl_quarto where id_hotel = $id_hotel  order by preco_quarto asc limit 1;";
+							$select = mysql_query($sql);
 
-        								while($rs=mysql_fetch_array($select)){
-
-
+							while($rs=mysql_fetch_array($select)){
 
 
-
-
-        								?>
+						?>
             <p class="txt_preco_hotel"><?php echo($rs['preco_quarto']); ?></p>
             <?php
           }
-
              ?>
             <a href="verQuartos.php"><input type="submit" name="btn_produto" value="ver quartos" class="btn_produto"></a>
 
@@ -230,9 +194,7 @@ $modo = 'busca_avancada';
         </div>
         <?php
           $cont+=1;
-
           }
-
         }
         ?>
       </div>

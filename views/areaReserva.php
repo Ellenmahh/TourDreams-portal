@@ -61,6 +61,14 @@ if (isset($_POST['btn_produto'])) {
 
       <!-- Link to open the modal -->
       <p><a href="#ex2" rel="modal:open" id="open_modal2">Open Modal</a></p>
+
+      <div id="ex3" class="modal">
+        <p>Hey amigo, a data de saída é menor que data inicial, por favor, insira um data válida...</p>
+
+      </div>
+
+      <!-- Link to open the modal -->
+      <p><a href="#ex3" rel="modal:open" id="open_modal3">Open Modal</a></p>
         <?php include('menu.php'); ?>
     </header>
     <section>
@@ -232,6 +240,32 @@ if (isset($_POST['btn_produto'])) {
 
 
     $('#open_modal2').click();
+
+
+
+
+
+    </script>
+
+    <?php
+    }
+    ?>
+
+
+    <?php
+
+
+
+    if(isset($_GET['data_menor'])){
+
+
+    ?>
+    <script type="text/javascript">
+
+
+
+
+    $('#open_modal3').click();
 
 
 

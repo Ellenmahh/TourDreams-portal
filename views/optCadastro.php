@@ -36,6 +36,17 @@
               <p>Divulgue seus estabelecimentos para que
                 encontrem com mais praticidade.</p>
             </div>
+
+            <div id="txt_btn_optCadastro">
+              <p>Reservar hotéis, resorts, pousadas em qualquer
+                lugar do mundo.</p>
+            </div>
+
+            <div id="txt_btn2_optCadastro">
+              <p>Divulgue seus estabelecimentos para que
+                encontrem com mais praticidade.</p>
+            </div>
+
           </div>
         </div>
       </div>

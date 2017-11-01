@@ -14,7 +14,7 @@
           <p>PESQUISE SOBRE SEU DESTINO</p>
         </div>
         <div id="area_pesquisa">
-          <input id="input_busca_avancada" placeholder="Ex: Vargem Grande" type="text" name="" value="">
+          <input id="input_busca_conhecaDestino" placeholder="Ex: Vargem Grande" type="text" name="" value="">
           <button id="btn_buscar_conhecaDestino" type="button" name="button" ><img  src="imagens/img_btn3.png" alt=""></button>
         </div>
         <div class="area_comentario">

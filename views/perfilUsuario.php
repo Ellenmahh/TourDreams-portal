@@ -6,6 +6,8 @@
 <html>
   <head>
     <?php include('head.php'); ?>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
   </head>
   <body>
     <div class="window" id="editar_perfilUsuario">
@@ -81,6 +83,13 @@
 <!-- mascara para cobrir o site -->
 <div id="mascara_usuario"></div>
     <header>
+      <div id="ex1" class="modal">
+        <p>Obrigado por enviar seu comentário!!.</p>
+
+      </div>
+
+      <!-- Link to open the modal -->
+      <p><a href="#ex1" rel="modal:open" id="open_modal">Open Modal</a></p>
         <?php include('menu.php'); ?>
     </header>
 
@@ -120,7 +129,31 @@
               <p id="titulo_mtf_perfilUsuario">MILHAS TRAVEL FIDELIDADE</p>
               <div id="pontuacao_mtf_perfilUsuario">
                 <img src="imagens/mtf.png" alt="">
-                <p>000000</p>
+                <?php
+                $id_usuario = $_GET['id_usuario'];
+
+
+                $sql="select sum(p.qtds_ponto) as valor_total from tbl_pontos as p
+                      inner join tbl_pontos_usuario as pu
+                      on p.id_pontos = pu.id_pontos
+                      inner join tbl_usuario as u on u.id_usuario = pu.id_usuario
+                      where u.id_usuario = $id_usuario
+                      group by p.id_pontos;";
+                //echo($sql);
+                $select = mysql_query($sql);
+
+                while($rs=mysql_fetch_array($select)){
+
+
+
+
+
+                 ?>
+                <p><?php echo($rs['valor_total']); ?></p>
+
+                <?php
+                }
+                 ?>
               </div>
               <div id="duvida_mtf_perfilUsuario">
                 <a href="#janela1" id="a_index_duvida" rel="modal"><p>O que é MTF?</p></a>
@@ -158,7 +191,7 @@
               //Incluindo o arquivo da controller para fazer o select
               require_once('controllers/reserva_usuario_controller.php');
               //Instancia do objeto de controller, e chamada dos metodos para listar os registros
-              $controller_list_reserva = new controllerReserva();
+              $controller_list_reserva = new controllerReservaUsuario();
               $rsReserva = $controller_list_reserva->listar();
               $cont=0;
               while ($cont<count($rsReserva)) {
@@ -174,7 +207,27 @@
 						&nbsp;<?php echo($rsReserva[$cont]->cidade_descricao);?>
 					</td>
 					<td>
-						&nbsp;<?php echo($rsReserva[$cont]->data_entrada);?>
+            <?php
+
+               $dtEntrega=date("Y-m-d",strtotime($rsReserva[$cont]->data_entrada));
+                     $today = date("Y-m-d");
+                     if($today >= $dtEntrega){
+
+                      $sql = "update tbl_reserva set status_reserva = 'viajando' where id_reserva=".$rsReserva[$cont]->id_reserva;
+                      mysql_query($sql);
+
+
+            ?>
+						&nbsp;Curtindo sua viagem
+            <?php
+          }else{
+
+
+             ?>
+             <?php echo($rsReserva[$cont]->data_entrada);?>
+             <?php
+           }
+              ?>
 					</td>
 					<td>
 						&nbsp;Reserva <?php echo($rsReserva[$cont]->status_reserva);?>
@@ -201,11 +254,26 @@
           </div>
 
           <div id="principal_produtos">
+            <?php
+                  //Incluindo o arquivo da controller para fazer o select
+                  require_once('controllers/reserva_usuario_controller.php');
+                  //Instancia do objeto de controller, e chamada dos metodos para listar os registros
+                  $controller_list_lugares = new controllerReservaUsuario();
+                  $rsLugares = $controller_list_lugares->listar_lugares_que_passou();
+                  $cont2=0;
+                  while ($cont2<count($rsLugares)) {
+
+                  $id_hotel = $rsLugares[$cont2]->id_hotel;
+
+                  $id_reserva = $rsLugares[$cont2]->id_reserva;
+
+
+            ?>
             <div class="produtos_div"  data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
-              <img src="imagens/hotel2.jpg" alt="">
+              <img src="<?php echo($rsLugares[$cont2]->imagem_hotel);?>" alt="">
               <div class="legenda_produto">
-                <p class="txt_nome_hotel">Hotel Fazende Suipe</p>
-                <p class="txt_estado_hotel">São Paulo</p>
+                <p class="txt_nome_hotel"><?php echo($rsLugares[$cont2]->nome_hotel);?></p>
+                <p class="txt_estado_hotel"><?php echo($rsLugares[$cont2]->cidade_descricao);?></p>
                 <div class="estrelas">
                   <img class="img_estrelas_hotel" src="imagens/estrelas.png" alt="">
                 </div>
@@ -214,186 +282,51 @@
                 </div>
                 <p class="txt_caracteristica_hotel">Wi-fi grátis</p>
                 <div id="area_comentario_perfilUsuario">
-                    <a href="#" id="mostrar">
-                    <button id="btn_pesquisa_avancada" type="button" name="button" >
-                    <img  id="img_filtro_comentario" src="imagens/cv.png" alt="dasd"></a></button>
+                   <a onclick="funcao(<?php echo($id_hotel); ?>)" id="comentario_mostrar">
+                    <button id="btn_pesquisa_avancada" type="button" name="button" ></button>
+                    <img  id="img_filtro_comentario" src="imagens/cv.png" alt="dasd"></a>
                 </div>
                 <p class="txt_diaria_hotel" >Diárias a partir de</p>
                 <p class="txt_rs" >R$</p>
-                <p class="txt_preco_hotel">200</p>
+                <?php
+                  $sql = "select * from tbl_quarto where id_hotel = $id_hotel  order by preco_quarto asc limit 1;";
+                  $select = mysql_query($sql);
+
+                  while($result=mysql_fetch_array($select)){
+
+
+                ?>
+                <p class="txt_preco_hotel"><?php echo($result['preco_quarto']); ?></p>
+                <?php
+
+                 }
+
+                 ?>
                 <input type="submit" name="btn_produto" value="ver novamente" class="btn_produto">
-                <div id="comentario">
-                  <h1 class="txt_comentario"><p>FAÇA SEU COMENTARIO</p></h1>
-                  <textarea name="txtobs" cols="39" rows="8" class="observacao"> </textarea>
-                  <button type="button" class="button_editar_comentario ">ENVIAR
-                     <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
-                  </button>
+                <form class="" action="router.php?controller=reserva_usuario&modo=inserir_comentario&id_reserva=<?php echo($id_reserva); ?>&id_usuario=<?php echo($_GET['id_usuario']); ?>" method="post">
+
+
+                <div id="comentario_perfil<?php echo($id_hotel); ?>" class="comentario_perfil">
+
+                <textarea name="comentario" rows="2" cols="1" class="input_comentario_perfil" placeholder="Insira uma comentário"></textarea>
+
+                <button type="submit" name="button" class="input_enviar_comentario"> <img src="imagens/enviar_comentario.png" alt=""></button>
+
                 </div>
+              </form>
 
               </div>
 
             </div>
+            <?php
+              $cont2+=1;
 
-            <div class="produtos_div"  data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
-              <img src="imagens/hotel2.jpg" alt="">
-              <div class="legenda_produto">
-                <p class="txt_nome_hotel">Hotel Fazende Suipe</p>
-                <p class="txt_estado_hotel">São Paulo</p>
-                <div class="estrelas">
-                  <img class="img_estrelas_hotel" src="imagens/estrelas.png" alt="">
-                </div>
-                <div class="caracteristicas_hotel">
-                  <img class="img_caracteristica_hotel" src="imagens/wifi.png" alt="">
-                </div>
-                <p class="txt_caracteristica_hotel">Wi-fi grátis</p>
-                <div id="area_comentario_perfilUsuario">
-                    <a href="#" id="mostrar">
-                    <button id="btn_pesquisa_avancada_comentario2" type="button" name="button" >
-                    <img  id="img_filtro_comentario" src="imagens/cv.png" alt="dasd"></a></button>
-                </div>
-                <p class="txt_diaria_hotel" >Diárias a partir de</p>
-                <p class="txt_rs" >R$</p>
-                <p class="txt_preco_hotel">200</p>
-                <input type="submit" name="btn_produto" value="ver novamente" class="btn_produto">
-                <div id="comentario2">
-                  <h1 class="txt_comentario"><p>FAÇA SEU COMENTARIO</p></h1>
-                  <textarea name="txtobs" cols="39" rows="8" class="observacao"> </textarea>
-                  <button type="button" class="button_editar_comentario ">ENVIAR
-                     <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
-                  </button>
-                </div>
+              }
 
-              </div>
 
-            </div>
-            <div class="produtos_div"  data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
-              <img src="imagens/hotel2.jpg" alt="">
-              <div class="legenda_produto">
-                <p class="txt_nome_hotel">Hotel Fazende Suipe</p>
-                <p class="txt_estado_hotel">São Paulo</p>
-                <div class="estrelas">
-                  <img class="img_estrelas_hotel" src="imagens/estrelas.png" alt="">
-                </div>
-                <div class="caracteristicas_hotel">
-                  <img class="img_caracteristica_hotel" src="imagens/wifi.png" alt="">
-                </div>
-                <p class="txt_caracteristica_hotel">Wi-fi grátis</p>
-                <div id="area_comentario_perfilUsuario">
-                    <a href="#" id="mostrar">
-                    <button id="btn_pesquisa_avancada_comentario3" type="button" name="button" >
-                    <img  id="img_filtro_comentario" src="imagens/cv.png" alt="dasd"></a></button>
-                </div>
-                <p class="txt_diaria_hotel" >Diárias a partir de</p>
-                <p class="txt_rs" >R$</p>
-                <p class="txt_preco_hotel">200</p>
-                <input type="submit" name="btn_produto" value="ver novamente" class="btn_produto">
-                <div id="comentario3">
-                  <h1 class="txt_comentario"><p>FAÇA SEU COMENTARIO</p></h1>
-                  <textarea name="txtobs" cols="39" rows="8" class="observacao"> </textarea>
-                  <button type="button" class="button_editar_comentario ">ENVIAR
-                     <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
-                  </button>
-                </div>
+            ?>
 
-              </div>
 
-            </div>
-            <div class="produtos_div"  data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
-              <img src="imagens/hotel2.jpg" alt="">
-              <div class="legenda_produto">
-                <p class="txt_nome_hotel">Hotel Fazende Suipe</p>
-                <p class="txt_estado_hotel">São Paulo</p>
-                <div class="estrelas">
-                  <img class="img_estrelas_hotel" src="imagens/estrelas.png" alt="">
-                </div>
-                <div class="caracteristicas_hotel">
-                  <img class="img_caracteristica_hotel" src="imagens/wifi.png" alt="">
-                </div>
-                <p class="txt_caracteristica_hotel">Wi-fi grátis</p>
-                <div id="area_comentario_perfilUsuario">
-                    <a href="#" id="mostrar">
-                    <button id="btn_pesquisa_avancada_comentario4" type="button" name="button" >
-                    <img  id="img_filtro_comentario" src="imagens/cv.png" alt="dasd"></a></button>
-                </div>
-                <p class="txt_diaria_hotel" >Diárias a partir de</p>
-                <p class="txt_rs" >R$</p>
-                <p class="txt_preco_hotel">200</p>
-                <input type="submit" name="btn_produto" value="ver novamente" class="btn_produto">
-                <div id="comentario2">
-                  <h1 class="txt_comentario4"><p>FAÇA SEU COMENTARIO</p></h1>
-                  <textarea name="txtobs" cols="39" rows="8" class="observacao"> </textarea>
-                  <button type="button" class="button_editar_comentario ">ENVIAR
-                     <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
-                  </button>
-                </div>
-
-              </div>
-
-            </div>
-            <div class="produtos_div"  data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
-              <img src="imagens/hotel2.jpg" alt="">
-              <div class="legenda_produto">
-                <p class="txt_nome_hotel">Hotel Fazende Suipe</p>
-                <p class="txt_estado_hotel">São Paulo</p>
-                <div class="estrelas">
-                  <img class="img_estrelas_hotel" src="imagens/estrelas.png" alt="">
-                </div>
-                <div class="caracteristicas_hotel">
-                  <img class="img_caracteristica_hotel" src="imagens/wifi.png" alt="">
-                </div>
-                <p class="txt_caracteristica_hotel">Wi-fi grátis</p>
-                <div id="area_comentario_perfilUsuario">
-                    <a href="#" id="mostrar">
-                    <button id="btn_pesquisa_avancada_comentario5" type="button" name="button" >
-                    <img  id="img_filtro_comentario" src="imagens/cv.png" alt="dasd"></a></button>
-                </div>
-                <p class="txt_diaria_hotel" >Diárias a partir de</p>
-                <p class="txt_rs" >R$</p>
-                <p class="txt_preco_hotel">200</p>
-                <input type="submit" name="btn_produto" value="ver novamente" class="btn_produto">
-                <div id="comentario5">
-                  <h1 class="txt_comentario"><p>FAÇA SEU COMENTARIO</p></h1>
-                  <textarea name="txtobs" cols="39" rows="8" class="observacao"> </textarea>
-                  <button type="button" class="button_editar_comentario ">ENVIAR
-                     <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
-                  </button>
-                </div>
-
-              </div>
-
-            </div>
-            <div class="produtos_div"  data-scroll-reveal="enter from the left after 0.3s, move 40px, over 2s">
-              <img src="imagens/hotel2.jpg" alt="">
-              <div class="legenda_produto">
-                <p class="txt_nome_hotel">Hotel Fazende Suipe</p>
-                <p class="txt_estado_hotel">São Paulo</p>
-                <div class="estrelas">
-                  <img class="img_estrelas_hotel" src="imagens/estrelas.png" alt="">
-                </div>
-                <div class="caracteristicas_hotel">
-                  <img class="img_caracteristica_hotel" src="imagens/wifi.png" alt="">
-                </div>
-                <p class="txt_caracteristica_hotel">Wi-fi grátis</p>
-                <div id="area_comentario_perfilUsuario">
-                    <a href="#" id="mostrar">
-                    <button id="btn_pesquisa_avancada_comentario6" type="button" name="button" >
-                    <img  id="img_filtro_comentario" src="imagens/cv.png" alt="dasd"></a></button>
-                </div>
-                <p class="txt_diaria_hotel" >Diárias a partir de</p>
-                <p class="txt_rs" >R$</p>
-                <p class="txt_preco_hotel">200</p>
-                <input type="submit" name="btn_produto" value="ver novamente" class="btn_produto">
-                <div id="comentario6">
-                  <h1 class="txt_comentario"><p>FAÇA SEU COMENTARIO</p></h1>
-                  <textarea name="txtobs" cols="39" rows="8" class="observacao"> </textarea>
-                  <button type="button" class="button_editar_comentario ">ENVIAR
-                     <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
-                  </button>
-                </div>
-
-              </div>
-
-            </div>
 
           </div>
       </section>
@@ -402,4 +335,28 @@
             <?php include('rodape.php'); ?>
           </footer>
   </body>
+  <?php
+
+
+
+  if(isset($_GET['comentario_enviado'])){
+
+
+  ?>
+  <script type="text/javascript">
+
+
+
+
+  $('#open_modal').click();
+
+
+
+
+
+  </script>
+
+  <?php
+  }
+  ?>
 </html>
