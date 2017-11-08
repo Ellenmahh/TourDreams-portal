@@ -402,9 +402,10 @@ section{
 
 #template{
   width: 100%;
-  height: 500px;
+  height: 800px;
 	background-image:url(../imagens/template.png);
-	margin-bottom: 500px;
+
+
 }
 
 #caixa_template{
@@ -611,7 +612,7 @@ section{
 	width: 800px;
 	height: 100px;
 	position: absolute;
-	margin-top: -600px;
+	margin-top: -700px;
 	margin-left:200px;
 }
 
@@ -1127,65 +1128,6 @@ section{
 }
 
 
-/*#labels{
-	width:800px;
-	height:auto;
-	border: 0px solid;
-
-}
-
-.area_selecao_buscaAvancada{
-	float: left;
-	border: 1px solid;
-	width: auto; height: auto;
-}
-
-.labels{
-	display: block;
-}
-
-
-
-#filtros input[type="checkbox"]{
-	visibility: hidden;
-}
-
-#filtros label{
-	width: 28px;
-	height: 28px;
-	top: 1px.
-	left: 1px;
-	background-color: white;
-	cursor: pointer;
-	border:2px solid #ccc;
-	border-radius: 3px;
-	margin-top: 10px;
-	margin-left: 50px;
-
-}
-
-#filtros label:before{
-		content: '';
-		width: 9px;
-		height: 5px;
-		border: 3px solid white;
-		border-top: none;
-		border-right: none;
-		transform: rotate(-45deg);
-		top: 6px;
-		left: 6px;
-		opacity: 1;
-}
-
-#filtros input[type="checkbox"]:checkbox + label:before{
-	opacity: 1;
-}
-
-#filtros input[type="checkbox"]:checked + label{
-	border:2px solid #5270ff;
-	background-color: #5270ff;
-}
-*/
 #filtros p{
 	margin-top: -30px;
 	margin-left: 100px;
@@ -1756,30 +1698,33 @@ section{
 	font-size: 50px;
 	text-align: justify;
 }
+
 /*============================================== PERFIL USUARIO ==============================================*/
 
 #capa_usuario{
-	width: 1500px;
-	height: 400px;
+	width: 1400px;
+	height: 890px;
 	margin-left: auto;
+	margin-top: 80px;
 	margin-right: auto;
 	border: 0px solid;
 	box-shadow: 5px 5px 5px #c5c5c5;
 }
 
 #img_perfilUsuario{
-	width: 300px;
-	height: 300px;
+	width: 600px;
+	height: 450px;
 	border: 0px solid;
 	margin-left: 50px;
 	margin-top: 50px;
+	border:0px solid black;
 	float: left;
 	border-radius: 20px;
 }
 
 #img_perfilUsuario img{
-	width: 300px;
-	height: 300px;
+	width: 600px;
+	height: 450px;
 	border: 0px solid;
 }
 
@@ -1800,7 +1745,7 @@ section{
 
 
 #area_info_perfilUsuario p{
-	font-size: 30px;
+	font-size: 50px;
 	font-family: Calibri;
 	margin-top: 20px;
 }
@@ -1812,7 +1757,7 @@ section{
 }
 
 #area_opcoes_perfilUsuario p{
-	margin-top: 0px;
+	margin-top: -15px;
 	color: #5270ff;
 	float: left;
 }
@@ -1823,15 +1768,16 @@ section{
 }
 
 #mtf_perfilUsuario{
-	width: 350px; height: auto;
+	width:1200px; height: auto;
 	border: 0px solid;
-	float: right;
-	margin-top: 50px;
-	margin-right: 50px;
+	float: left;
+	margin-top:100px;
+	margin-left: 20px;
+
 }
 
 #titulo_mtf_perfilUsuario{
-	font-size: 50px;
+	font-size: 75px;
 	text-align: center;
 }
 
@@ -1839,57 +1785,65 @@ section{
 	width: auto; height: 50px;
 	border: 0px solid;
 	margin-top: 20px;
-
+	margin-left: 450px;
 }
 
 #pontuacao_mtf_perfilUsuario img{
-	width: 50px; height: 50px;
+	width: 75px; height: 75px;
 	margin-left: 20px;
 	float: left;
 
 }
 
 #pontuacao_mtf_perfilUsuario p{
-	font-size: 40px;
+	font-size: 60px;
 	font-family: Calibri;
 	margin-left: 40px;
 	float: left;
 }
 
 #duvida_mtf_perfilUsuario{
-	width: auto; height: 30px;
+	width:900px; height: 30px;
 	border: 0px solid;
-	margin-top: 50px;
+	margin-top: 56px;
+	margin-left: 330px;
 }
 
 #duvida_mtf_perfilUsuario p{
-	font-size: 20px;
+	font-size: 35px;
 	font-family: Calibri;
 	float: left;
-	margin-left: 35px;
+	margin-left: 15px;
+	margin-top: 10px;
 }
 
 #a_index_duvida{
   color: #000;
-  font-size: 20px;
+  font-size: 38px;
 	font-family: Tahoma;
 	margin-top: 0px;
-}
 
+}
+#a_index_duvida p {
+margin-left: 50px;
+
+}
 #txt_perfilUsuario{
-	width: 1000px;
+	width: 1500px;
 	height: auto;
 	margin-top: 80px;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
-	font-size: 50px;
+
 	font-family: Calibri;
 	border: solid 0px;
 }
 
 #txt_perfilUsuario p{
 	opacity: 0.5;
+	font-size: 80px;
+margin-top: 90px;
 }
 
 /**** modal_perfilUsuario ****/
@@ -2207,12 +2161,18 @@ section{
 
 /*============================================== PERFIL PARCEIRO ==============================================*/
 
+#img_hotel_perfilParceiro img{
+		width: 980px;
+		height:980px;
 
+
+}
 #capa_parceiro{
-	width: 1000px;
-	height: auto;
+	width: 1200px;
+	height: 580px;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 90px;
 	border: 0px solid;
 	box-shadow: 5px 5px 5px #c5c5c5;
 }
@@ -2226,19 +2186,21 @@ section{
 }
 
 #titulo_mtf_perfilParceiro{
-	font-size: 60px;
+	font-size: 85px;
 	text-align: center;
 }
 
 #pontuacao_mtf_perfilParceiro{
 	width: auto; height: 50px;
 	border: 0px solid;
-	margin-top: 20px;
-
+	margin-top: 50px;
+  font-size: 80px;
+	margin-left: -30px;
+	margin-bottom: 100px;
 }
 
 #pontuacao_mtf_perfilParceiro img{
-	width: 50px; height: 50px;
+	width: 90px; height: 90px;
 	margin-left: 150px;
 	float: left;
 
@@ -2252,15 +2214,17 @@ section{
 }
 
 #duvida_mtf_perfilParceiro{
-	width: auto; height: 30px;
+	width: 980px; height: 30px;
 	border: 0px solid;
 	margin-top: 50px;
+	margin-left: -100px;
 }
 
 #duvida_mtf_perfilParceiro p{
-	font-size: 20px;
+	font-size: 48px;
 	font-family: Calibri;
 	float: left;
+	margin-top: 20px;
 	margin-left: 100px;
 }
 
@@ -2285,9 +2249,10 @@ section{
 }
 
 #produto_div_hotel_perfilParceiro{
-	width: 1000px;
-	min-height: 420px;
+	width: 1200px;
+	min-height: 580px;
 	height: auto;
+	margin-left: -95px;
 
 	border: solid 0px;
 	border-radius: 2px;
@@ -2307,7 +2272,8 @@ section{
 }
 
 #area_titulo_hotel_perfilParceiro p{
-	font-size: 40px;
+	font-size: 75px;
+	margin-left: 15px;
 	opacity: 0.5;
 	text-align: center;
 }
@@ -2318,7 +2284,7 @@ section{
 }
 
 #area_infos_hotel_perfilParceiro p{
-	font-size: 40px;
+	font-size: 70px;
 	margin-left: 50px;
 	margin-top: 30px;
 }
@@ -2347,9 +2313,9 @@ section{
 }
 
 #txt_perfilUsuario{
-	width: 1000px;
+	width: 1500px;
 	height: auto;
-	margin-top: 80px;
+	margin-top: 200px;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
@@ -2373,11 +2339,11 @@ section{
 
 }
 .produtos_div_verQuartos{
-	width: 470px;
-	min-height: 500px;
+	width: 1200px;
+	min-height: 1200px;
+	margin-top: 50px;
 	height: auto;
-	margin-left: 80px;
-	margin-top: 80px;
+	margin-left:160px;
 	float: left;
 	border: solid 0px;
 	border-radius: 2px;
@@ -2407,7 +2373,7 @@ section{
 
 .produtos_div_verQuartos img{
 	width: 100%;
-	height: 300px;
+	height: 700px;
 	border-radius: 2px;
 }
 
@@ -2419,6 +2385,7 @@ section{
 	opacity: 1;
 	transition: 1s;
 	border: solid 0px;
+
 }
 
 .legenda_produto_verQuartos img{
@@ -3736,6 +3703,7 @@ section{
 #btns_area_optCadastro{
 	width: 100%; height: 2000px;
 	border: 0px solid;
+
 	margin-top: 00px;
 }
 
@@ -4347,17 +4315,17 @@ body {
 
 #espaco_status p{
 	font-family: Calibri;
-	font-size: 50px;
+	font-size: 80px;
 	opacity: 0.5;
 	margin-left:30px;
 	float:left;
 	margin-bottom:15px;
-
+margin-top: 25px;
 }
 #espaco_status{
 	border:0px solid black;
 	width:1350px;
-	height:350px;
+	height:680px;
 	margin:auto;
 	margin-top:35px;
 	font-family: Calibri;
@@ -4379,24 +4347,24 @@ body {
 	background-color:#F8F7F7;
 	border-radius:2px;
 	font-family: Calibri;
-	font-size: 20px;
+	font-size: 38px;
 }
 
 #status_table{
 	border:0px solid black;
-	width:1200px;
-	height:260px;
+	width:1380px;
+	height:600px;
 	overflow:auto;
 	margin:auto;
 	margin-top:20px;
-
+	font-size: 39px;
 }
 .icone_perfil_mais_status{
 	float:left;
 	margin-left:15px;
 	border:0px solid black;
-	width:30px;
-	height:30px;
+	width:50px;
+	height:50px;
 	opacity: 0.6;
 	margin-top:-2px;
 
@@ -4427,7 +4395,7 @@ body {
 
 
 #seja_usuario{
-	width:750x;
+	width: 1250px;
 	height:300px;
 	border: 10px solid #5270ff;
 	border-radius: 3px;
@@ -4452,6 +4420,59 @@ body {
 	width:auto;
 	height:auto;
 	margin-top: 00px;
+}
+#espaco_login_responsivo{
+	width:100%;
+	height: auto;
+	margin-top: 690px;
+
+}
+
+#botao_conectar_login{
+  width: 700px;
+  height:160px;
+	border: 0px solid black;
+	clear: both;
+	margin-left:360px;
+	color: #fff;
+	margin-top: 35px;
+  background-color:#5270ff;
+	margin-bottom: 30px;
+}
+#botao_conectar_login:hover {
+	color:#000;
+	transition: 1s;
+}
+#cadastrarespaco{
+	width: 600px;
+	height: 60px;
+	border: 0px solid black;
+	clear:both;
+	margin: auto;
+	margin-top: 40px;
+	color: #000;
+	font-family: Tahoma;
+	font-size: 55px;
+}
+#cadastrarespaco p {
+		color:#000;
+		margin-left:150px;
+}
+.input_login_usu{
+  width: 1200px;
+  height: 150px;
+  float: left;
+  margin-left: 100px;
+  font-family: Calibri;
+  font-size: 70px;
+  margin-top:20px;
+  margin-bottom:90px;
+	border: 2px solid #b3b3b3;
+}
+
+.input_login_usu:focus{
+	background-color: #e3e3e3;
+	border: 2px solid #e3e3e3;
 }
 
 .input_cadastro_usu{
@@ -4511,7 +4532,7 @@ body {
 	margin-left: 100px;
 	margin-bottom:25px;
 	border-radius:15px;
-	 font-family: 'dosislight';
+	font-family: 'dosislight';
 	font-size: 80px;
 	opacity: 0.8;
 	float:left;
@@ -4523,22 +4544,22 @@ body {
 }
 
 .option_cadastro2{
-	width:1120px;
-	height:52px;
-	margin-left:30px;
+	width:1200px;
+	height: 150px;
+	margin-left:10px;
 	margin-bottom:25px;
 	border-radius:15px;
-	 font-family: 'dosislight';
-	font-size: 25px;
+	font-family: 'dosislight';
+	font-size: 70px;
 	opacity: 0.8;
 	float:left;
 	margin-top:10px;
-	border: 2px solid #c3c3c3;
+	border: 5px solid #c3c3c3;
 
 }
 
 .option_cadastro2:focus{
-	border: 2px solid #d3d3d3;
+	border: 5px solid #d3d3d3;
 }
 
 #foto_editar_usuario{
@@ -4663,10 +4684,10 @@ input[type='file'] {
 .numero_cadastro_parceiro{
    float:left;
    margin-left:30px;
-   width:90px;
-   height:50px;
+   width: 160px;
+   height: 150px;
    margin-top:8px;
-	font-size: 20px;
+	font-size: 70px;
    border: 2px solid #b3b3b3;
 }
 .numero_cadastro_parceiro:focus{
@@ -4691,19 +4712,19 @@ input[type='file'] {
 	position: absolute;
 	top: 2px;
 	left: 0;
-	width: 20px;
-	height: 20px;
+	width: 50px;
+	height: 50px;
 	background: #e6e6e6;
 }
+
 .control2 {
-	font-size: 20px;
 	position: relative;
 	display: block;
 	margin-bottom: 15px;
-	padding-left: 30px;
+	padding-left: 70px;
 	cursor: pointer;
 	font-family: Calibri;
-	font-size: 24px;
+	font-size: 70px;
 
 }
 
@@ -4739,10 +4760,10 @@ input[type='file'] {
 	background: #e6e6e6;
 }
 .control--radio .control__indicator2:after {
-	top: 7px;
-	left: 7px;
-	width: 6px;
-	height: 6px;
+	top: 15px;
+	left: 15px;
+	width: 20px;
+	height: 20px;
 	border-radius: 50%;
 	background: #fff;
 }
@@ -4751,27 +4772,27 @@ input[type='file'] {
 }
 
 .input_cadastro_parceiro{
-  width: 1132px;
-  height: 50px;
+	width: 1200px;
+  height: 150px;
   float: left;
-  margin-left: 30px;
+  margin-left: 10px;
   font-family: Calibri;
-  font-size: 25px;
-  margin-top:8px;
-  margin-bottom:20px;
-  border: 2px solid #b3b3b3;
+  font-size: 70px;
+  margin-top:10px;
+  margin-bottom:40px;
+	border: 2px solid #b3b3b3;;
 }
 .input_cadastro_parceiro:focus{
 	background-color: #e3e3e3;
 	border: 2px solid #e3e3e3;
 }
 .input_cadastro_parceiro2{
-  width: 1010px;
-  height: 50px;
+	width: 1000px;
+  height: 150px;
   float: left;
-  margin-left: 30px;
+  margin-left: 10px;
   font-family: Calibri;
-  font-size: 25px;
+  font-size: 70px;
   margin-top:8px;
   margin-bottom:20px;
   border: 2px solid #b3b3b3;
@@ -4781,34 +4802,27 @@ input[type='file'] {
 	background-color: #e3e3e3;
 	border: 2px solid #e3e3e3;
 }
+
 #espaco_cadastro_p3{
-	float:left;
-	width:600px;
-	height:950px;
-
-	margin-left: 40px;
+	width: 1200px;
+	height: 950px;
+	margin-left: 130px;
 }
-#espaco_cadastro_p4{
-	float:right;
-	width:550px;
-	height:950px;
 
-	margin-top: 8px;
+#espaco_cadastro_p4{
+	width: 1200px;
+	height: 950px;
+	margin-left: 130px;
 }
 
 .espaco_perguntas{
-  font-family: Calibri;
-  font-size: 30px;
-  border:1px solid white;
+  font-size: 70px;
+  border-bottom: 1px solid;
   height:200px;
-	 width:600px;
-	 margin-top:25px;
-	 overflow:auto;
-
- 		font-family: 'dosislight';
-
+	width:600px;
+	overflow:auto;
+	font-family: 'dosislight';
 }
-
 
 .espaco_perguntas_img{
   font-family: Calibri;
@@ -4818,29 +4832,27 @@ input[type='file'] {
   width:600px;
   overflow:auto;
   margin-top:20px;
-
 }
 
-
 .espaco_perguntas_btn{
-  font-family: Calibri;
   font-size: 30px;
   border:1px solid white;
   height:200px;
 	width:600px;
 	overflow:auto;
  	font-family: 'dosislight';
-
 }
 
 .mais_espaco_p{
 	margin-top:28px;
 	float:left;
 	margin-left:15px;
+	font-size: 70px;
 }
+
 .espaco_p_cadastro{
 	float:left;
-	margin-top:0px;
+	margin-top: 70px;
 	margin-left:15px;
 }
 
@@ -4861,24 +4873,25 @@ input[type='file'] {
 	margin-left:30px;
 	margin-top:15px;
 	 font-family: Calibri;
-	font-size: 30px;
+	font-size: 70px;
 	margin-bottom:15px;
 
 }
 
 .btn_avanca_parceiro{
 	clear:both;
-	margin-top:45px;
+	margin-top: 250px;
+	margin-right: 50px;
 	border-radius:2px;
+	border:0px solid black;
+	width: 600px;
+	height: 150px;
 	font-family: Calibri;
 	color:#fff;
 	background-color:#5270ff;
-	font-size:25px;
-	width:250px;
-	height:60px;
 	float:right;
-	border: 0;
-	margin-right:20px;
+	font-size: 80px;
+	font-weight:bold;
 }
 .btn_avanca_parceiro:hover{
 	color:#000;
@@ -5036,11 +5049,10 @@ input[type='file'] {
 	border:0px solid black;
 	width:240px;
 	height:200px;
-	margin-top:10px;
-	margin-left: 10px;
+	margin-top: 50px;
+	margin-left: 50px;
 	border-radius: 2px;
 	display:block;
-	float: right;
 }
 .img_parceiro_cadastro2_quarto_editar{
 	border:0px solid black;
@@ -5057,17 +5069,17 @@ input[type='file'] {
 	float:left;
 	border:1px solid #a1a1a1;
 	width:240px;
-	height:200px;
+	height: 400px;
 	margin-top:20px;
-	margin-left:40px;
+	margin-left:0px;
 	opacity:0.4;
 	border-radius: 2px;
 
 }
  .addquartoo{
   border:0px solid black;
-  width: 165px;
-  height:160px;
+  width: 400px;
+  height: 400px;
   margin-left:45px;
   margin-top:25px;
   float:left;

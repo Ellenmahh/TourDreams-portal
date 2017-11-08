@@ -107,7 +107,7 @@
 
              ?>
             <div id="img_perfilUsuario">
-              <img src="<?php echo($rs['foto_usuario']); ?>" alt="" id="img_perfil_usuario">
+              <img src="<?php echo($rs['foto_usuario']); ?>" alt="" id="img_perfil_usuario" >
             </div>
             <div id="area_info_perfilUsuario">
 
@@ -138,7 +138,7 @@
                       on p.id_pontos = pu.id_pontos
                       inner join tbl_usuario as u on u.id_usuario = pu.id_usuario
                       where u.id_usuario = $id_usuario
-                      group by p.id_pontos;";
+                      group by u.id_usuario;";
                 //echo($sql);
                 $select = mysql_query($sql);
 

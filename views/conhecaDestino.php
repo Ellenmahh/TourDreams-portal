@@ -1,3 +1,9 @@
+<?php
+$modo = 'busca_conheca';
+
+
+ ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -13,49 +19,15 @@
         <div id="txt_parceiros">
           <p>PESQUISE SOBRE SEU DESTINO</p>
         </div>
+        <form class="" action="router.php?controller=conheca&modo=<?php echo($modo); ?>" method="post">
+
         <div id="area_pesquisa">
-          <input id="input_busca_conhecaDestino" placeholder="Ex: Vargem Grande" type="text" name="" value="">
-          <button id="btn_buscar_conhecaDestino" type="button" name="button" ><img  src="imagens/img_btn3.png" alt=""></button>
+          <input id="input_busca_conhecaDestino" placeholder="Ex: Vargem Grande" type="text" name="busca" value="">
+          <button id="btn_buscar_conhecaDestino" type="submit" name="button" ><img  src="imagens/img_btn3.png" alt=""></button>
         </div>
-        <div class="area_comentario">
-            <img class="img_hotel_conhecaDestino" src="imagens/hotel5.jpg" alt="">
-            <img class="img_usuario_conhecaDestino" src="imagens/harry.jpg" alt="">
-            <p class="txt_nome_conhecaDestino" >Andrey Alves</p>
-            <p class="txt_comentario_conhecaDestino">teste teste teste teste teste teste teste teste
-              teste teste teste teste teste teste teste teste
-              teste teste teste teste teste teste teste teste
-              teste teste teste teste teste teste teste</p>
-        </div>
+        </form>
 
-        <div class="area_comentario">
-            <img class="img_hotel_conhecaDestino" src="imagens/hotel2.jpg" alt="">
-            <img class="img_usuario_conhecaDestino" src="imagens/harry.jpg" alt="">
-            <p class="txt_nome_conhecaDestino" >Andrey Alves</p>
-            <p class="txt_comentario_conhecaDestino">teste teste teste teste teste teste teste teste
-              teste teste teste teste teste teste teste teste
-              teste teste teste teste teste teste teste teste
-              teste teste teste teste teste teste teste</p>
-        </div>
-
-        <div class="area_comentario">
-            <img class="img_hotel_conhecaDestino" src="imagens/hotel3.jpg" alt="">
-            <img class="img_usuario_conhecaDestino" src="imagens/harry.jpg" alt="">
-            <p class="txt_nome_conhecaDestino" >Andrey Alves</p>
-            <p class="txt_comentario_conhecaDestino">teste teste teste teste teste teste teste teste
-              teste teste teste teste teste teste teste teste
-              teste teste teste teste teste teste teste teste
-              teste teste teste teste teste teste teste</p>
-        </div>
-
-        <div class="area_comentario">
-            <img class="img_hotel_conhecaDestino" src="imagens/hotel4.jpg" alt="">
-            <img class="img_usuario_conhecaDestino" src="imagens/harry.jpg" alt="">
-            <p class="txt_nome_conhecaDestino" >Andrey Alves</p>
-            <p class="txt_comentario_conhecaDestino">teste teste teste teste teste teste teste teste
-              teste teste teste teste teste teste teste teste
-              teste teste teste teste teste teste teste teste
-              teste teste teste teste teste teste teste</p>
-        </div>
+      <?php include_once('conheca/conheca_view.php'); ?>
 
       </div>
     </section>

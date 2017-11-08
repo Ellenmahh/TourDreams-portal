@@ -13,9 +13,9 @@ $id_hotel=$_GET['id_hotel'];
 				<?php
 				    $sql="select * from tbl_quarto where id_hotel=".$id_hotel;
                     mysql_query($sql);
-                    
-                    
-					if(empty($sql)){
+
+
+					if($sql != null){
 
 
 						 require_once('controllers/quarto_controller.php');
@@ -101,16 +101,16 @@ $id_hotel=$_GET['id_hotel'];
 							<a href="ADDQuarto.php?id_hotel=<?php echo($id_hotel);?>" >	<p> Adicione + Quartos</p> </a>
 						</div>
 				<?php
-					}else{
+					}else if(empty($sql)){
 				?>
-							
+
 						<div id="mensagem_quartos">
 							<p><?php echo('NÃO HÁ QUARTOS CADASTRADOS'); ?> <p>
-							
+
 						</div>
 						<div id="espaco_add_quarto">
 								<a href="ADDQuarto.php?id_hotel=<?php echo($id_hotel);?>" >	<p> Adicione Quartos</p> </a>
-							
+
 						</div>
 				<?php
 					}

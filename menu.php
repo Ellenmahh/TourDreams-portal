@@ -44,7 +44,7 @@
             <tr><td>&nbsp;&nbsp; </td></tr>
 						<tr><td><li><a href="sobre.php" style="color:#000;">&nbsp;Sobre </a> </li></tr></td>
             <tr><td>&nbsp;______________________ </td></tr>
-            <tr><td><li><a href="sobre.php" style="color:#000;">&nbsp;Login </a> </li></tr></td>
+            <tr><td><li><a href="login_responsivo_opt.php" style="color:#000;">&nbsp;Login </a> </li></tr></td>
             <tr><td>&nbsp;&nbsp; </td></tr>
             <tr><td><li><a href="optCadastro.php" style="color:#000;">&nbsp;Cadastro </a> </li></tr></td>
             <tr><td>&nbsp;&nbsp; </td></tr>

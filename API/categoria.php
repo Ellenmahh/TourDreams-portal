@@ -15,10 +15,10 @@ $id_categoria = $_GET['id_categoria'];
    where id_categora = '".$id_categoria."'";
 //echo($sql);
   $select = mysql_query($sql);
-  $praia = array();
+  $categoria = array();
   while($rs=mysql_fetch_array($select)){
 
-    $praia [] = array(
+    $categoria [] = array(
       'id_hotel'=>$rs['id_hotel'],
       'nome_hotel'=>$rs['nome_hotel'],
       'cidade_descricao'=>$rs['cidade_descricao'],
@@ -27,7 +27,7 @@ $id_categoria = $_GET['id_categoria'];
 
     );
   }
-echo json_encode($praia);
+echo json_encode($categoria);
 
 
  ?>

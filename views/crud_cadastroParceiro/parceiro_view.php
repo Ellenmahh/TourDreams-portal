@@ -195,7 +195,7 @@
 				?>
 				<tr>
 					<td class="espaco_perguntas">
-						<p class="espaco_p_cadastro">Seu Hotel possuí Wi-Fi?</p>
+						<p class="espaco_p_cadastro">Seu Hotel possui Wi-Fi?</p>
 						<div class="resposta_opt_p">
 							<label class="control2 control--radio">
 								<input  type="radio"  name="opt2"  <?php if($wi_fi == 1){ echo('checked'); } ?> value="1"/>Sim
@@ -232,7 +232,7 @@
 				</tr>
 				<tr>
 					<td class="espaco_perguntas">
-						<p class="espaco_p_cadastro">Possuí estacionamento? </p>
+						<p class="espaco_p_cadastro">Possui estacionamento? </p>
 						<div class="resposta_opt_p">
 							<label class="control2 control--radio">
 								<input   type="radio"  name="opt4" value="1" />  Sim
@@ -249,7 +249,7 @@
 				</tr>
 				<tr>
 					<td class="espaco_perguntas">
-						<p class="espaco_p_cadastro">Possuí SPA? </p>
+						<p class="espaco_p_cadastro">Possui SPA? </p>
 						<div class="resposta_opt_p">
 							<label class="control2 control--radio">
 								<input   type="radio"  name="opt5" value="1" />  Sim

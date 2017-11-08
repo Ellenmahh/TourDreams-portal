@@ -101,7 +101,14 @@
           $sql = "insert into tbl_comentarios (id_reserva, txt_comentario, situacao_comentario)values($comentario->id_reserva, '".$comentario->comentario."', 0);";
           //echo($sql);
 
+
+
           mysql_query($sql);
+
+          $sql2 = "insert into tbl_pontos_usuario(id_usuario, id_pontos)values($comentario->id_usuario, 2); ";
+
+          mysql_query($sql2);
+
 
 
           header('location:perfilUsuario.php?comentario_enviado&id_usuario='.$comentario->id_usuario);

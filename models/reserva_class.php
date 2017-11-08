@@ -22,7 +22,7 @@
 	  //metodo para inserir no banco
 	   public function Insert($reserva){
 			  //Fazendo o select para verificar o email
-		 $sql_verificaReserva = mysql_query("SELECT * FROM tbl_reserva WHERE id_quarto = $reserva->id_quarto and (('$reserva->data_entrada' BETWEEN data_entrada AND data_saida) OR ('$reserva->data_saida' BETWEEN data_entrada AND data_saida));");
+		 $sql_verificaReserva = mysql_query("SELECT * FROM tbl_reserva WHERE id_quarto = $reserva->id_quarto and status_reserva != 'recusada' and (('$reserva->data_entrada' BETWEEN data_entrada AND data_saida) OR ('$reserva->data_saida' BETWEEN data_entrada AND data_saida));");
 
 		 //Vendo se o email inserido já existe no BD
 		 if(@mysql_num_rows($sql_verificaReserva) > 0){

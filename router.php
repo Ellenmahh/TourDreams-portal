@@ -41,6 +41,22 @@ switch($controller){
 
 
               }
+
+              case'conheca':
+              require_once('controllers/conheca_controller.php');
+              require_once('models/conheca_class.php');
+
+                  switch ($modo) {
+                    case 'busca_conheca':
+
+                    $controller_conheca = new controllerConheca();
+
+                    $controller_conheca->pesquisa();
+                      # code...
+                      break;
+
+
+                  }
               case'reserva_usuario':
               require_once('controllers/reserva_usuario_controller.php');
               require_once('models/reserva_usuario_class.php');

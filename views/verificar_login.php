@@ -26,7 +26,7 @@ $senha = "";
 			$_SESSION['nome_usuario'] = $nome;
 			$_SESSION['id_usuario'] = $idUsuario;
 			$_SESSION['foto_usuario'] = $foto;
-			
+
 			header('location:../home.php?logado=ON');
 
 		}
