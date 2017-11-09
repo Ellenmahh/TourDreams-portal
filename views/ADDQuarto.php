@@ -3,8 +3,8 @@
 <html>
   <head>
     <?php
-		
-		
+
+
 		include('head.php');
 
 
@@ -74,9 +74,9 @@
 		  <?php include('menu.php'); ?>
 	  </header>
    </body>
- 
- 
- 
+
+
+
  <?php
 	$nome_quarto="";
 	$numero_quarto="";
@@ -109,8 +109,9 @@
              required value="<?php echo($preco_quarto);?>"/></p>
 
 
-
-					<p>O que contém no quarto? </p>
+          <div id="pergunta_quarto">
+					    <p>O que contém no quarto? </p>
+          </div>
 					<div id="resp_parceiro2">
 							<?php
 									require_once('controllers/quarto_controller.php');
@@ -140,7 +141,9 @@
 
 
 					</div>
-					<p>&nbsp;Adicione fotos do quarto:</p>
+          <div id="pergunta_quarto2">
+					       <p>&nbsp;Adicione fotos do quarto:</p>
+         </div>
 					<div id="espaco_fotos_parceiro_cadastro">
 
 							<div class="img_parceiro_cadastro2">

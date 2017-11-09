@@ -9,14 +9,18 @@ $email = $_GET['email'];
 $senha = $_GET['senha'];
 
 $sql = "select * from tbl_usuario where email_usuario='".$email."' and senha_usuario=".$senha;
-  $select =mysql_query($sql);
-	if($rs = mysql_fetch_array($select)){
-      echo json_encode(array("email"=>$email,"senha"=>$senha));
-    //echo json_encode($rs);
-    //echo $rs;
+$lista_user = array();
+$select =mysql_query($sql);
+while ($rs = mysql_fetch_array($select)){
+	$lista_user= array(
+		"id"=>$rs['id_usuario'],
+		"nome"=>$rs['nome_usuario'],
+		"email"=>$rs['email_usuario'],
+		"senha"=>$rs['senha_usuario']
 
-	}
-
+	);
+}
+  echo json_encode($lista_user);
 
 /*
 if($usuario = "teste" && $senha == "teste"){

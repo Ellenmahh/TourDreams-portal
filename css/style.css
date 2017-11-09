@@ -6,14 +6,27 @@ margin-right:-170px;
 margin-top:20px;
 border:0px solid black;
 }
+
+#espaco_pg_reserva_rua_preco{
+	display:none;
+}
+
+
 *{
 margin:0;
 }
 
+#pergunta_quarto{
+		display:none;
+
+}
+#pergunta_quarto2{
+		display:none;
+
+}
 #nav_responsivo{
 	display: none;
 }
-
 * {
 -webkit-box-sizing:border-box;
 -moz-box-sizing:border-box;
@@ -128,7 +141,7 @@ margin-left: 572px;
 #div_usuario_logado{
 width: 350px; height: 150px;
 background-color: transparent;
-
+margin-top: -680px;
 margin-left: 1450px;
 position: absolute;
 border-radius: 5px;
@@ -5102,6 +5115,18 @@ display: none;
 }
 
 #open_modal3{
+
+display: none;
+
+}
+
+#open_modal4{
+
+display: none;
+
+}
+
+#open_modal5{
 
 display: none;
 

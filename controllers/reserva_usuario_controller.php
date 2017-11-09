@@ -61,6 +61,20 @@ Arquivos relacionados: reserva_view.php, reserva_class.php.
           $reserva_controller->InsertComentario($reserva_controller);
         }
 
+        public function cupom(){
+
+          $id_usuario = $_GET['id_usuario'];
+          $cupom = $_GET['cupom'];
+
+          $reserva_controller = new reserva_usuario();
+          $reserva_controller->id_usuario = $id_usuario;
+          $reserva_controller->cupom = $cupom;
+
+
+
+          $reserva_controller->InsertCupom($reserva_controller);
+        }
+
 
 
 

@@ -4,10 +4,6 @@
 
     class melhores{
 
-
-
-
-
         //metodo construtor
         public function __construct(){
 

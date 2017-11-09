@@ -1,11 +1,12 @@
-.excluir_quarto_espaco{
-	float:right;
-	width:60px;
-	height:65px;
-	margin-right:-170px;
+.excluir_quarto_espaco {
+	float: right;
+	width:150px;
+	height:155px;
+	margin-right:-250px;
 	margin-top:20px;
 	border:0px solid black;
 }
+
 *{
 	margin:0;
 }
@@ -755,6 +756,7 @@ section{
 	color: #000;
 	font-family: Calibri;
 	font-weight: bold;
+	font-size: 70px;
 }
 
 .txt_estado_hotel{
@@ -801,21 +803,22 @@ section{
 .txt_diaria_hotel{
 	font-family: Calibri;
 	margin-top: 40px;
-	margin-left: -50px;
+	margin-left: -20px;
 	font-size: 50px;
 }
 
 .txt_rs{
 	font-size: 100px;
 	margin-top: 50px;
-	margin-left: -50px;
+	margin-left: -20px;
 }
 
 .txt_preco_hotel{
 	margin-top: -150px;
-	margin-left: 50px;
+	margin-left: 95px;
 	font-size: 150px;
 	font-family: Calibri;
+
 }
 
 .btn_produto{
@@ -2162,8 +2165,10 @@ margin-top: 90px;
 /*============================================== PERFIL PARCEIRO ==============================================*/
 
 #img_hotel_perfilParceiro img{
-		width: 980px;
-		height:980px;
+		width: 1200px;
+		height:900px;
+		background-color:pink;
+		border:1px solid black;
 
 
 }
@@ -2250,7 +2255,7 @@ margin-top: 90px;
 
 #produto_div_hotel_perfilParceiro{
 	width: 1200px;
-	min-height: 580px;
+	min-height: 1300px;
 	height: auto;
 	margin-left: -95px;
 
@@ -2260,20 +2265,24 @@ margin-top: 90px;
 	box-shadow: 5px 5px 5px #c5c5c5;
 	opacity: 1;
 }
-
+#produto_div_hotel_perfilParceiro img{
+	width:1200px;
+	height:600px;
+}
 #legenda_hotel_perfilParceiro{
 	width: 450px; height: 420px;
 	float: left;
 }
 
 #area_titulo_hotel_perfilParceiro{
-	width: 450px; height: 150px;
-	margin-top: 50px;
+	width: 1000px; height: 200px;
+	margin-top: 45px;
+	margin-bottom: 40px;
 }
 
 #area_titulo_hotel_perfilParceiro p{
 	font-size: 75px;
-	margin-left: 15px;
+	margin-left: 20px;
 	opacity: 0.5;
 	text-align: center;
 }
@@ -2289,24 +2298,24 @@ margin-top: 90px;
 	margin-top: 30px;
 }
 
-#area_indicacao_hotel_perfilParceiro:hover #btn_produto_editarHotel{
+#area_indicacao_hotel_perfilParceiro{
 	opacity: 1;
 	transition: 1.1s;
 }
 
 #btn_produto_editarHotel{
-	font-size: 20px;
-	color: #fff;
+	width:280px;
+	height:150px;
+	float:right;
+	margin-right: -700px;
 	background-color:#5270ff;
-	font-family: Calibri;
-	width: 150px;
-	height: 50px;
-	border: 0;
-	opacity: 0;
+	color:#fff;
 	transition:0.5s;
-	margin-top: -20px;
-	float: right;
+	margin-top: -150px;
+  font-size: 58px;
+	font-family: Calibri;
 }
+
 
 #btn_produto_editarHotel:hover{
 	color: black;
@@ -2347,7 +2356,7 @@ margin-top: 90px;
 	float: left;
 	border: solid 0px;
 	border-radius: 2px;
-	margin-bottom: 10px;
+	margin-bottom: 52px;
 	box-shadow: 5px 5px 5px #c5c5c5;
 	overflow: hidden;
 }
@@ -2378,38 +2387,52 @@ margin-top: 90px;
 }
 
 .legenda_produto_verQuartos{
-	width: 300px;
+	width: 800px;
 	height: 100px;
 	margin-top: 0px;
-	position: absolute;
 	opacity: 1;
 	transition: 1s;
 	border: solid 0px;
+	border: 0px solid black;
+	margin-left: 60px;
+}
+#espaco_add_quarto{
+		width:600px;
+		height:100px;
+		border:1px solid black;
+		clear:both;
+		margin-left: 450px;
+		font-size: 60px;
+		background-color:#5270ff;
+		 font-family: Calibri;
+		 color: #fff;
+		 margin-top: 50px;
 
 }
-
+#espaco_add_quarto p {
+		color:#fff;
+		margin-left: 20px;
+}
 .legenda_produto_verQuartos img{
-	width: 30px;
-	height: 30px;
+	width: 100px;
+	height: 100px;
 	margin-top: 0px;
-	margin-left: 15px;
+	margin-left: 65px;
 	float:left;
 }
-
 .btn_produto_verQuartos{
-	font-size: 25px;
-	color: #fff;
-	background-color:#5270ff;
-	font-family: Calibri;
-	width: 150px;
-	height: 45px;
-	border: 0;
-	opacity: 0;
-	margin-top: -50px;
-	margin-right: -160px;
-	transition:0.5s;
-	float: right;
+   font-size: 60px;
+	 width:300px;
+	 height:100px;
+	 background-color:#5270ff;
+ 		font-family: Calibri;
+		color: #fff;
+		float:right;
+		margin-right: -280px;
+		margin-top: -50px;
 }
+
+
 
 .btn_produto_verQuartos:hover{
 	color:#000;
@@ -2417,29 +2440,41 @@ margin-top: 90px;
 }
 
 .txt_caracteristica_verQuartos{
-	margin-left: 50px;
-	margin-top: 15px;
-	font-size: 18px;
+	margin-top: 45px;
+	border: 0px solid black;
+	float:left;
+	font-size: 65px;
 	color: #000;
 	font-family: Calibri;
 	opacity: 0.7;
+	width:190px;
+	height:50px;
+	margin-left: -360px;
 }
 
 .caracteristicas_verQuartos{
-	width: 30px;
-	height: 30px;
-	margin-top: 10px;
+	width:550px;
+	height: 200px;
+	margin-top: 70px;
 	float:left;
+	margin-left: -55px;
+	border:0px solid black;
 }
-
-
+.img_caracteristicas_verQuartos{
+	border:0px solid black;
+	float:left;
+	width:250px;
+	height:200px;
+	margin-left: -55px ;
+}
 
 /*============================================== AREA DA RESERVA ==============================================*/
 
 #area_img_areaReserva{
-	width: 650px; height: auto;
+	width: 1100px; height: auto;
 	border: 0px solid;
 	float: left;
+	margin-top: 90px;
 }
 
 #area_img_areaReserva p{
@@ -2449,32 +2484,36 @@ margin-top: 90px;
 }
 
 #cancelamento_reserva_areaReserva{
-	width: 500px; height: auto;
+	width: 1250px; height: auto;
 	margin-left: 115px;
-	margin-top: -100px;
+	margin-top: 0px;
 	border: 0px solid;
 }
 
 #cancelamento_reserva_areaReserva p{
-	font-size: 16px; font-family: Calibri; color: #5270ff;
+	font-size: 60px; font-family: Calibri; color: #5270ff;
 	font-weight: bold;
 }
 
 #entrada_saida_areaReserva{
-	width: 350px; height: auto;
+	width: 1000px; height: auto;
 	margin-left: 135px;
-	border: 0px solid;
+	margin-top: 40px;
+		border: 0px solid;
 }
 
 #entrada_saida_areaReserva p{
 	margin-left: 00px;
+	font-size:58px;
+	margin-top: 30px;
 }
 
 .insert_data{
-	width: 250px; height: 50px;
-	font-size: 20px;
+	width: 700px; height: 70px;
+	font-size: 45px;
 	border-radius: 0px;
 	border: 2px solid #b3b3b3;
+	margin-top: 15px;
 }
 
 .insert_data:focus{
@@ -2528,10 +2567,10 @@ margin-top: 90px;
 }
 
 #area_txt_areaReserva{
-	width: 415px; min-height: 960px;
+	width: 915px; min-height: 960px;
 	height: auto;
 	float: left;
-	margin-top: 10px;
+	margin-top: 80px;
 	margin-left: 50px;
 	border: 0px solid;
 	/*
@@ -2542,8 +2581,8 @@ margin-top: 90px;
 }
 
 #area_txt_areaReserva p{
-	font-size: 25px; font-family: Calibri;
-	margin-top: 18px;
+	font-size: 50px; font-family: Calibri;
+	margin-top: 28px;
 	margin-left: 20px;
 	border: 0px solid;
 }
@@ -2563,14 +2602,22 @@ margin-top: 90px;
 	margin-left: 15px;
 }
 */
-
+#espaco_pg_reserva_rua_preco{
+		font-size:90px;
+		width: 750px;
+		height:200px;
+		margin-left: 75px;
+		margin-top: 55px;
+		border:0px solid black;
+}
 #nome_hotel_areaReserva{
 	width: auto; height: auto;
 	border:0px solid;
+	margin-left: 100px;
 }
 
 #nome_hotel_areaReserva p{
-	font-size: 60px; font-family: Calibri; font-weight: bold;
+	font-size: 80px; font-family: Calibri; font-weight: bold;
 }
 
 #sub_texto_areaReserva{
@@ -2580,7 +2627,8 @@ margin-top: 90px;
 }
 
 #sub_texto_areaReserva p{
-	font-size: 35px; font-family: Calibri;
+	font-size: 65px; font-family: Calibri;
+	margin-left: 100px;
 }
 
 
@@ -2653,7 +2701,7 @@ margin-top: 90px;
 	margin: 0;
 	padding: 0;
 	vertical-align: baseline;
-	list-style: none
+	list-style: none;
 }
 .camera_wrap {
 	direction: ltr;
@@ -2664,19 +2712,23 @@ margin-top: 90px;
 	margin-left: 60px;
 	margin-top: 70px;
 	border: 0px solid;
+
 }
 .camera_wrap img {
-	width: 80px; height: 80px;
+	width: 100px; height: 100px;
 }
 .camera_fakehover {
-	height: 100%;
+	height: 500px;
 	min-height: 60px;
 	position: relative;
 	width: 100%;
 	z-index: 1;
 }
+
 .camera_wrap {
-	width: 100%;
+	width: 1200px;
+	float:left;
+	margin-left: -200px;
 }
 .camera_src {
 	display: none;
@@ -3807,7 +3859,7 @@ footer{
 	color: #000;
 	opacity: 0.6;
 	font-family: Calibri;
-	font-size: 100px;
+	font-size: 80px;
 	text-align: center;
 	margin-bottom:5px;
 }
@@ -4038,7 +4090,7 @@ body {
 }
 
 #hgroup_modal {
-	width: 380px;
+	width: 900px;
 	height: auto;
 	text-align:center;
 	margin-top: 4em;
@@ -4279,8 +4331,8 @@ body {
 
 .window{
     display:none;
-    width:500px;
-    height:600px;
+    width:1500px;
+    height:1500px;
     position:absolute;
     left:0;
     top:0;
@@ -4298,6 +4350,8 @@ body {
     top:0;
     z-index:9000;
     background-color:#000;
+
+		width:1500px;
 }
 
 #mascara_usuario{
@@ -4907,13 +4961,13 @@ input[type='file'] {
 
 }
 .input_cadastro_parceiroo{
-  width: 700px;
-  height: 50px;
+  width: 1200px;
+  height: 140px;
   float: left;
-  margin-left: 50px;
+  margin-left: 5px;
   font-family: Calibri;
-  font-size: 25px;
-  margin-top:10px;
+  font-size: 60px;
+  margin-top:25px;
   margin-bottom:40px;
   border: 2px solid #b3b3b3;
 }
@@ -4922,12 +4976,12 @@ input[type='file'] {
 	border: 2px solid #e3e3e3;
 }
 .input_cadastro_parceiroo2{
-  width: 300px;
-  height: 50px;
+  width: 800px;
+  height: 140px;
   float: left;
-  margin-left: 20px;
+  margin-left: 5px;
   font-family: Calibri;
-  font-size: 25px;
+  font-size: 60px;
   margin-top:10px;
   margin-bottom:40px;
   border: 2px solid #b3b3b3;
@@ -4938,12 +4992,12 @@ input[type='file'] {
 	border: 2px solid #e3e3e3;
 }
 .input_cadastro_parceiroo3{
-  width: 100px;
-  height: 40px;
+  width: 200px;
+  height: 80px;
   float: right;
   margin-left: 10px;
   font-family: Calibri;
-  font-size: 25px;
+  font-size: 60px;
   margin-top:0px;
   margin-bottom:40px;
     border: 2px solid #b3b3b3;
@@ -4954,13 +5008,31 @@ input[type='file'] {
 	border: 2px solid #e3e3e3;
 }
 #espaco_parceiroo_perguntas{
-	width:1100px;
+	width:1500px;
 	height:500px;
-	border:0px solid black;
+	border:1px solid black;
 	clear:both;
-	margin:auto;
 }
+#pergunta_quarto{
+		font-size:80px;
+		margin-top: 25px;
+		float:left;
+		border:0 px solid black;
+		width:1000px;
+		height:150px;
 
+}
+#pergunta_quarto2{
+		font-size:80px;
+		margin-top: 400px;
+		float:left;
+		border:0 px solid black;
+		width:1000px;
+		height:150px;
+		font-family:Calibri;
+		margin-bottom: -190px;
+
+}
 #resp_parceiro2:hover{
 	background-color: #e5e5e5;
 
@@ -4969,7 +5041,8 @@ input[type='file'] {
 #espaco_parceiroo_perguntas p{
 	float:left;
 	opacity: 0.8;
-	margin-left:18px;
+	margin-left: -900px;
+	font-size:60px;
 }
 #resp_parceiro2{
 	width:950px;
@@ -5047,10 +5120,9 @@ input[type='file'] {
 }
 .img_parceiro_cadastro2{
 	border:0px solid black;
-	width:240px;
-	height:200px;
-	margin-top: 50px;
-	margin-left: 50px;
+	width:550px;
+	height:550px;
+	float: right;
 	border-radius: 2px;
 	display:block;
 }
@@ -5070,7 +5142,7 @@ input[type='file'] {
 	border:1px solid #a1a1a1;
 	width:240px;
 	height: 400px;
-	margin-top:20px;
+	margin-top:150px;
 	margin-left:0px;
 	opacity:0.4;
 	border-radius: 2px;

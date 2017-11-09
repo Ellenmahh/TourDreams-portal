@@ -75,6 +75,24 @@
 
 	}
 
+
+  public function verifica_cupom(){
+
+    $id_usuario = $_GET['id_usuario'];
+    $id_quarto = $_GET['id_quarto'];
+    $cupom = $_POST['cupom'];
+
+
+    $cupom_controller = new reservas();
+    $cupom_controller->id_usuario = $id_usuario;
+    $cupom_controller->id_quarto = $id_quarto;
+    $cupom_controller->cupom = $cupom;
+    $cupom_controller->Cupom($cupom_controller);
+
+
+
+  }
+
 }
 
  ?>

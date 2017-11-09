@@ -1,4 +1,12 @@
 <?php
+$str = "A2R675UIY0PAQ8BLZ7";
+$codigo = str_shuffle($str);
+
+
+
+
+
+
   session_start();
   $id_usuario = $_SESSION['id_usuario'];
 ?>
@@ -88,8 +96,14 @@
 
       </div>
 
+      <div id="ex2" class="modal">
+        <p>Cupom resgatado, este é seu cupom: <b><?php echo($_GET['cupom_resgatado']); ?></b>, utilize em reservas para obter descontos :D</p>
+
+      </div>
+
       <!-- Link to open the modal -->
       <p><a href="#ex1" rel="modal:open" id="open_modal">Open Modal</a></p>
+      <p><a href="#ex2" rel="modal:open" id="open_modal2">Open Modal</a></p>
         <?php include('menu.php'); ?>
     </header>
 
@@ -150,6 +164,24 @@
 
                  ?>
                 <p><?php echo($rs['valor_total']); ?></p>
+
+                <?php
+                if($rs['valor_total'] > 0){
+
+                 ?>
+                 <form class="" action="router.php?controller=reserva_usuario&modo=pegar_cupom&id_usuario=<?php echo($id_usuario); ?>&cupom=<?php echo($codigo); ?>" method="post">
+                  <input type="submit" name="" value="pegar meu cupom">
+                </form>
+                <?php
+              }else{
+
+                 ?>
+                   <input type="submit" name="" value="pegar meu cupom" style="display:none;">
+              <?php
+
+               }
+               ?>
+
 
                 <?php
                 }
@@ -349,6 +381,33 @@
 
 
   $('#open_modal').click();
+
+
+
+
+
+  </script>
+
+  <?php
+  }
+  ?>
+
+
+  <?php
+
+
+
+  if(isset($_GET['cupom'])){
+
+  $cupom_resgatado = $_GET['cupom_resgatado'];
+
+  ?>
+  <script type="text/javascript">
+
+
+
+
+  $('#open_modal2').click();
 
 
 

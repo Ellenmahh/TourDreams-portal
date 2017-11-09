@@ -39,6 +39,14 @@ switch($controller){
                   # code...
                   break;
 
+                  case 'verifica_cupom':
+
+                  $controller_reservas = new controllerReservas();
+
+                  $controller_reservas->verifica_cupom();
+                    # code...
+                    break;
+
 
               }
 
@@ -69,6 +77,14 @@ switch($controller){
                     $controller_reservas->comentario();
                       # code...
                       break;
+
+                      case 'pegar_cupom':
+
+                      $controller_reservas = new controllerReservaUsuario();
+
+                      $controller_reservas->cupom();
+                        # code...
+                        break;
 
 
                   }

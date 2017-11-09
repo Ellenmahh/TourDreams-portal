@@ -54,7 +54,9 @@
 		</div>
 
 <!-- mascara para cobrir o site -->
-<div id="mascara"></div>
+<div id="mascara">
+
+</div>
     <header>
         <?php include('menu.php'); ?>
     </header>
@@ -129,7 +131,7 @@
              ?>
 
             <div id="produto_div_hotel_perfilParceiro">
-              <img id="img_hotel_perfilParceiro" src="<?php echo($rs['imagem_hotel_1']); ?>" alt="">
+              <img id="img_hotel_perfilParceiro" src="<?php echo($rs['imagem_hotel_1']); ?>" alt="" width="100%" height="100%">
               <div id="legenda_hotel_perfilParceiro">
                 <div id="area_titulo_hotel_perfilParceiro">
                   <p>HOTEL <?php echo($rs['nome_hotel']); ?></p>
@@ -141,7 +143,7 @@
                   <p>N <?php echo($rs['numero_hotel']); ?></p>
 
                   <a href="router.php?controller=hotel&modo=BuscarInfoHotel&id_hotel=<?php echo($id_hotel); ?>">
-                    <input type="submit" id="btn_produto_editarHotel" name="btn_hotel_editar" value="editar">
+                    <input type="submit" id="btn_produto_editarHotel" name="btn_hotel_editar" value="Editar">
                   </a>
                 </div>
               </div>

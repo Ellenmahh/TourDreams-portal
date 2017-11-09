@@ -115,6 +115,15 @@
 
         }
 
+        public function InsertCupom($cupom){
+
+          $sql = "insert into tbl_cupons(descricao_cupons, situacao_cupons, id_usuario)values('$cupom->cupom', 0, $cupom->id_usuario);";
+          //echo($sql);
+          mysql_query($sql);
+          header('location:perfilUsuario.php?cupom&cupom_resgatado='.$cupom->cupom.'&id_usuario='.$cupom->id_usuario);
+
+        }
+
 
 
 

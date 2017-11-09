@@ -50,6 +50,24 @@
 		}
 	}
 
+	public function Cupom($cupom){
+
+			$sql_verificar_cupom = mysql_query("select * from tbl_cupons where id_usuario = $cupom->id_usuario and descricao_cupons = '$cupom->cupom' ");
+			//echo($sql_verificar_cupom);
+			//mysql_query($sql_verificar_cupom);
+			if(mysql_num_rows($sql_verificar_cupom) != 0){
+						header('location:areaReserva.php?cupom_ok&id_quarto='.$cupom->id_quarto.'&id_usuario='.$cupom->id_usuario);
+
+
+			}else{
+
+					header('location:areaReserva.php?cupom_erro&id_quarto='.$cupom->id_quarto.'&id_usuario='.$cupom->id_usuario);
+
+
+			}
+
+
+	}
 
 
 }

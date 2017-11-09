@@ -69,6 +69,22 @@ if (isset($_POST['btn_produto'])) {
 
       <!-- Link to open the modal -->
       <p><a href="#ex3" rel="modal:open" id="open_modal3">Open Modal</a></p>
+
+      <div id="ex4" class="modal">
+        <p>Cupom válido</p>
+
+      </div>
+
+      <!-- Link to open the modal -->
+      <p><a href="#ex4" rel="modal:open" id="open_modal4">Open Modal</a></p>
+
+      <div id="ex5" class="modal">
+        <p>Cupom inválido</p>
+
+      </div>
+
+      <!-- Link to open the modal -->
+      <p><a href="#ex5" rel="modal:open" id="open_modal5">Open Modal</a></p>
         <?php include('menu.php'); ?>
     </header>
     <section>
@@ -103,7 +119,7 @@ if (isset($_POST['btn_produto'])) {
                   $select = mysql_query($sql);
                   while($rs=mysql_fetch_array($select)){
 
-
+                 $rsReserva[$cont]->preco_quarto;
 
 
 
@@ -138,8 +154,10 @@ if (isset($_POST['btn_produto'])) {
               <div id="nome_hotel_areaReserva">
                 <p><?php echo($rsReserva[$cont]->nome_quarto);?></p>
               </div>
-              <p><?php echo($rsReserva[$cont]->rua_quarto);?> - <?php echo($rsReserva[$cont]->cidade_quarto);?> - <?php echo($rsReserva[$cont]->uf_quarto);?></p>
-              <p>R$<?php echo($rsReserva[$cont]->preco_quarto);?></p>
+              <div id="espaco_pg_reserva_rua_preco">
+                <p><?php echo($rsReserva[$cont]->rua_quarto);?> - <?php echo($rsReserva[$cont]->cidade_quarto);?> - <?php echo($rsReserva[$cont]->uf_quarto);?></p>
+                <p>R$<?php echo($rsReserva[$cont]->preco_quarto;);?></p>
+              </div>
             </div>
             <div class="caixa_areaReserva">
               <div id="sub_texto_areaReserva">
@@ -171,6 +189,12 @@ if (isset($_POST['btn_produto'])) {
 
             <input id="btn_finalizarReserva" type="submit" name="btn_produto" value="FINALIZAR RESERVA" class="btn_produto_areaReserva">
             </form>
+            <form class="" action="router.php?controller=reservas&modo=verifica_cupom&id_usuario=<?php echo($id_usuario); ?>&id_quarto=<?php echo($id_quarto); ?>" method="post">
+              <input type="text" name="cupom" value="" placeholder="insira cupom">
+              <input type="submit" name="" value="OK">
+            </form>
+
+
             <?php
               $cont+=1;
 
@@ -266,6 +290,61 @@ if (isset($_POST['btn_produto'])) {
 
 
     $('#open_modal3').click();
+
+
+
+
+
+    </script>
+
+    <?php
+    }
+    ?>
+
+
+    <?php
+
+
+
+    if(isset($_GET['cupom_ok'])){
+
+
+
+
+    ?>
+    <script type="text/javascript">
+
+
+
+
+    $('#open_modal4').click();
+
+
+
+
+
+    </script>
+
+    <?php
+    }
+    ?>
+
+    <?php
+
+
+
+    if(isset($_GET['cupom_erro'])){
+
+
+
+
+    ?>
+    <script type="text/javascript">
+
+
+
+
+    $('#open_modal5').click();
 
 
 
