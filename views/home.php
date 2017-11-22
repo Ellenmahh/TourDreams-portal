@@ -78,6 +78,7 @@ if(isset($_SESSION['id_usuario']))
 </script>
 
 
+
   </head>
   <body>
     <div class="window" id="janela1">
@@ -143,7 +144,7 @@ if(isset($_SESSION['id_usuario']))
               <form class="" action="router.php?controller=home&modo=<?php echo($modo); ?>" method="post">
 
 
-              <input type="text" id="input_busca" name="busca" value="" placeholder=" Locais, Cidades, Hotéis" >
+              <input type="text" id="input_busca" name="busca" value="" placeholder="Locais, Cidades" >
               <button id="btn_buscar" type="submit">
                 <img src="imagens/img_btn2.png" alt="dasd">
               </button>

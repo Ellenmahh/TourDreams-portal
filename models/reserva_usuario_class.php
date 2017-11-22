@@ -1,9 +1,5 @@
 <?php
 
-
-
-
-
     class reserva_usuario{
 
         public $id_promocao;
@@ -56,11 +52,24 @@
 
               $cont+=1;
 
+
+
            }
 
-           return $listReserva;
+           if(@$listReserva == null){
+             ?>
+              <script type="text/javascript">
+                $("#espaco_status").css("display","none");
+
+              </script>
+             <?php
+           }
+           return @$listReserva;
+
 
         }
+
+
 
 
         //metodo para selecionar tudo do banco
@@ -89,8 +98,19 @@
               $cont2+=1;
 
            }
+           if(@$listLugares == null){
 
-           return $listLugares;
+             ?>
+              <script type="text/javascript">
+                $("#reserva_null_usuario").css("display","block");
+                $("#txt_perfilUsuario").css("display","none");
+
+              </script>
+             <?php
+
+
+           }
+           return @$listLugares;
 
         }
 

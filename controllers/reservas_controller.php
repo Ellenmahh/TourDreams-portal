@@ -21,7 +21,7 @@
 
           $data_entrada=$_POST['txt_entrada'];
           $data_saida=$_POST['txt_saida'];
-          if(strtotime($data_saida) <= strtotime($data_entrada)){
+          if(strtotime($data_saida) < strtotime($data_entrada)){
 
             header('location:areaReserva.php?data_menor&id_quarto='.$_GET['id_quarto'].'&id_usuario='.$id_usuario);
 

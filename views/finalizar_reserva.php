@@ -78,10 +78,28 @@ end: function(){}}); // callback
 
           <div id="my-slider" class="slider">
             <a class="left arrow"></a><a class="right arrow"></a>
+            <?php
+
+            $sql = "select distinct h.nome_hotel, h.id_hotel, h.imagem_hotel_1, c.nome_categoria from tbl_quarto as q inner join tbl_hotel as h on h.id_hotel = q.id_hotel inner join tbl_categoria as c on c.id_categoria = h.id_categora where q.id_quarto = $id_quarto";
+
+            $select = mysql_query($sql);
+
+
+
+            while($rs=mysql_fetch_array($select)){
+              echo($select);
+
+             ?>
+            <div class="slide active"> <img src="<?php echo($rs['imagem_hotel_1']); ?>"> </div>
             <div class="slide active"> <img src="imagens/slides_areaReserva/hotel1.jpg"> </div>
-            <div class="slide"> <img src="imagens/slides_areaReserva/hotel2.jpg"> </div>
-            <div class="slide"> <img src="imagens/slides_areaReserva/hotel3.jpg"> </div>
-            </div>
+
+            <?php
+           }
+
+
+             ?>
+
+          </div>
 
 
         </div>

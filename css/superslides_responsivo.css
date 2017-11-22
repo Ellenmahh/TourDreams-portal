@@ -1,10 +1,19 @@
 #slides {
   position: relative;
 }
-#slides .slides-container {
-  display: none;
+#slides img{
+  width:100%;
+  height:100%;
 }
-
+#slides .slides-container {
+	float:left;
+}
+#slides .slides-container img{
+	margin: auto;
+	width:100%;
+	height:100%;
+  float:left;
+}
 #slides .scrollable {
   *zoom: 1;
   position: relative;
@@ -13,6 +22,7 @@
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   height: 100%;
+  width: 100%;
 }
 #slides .scrollable:after {
   content: "";

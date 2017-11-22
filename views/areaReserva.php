@@ -102,13 +102,14 @@ if (isset($_POST['btn_produto'])) {
                 $cont=0;
                 while ($cont<count($rsReserva)) {
                   $id_quarto = $rsReserva[$cont]->id_quarto;
-                  $id_preco_quarto = $rsReserva[$cont]->preco_quarto;
+                  $preco_quarto = $rsReserva[$cont]->preco_quarto;
+
 
 
 
 
                ?>
-          <form class="" action="router.php?controller=reservas&modo=nova_reserva&id_quarto=<?php echo($_GET['id_quarto']); ?>&id_usuario=<?php echo($id_usuario); ?>&preco_quarto=<?php echo($id_preco_quarto); ?>" method="post">
+          <form class="" action="router.php?controller=reservas&modo=nova_reserva&id_quarto=<?php echo($_GET['id_quarto']); ?>&id_usuario=<?php echo($id_usuario); ?>&preco_quarto=<?php echo($preco_quarto); ?>" method="post">
           <div id="area_img_areaReserva">
 
             <div class="fluid_container">
@@ -118,10 +119,6 @@ if (isset($_POST['btn_produto'])) {
                   $sql = "select * from tbl_imagens_quarto where id_quarto = $id_quarto";
                   $select = mysql_query($sql);
                   while($rs=mysql_fetch_array($select)){
-
-                 $rsReserva[$cont]->preco_quarto;
-
-
 
 
                 ?>
@@ -155,26 +152,37 @@ if (isset($_POST['btn_produto'])) {
                 <p><?php echo($rsReserva[$cont]->nome_quarto);?></p>
               </div>
               <div id="espaco_pg_reserva_rua_preco">
-                <p><?php echo($rsReserva[$cont]->rua_quarto);?> - <?php echo($rsReserva[$cont]->cidade_quarto);?> - <?php echo($rsReserva[$cont]->uf_quarto);?></p>
-                <p>R$<?php echo($rsReserva[$cont]->preco_quarto;);?></p>
+                <p><?php echo($rsReserva[$cont]->nome_quarto);?> - <?php echo($rsReserva[$cont]->cidade_quarto);?> - <?php echo($rsReserva[$cont]->uf_quarto);?></p>
+                <?php if(isset($_GET['cupom_ok'])){
+
+                  $desconto = ($rsReserva[$cont]->preco_quarto / 100)*30;
+                  $preco_quarto =  $rsReserva[$cont]->preco_quarto - $desconto;
+                   ?>
+
+                <p>R$<?php echo($preco_quarto);?> <b id="b_desconto">  -30% de desconto</b></p>
+              <?php }else{ ?>
+                <p>R$<?php echo($rsReserva[$cont]->preco_quarto);?></p>
+              <?php } ?>
               </div>
             </div>
             <div class="caixa_areaReserva">
               <div id="sub_texto_areaReserva">
                 <p>Sua reserva inclui:</p>
               </div>
-              <?php
-              $sql = "select c.descricao_carac_quarto from caracteristicas_quarto as c inner join caracteristicas_quarto_hotel as ch on ch.id_carac_quarto = c.id_carac_quarto inner join tbl_quarto as q on q.id_quarto = ch.id_quarto where q.id_quarto = $id_quarto;";
-              $select = mysql_query($sql);
+              <div class="espaco_inclui_reserva">
+                <?php
+                $sql = "select c.descricao_carac_quarto from caracteristicas_quarto as c inner join caracteristicas_quarto_hotel as ch on ch.id_carac_quarto = c.id_carac_quarto inner join tbl_quarto as q on q.id_quarto = ch.id_quarto where q.id_quarto = $id_quarto;";
+                $select = mysql_query($sql);
 
-              while ($rs=mysql_fetch_array($select)) {
+                while ($rs=mysql_fetch_array($select)) {
+
+                 ?>
+                <p> - <?php echo($rs['descricao_carac_quarto']); ?></p>
+              <?php
+                }
 
                ?>
-              <p> - <?php echo($rs['descricao_carac_quarto']); ?></p>
-            <?php
-              }
-
-             ?>
+             </div>
             </div>
             <!--<input type="submit" name="finaliza" value="finaliza">-->
 
@@ -189,9 +197,9 @@ if (isset($_POST['btn_produto'])) {
 
             <input id="btn_finalizarReserva" type="submit" name="btn_produto" value="FINALIZAR RESERVA" class="btn_produto_areaReserva">
             </form>
-            <form class="" action="router.php?controller=reservas&modo=verifica_cupom&id_usuario=<?php echo($id_usuario); ?>&id_quarto=<?php echo($id_quarto); ?>" method="post">
-              <input type="text" name="cupom" value="" placeholder="insira cupom">
-              <input type="submit" name="" value="OK">
+            <form class="espaco_cupom" action="router.php?controller=reservas&modo=verifica_cupom&id_usuario=<?php echo($id_usuario); ?>&id_quarto=<?php echo($id_quarto); ?>" method="post">
+              <input type="text" name="cupom" value="" placeholder="insira cupom"  class="input_cupom">
+              <input type="submit" name="" value="OK" class="input_cupom_ok">
             </form>
 
 

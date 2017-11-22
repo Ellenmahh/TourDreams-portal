@@ -3,7 +3,10 @@
   <head>
   <?php include('head.php'); ?>
 
-<link href="css/carousel.css" rel="stylesheet" type="text/css" />
+<link href="css/carousel.css" rel="stylesheet" type="text/css" media="screen and (min-width:1200px)"/>
+
+<link href="css/carousel_responsivo.css" rel="stylesheet" type="text/css" media="screen and (max-device-width:700px)"/>
+
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="js/jquery.flexisel.js"></script>
 <script type="text/javascript" src="js/carousel.js"></script>
@@ -40,12 +43,16 @@
                   <div class="produtos_div_melhoresDestinos">
        						  <img src="<?php echo($rsPraia[$cont]->imagem_hotel);?>" alt="" class="imagem_melhoresdestinos">
        							<div class="caracteristicas">
-       								<img  style="width:35px; float:left;" src="imagens/localizacao.png" alt="">
-                      	<p style="float:left;margin-top:50px;font-size:20px;"><?php echo($rsPraia[$cont]->cidade_hotel);?></p>
-                        <img style="margin-right:250px;margin-top:10px;" src="imagens/wifi.png" alt="">
-                        	<p style="margin-top:20px;margin-left:20px;width:100px;">Wi-fi grátis</p>
-                          <p style="margin-top:40px;font-size:10px;margin-right:250px;width:100px;">Diárias a partir de</p>
-                          <p style="margin-top:30px;margin-right:250px;float:left;">R$</p>
+       								<img src="imagens/localizacao.png" alt="">
+                      	<p  class="cidade_destinos"><?php echo($rsPraia[$cont]->cidade_hotel);?></p>
+                    <div class="espaco_wifi">
+      								<img src="imagens/wifi.png" alt="" class="wifi_melhores_img">
+      								<div class="carac_espaco">Wi-fi grátis</div>
+
+							      </div>
+
+                          <p  class="diaria_melhores">Diárias a partir de</p>
+                          <p class="rs_espaco_preco">R$</p>
                           <?php
                       								$sql = "select * from tbl_quarto where id_hotel = $id_hotel  order by preco_quarto asc limit 1;";
                       								$select = mysql_query($sql);
@@ -58,7 +65,7 @@
 
 
                       		?>
-                          <p style="margin-right:230px;float:right;font-size:30px;"><?php echo($rs['preco_quarto']);  ?></p>
+                          <p class="preco_melhores_destinos"><?php echo($rs['preco_quarto']);  ?></p>
                           <?php
 
                         }
@@ -66,10 +73,10 @@
                            ?>
 
                           <a href="verQuartos.php?id_hotel=<?php echo($id_hotel);?>">
-                            <input type="submit" name="btn_produto" value="reservar" class="btn_produto">
+                             <input type="submit" name="btn_produto" value="reservar" class="btn_produto_melhores_destinos">
                           </a>
        							</div>
- 						       </div>
+ 				</div>
             </li>
             <?php
               $cont+=1;
@@ -108,12 +115,15 @@
                           <div class="produtos_div_melhoresDestinos">
                             <img src="<?php echo($rsInverno[$cont2]->imagem_hotel);?>" alt="" class="imagem_melhoresdestinos">
                             <div class="caracteristicas">
-                              <img  style="width:35px; float:left;" src="imagens/localizacao.png" alt="">
-                                <p style="float:left;margin-top:50px;font-size:20px;"><?php echo($rsInverno[$cont2]->cidade_hotel);?></p>
-                                <img style="margin-right:250px;margin-top:10px;" src="imagens/wifi.png" alt="">
-                                  <p style="margin-top:20px;margin-left:20px;width:100px;">Wi-fi grátis</p>
-                                  <p style="margin-top:40px;font-size:10px;margin-right:250px;width:100px;">Diárias a partir de</p>
-                                  <p style="margin-top:30px;margin-right:250px;float:left;">R$</p>
+                              <img src="imagens/localizacao.png" alt="">
+                            	<p  class="cidade_destinos"><?php echo($rsInverno[$cont2]->cidade_hotel);?></p>
+								<div class="espaco_wifi">
+									<img src="imagens/wifi.png" alt="" class="wifi_melhores_img">
+									<div class="carac_espaco">Wi-fi grátis</div>
+
+								</div>
+                                  <p class="diaria_melhores">Diárias a partir de</p>
+                                  <p class="rs_espaco_preco">R$</p>
                                   <?php
                               								$sql = "select * from tbl_quarto where id_hotel = $id_hotel_2  order by preco_quarto asc limit 1;";
                               								$select = mysql_query($sql);
@@ -127,13 +137,13 @@
 
 
                               		?>
-                                  <p style="margin-right:230px;float:right;font-size:30px;"><?php echo($rs['preco_quarto']);  ?></p>
+                                  <p class="preco_melhores_destinos"><?php echo($rs['preco_quarto']);  ?></p>
                                   <?php
                                   }
 
                                    ?>
                                   <a href="areaReserva.php">
-                                    <input type="submit" name="btn_produto" value="reservar" class="btn_produto">
+                                    <input type="submit" name="btn_produto" value="reservar" class="btn_produto_melhores_destinos">
                                   </a>
                             </div>
                            </div>
@@ -175,12 +185,15 @@
                           <div class="produtos_div_melhoresDestinos">
                             <img src="<?php echo($rsCampo[$cont3]->imagem_hotel);?>" alt="" class="imagem_melhoresdestinos">
                             <div class="caracteristicas">
-                              <img  style="width:35px; float:left;" src="imagens/localizacao.png" alt="">
-                                <p style="float:left;margin-top:50px;font-size:20px;"><?php echo($rsCampo[$cont3]->cidade_hotel);?></p>
-                                <img style="margin-right:250px;margin-top:10px;" src="imagens/wifi.png" alt="">
-                                  <p style="margin-top:20px;margin-left:20px;width:100px;">Wi-fi grátis</p>
-                                  <p style="margin-top:40px;font-size:10px;margin-right:250px;width:100px;">Diárias a partir de</p>
-                                  <p style="margin-top:30px;margin-right:250px;float:left;">R$</p>
+                              <img src="imagens/localizacao.png" alt="">
+								              <p  class="cidade_destinos"><?php echo($rsCampo[$cont3]->cidade_hotel);?></p>
+									<div class="espaco_wifi">
+										<img src="imagens/wifi.png" alt="" class="wifi_melhores_img">
+									<div class="carac_espaco">Wi-fi grátis</div>
+
+								</div>
+                                  <p class="diaria_melhores">Diárias a partir de</p>
+                                  <p class="rs_espaco_preco">R$</p>
                                   <?php
                                               $sql = "select * from tbl_quarto where id_hotel = $id_hotel_3  order by preco_quarto asc limit 1;";
                                               $select = mysql_query($sql);
@@ -193,12 +206,12 @@
 
 
                                   ?>
-                                  <p style="margin-right:230px;float:right;font-size:30px;"> <?php echo($rs['preco_quarto']);  ?></p>
+                                  <p class="preco_melhores_destinos"> <?php echo($rs['preco_quarto']);  ?></p>
                                   <?php
                                 }
                                    ?>
                                   <a href="areaReserva.php">
-                                    <input type="submit" name="btn_produto" value="reservar" class="btn_produto">
+                                    <input type="submit" name="btn_produto" value="reservar" class="btn_produto_melhores_destinos">
                                   </a>
                             </div>
                            </div>
@@ -239,12 +252,15 @@
                           <div class="produtos_div_melhoresDestinos">
                             <img src="<?php echo($rsFazenda[$cont4]->imagem_hotel);?>" alt="" class="imagem_melhoresdestinos">
                             <div class="caracteristicas">
-                              <img  style="width:35px; float:left;" src="imagens/localizacao.png" alt="">
-                                <p style="float:left;margin-top:50px;font-size:20px;"><?php echo($rsFazenda[$cont4]->cidade_hotel);?></p>
-                                <img style="margin-right:250px;margin-top:10px;" src="imagens/wifi.png" alt="">
-                                  <p style="margin-top:20px;margin-left:20px;width:100px;">Wi-fi grátis</p>
-                                  <p style="margin-top:40px;font-size:10px;margin-right:250px;width:100px;">Diárias a partir de</p>
-                                  <p style="margin-top:30px;margin-right:250px;float:left;">R$</p>
+                              <img src="imagens/localizacao.png" alt="">
+								              <p  class="cidade_destinos"><?php echo($rsFazenda[$cont4]->cidade_hotel);?></p>
+								<div class="espaco_wifi">
+									<img src="imagens/wifi.png" alt="" class="wifi_melhores_img">
+									<div class="carac_espaco">Wi-fi grátis</div>
+
+								</div>
+                                  <p class="diaria_melhores">Diárias a partir de</p>
+                                  <p class="rs_espaco_preco">R$</p>
                                   <?php
                                               $sql = "select * from tbl_quarto where id_hotel = $id_hotel_4  order by preco_quarto asc limit 1;";
                                               $select = mysql_query($sql);
@@ -257,12 +273,12 @@
 
 
                                   ?>
-                                  <p style="margin-right:230px;float:right;font-size:30px;"><?php echo($rs['preco_quarto']); ?></p>
+                                  <p class="preco_melhores_destinos"><?php echo($rs['preco_quarto']); ?></p>
                                   <?php
                                   }
                                    ?>
                                   <a href="areaReserva.php">
-                                    <input type="submit" name="btn_produto" value="reservar" class="btn_produto">
+                                    <input type="submit" name="btn_produto" value="reservar" class="btn_produto_melhores_destinos">
                                   </a>
                             </div>
                            </div>

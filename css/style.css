@@ -8,7 +8,7 @@ border:0px solid black;
 }
 
 #espaco_pg_reserva_rua_preco{
-	display:none;
+	display:block;
 }
 
 
@@ -5302,5 +5302,11 @@ border: 0;
 .input_enviar_comentario img{
 width: 30px;
 height: 30px;
+
+}
+
+#b_desconto{
+color:#3CB371; 
+
 
 }

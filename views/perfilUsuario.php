@@ -34,9 +34,9 @@ $codigo = str_shuffle($str);
 			</hgroup>
 			<form id="form_modal">
 			  <div class="group">
-				   <p>O Milhas Travel Fidelidade conhecida como MTF, é uma
+				   <p>  O Milhas Travel Fidelidade conhecida como MTF, é uma
            maneira que a TourDreams encontrou de presentear nossos
-         clientes por tais ações realizadas no portal, ou até mesmo, no aplicativo.</p>
+         clientes por tais ações realizadas no portal, ou até mesmo, no aplicativo.  </p>
 			  </div>
 			</form>
 		</div>
@@ -131,11 +131,12 @@ $codigo = str_shuffle($str);
               <p><?php echo($rs['cpf_usuario']); ?></p>
               <div id="area_opcoes_perfilUsuario">
 
-                <a href="#editar_perfilUsuario" id="a_index_duvida" rel="modal_editar">
-                  <p>Editar informações</p>
+                  <a href="#editar_perfilUsuario" id="a_index_duvida" rel="modal_editar">
+                    <p>Editar informações</p>
 
-                  <img src="imagens/editar.png" alt="">
-                </a>
+                    <img src="imagens/editar.png" alt="">
+                  </a>
+
               </div>
 
             </div>
@@ -170,7 +171,7 @@ $codigo = str_shuffle($str);
 
                  ?>
                  <form class="" action="router.php?controller=reserva_usuario&modo=pegar_cupom&id_usuario=<?php echo($id_usuario); ?>&cupom=<?php echo($codigo); ?>" method="post">
-                  <input type="submit" name="" value="pegar meu cupom">
+                  <input id="pontuacao_mtf_perfilUsuario_input" type="submit" name="" value=" Pegar meu cupom ">
                 </form>
                 <?php
               }else{
@@ -228,8 +229,6 @@ $codigo = str_shuffle($str);
               $cont=0;
               while ($cont<count($rsReserva)) {
 
-
-
         ?>
 				<tr class="conteudo_status">
 					<td>
@@ -243,7 +242,7 @@ $codigo = str_shuffle($str);
 
                $dtEntrega=date("Y-m-d",strtotime($rsReserva[$cont]->data_entrada));
                      $today = date("Y-m-d");
-                     if($today >= $dtEntrega){
+                     if($today > $dtEntrega){
 
                       $sql = "update tbl_reserva set status_reserva = 'viajando' where id_reserva=".$rsReserva[$cont]->id_reserva;
                       mysql_query($sql);
@@ -281,6 +280,10 @@ $codigo = str_shuffle($str);
         ?>
 			</table>
 		  </div>
+      <div id="reserva_null_usuario">
+        <p>Você não possui nenhuma reserva em nosso site, Bora lá? <a href="home.php">Reservar</a></p>
+
+      </div>
           <div id="txt_perfilUsuario">
             <p>LUGARES POR ONDE VOCÊ PASSOU</p>
           </div>
@@ -354,11 +357,7 @@ $codigo = str_shuffle($str);
               $cont2+=1;
 
               }
-
-
             ?>
-
-
 
           </div>
       </section>

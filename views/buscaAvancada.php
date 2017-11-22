@@ -49,7 +49,7 @@ $modo = 'busca_avancada';
               ?>
               <!--<p class="titulo_filtro" >ESTRELAS</p>-->
               <label class="control control--checkbox"><?php echo($rsCategoria[$cont2]->nome_categoria);?>
-                <input type="checkbox" value="<?php echo($rsCategoria[$cont2]->id_categoria);?>" name="categoria[]" />
+                <input  type="checkbox" value="   <?php echo($rsCategoria[$cont2]->id_categoria);?>" name="categoria[]" />
                 <div class="control__indicator"></div>
               </label>
               <?php

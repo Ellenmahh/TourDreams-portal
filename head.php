@@ -5,9 +5,11 @@
 <link rel="stylesheet" type="text/css" href="css/style.css" media="screen and (min-width:1200px)">
 <link rel="stylesheet" type="text/css" href="css/style_responsivo.css" media="screen and (max-device-width:700px)">
 <link rel="stylesheet" type="text/css" href="css/superslides_responsivo.css" media="screen and (max-device-width:700px)">
+<link rel="stylesheet" type="text/css" href="css/calendario_responsivo.css" media="screen and (max-device-width:700px)">
+
 <link rel="shortcut icon" href="imagens/iconsiteblack.png" />
 <link href="fontes/fonte.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="css/calendario.css">
+<link rel="stylesheet" type="text/css" href="css/calendario.css" media="screen and (min-device-width:1200px)">
 <link rel="stylesheet" src="js/jquery-ui.css" />
 <link rel="stylesheet" href="css/superslides.css">
 
@@ -377,24 +379,26 @@ $(function() {
 });
 
 $(function() {
-    $("#calendario2").datepicker({
-      //minDate: 0,
-      changeMonth: true,
-      changeYear: true,
+  $('#calendario2').datepicker({ minDate: 0,
+    changeMonth: true,
+    changeYear: true,
+
+    dateFormat: 'dd/mm/yy',
+    dayNames: ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado','Domingo'],
+    dayNamesMin: ['D','S','T','Q','Q','S','S','D'],
+    dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb','Dom'],
+    monthNames: ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+    monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez']
+
+    ,
+    nextText: 'Próximo',
+    prevText: 'Anterior'
 
 
-      dateFormat: 'dd/mm/yy',
-      dayNames: ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado','Domingo'],
-      dayNamesMin: ['D','S','T','Q','Q','S','S','D'],
-      dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb','Dom'],
-      monthNames: ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
-      monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez']
 
-      ,
-      nextText: 'Próximo',
-      prevText: 'Anterior'
 
-    });
+
+  });
 
 });
 

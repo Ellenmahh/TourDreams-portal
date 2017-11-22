@@ -36,7 +36,7 @@
 
 		 }else {
 
-				$sql =" insert into tbl_reserva(id_quarto, data_entrada, data_saida, status_reserva, dias_totais, valor_total, id_usuario)values($reserva->id_quarto, '".$reserva->data_entrada."', '".$reserva->data_saida."', 'pendente', '$reserva->total_dias', '$reserva->valor_total', '$reserva->id_usuario');";
+				$sql =" insert into tbl_reserva(id_quarto, data_entrada, data_saida, status_reserva, dias_totais, valor_total, id_usuario, lugar_reserva)values($reserva->id_quarto, '".$reserva->data_entrada."', '".$reserva->data_saida."', 'pendente', '$reserva->total_dias', '$reserva->valor_total', '$reserva->id_usuario', 'website');";
 
 
 
@@ -60,6 +60,10 @@
 
 
 			}else{
+
+				//echo "asdasd";
+
+				echo($sql_verificar_cupom);
 
 					header('location:areaReserva.php?cupom_erro&id_quarto='.$cupom->id_quarto.'&id_usuario='.$cupom->id_usuario);
 

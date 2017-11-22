@@ -13,15 +13,18 @@
 	<link rel="stylesheet" type="text/css" href="css/demo.css" />
 	<!-- Component styles -->
 	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<link rel="stylesheet" type="text/css" href="css/component_responsivo.css" media="screen and (max-device-width:700px)">
 	<script src="js/modernizr.custom.js"></script>
 </head>
 <body>
 
 	<!-- Main container -->
 	<div class="container">
-		<div id="logo_Da_index">
-			<img src="imagens/td.png" alt="">
-		</div>
+
+			<div id="logo_Da_index">
+				<img src="imagens/td.png" alt="">
+			</div>
+
 		<!-- Blueprint header -->
 		<header class="bp-header cf">
 

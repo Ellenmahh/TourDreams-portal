@@ -4,7 +4,7 @@
 	$conexao_bd = new mysql_db();
 	$conexao_bd->conectar();
 
-$id_hotel = $_GET['id_hotel'];
+$id_quarto = $_GET['id_quarto'];
 require_once("../models/dados_quarto.php");
 require_once("../models/caracteristicas.php");
 
@@ -34,7 +34,7 @@ require_once("../models/caracteristicas.php");
 */
 
 $sql = "select q.id_quarto,q.id_hotel,q.nome_quarto,q.numero_quarto,q.camas_solteiro,q.camas_casal,q.preco_quarto,i.nome_imagem
-from tbl_quarto as q inner join tbl_imagens_quarto as i on q.id_quarto = i.id_quarto where q.id_hotel = '".$id_hotel."';";
+from tbl_quarto as q inner join tbl_imagens_quarto as i on q.id_quarto = i.id_quarto where q.id_quarto = '".$id_quarto."';";
 
 $select=mysql_query($sql);
 $quarto = array();

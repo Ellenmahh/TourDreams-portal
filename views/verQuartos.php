@@ -77,7 +77,7 @@ $id_usuario = $_SESSION['id_usuario'];
                 <div class="caracteristicas_verQuartos">
                   <img class="img_caracteristicas_verQuartos" src="imagens/wifi.png" alt="">
                 </div>
-                <p class="txt_caracteristica_verQuartos">Wi-fi gratuito</p>
+                <p class="txt_caracteristica_verQuartos2">Wi-fi gratuito</p>
 
                 <a href="areaReserva.php?id_quarto=<?php echo($id_quarto); ?>&id_usuario=<?php echo($id_usuario); ?>"><input type="submit" name="btn_produto" value="reservar" class="btn_produto_verQuartos"></a>
 

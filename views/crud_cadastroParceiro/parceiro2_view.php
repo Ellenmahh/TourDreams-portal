@@ -26,12 +26,16 @@
 				<div id="espaco_parceiroo_perguntas">
 					<p>Quantidade de camas de solteiro: &nbsp;<input   type="text" name="txtCamas" placeholder=" " class="input_cadastro_parceiroo3"  value="<?php echo($camas_solteiro);?>"/></p>
 					<p>&nbsp;Quantidade de camas de casal: &nbsp;<input type="text" name="txtCamasCasal" placeholder=" " class="input_cadastro_parceiroo3"  value="<?php echo($camas_casal);?>"/></p>
-					<p>&nbsp;<input type="text"placeholder="Preço" name="txtPreco" placeholder=" " class="input_cadastro_parceiroo3" id="preco_quarto"
-             required value="<?php echo($preco_quarto);?>"/></p>
+					<p>&nbsp;
+            <input type="text"placeholder="Preço" name="txtPreco" placeholder=" " class="input_cadastro_parceiroo3" id="preco_quarto"
+             required value="<?php echo($preco_quarto);?>"/>
+
+          </p>
 
 
-
-					<p>O que contém no quarto? </p>
+          <div class="espaco_pergunta_contem">
+					       <p>O que contém no quarto? </p>
+          </div>
 					<div id="resp_parceiro2">
 							<?php
 									require_once('controllers/quarto_controller.php');
@@ -61,18 +65,21 @@
 
 
 					</div>
-					<p>&nbsp;Adicione fotos do quarto:</p>
+          <div class="addfoto_quarto_espaco">
+					       <p>&nbsp;Adicione fotos do quarto:</p>
+          </div>
 					<div id="espaco_fotos_parceiro_cadastro">
 
-							<div class="img_parceiro_cadastro2">
+              <div class="img_parceiro_cadastro2">
 
-							</div>
-
+              </div>
 						<div class="img_parceiro_cadastro22">
 							  <label name="addquartoo" class="addquartoo" for='uploadChange'><img src="imagens/addMais.png" width="90%" height="90%"/> </label>
 							   <input type="file" name="arquivos2[]" multiple="multiple" id="uploadChange" />
 						</div>
+
 					</div>
+
 				</div>
 
 

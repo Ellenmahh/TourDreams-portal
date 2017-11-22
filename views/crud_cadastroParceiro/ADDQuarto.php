@@ -31,7 +31,10 @@
 
 
 
-					<p>O que contém no quarto? </p>
+        <div class="espaco_pergunta_contem">
+            <p>O que contém no quarto? </p>
+
+       </div>
 					<div id="resp_parceiro2">
 							<?php
 									require_once('controllers/quarto_controller.php');
@@ -61,7 +64,9 @@
 
 
 					</div>
-					<p>&nbsp;Adicione fotos do quarto:</p>
+          <div class="addfoto_quarto_espaco">
+					       <p>&nbsp;Adicione fotos do quarto:</p>
+          </div>
 					<div id="espaco_fotos_parceiro_cadastro">
 
 							<div class="img_parceiro_cadastro2">

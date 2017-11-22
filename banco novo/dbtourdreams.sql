@@ -55,7 +55,7 @@ CREATE TABLE `caracteristicas_quarto_hotel` (
   KEY `fk_id_quarto_carac_idx` (`id_quarto`),
   CONSTRAINT `fk_id_carac_quarto` FOREIGN KEY (`id_carac_quarto`) REFERENCES `caracteristicas_quarto` (`id_carac_quarto`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_id_quarto_carac` FOREIGN KEY (`id_quarto`) REFERENCES `tbl_quarto` (`id_quarto`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=120 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=123 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -64,7 +64,7 @@ CREATE TABLE `caracteristicas_quarto_hotel` (
 
 LOCK TABLES `caracteristicas_quarto_hotel` WRITE;
 /*!40000 ALTER TABLE `caracteristicas_quarto_hotel` DISABLE KEYS */;
-INSERT INTO `caracteristicas_quarto_hotel` VALUES (1,1,58),(2,5,58),(44,1,70),(46,1,89),(54,1,138),(55,2,138),(56,1,139),(57,2,139),(58,1,143),(59,2,143),(60,1,144),(61,2,144),(62,1,145),(63,2,145),(64,1,146),(65,2,146),(66,1,147),(67,2,147),(68,1,148),(69,2,148),(70,1,149),(71,2,149),(72,1,150),(73,2,150),(74,1,152),(75,2,152),(76,1,153),(77,2,153),(78,1,154),(79,2,154),(80,1,155),(81,2,155),(82,1,156),(83,2,156),(84,1,157),(85,2,157),(86,1,158),(87,2,158),(88,1,159),(89,2,159),(90,1,160),(91,2,160),(92,1,161),(93,2,161),(94,1,162),(95,2,162),(96,1,163),(97,2,163),(98,1,164),(99,2,164),(100,1,165),(101,2,165),(102,1,166),(103,2,166),(104,4,166),(105,5,166),(106,1,167),(107,2,167),(108,4,167),(109,5,167),(110,1,168),(111,2,168),(112,3,168),(113,5,168),(114,6,168),(115,1,169),(116,2,169),(117,3,169),(118,4,169),(119,5,169);
+INSERT INTO `caracteristicas_quarto_hotel` VALUES (1,1,58),(2,5,58),(44,1,70),(46,1,89),(54,1,138),(55,2,138),(56,1,139),(57,2,139),(58,1,143),(59,2,143),(60,1,144),(61,2,144),(62,1,145),(63,2,145),(64,1,146),(65,2,146),(66,1,147),(67,2,147),(68,1,148),(69,2,148),(70,1,149),(71,2,149),(72,1,150),(73,2,150),(74,1,152),(75,2,152),(76,1,153),(77,2,153),(78,1,154),(79,2,154),(80,1,155),(81,2,155),(82,1,156),(83,2,156),(84,1,157),(85,2,157),(86,1,158),(87,2,158),(88,1,159),(89,2,159),(90,1,160),(91,2,160),(92,1,161),(93,2,161),(94,1,162),(95,2,162),(96,1,163),(97,2,163),(98,1,164),(99,2,164),(100,1,165),(101,2,165),(102,1,166),(103,2,166),(104,4,166),(105,5,166),(106,1,167),(107,2,167),(108,4,167),(109,5,167),(110,1,168),(111,2,168),(112,3,168),(113,5,168),(114,6,168),(115,1,169),(116,2,169),(117,3,169),(118,4,169),(119,5,169),(120,1,170),(121,2,170),(122,4,170);
 /*!40000 ALTER TABLE `caracteristicas_quarto_hotel` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -279,6 +279,37 @@ INSERT INTO `tbl_caracteristicas_hotel` VALUES (1,0,1,1,0,1,1,1,0,1,0,40,1),(1,1
 UNLOCK TABLES;
 
 --
+-- Table structure for table `tbl_caracteristicas_quarto`
+--
+
+DROP TABLE IF EXISTS `tbl_caracteristicas_quarto`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tbl_caracteristicas_quarto` (
+  `id_quarto` int(11) DEFAULT NULL,
+  `wifi` tinyint(1) DEFAULT NULL,
+  `acesso_cadeirantes` tinyint(1) DEFAULT NULL,
+  `televisao` tinyint(1) DEFAULT NULL,
+  `ar_condicionado` tinyint(1) DEFAULT NULL,
+  `banheira_hidro` tinyint(1) DEFAULT NULL,
+  `servicos_quarto` tinyint(1) DEFAULT NULL,
+  `id_carac_quarto` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id_carac_quarto`),
+  KEY `id_caracteristicas_quarto_idx` (`id_quarto`),
+  CONSTRAINT `id_caracteristicas_quarto` FOREIGN KEY (`id_quarto`) REFERENCES `tbl_quarto` (`id_quarto`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tbl_caracteristicas_quarto`
+--
+
+LOCK TABLES `tbl_caracteristicas_quarto` WRITE;
+/*!40000 ALTER TABLE `tbl_caracteristicas_quarto` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tbl_caracteristicas_quarto` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `tbl_categoria`
 --
 
@@ -346,7 +377,7 @@ CREATE TABLE `tbl_comentarios` (
   PRIMARY KEY (`id_comentario`),
   KEY `fk_id_reserva_comentario_idx` (`id_reserva`),
   CONSTRAINT `fk_id_reserva_comentario` FOREIGN KEY (`id_reserva`) REFERENCES `tbl_reserva` (`id_reserva`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -355,7 +386,7 @@ CREATE TABLE `tbl_comentarios` (
 
 LOCK TABLES `tbl_comentarios` WRITE;
 /*!40000 ALTER TABLE `tbl_comentarios` DISABLE KEYS */;
-INSERT INTO `tbl_comentarios` VALUES (4,13,'teste',1),(5,13,'asdasdasdasd',1),(6,17,'ola mundo',1),(7,13,'asd',1),(8,17,'asdasd',0),(9,13,'asdasd',0),(10,13,'dasd',0),(11,21,'Obrigada pela hospedagem.',0),(12,21,'',1),(13,21,'Ótimo hotel. ',0);
+INSERT INTO `tbl_comentarios` VALUES (1,29,'comentário teste',1);
 /*!40000 ALTER TABLE `tbl_comentarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -369,12 +400,12 @@ DROP TABLE IF EXISTS `tbl_cupons`;
 CREATE TABLE `tbl_cupons` (
   `id_cupons` int(11) NOT NULL AUTO_INCREMENT,
   `descricao_cupons` varchar(45) DEFAULT NULL,
-  `situacao_cupons` tinyint(4) DEFAULT NULL,
   `id_usuario` int(11) DEFAULT NULL,
+  `situacao_cupons` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`id_cupons`),
   KEY `fk_id_usuario_cupom_idx` (`id_usuario`),
   CONSTRAINT `fk_id_usuario_cupom` FOREIGN KEY (`id_usuario`) REFERENCES `tbl_usuario` (`id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -383,7 +414,7 @@ CREATE TABLE `tbl_cupons` (
 
 LOCK TABLES `tbl_cupons` WRITE;
 /*!40000 ALTER TABLE `tbl_cupons` DISABLE KEYS */;
-INSERT INTO `tbl_cupons` VALUES (8,'L5BZR0U7782IP6AQAY',0,23);
+INSERT INTO `tbl_cupons` VALUES (2,'6UI7QZ5B8A7Y2PL0RA',23,0),(3,'8IA06P2RQB5UY7A7ZL',23,0),(4,'P85AIY6Q7UZR270ABL',23,0);
 /*!40000 ALTER TABLE `tbl_cupons` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -438,7 +469,7 @@ CREATE TABLE `tbl_endereco_usuario` (
   KEY `codigo_cidade_endereco_idx` (`cidade_codigo`),
   CONSTRAINT `codigo_cidade_endereco_usuario` FOREIGN KEY (`cidade_codigo`) REFERENCES `cidade` (`cidade_codigo`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_endereco_usuario` FOREIGN KEY (`id_usuario`) REFERENCES `tbl_usuario` (`id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -447,7 +478,7 @@ CREATE TABLE `tbl_endereco_usuario` (
 
 LOCK TABLES `tbl_endereco_usuario` WRITE;
 /*!40000 ALTER TABLE `tbl_endereco_usuario` DISABLE KEYS */;
-INSERT INTO `tbl_endereco_usuario` VALUES (1,11,'Rua Marechal Deodoro','Centro',857,6873),(2,12,'Rua Marechal Deodoro','Centro',334,8335),(3,13,'Rua Marechal Deodoro','Centro',566,9798),(4,14,'Rua Marechal Deodoro','Centro',531,8926),(5,15,'Rua Marechal Deodoro','Centro',602,5744),(6,16,'Rua Marechal Deodoro','Centro',314,4108),(7,17,'Rua Marechal Deodoro','Centro',120,5769),(8,18,'teste','teste',12,4522),(9,19,'teste','teste',10,2620),(10,20,'roselandia','estrada do ribeirão',300,9055),(11,23,'Rua das Amoreiras','São Judas',160,9773),(12,24,'nao sei','ali',1,5508);
+INSERT INTO `tbl_endereco_usuario` VALUES (1,11,'Rua Marechal Deodoro','Centro',857,6873),(2,12,'Rua Marechal Deodoro','Centro',334,8335),(3,13,'Rua Marechal Deodoro','Centro',566,9798),(4,14,'Rua Marechal Deodoro','Centro',531,8926),(5,15,'Rua Marechal Deodoro','Centro',602,5744),(6,16,'Rua Marechal Deodoro','Centro',314,4108),(7,17,'Rua Marechal Deodoro','Centro',120,5769),(8,18,'teste','teste',12,4522),(9,19,'teste','teste',10,2620),(10,20,'roselandia','estrada do ribeirão',300,9055),(11,23,'Rua das Amoreiras','São Judas',160,9773),(12,24,'nao sei','ali',1,5508),(13,26,'Rua do Carlos','Bairro do carlos',30,8372);
 /*!40000 ALTER TABLE `tbl_endereco_usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -543,7 +574,7 @@ CREATE TABLE `tbl_hotel` (
 
 LOCK TABLES `tbl_hotel` WRITE;
 /*!40000 ALTER TABLE `tbl_hotel` DISABLE KEYS */;
-INSERT INTO `tbl_hotel` VALUES (40,'nada','Hotel','3269-465454',1,'sdasd',0,'arquivos_parceiro/hotel1.jpg','pendente','nada','hotel@gmail.com','hotel00',0),(41,'nada','Hotel Fazenda Suipe','11953534927',1,'84.926.814/0001-41',0,'arquivos_parceiro/hotel1.jpg','nada','nada','hotelfazenda@gmail.com','hotelfazenda',1),(42,'nada','Hotel Holy','4578965445',3,'54.613.814/0001-20',0,'arquivos_parceiro/hotel2.jpg','devendo','nada','holy@email.com','123456',1),(43,'nada','Hotel Sampa City','7875197946',2,'68.824.616/0001-10',0,'arquivos_parceiro/hotel3.jpg','nada','nada','sampa@email.com','123456',1),(45,'nada','hotel1','099-099090',3,'554811',0,'arquivos_parceiro/hotel2 - Copia - Copia.jpg','nada','nada','hotel11@gmail.com','123',0),(46,'nada','hotel0','645665',2,'55481',0,'arquivos_parceiro/harry - Copia - Copia - Copia (2).jpg','nada','nada','hotel00@gmail.com','hotel00',NULL),(47,'nada','hotel007','456d465a5da',1,'55481',0,'arquivos_parceiro/harry - Copia - Copia - Copia (2).jpg','nada','nada','hotel007@gmail.com','aaa',NULL),(49,'nada','hotel90','011 958995-8599',4,'964584',0,'arquivos_parceiro/harry.jpg','nada','nada','hotel90@gmail.com','123',NULL),(50,'nada','hotel99','011 958995-8599',4,'964584',0,'arquivos_parceiro/grecia2 - Copia.jpg','nada','nada','hotel905@gmail.com','323',NULL),(51,'nada','iza','(11)1111-1111',1,'23.333.333/3333-33',0,'arquivos_parceiro/','nada','nada','iza@gmail.com','123',NULL),(52,'nada','iza','(11)1111-1111',1,'23.333.333/3333-33',0,'arquivos_parceiro/','nada','nada','iza1@gmail.com','123',NULL);
+INSERT INTO `tbl_hotel` VALUES (40,'nada','Hotel','3269-465454',1,'sdasd',0,'arquivos_parceiro/hotel1.jpg','devendo','nada','hotel@gmail.com','hotel00',1),(41,'nada','Hotel Fazenda Suipe','11953534927',1,'84.926.814/0001-41',0,'arquivos_parceiro/hotel1.jpg','nada','nada','hotelfazenda@gmail.com','hotelfazenda',1),(42,'nada','Hotel Holy','4578965445',3,'54.613.814/0001-20',0,'arquivos_parceiro/hotel2.jpg','devendo','nada','holy@email.com','123456',1),(43,'nada','Hotel Sampa City','7875197946',2,'68.824.616/0001-10',0,'arquivos_parceiro/hotel3.jpg','nada','nada','sampa@email.com','123456',1),(45,'nada','hotel1','099-099090',3,'554811',0,'arquivos_parceiro/hotel2 - Copia - Copia.jpg','nada','nada','hotel11@gmail.com','123',0),(46,'nada','hotel0','645665',2,'55481',0,'arquivos_parceiro/harry - Copia - Copia - Copia (2).jpg','nada','nada','hotel00@gmail.com','hotel00',NULL),(47,'nada','hotel007','456d465a5da',1,'55481',0,'arquivos_parceiro/harry - Copia - Copia - Copia (2).jpg','nada','nada','hotel007@gmail.com','aaa',NULL),(49,'nada','hotel90','011 958995-8599',4,'964584',0,'arquivos_parceiro/harry.jpg','nada','nada','hotel90@gmail.com','123',NULL),(50,'nada','hotel99','011 958995-8599',4,'964584',0,'arquivos_parceiro/grecia2 - Copia.jpg','nada','nada','hotel905@gmail.com','323',NULL),(51,'nada','iza','(11)1111-1111',1,'23.333.333/3333-33',0,'arquivos_parceiro/','nada','nada','iza@gmail.com','123',NULL),(52,'nada','iza','(11)1111-1111',1,'23.333.333/3333-33',0,'arquivos_parceiro/','nada','nada','iza1@gmail.com','123',NULL);
 /*!40000 ALTER TABLE `tbl_hotel` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -561,7 +592,7 @@ CREATE TABLE `tbl_imagens_quarto` (
   PRIMARY KEY (`id_imagem_quarto`),
   KEY `fk_id_quarto_imagem_idx` (`id_quarto`),
   CONSTRAINT `fk_id_quarto_imagem` FOREIGN KEY (`id_quarto`) REFERENCES `tbl_quarto` (`id_quarto`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=76 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=78 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -570,7 +601,7 @@ CREATE TABLE `tbl_imagens_quarto` (
 
 LOCK TABLES `tbl_imagens_quarto` WRITE;
 /*!40000 ALTER TABLE `tbl_imagens_quarto` DISABLE KEYS */;
-INSERT INTO `tbl_imagens_quarto` VALUES (2,58,'arquivos_parceiro/quarto1_hotel40.jpg'),(3,58,'arquivos_parceiro/quarto2_hotel40.jpg'),(4,58,'arquivos_parceiro/quarto3_hotel40.jpg'),(5,58,'arquivos_parceiro/quarto4_hotel40.jpg'),(6,58,'arquivos_parceiro/quarto5_hotel40.jpg'),(11,63,'arquivos_parceiro/quarto1_hotel42.jpg'),(12,63,'arquivos_parceiro/quarto2_hotel42.jpg'),(13,63,'arquivos_parceiro/quarto3_hotel42.jpg'),(14,66,'arquivos_parceiro/quarto1_hotel43.jpg'),(15,66,'arquivos_parceiro/quarto2_hotel43.jpg'),(16,66,'arquivos_parceiro/quarto3_hotel43.jpg'),(17,66,'arquivos_parceiro/quarto4_hotel43.jpg'),(18,66,'arquivos_parceiro/quarto5_hotel43.jpg'),(19,70,'arquivos_parceiro/q1.jpg'),(20,70,'arquivos_parceiro/q2.jpg'),(21,70,'arquivos_parceiro/q3.jpg'),(22,70,'arquivos_parceiro/q4.jpg'),(32,58,'arquivos_parceiro/quarto1_hotel40.jpg'),(33,58,'arquivos_parceiro/quarto1_hotel40.jpg'),(34,58,'arquivos_parceiro/quarto1_hotel40.jpg'),(35,58,'arquivos_parceiro/quarto2_hotel40.jpg'),(36,58,'arquivos_parceiro/quarto3_hotel40.jpg'),(37,58,'arquivos_parceiro/quarto4_hotel40.jpg'),(38,58,'arquivos_parceiro/quarto5_hotel40.jpg'),(39,58,'arquivos_parceiro/quarto6_hotel40.jpg'),(40,58,'arquivos_parceiro/quarto7_hotel40.jpg'),(41,153,'arquivos_parceiro/filtro - Copia.png'),(42,153,'arquivos_parceiro/harry - Copia.jpg'),(43,153,'arquivos_parceiro/harry.jpg'),(44,153,'arquivos_parceiro/'),(45,153,'arquivos_parceiro/'),(46,154,'arquivos_parceiro/call.png'),(47,154,'arquivos_parceiro/cumprimento.jpg'),(48,154,'arquivos_parceiro/'),(49,154,'arquivos_parceiro/'),(50,154,'arquivos_parceiro/'),(51,155,'arquivos_parceiro/grecia - Copia.jpg'),(52,155,'arquivos_parceiro/grecia.jpg'),(53,155,'arquivos_parceiro/grecia2 - Copia.jpg'),(54,155,'arquivos_parceiro/'),(55,155,'arquivos_parceiro/'),(56,156,'arquivos_parceiro/grecia - Copia.jpg'),(57,156,'arquivos_parceiro/grecia.jpg'),(58,156,'arquivos_parceiro/grecia2 - Copia.jpg'),(59,156,'arquivos_parceiro/'),(60,156,'arquivos_parceiro/'),(61,157,'arquivos_parceiro/grecia2 - Copia.jpg'),(62,157,'arquivos_parceiro/grecia2.jpg'),(63,157,'arquivos_parceiro/harry - Copia.jpg'),(64,157,'arquivos_parceiro/'),(65,157,'arquivos_parceiro/'),(66,166,'arquivos_parceiro/grecia2.jpg'),(67,166,'arquivos_parceiro/harry - Copia.jpg'),(68,167,'arquivos_parceiro/hotel6.jpg'),(69,167,'arquivos_parceiro/hotel7 - Copia.jpg'),(70,167,'arquivos_parceiro/hotel7.jpg'),(71,168,'arquivos_parceiro/bannerpromocao4.jpg'),(72,168,'arquivos_parceiro/bannerpromocao5.jpg'),(73,168,'arquivos_parceiro/curtindo_cinza.png'),(74,168,'arquivos_parceiro/delete_edit.png'),(75,169,'arquivos_parceiro/');
+INSERT INTO `tbl_imagens_quarto` VALUES (2,58,'arquivos_parceiro/quarto1_hotel40.jpg'),(3,58,'arquivos_parceiro/quarto2_hotel40.jpg'),(4,58,'arquivos_parceiro/quarto3_hotel40.jpg'),(5,58,'arquivos_parceiro/quarto4_hotel40.jpg'),(6,58,'arquivos_parceiro/quarto5_hotel40.jpg'),(11,63,'arquivos_parceiro/quarto1_hotel42.jpg'),(12,63,'arquivos_parceiro/quarto2_hotel42.jpg'),(13,63,'arquivos_parceiro/quarto3_hotel42.jpg'),(14,66,'arquivos_parceiro/quarto1_hotel43.jpg'),(15,66,'arquivos_parceiro/quarto2_hotel43.jpg'),(16,66,'arquivos_parceiro/quarto3_hotel43.jpg'),(17,66,'arquivos_parceiro/quarto4_hotel43.jpg'),(18,66,'arquivos_parceiro/quarto5_hotel43.jpg'),(19,70,'arquivos_parceiro/q1.jpg'),(20,70,'arquivos_parceiro/q2.jpg'),(21,70,'arquivos_parceiro/q3.jpg'),(22,70,'arquivos_parceiro/q4.jpg'),(32,58,'arquivos_parceiro/quarto1_hotel40.jpg'),(33,58,'arquivos_parceiro/quarto1_hotel40.jpg'),(34,58,'arquivos_parceiro/quarto1_hotel40.jpg'),(35,58,'arquivos_parceiro/quarto2_hotel40.jpg'),(36,58,'arquivos_parceiro/quarto3_hotel40.jpg'),(37,58,'arquivos_parceiro/quarto4_hotel40.jpg'),(38,58,'arquivos_parceiro/quarto5_hotel40.jpg'),(39,58,'arquivos_parceiro/quarto6_hotel40.jpg'),(40,58,'arquivos_parceiro/quarto7_hotel40.jpg'),(41,153,'arquivos_parceiro/filtro - Copia.png'),(42,153,'arquivos_parceiro/harry - Copia.jpg'),(43,153,'arquivos_parceiro/harry.jpg'),(44,153,'arquivos_parceiro/'),(45,153,'arquivos_parceiro/'),(46,154,'arquivos_parceiro/call.png'),(47,154,'arquivos_parceiro/cumprimento.jpg'),(48,154,'arquivos_parceiro/'),(49,154,'arquivos_parceiro/'),(50,154,'arquivos_parceiro/'),(51,155,'arquivos_parceiro/grecia - Copia.jpg'),(52,155,'arquivos_parceiro/grecia.jpg'),(53,155,'arquivos_parceiro/grecia2 - Copia.jpg'),(54,155,'arquivos_parceiro/'),(55,155,'arquivos_parceiro/'),(56,156,'arquivos_parceiro/grecia - Copia.jpg'),(57,156,'arquivos_parceiro/grecia.jpg'),(58,156,'arquivos_parceiro/grecia2 - Copia.jpg'),(59,156,'arquivos_parceiro/'),(60,156,'arquivos_parceiro/'),(61,157,'arquivos_parceiro/grecia2 - Copia.jpg'),(62,157,'arquivos_parceiro/grecia2.jpg'),(63,157,'arquivos_parceiro/harry - Copia.jpg'),(64,157,'arquivos_parceiro/'),(65,157,'arquivos_parceiro/'),(66,166,'arquivos_parceiro/grecia2.jpg'),(67,166,'arquivos_parceiro/harry - Copia.jpg'),(68,167,'arquivos_parceiro/hotel6.jpg'),(69,167,'arquivos_parceiro/hotel7 - Copia.jpg'),(70,167,'arquivos_parceiro/hotel7.jpg'),(71,168,'arquivos_parceiro/bannerpromocao4.jpg'),(72,168,'arquivos_parceiro/bannerpromocao5.jpg'),(73,168,'arquivos_parceiro/curtindo_cinza.png'),(74,168,'arquivos_parceiro/delete_edit.png'),(75,169,'arquivos_parceiro/'),(76,170,'arquivos_parceiro/hotel3.jpg'),(77,170,'arquivos_parceiro/hotel4.jpg');
 /*!40000 ALTER TABLE `tbl_imagens_quarto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -668,7 +699,7 @@ CREATE TABLE `tbl_pontos_usuario` (
   KEY `fk_id_pontos_pr_usuario_idx` (`id_pontos`),
   CONSTRAINT `fk_id_pontos_pr_usuario` FOREIGN KEY (`id_pontos`) REFERENCES `tbl_pontos` (`id_pontos`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_id_pontos_usuario` FOREIGN KEY (`id_usuario`) REFERENCES `tbl_usuario` (`id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -677,7 +708,7 @@ CREATE TABLE `tbl_pontos_usuario` (
 
 LOCK TABLES `tbl_pontos_usuario` WRITE;
 /*!40000 ALTER TABLE `tbl_pontos_usuario` DISABLE KEYS */;
-INSERT INTO `tbl_pontos_usuario` VALUES (1,23,1),(2,23,1),(3,23,1),(4,23,2),(5,23,1),(6,23,1),(7,15,2),(8,15,2),(9,15,2);
+INSERT INTO `tbl_pontos_usuario` VALUES (1,23,1),(2,23,1),(3,23,1),(4,23,2),(5,23,1),(6,23,1),(7,23,2);
 /*!40000 ALTER TABLE `tbl_pontos_usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -724,7 +755,7 @@ CREATE TABLE `tbl_quarto` (
   PRIMARY KEY (`id_quarto`),
   KEY `id_hotel_quarto_idx` (`id_hotel`),
   CONSTRAINT `id_hotel_quarto` FOREIGN KEY (`id_hotel`) REFERENCES `tbl_hotel` (`id_hotel`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=170 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=171 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -733,7 +764,7 @@ CREATE TABLE `tbl_quarto` (
 
 LOCK TABLES `tbl_quarto` WRITE;
 /*!40000 ALTER TABLE `tbl_quarto` DISABLE KEYS */;
-INSERT INTO `tbl_quarto` VALUES (58,40,'quarto1',' 5',2,1,' 12,00'),(63,42,'Quarto do hotel 2','89',9,5,'450'),(66,43,'Quarto Residencial','78',5,6,'890'),(70,40,'PAPAP','23',3,7,'900'),(88,46,'suit','5',2,1,'15,00'),(89,47,'suit','5',2,1,'15,00'),(138,50,'suit08','8',2,1,'20,00'),(139,50,'suit08','8',2,1,'20,00'),(140,50,'suit08','8',2,1,'20,00'),(141,50,'suit08','8',2,1,'20,00'),(142,50,'suit08','8',2,1,'20,00'),(143,50,'suit08','8',2,1,'20,00'),(144,50,'suit08','8',2,1,'20,00'),(145,50,'suit08','8',2,1,'20,00'),(146,50,'suit08','8',2,1,'20,00'),(147,50,'suit08','8',2,1,'20,00'),(148,50,'suit08','8',2,1,'20,00'),(149,50,'suit08','8',2,1,'20,00'),(150,50,'suit08','8',2,1,'20,00'),(151,50,'suit08','8',2,1,'20,00'),(152,50,'suit08','8',2,1,'20,00'),(153,50,'suit08','8',2,1,'20,00'),(154,50,'suit08','8',2,1,'20,00'),(155,50,'suit08','8',2,1,'20,00'),(156,50,'suit08','8',2,1,'20,00'),(157,50,'suit08','8',2,1,'20,00'),(158,50,'suit08','8',2,1,'20,00'),(159,50,'suit08','8',2,1,'20,00'),(160,50,'suit08','8',2,1,'20,00'),(161,50,'suit08','8',2,1,'20,00'),(162,50,'suit08','8',2,1,'20,00'),(163,50,'suit08','8',2,1,'20,00'),(164,50,'suit08','8',2,1,'20,00'),(165,50,'suit08','8',2,1,'20,00'),(166,50,'suit08','5',1,2,'20,00'),(167,50,'suit08','5',1,2,'20,00'),(168,45,'suits','55',1,1,'30,00'),(169,52,'aaa','aaa',2,1,'212');
+INSERT INTO `tbl_quarto` VALUES (58,40,'quarto1',' 5',2,1,' 12,00'),(63,42,'Quarto do hotel 2','89',9,5,'450'),(66,43,'Quarto Residencial','78',5,6,'890'),(70,40,'PAPAP','23',3,7,'900'),(88,46,'suit','5',2,1,'15,00'),(89,47,'suit','5',2,1,'15,00'),(138,50,'suit08','8',2,1,'20,00'),(139,50,'suit08','8',2,1,'20,00'),(140,50,'suit08','8',2,1,'20,00'),(141,50,'suit08','8',2,1,'20,00'),(142,50,'suit08','8',2,1,'20,00'),(143,50,'suit08','8',2,1,'20,00'),(144,50,'suit08','8',2,1,'20,00'),(145,50,'suit08','8',2,1,'20,00'),(146,50,'suit08','8',2,1,'20,00'),(147,50,'suit08','8',2,1,'20,00'),(148,50,'suit08','8',2,1,'20,00'),(149,50,'suit08','8',2,1,'20,00'),(150,50,'suit08','8',2,1,'20,00'),(151,50,'suit08','8',2,1,'20,00'),(152,50,'suit08','8',2,1,'20,00'),(153,50,'suit08','8',2,1,'20,00'),(154,50,'suit08','8',2,1,'20,00'),(155,50,'suit08','8',2,1,'20,00'),(156,50,'suit08','8',2,1,'20,00'),(157,50,'suit08','8',2,1,'20,00'),(158,50,'suit08','8',2,1,'20,00'),(159,50,'suit08','8',2,1,'20,00'),(160,50,'suit08','8',2,1,'20,00'),(161,50,'suit08','8',2,1,'20,00'),(162,50,'suit08','8',2,1,'20,00'),(163,50,'suit08','8',2,1,'20,00'),(164,50,'suit08','8',2,1,'20,00'),(165,50,'suit08','8',2,1,'20,00'),(166,50,'suit08','5',1,2,'20,00'),(167,50,'suit08','5',1,2,'20,00'),(168,45,'suits','55',1,1,'30,00'),(169,52,'aaa','aaa',2,1,'212'),(170,51,'quarto 01','05',1,1,'50,00');
 /*!40000 ALTER TABLE `tbl_quarto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -753,12 +784,13 @@ CREATE TABLE `tbl_reserva` (
   `dias_totais` int(11) DEFAULT NULL,
   `valor_total` decimal(10,2) DEFAULT NULL,
   `id_usuario` int(11) DEFAULT NULL,
+  `lugar_reserva` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id_reserva`),
   KEY `id_quarto_reserva_idx` (`id_quarto`),
   KEY `id_usuario_reserva_idx` (`id_usuario`),
   CONSTRAINT `id_quarto_reserva` FOREIGN KEY (`id_quarto`) REFERENCES `tbl_quarto` (`id_quarto`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `id_usuario_reserva` FOREIGN KEY (`id_usuario`) REFERENCES `tbl_usuario` (`id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -767,7 +799,7 @@ CREATE TABLE `tbl_reserva` (
 
 LOCK TABLES `tbl_reserva` WRITE;
 /*!40000 ALTER TABLE `tbl_reserva` DISABLE KEYS */;
-INSERT INTO `tbl_reserva` VALUES (13,58,'2017-10-25','2017-10-31','viajando',7,84.00,23),(14,58,'2025-10-01','2025-10-08','recusada',8,96.00,23),(15,58,'2026-10-05','2026-10-30','aprovada',26,312.00,23),(17,63,'2017-10-30','2017-11-02','viajando',4,1800.00,23),(21,58,'2017-11-08','2017-12-18','viajando',41,492.00,15),(23,58,'2024-10-24','2024-11-01','viajando',9,108.00,15),(24,58,'2019-11-01','2019-11-02','recusada',2,24.00,25);
+INSERT INTO `tbl_reserva` VALUES (29,58,'2017-11-14','2017-11-17','viajando',4,48.00,23,'website'),(49,66,'2017-11-16','2017-11-16','viajando',1,890.00,22,'app');
 /*!40000 ALTER TABLE `tbl_reserva` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -782,7 +814,7 @@ CREATE TABLE `tbl_setores` (
   `id_setor` int(11) NOT NULL AUTO_INCREMENT,
   `nome_setor` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id_setor`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -842,7 +874,7 @@ CREATE TABLE `tbl_usuario` (
   `foto_usuario` varchar(100) DEFAULT NULL,
   `qtds_reservas_usuario` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -851,7 +883,7 @@ CREATE TABLE `tbl_usuario` (
 
 LOCK TABLES `tbl_usuario` WRITE;
 /*!40000 ALTER TABLE `tbl_usuario` DISABLE KEYS */;
-INSERT INTO `tbl_usuario` VALUES (11,'Paulo Juan Anthony Cavalcanti','09088286752','481268157','ppaulojuananthonycavalcanti@vectrausinagem.com.br','123','2736568459','27984498108','arquivos_usuarios/pessoa3.jpg',0),(12,'Pedro Henrique Kaique Cardoso','17168377744','258839788','pedrohenriquekaiquecardoso-91@maggitoyota.com.br','123','2725130842','27994454898','arquivos_usuarios/pessoa4.jpg',0),(13,'Igor Francisco Moura','52618019741','413840906','igorfranciscomoura_@yahooo.com.br','123','2728522613','27995826517','arquivos_usuarios/pessoa5.jpg',0),(14,'Nicole Manuela Olivia Campos','08196799764','490408606','nnicolemanuelaoliviacampos@comdados.com','123','2736370471','27995908214','arquivos_usuarios/pessoa1.jpg',0),(15,'Marina Clara Luna Cardoso','95561801767','336369748','marinaclaralunacardoso-71@tcotecnologia.com.br','123','2738078625','27986314272','arquivos_usuarios/pessoa2.jpg',0),(16,'Vitória Sarah Cavalcanti','05084328716','162527603','vitiasarahcavalcanti_@tita.com.br','123','2739240759','27985706836','arquivos_usuarios/pessoa6.jpg',0),(17,'Evelyn Isabelle Barros','04629502718','125016104','evelyn@email.com','123','2736915530','27985867421','arquivos_usuarios/pessoa4.jpg',0),(18,'teste','teste','teste','teste','teste','teste','teste','',0),(19,'teste22','teste','teste','teste@gmail.com','123','teste','teste','fggds',0),(20,'lizandra lisboa','6656529898','65326898876','lizandralis22@gmail.com','lizandrinha','246368635','5746554655','arquivos_usuarios/pessoa4.jpg',0),(21,'ellen','','','','','','','.0.',NULL),(22,'','','','eln@eln','123','','','.0.',NULL),(23,'Vinicius Ivan Colutti','503.824.358-42','20.457.835-6','viniciuscolutti@hotmail.com','kelow1203','(11)4158-6682','(11)953534927','arquivos_usuarios/download (1).jpg',0),(24,'ryuy','111.111.111-11','11.111.111-1','iza@gmail.com','123','(11)1111-1111','(11)111111111','arquivos_usuarios/',0),(25,'Ellen mayara silva munguba de melo','123.213.425-23','12.312.426-4','eln@123','123','(12)3323-1231','(11)111121212','arquivos_usuarios/',0),(26,'asd','','','asd','123','','','.0.',NULL);
+INSERT INTO `tbl_usuario` VALUES (11,'Paulo Juan Anthony Cavalcanti','09088286752','481268157','ppaulojuananthonycavalcanti@vectrausinagem.com.br','123','2736568459','27984498108','arquivos_usuarios/pessoa3.jpg',0),(12,'Pedro Henrique Kaique Cardoso','17168377744','258839788','pedrohenriquekaiquecardoso-91@maggitoyota.com.br','123','2725130842','27994454898','arquivos_usuarios/pessoa4.jpg',0),(13,'Igor Francisco Moura','52618019741','413840906','igorfranciscomoura_@yahooo.com.br','123','2728522613','27995826517','arquivos_usuarios/pessoa5.jpg',0),(14,'Nicole Manuela Olivia Campos','08196799764','490408606','nnicolemanuelaoliviacampos@comdados.com','123','2736370471','27995908214','arquivos_usuarios/pessoa1.jpg',0),(15,'Marina Clara Luna Cardoso','95561801767','336369748','marinaclaralunacardoso-71@tcotecnologia.com.br','123','2738078625','27986314272','arquivos_usuarios/pessoa2.jpg',0),(16,'Vitória Sarah Cavalcanti','05084328716','162527603','vitiasarahcavalcanti_@tita.com.br','123','2739240759','27985706836','arquivos_usuarios/pessoa6.jpg',0),(17,'Evelyn Isabelle Barros','04629502718','125016104','evelyn@email.com','123','2736915530','27985867421','arquivos_usuarios/pessoa4.jpg',0),(18,'teste','teste','teste','teste','teste','teste','teste','',0),(19,'teste22','teste','teste','teste@gmail.com','123','teste','teste','fggds',0),(20,'lizandra lisboa','6656529898','65326898876','lizandralis22@gmail.com','lizandrinha','246368635','5746554655','arquivos_usuarios/pessoa4.jpg',0),(21,'ellen','','','','','','','.0.',NULL),(22,'','','','eln@eln','123','','','.0.',NULL),(23,'Vinicius Ivan Colutti','503.824.358-42','20.457.835-6','viniciuscolutti@hotmail.com','kelow1203','(11)4158-6682','(11)953534927','arquivos_usuarios/download (1).jpg',0),(24,'ryuy','111.111.111-11','11.111.111-1','iza@gmail.com','123','(11)1111-1111','(11)111111111','arquivos_usuarios/',0),(25,'Ellen mayara silva munguba de melo','123.213.425-23','12.312.426-4','eln@123','123','(12)3323-1231','(11)111121212','arquivos_usuarios/',0),(26,'Jailson Mendes_p','425.944.545-45','12.121.212-1','carlos@gmail.com','123','(11)9875-4545','(11)879848484','arquivos_usuarios/download.jpg',0),(27,'haha','13854387438','138743438','haha@gmail.com','123','1354834874','1354834874','.0.',NULL);
 /*!40000 ALTER TABLE `tbl_usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -997,4 +1029,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-11-09 16:58:02
+-- Dump completed on 2017-11-16 16:52:54

@@ -12,7 +12,7 @@ $id_categoria = $_GET['id_categoria'];
   as eh on h.id_hotel = eh.id_hotel inner join cidade
   as c on eh.cidade_codigo = c.cidade_codigo  inner join tbl_quarto
   as q on h.id_hotel = q.id_hotel
-   where id_categora = '".$id_categoria."'";
+   where id_categora = '".$id_categoria."'and h.aprovar_hotel = 1;" ;
 //echo($sql);
   $select = mysql_query($sql);
   $categoria = array();
